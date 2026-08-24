@@ -123,7 +123,10 @@
     destino.appendChild(grid);
 
     if (c.caso) {
-      const caja = el("div", { class: "caso", html: c.caso });
+      const caja = el("div", {
+        class: "caso" + (c.casoEstado === "pendiente" ? " pendiente" : ""),
+        html: c.caso
+      });
       destino.parentNode.insertBefore(caja, destino);
     }
   }

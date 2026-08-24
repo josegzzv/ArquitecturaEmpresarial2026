@@ -18,10 +18,12 @@
   /* Normaliza lo que escribe el alumno: coma decimal, %, espacios, separador de miles */
   function aNumero(txt) {
     if (txt === null || txt === undefined) return NaN;
-    let s = String(txt).trim().replace(/\s|%/g, "");
+    let s = String(txt).trim().replace(/\s|%|\$/g, "").replace(/[−–—]/g, "-");
     if (s === "") return NaN;
-    if (s.indexOf(",") > -1 && s.indexOf(".") > -1) s = s.replace(/,/g, "");   // 1,234.56
-    else s = s.replace(",", ".");                                              // 31,22
+    // Coma seguida de exactamente 3 dígitos = separador de miles (1,234 · 395,081)
+    s = s.replace(/,(?=\d{3}(\D|$))/g, "");
+    // La coma que quede se interpreta como separador decimal (31,22)
+    s = s.replace(",", ".");
     return parseFloat(s);
   }
 

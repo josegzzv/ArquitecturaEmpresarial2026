@@ -9,16 +9,18 @@ Sin dependencias, sin build, sin servidor. Se publica tal cual en GitHub Pages.
 index.html            Portada: tarjetas de las 5 semanas
 semana.html           Página genérica de semana (semana.html?s=1)
 glosario.html         Glosario buscable, alimentado por todas las semanas
+aviso-legal.html      Autoría, atribuciones, marcas de terceros y condiciones de uso
+publicar.sh           Publica o actualiza el sitio en GitHub Pages
 assets/css/styles.css Único archivo de estilos (tema claro y oscuro)
 assets/js/nucleo.js   Registro de contenido, tema, progreso local, utilidades
 assets/js/vistas.js   Render de portada, conceptos y glosario
-assets/js/practica.js Motor de práctica: 5 modos
+assets/js/practica.js Motor de práctica: 6 modos
 data/curso.js         Metadatos generales del curso
 data/semana-1.js      Contenido y reactivos de la Semana 1
 data/semana-2.js      Contenido y reactivos de la Semana 2
 data/semana-3.js      Contenido y reactivos de la Semana 3
-data/semana-4.js      Plantilla vacía
-data/semana-5.js      Plantilla vacía
+data/semana-4.js      Contenido y reactivos de la Semana 4
+data/semana-5.js      Contenido y reactivos de la Semana 5
 ```
 
 Los archivos de `data/` son JavaScript (no JSON puro) por una sola razón práctica:
@@ -27,7 +29,7 @@ sin necesidad de levantar un servidor local. El contenido interno es JSON litera
 
 ## Cómo agregar una semana nueva
 
-1. Abre `data/semana-3.js` (o la que corresponda).
+1. Abre `data/semana-N.js` de la semana que vas a llenar.
 2. Cambia `estado: "proximamente"` por `estado: "publicada"`.
 3. Llena `titulo`, `subtitulo`, `sesiones`, `objetivos`, `dias`, `terminos` y `practica`.
 4. Guarda y haz push. No hay que tocar HTML, CSS ni JS.

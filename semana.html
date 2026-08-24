@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semana · Arquitectura Empresarial</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23b3400a'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='sans-serif' font-weight='bold' fill='white'>AE</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/nucleo.js"></script>
+</head>
+<body>
+
+<header class="sitio"><div class="contenedor barra"></div></header>
+
+<main>
+  <div class="contenedor">
+    <section class="hero" id="cabecera"></section>
+
+    <div class="pestanas" role="tablist">
+      <button id="tab-conceptos" role="tab" aria-selected="true">Conceptos</button>
+      <button id="tab-practica"  role="tab" aria-selected="false">Práctica</button>
+    </div>
+
+    <div id="conceptos" role="tabpanel"></div>
+    <div id="practica"  role="tabpanel" hidden></div>
+  </div>
+</main>
+
+<footer class="sitio"><div class="contenedor"></div></footer>
+
+<script src="data/curso.js"></script>
+<script src="data/semana-1.js"></script>
+<script src="data/semana-2.js"></script>
+<script src="data/semana-3.js"></script>
+<script src="data/semana-4.js"></script>
+<script src="data/semana-5.js"></script>
+<script src="assets/js/vistas.js"></script>
+<script src="assets/js/practica.js"></script>
+<script>
+(function () {
+  const id = EA.parametro("s", "1");
+  const semana = EA.obtenerSemana(id);
+  EA.montarCascaron("semana-" + id);
+
+  const cabecera  = document.getElementById("cabecera");
+  const conceptos = document.getElementById("conceptos");
+  const practica  = document.getElementById("practica");
+  const tabC = document.getElementById("tab-conceptos");
+  const tabP = document.getElementById("tab-practica");
+
+  if (!semana) {
+    cabecera.innerHTML = "<h1>Semana no encontrada</h1>";
+    conceptos.innerHTML = '<div class="vacio"><h3>Contenido no disponible</h3>'
+      + '<p>Vuelve al <a href="index.html">índice del curso</a>.</p></div>';
+    document.querySelector(".pestanas").hidden = true;
+    return;
+  }
+
+  document.title = "Semana " + semana.id + " · " + semana.titulo;
+  EA.vistas.renderSemana(semana, conceptos, cabecera);
+
+  if (semana.estado !== "publicada") {
+    conceptos.innerHTML = '<div class="vacio"><h3>Próximamente</h3>'
+      + "<p>El material de esta semana se publicará antes de la sesión correspondiente.</p></div>";
+  }
+
+  EA.practica.crear(semana, practica);
+
+  function activa(cual) {
+    const esConceptos = cual === "conceptos";
+    tabC.setAttribute("aria-selected", String(esConceptos));
+    tabP.setAttribute("aria-selected", String(!esConceptos));
+    conceptos.hidden = !esConceptos;
+    practica.hidden = esConceptos;
+    history.replaceState(null, "", "?s=" + semana.id + (esConceptos ? "" : "&v=practica"));
+  }
+  tabC.addEventListener("click", function () { activa("conceptos"); });
+  tabP.addEventListener("click", function () { activa("practica"); });
+
+  if (EA.parametro("v", "") === "practica") activa("practica");
+})();
+</script>
+</body>
+</html>

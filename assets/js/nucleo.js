@@ -177,8 +177,17 @@ window.EA = (function () {
 
     const pie = document.querySelector("footer.sitio .contenedor");
     if (pie) {
-      pie.appendChild(el("span", { text: c.titulo }));
-      pie.appendChild(el("span", { text: "Material de apoyo para estudiantes · " + new Date().getFullYear() }));
+      pie.appendChild(el("div", { class: "pie-autoria" }, [
+        el("strong", { text: c.titulo }),
+        el("span", {}, [
+          document.createTextNode("Material generado por "),
+          el("a", { href: "mailto:" + (c.correo || ""), class: "pie-correo", text: c.correo || "" })
+        ])
+      ]));
+      pie.appendChild(el("div", { class: "pie-legal" }, [
+        el("a", { href: "aviso-legal.html", text: "Aviso legal y atribuciones" }),
+        el("span", { text: "Material de apoyo para estudiantes · " + new Date().getFullYear() })
+      ]));
     }
   }
 

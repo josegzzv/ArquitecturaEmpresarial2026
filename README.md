@@ -16,7 +16,7 @@ assets/js/practica.js Motor de práctica: 5 modos
 data/curso.js         Metadatos generales del curso
 data/semana-1.js      Contenido y reactivos de la Semana 1
 data/semana-2.js      Contenido y reactivos de la Semana 2
-data/semana-3.js      Plantilla vacía (estado: "proximamente")
+data/semana-3.js      Contenido y reactivos de la Semana 3
 data/semana-4.js      Plantilla vacía
 data/semana-5.js      Plantilla vacía
 ```
@@ -49,7 +49,7 @@ atenuada y no son navegables.
 | `nota`     | `titulo`, `cuerpo` (HTML)       | Caja ámbar: advertencias, preguntas al grupo |
 | `clave`    | `titulo`, `cuerpo` (HTML)       | Caja de acento: idea central del tema |
 
-### Los cinco modos de práctica
+### Los seis modos de práctica
 
 ```js
 practica: {
@@ -87,10 +87,31 @@ practica: {
     explicacion: "…"
   }],
 
-  // 5 · Tarjetas de repaso
+  // 5 · Ejercicios numéricos (cálculo de tiempos, capacidad, costos)
+  calculos: [{
+    tema: "Rutas múltiples",
+    titulo: "Título del ejercicio",
+    enunciado: "Planteamiento en HTML…",
+    datos:    { tipo: "tabla", titulo: "…", encabezados: [...], filas: [[...]] },  // opcional
+    diagrama: { titulo: "…", cuerpo: "diagrama ASCII" },                          // opcional
+    preguntas: [
+      { etiqueta: "Tiempo de ciclo (CT)", respuesta: 31.22, unidad: "min",
+        tolerancia: 0.05, pista: "texto opcional" }
+    ],
+    solucion: "<p>…</p><div class='paso-calc'>desarrollo monoespaciado</div>"
+  }],
+
+  // 6 · Tarjetas de repaso
   flashcards: [{ frente: "TOGAF", reverso: "The Open Group Architecture Framework…" }]
 }
 ```
+
+**Sobre el modo `calculos`.** Acepta punto o coma decimal y tolera `%` y espacios.
+`tolerancia` es absoluta (si se omite, 0.01); usa un valor holgado para porcentajes
+(0.5–0.8) y estrecho para enteros (0.01). A diferencia de los demás modos, los
+ejercicios **no se barajan**: se presentan en el orden del arreglo, para que puedan
+construirse uno sobre otro. Dentro de `solucion`, la clase `paso-calc` da formato
+monoespaciado al desarrollo y `resaltado` marca el resultado.
 
 Las opciones y el orden de los reactivos se barajan automáticamente en cada
 intento: escribe siempre la respuesta correcta en la posición que quieras y
@@ -139,7 +160,14 @@ El archivo `.nojekyll` evita que GitHub procese el sitio con Jekyll.
 ### Actualizaciones posteriores
 
 ```bash
-git add -A && git commit -m "Semana 3" && git push
+bash publicar.sh "Semana 4"
+```
+
+El script detecta que el repositorio ya está configurado y solo hace
+`add` + `commit` + `push`, conservando el historial. También sirve el camino manual:
+
+```bash
+git add -A && git commit -m "Semana 4" && git push
 ```
 
 Pages redespliega solo, en menos de un minuto.

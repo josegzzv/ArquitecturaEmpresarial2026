@@ -11,8 +11,24 @@
     { clave: "escenarios",     icono: "⚖", nombre: "Escenario → marco", desc: "Lee la situación y decide qué marco, estándar o metodología aplica." },
     { clave: "clasificar",     icono: "▦", nombre: "Clasificar", desc: "Arrastra cada elemento a la categoría o dominio que le corresponde." },
     { clave: "ordenar",        icono: "↕", nombre: "Ordenar secuencia", desc: "Coloca las fases o pasos en el orden correcto." },
+    { clave: "calculos",       icono: "∑", nombre: "Cálculo de tiempos y capacidad", desc: "Ejercicios numéricos: CT, TCT, eficiencia, takt, cuello de botella y capacidad, con solución paso a paso." },
     { clave: "flashcards",     icono: "🗂", nombre: "Tarjetas de repaso", desc: "Concepto de un lado, definición del otro. Repaso rápido." }
   ];
+
+  /* Normaliza lo que escribe el alumno: coma decimal, %, espacios, separador de miles */
+  function aNumero(txt) {
+    if (txt === null || txt === undefined) return NaN;
+    let s = String(txt).trim().replace(/\s|%/g, "");
+    if (s === "") return NaN;
+    if (s.indexOf(",") > -1 && s.indexOf(".") > -1) s = s.replace(/,/g, "");   // 1,234.56
+    else s = s.replace(",", ".");                                              // 31,22
+    return parseFloat(s);
+  }
+
+  function formatea(n) {
+    return Number.isInteger(n) ? String(n)
+      : String(Math.round(n * 10000) / 10000).replace(".", ".");
+  }
 
   function crear(semana, contenedor) {
     const practica = semana.practica || {};
@@ -43,7 +59,8 @@
         el("span", { class: "nombre", text: m.nombre }),
         el("span", { class: "desc", text: m.desc }),
         el("span", { class: "pastilla", style: "align-self:flex-start;margin-top:.4rem",
-          text: (practica[m.clave] || []).length + (m.clave === "flashcards" ? " tarjetas" : " reactivos") })
+          text: (practica[m.clave] || []).length + (m.clave === "flashcards" ? " tarjetas"
+                 : m.clave === "calculos" ? " ejercicios" : " reactivos") })
       ]);
       b.addEventListener("click", function () {
         barraModos.querySelectorAll(".modo").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
@@ -61,6 +78,7 @@
         case "escenarios":     sesionPreguntas(EA.barajar(datos), "escenarios", true); break;
         case "clasificar":     sesionClasificar(datos); break;
         case "ordenar":        sesionOrdenar(datos); break;
+        case "calculos":       sesionCalculos(datos); break;
         case "flashcards":     sesionFlashcards(EA.barajar(datos)); break;
       }
     }
@@ -343,7 +361,92 @@
       pinta();
     }
 
-    /* ================= 5 · Tarjetas de repaso ================= */
+    /* ================= 5 · Cálculo de tiempos y capacidad ================= */
+    function sesionCalculos(lista) {
+      let i = 0, aciertosTotales = 0, camposTotales = 0;
+
+      function pinta() {
+        panel.innerHTML = "";
+        if (i >= lista.length) return resultado(aciertosTotales, camposTotales, [], "calculos");
+
+        const ej = lista[i];
+        panel.appendChild(encabezado(i, lista.length, aciertosTotales));
+        if (ej.tema) panel.appendChild(el("div", { class: "pregunta-tema", text: ej.tema }));
+        panel.appendChild(el("p", { class: "pregunta", html: ej.titulo }));
+        if (ej.enunciado) panel.appendChild(el("div", { class: "escenario-caja", html: ej.enunciado }));
+
+        if (ej.datos) panel.appendChild(EA.vistas.renderBloque(ej.datos));
+        if (ej.diagrama) panel.appendChild(EA.vistas.renderBloque({ tipo: "diagrama", titulo: ej.diagrama.titulo, cuerpo: ej.diagrama.cuerpo }));
+
+        /* Campos de respuesta */
+        const campos = el("div", { class: "campos-calculo" });
+        const entradas = [];
+        ej.preguntas.forEach(function (q, idx) {
+          const input = el("input", {
+            type: "text", inputmode: "decimal", class: "entrada-num",
+            placeholder: "0.00", "aria-label": q.etiqueta
+          });
+          input.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") { e.preventDefault(); revisar.click(); }
+          });
+          entradas.push({ input: input, q: q });
+          campos.appendChild(el("label", { class: "campo" }, [
+            el("span", { class: "campo-etiqueta", html: q.etiqueta }),
+            el("span", { class: "campo-entrada" }, [
+              input,
+              el("span", { class: "campo-unidad", text: q.unidad || "" })
+            ]),
+            q.pista ? el("span", { class: "campo-pista", html: q.pista }) : null
+          ]));
+        });
+        panel.appendChild(campos);
+
+        const revisar = el("button", { class: "btn primario", type: "button", text: "Revisar respuestas" });
+        const acciones = el("div", { class: "acciones" }, [revisar]);
+        panel.appendChild(acciones);
+
+        revisar.addEventListener("click", function () {
+          let bien = 0;
+          entradas.forEach(function (x) {
+            const val = aNumero(x.input.value);
+            const tol = x.q.tolerancia !== undefined ? x.q.tolerancia : 0.01;
+            const ok = !isNaN(val) && Math.abs(val - x.q.respuesta) <= tol;
+            if (ok) bien++;
+            x.input.disabled = true;
+            x.input.classList.add(ok ? "bien" : "mal");
+            const marca = el("span", { class: "campo-veredicto " + (ok ? "bien" : "mal") });
+            marca.innerHTML = ok
+              ? "✓"
+              : '✗ <b>' + formatea(x.q.respuesta) + "</b> " + (x.q.unidad || "");
+            x.input.parentNode.appendChild(marca);
+          });
+
+          aciertosTotales += bien;
+          camposTotales += ej.preguntas.length;
+
+          const retro = el("div", { class: "retro " + (bien === ej.preguntas.length ? "bien" : "mal") });
+          retro.appendChild(el("div", { class: "veredicto", text: bien + " de " + ej.preguntas.length + " valores correctos" }));
+          panel.appendChild(retro);
+
+          if (ej.solucion) {
+            panel.appendChild(el("div", { class: "bloque solucion" }, [
+              el("h4", { text: "Solución paso a paso" }),
+              el("div", { html: ej.solucion })
+            ]));
+          }
+
+          acciones.innerHTML = "";
+          const sig = el("button", { class: "btn primario", type: "button",
+            text: i === lista.length - 1 ? "Ver resultado" : "Siguiente ejercicio →" });
+          sig.addEventListener("click", function () { i++; pinta(); });
+          acciones.appendChild(sig);
+          panel.appendChild(acciones);
+        });
+      }
+      pinta();
+    }
+
+    /* ================= 6 · Tarjetas de repaso ================= */
     function sesionFlashcards(lista) {
       let i = 0, sabidas = 0;
       let volteada = false;

@@ -1,46 +1,70 @@
 #!/usr/bin/env bash
 # ============================================================
-#  Publica el sitio del curso en GitHub Pages
-#  Repo destino: josegzzv/ArquitecturaEmpresarial2026 (cuenta personal)
-#  Usa el alias SSH "github.com-personal" definido en ~/.ssh/config
+#  Publica o actualiza el sitio del curso en GitHub Pages
+#  Repo: josegzzv/ArquitecturaEmpresarial2026 (cuenta personal)
+#  Usa el alias SSH "github.com-personal" de ~/.ssh/config
 #
-#  Uso:  cd ea-curso && bash publicar.sh
-#  Requisito previo: el repositorio debe existir ya en GitHub, VACÍO
-#  (sin README, sin .gitignore, sin licencia). Créalo en github.com/new
-#  o con:  gh repo create josegzzv/ArquitecturaEmpresarial2026 --public
+#  Uso:  bash publicar.sh ["mensaje del commit"]
+#
+#  El script detecta si ya existe un repositorio Git configurado:
+#    · Si YA existe  -> solo hace add + commit + push (conserva el historial).
+#    · Si NO existe  -> lo inicializa con tu identidad y hace el primer push.
 # ============================================================
 
 set -euo pipefail
 
 ALIAS_SSH="github.com-personal"
 REPO="josegzzv/ArquitecturaEmpresarial2026"
+REMOTO="git@$ALIAS_SSH:$REPO.git"
 NOMBRE="${GIT_AUTHOR_NAME:-Antonio González}"
 CORREO="${GIT_AUTHOR_EMAIL:-josegzzv@gmail.com}"
+MENSAJE="${1:-Actualiza el material del curso}"
 
-echo "──> 1. Verificando la identidad SSH del alias $ALIAS_SSH"
-# GitHub siempre responde con código 1 a ssh -T; lo que importa es el saludo.
-ssh -T "git@$ALIAS_SSH" 2>&1 | head -2 || true
+echo "──> Verificando la identidad SSH del alias $ALIAS_SSH"
+ssh -T "git@$ALIAS_SSH" 2>&1 | head -2 || true   # GitHub siempre sale con código 1
 echo
 
-echo "──> 2. Historial limpio con tu identidad ($NOMBRE <$CORREO>)"
-rm -rf .git
-git init -q
-git config user.name  "$NOMBRE"
-git config user.email "$CORREO"
-git add -A
-git commit -q -m "Sitio del curso: semanas 1 y 2 completas, plantillas 3-5"
-git branch -M main
+if [ -d .git ] && git remote get-url origin >/dev/null 2>&1; then
+  # ---------- Repositorio ya configurado: actualización ----------
+  echo "──> Repositorio existente detectado. Actualizando."
+  echo "    remote: $(git remote get-url origin)"
 
-echo "──> 3. Remote y push"
-git remote add origin "git@$ALIAS_SSH:$REPO.git"
-git push -u origin main
+  if [ -z "$(git status --porcelain)" ]; then
+    echo "    No hay cambios que registrar."
+  else
+    git add -A
+    git commit -m "$MENSAJE"
+    echo "    Commit creado: $MENSAJE"
+  fi
 
-echo
-echo "──> 4. Falta un paso manual (o usa gh, abajo):"
-echo "     Settings → Pages → Source: Deploy from a branch → main / (root)"
-echo
-echo "     Con gh CLI:"
-echo "     gh api -X POST repos/$REPO/pages -f 'source[branch]=main' -f 'source[path]=/'"
-echo
-echo "     En 1-2 minutos el sitio queda en:"
-echo "     https://josegzzv.github.io/ArquitecturaEmpresarial2026/"
+  git push
+  echo
+  echo "──> Listo. GitHub Pages redespliega solo en menos de un minuto:"
+  echo "    https://josegzzv.github.io/ArquitecturaEmpresarial2026/"
+
+else
+  # ---------- Primera publicación ----------
+  echo "──> Sin repositorio configurado. Inicializando."
+  echo "    Requisito: el repo debe existir en GitHub y estar VACÍO."
+  echo "    Identidad: $NOMBRE <$CORREO>"
+  echo
+
+  git init -q
+  git config user.name  "$NOMBRE"
+  git config user.email "$CORREO"
+  git add -A
+  git commit -q -m "$MENSAJE"
+  git branch -M main
+  git remote add origin "$REMOTO"
+  git push -u origin main
+
+  echo
+  echo "──> Falta activar Pages una sola vez:"
+  echo "    https://github.com/$REPO/settings/pages"
+  echo "    Source: Deploy from a branch -> main / (root)"
+  echo
+  echo "    Con gh CLI:"
+  echo "    gh api -X POST repos/$REPO/pages -f 'source[branch]=main' -f 'source[path]=/'"
+  echo
+  echo "    El sitio queda en https://josegzzv.github.io/ArquitecturaEmpresarial2026/"
+fi

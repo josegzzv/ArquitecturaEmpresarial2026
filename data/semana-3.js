@@ -253,37 +253,74 @@ EA.registrarSemana({
                 + "<p><b>La consecuencia que importa:</b> si el throughput está topado por el cuello de botella, meter más trabajo al proceso <b>no produce más</b> — solo alarga el tiempo que cada job pasa esperando. Es la justificación matemática de los límites de WIP en un tablero Kanban.</p>"
         },
         {
-          tipo: "diagrama",
-          titulo: "Proceso de referencia con los tres patrones (tiempos en minutos)",
-          cuerpo:
-"   (inicio)\n" +
-"       |\n" +
-"    A (10)\n" +
-"       |\n" +
-"       <> ---- 0.7 ----------------+     RUTAS MÚLTIPLES\n" +
-"       |                           |\n" +
-"       +-- 0.3 --> B (20) --+      |\n" +
-"                            v      v\n" +
-"                          C (23) <-+\n" +
-"                            |\n" +
-"       +--------------------+\n" +
-"       v\n" +
-"    D (10) <---- 0.1 retrabajo ----+     RETRABAJO\n" +
-"       |                           |\n" +
-"    E (20)                         |\n" +
-"       |                           |\n" +
-"    I (5)  inspección -------------+\n" +
-"       |  (0.9 continúa)\n" +
-"       +\n" +
-"      / \\                               RUTAS PARALELAS\n" +
-"     v   v\n" +
-"  G(13) F(9)\n" +
-"     \\   /\n" +
-"       +\n" +
-"       |\n" +
-"    H (2)\n" +
-"       |\n" +
-"    (fin)"
+          tipo: "svg",
+          titulo: "Proceso de referencia con los tres patrones",
+          pie: "Los tres patrones en un solo proceso. Cada zona punteada se calcula con su propia regla y el tiempo de ciclo es la suma de los cinco tramos: 10 + 29 + 38.5 + 13 + 2 = 92.5 minutos.",
+          svg:
+            '<svg viewBox="0 0 1090 352" role="img" aria-label="Proceso de referencia: la actividad A alimenta una compuerta exclusiva que envía 70 por ciento a C y 30 por ciento a B y luego a C; sigue un ciclo D, E e inspección I con 10 por ciento de retrabajo; después una compuerta paralela ejecuta G y F simultáneamente y converge en H">'
+            + '<defs><marker id="pa-proc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker>'
+            + '<marker id="pa-proc-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta-viva" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
+            + '<rect class="zona" x="138" y="150" width="280" height="178" rx="16"/>'
+            + '<text class="rotulo-viva" x="278" y="142" text-anchor="middle">RUTAS MÚLTIPLES · Σ p·T</text>'
+            + '<rect class="zona" x="432" y="96" width="258" height="138" rx="16"/>'
+            + '<text class="rotulo-viva" x="561" y="88" text-anchor="middle">RETRABAJO · (1+r)·T</text>'
+            + '<rect class="zona" x="714" y="96" width="236" height="214" rx="16"/>'
+            + '<text class="rotulo-viva" x="832" y="88" text-anchor="middle">RUTAS PARALELAS · máx</text>'
+            + '<circle class="caja" cx="26" cy="200" r="12"/>'
+            + '<path class="arista" d="M40,200 L48,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="52" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="90" y="196" text-anchor="middle">A</text>'
+            + '<text class="rotulo-sm" x="90" y="212" text-anchor="middle">10 min</text>'
+            + '<path class="arista" d="M128,200 L142,200" marker-end="url(#pa-proc)"/>'
+            + '<polygon class="caja-viva" points="168,177 191,200 168,223 145,200"/>'
+            + '<text class="rotulo" x="168" y="205" text-anchor="middle">×</text>'
+            + '<path class="arista" d="M191,200 L326,200" marker-end="url(#pa-proc)"/>'
+            + '<text class="rotulo-sm" x="258" y="192" text-anchor="middle">0.7</text>'
+            + '<path class="arista" d="M168,223 C168,266 196,292 222,292" marker-end="url(#pa-proc)"/>'
+            + '<text class="rotulo-sm" x="150" y="262" text-anchor="middle">0.3</text>'
+            + '<rect class="caja" x="227" y="266" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="265" y="288" text-anchor="middle">B</text>'
+            + '<text class="rotulo-sm" x="265" y="304" text-anchor="middle">20 min</text>'
+            + '<path class="arista" d="M303,292 C332,292 350,262 358,230" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="332" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="370" y="196" text-anchor="middle">C</text>'
+            + '<text class="rotulo-sm" x="370" y="212" text-anchor="middle">23 min</text>'
+            + '<path class="arista" d="M408,200 L434,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="440" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="478" y="196" text-anchor="middle">D</text>'
+            + '<text class="rotulo-sm" x="478" y="212" text-anchor="middle">10 min</text>'
+            + '<path class="arista" d="M516,200 L524,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="530" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="568" y="196" text-anchor="middle">E</text>'
+            + '<text class="rotulo-sm" x="568" y="212" text-anchor="middle">20 min</text>'
+            + '<path class="arista" d="M606,200 L630,200" marker-end="url(#pa-proc)"/>'
+            + '<polygon class="caja-viva" points="658,176 681,200 658,224 635,200"/>'
+            + '<text class="rotulo-sm" x="658" y="204" text-anchor="middle">I · 5</text>'
+            + '<path class="arista-viva" d="M652,178 C630,126 520,112 478,170" marker-end="url(#pa-proc-v)"/>'
+            + '<text class="rotulo-viva" x="566" y="112" text-anchor="middle">0.1 rechazo → regresa a D</text>'
+            + '<path class="arista" d="M681,200 L716,200" marker-end="url(#pa-proc)"/>'
+            + '<text class="rotulo-sm" x="700" y="192" text-anchor="middle">0.9</text>'
+            + '<polygon class="caja-viva" points="740,180 758,200 740,220 722,200"/>'
+            + '<text class="rotulo" x="740" y="205" text-anchor="middle">+</text>'
+            + '<path class="arista" d="M740,180 C740,148 776,138 790,133" marker-end="url(#pa-proc)"/>'
+            + '<path class="arista" d="M740,220 C740,252 776,262 790,267" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="794" y="104" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="832" y="126" text-anchor="middle">G</text>'
+            + '<text class="rotulo-sm" x="832" y="142" text-anchor="middle">13 min</text>'
+            + '<rect class="caja" x="794" y="244" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="832" y="266" text-anchor="middle">F</text>'
+            + '<text class="rotulo-sm" x="832" y="282" text-anchor="middle">9 min</text>'
+            + '<path class="arista" d="M870,130 C898,140 906,160 916,186" marker-end="url(#pa-proc)"/>'
+            + '<path class="arista" d="M870,270 C898,260 906,240 916,214" marker-end="url(#pa-proc)"/>'
+            + '<polygon class="caja-viva" points="924,180 942,200 924,220 906,200"/>'
+            + '<text class="rotulo" x="924" y="205" text-anchor="middle">+</text>'
+            + '<path class="arista" d="M942,200 L954,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="958" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="996" y="196" text-anchor="middle">H</text>'
+            + '<text class="rotulo-sm" x="996" y="212" text-anchor="middle">2 min</text>'
+            + '<path class="arista" d="M1034,200 L1044,200" marker-end="url(#pa-proc)"/>'
+            + '<circle class="caja" cx="1060" cy="200" r="12"/><circle class="caja" cx="1060" cy="200" r="7"/>'
+            + '</svg>'
         },
         {
           tipo: "texto",
@@ -624,35 +661,71 @@ EA.registrarSemana({
         enunciado: "Calcula el tiempo de ciclo del proceso de referencia, que combina los tres patrones. Usa el supuesto de <b>una sola repetición</b> en el retrabajo. Tiempos en minutos.",
         diagrama: {
           titulo: "Proceso de referencia",
-          cuerpo:
-"   (inicio)\n" +
-"       |\n" +
-"    A (10)\n" +
-"       |\n" +
-"       <> ---- 0.7 ----------------+\n" +
-"       |                           |\n" +
-"       +-- 0.3 --> B (20) --+      |\n" +
-"                            v      v\n" +
-"                          C (23) <-+\n" +
-"                            |\n" +
-"       +--------------------+\n" +
-"       v\n" +
-"    D (10) <---- 0.1 retrabajo ----+\n" +
-"       |                           |\n" +
-"    E (20)                         |\n" +
-"       |                           |\n" +
-"    I (5)  inspección -------------+\n" +
-"       |\n" +
-"       +\n" +
-"      / \\\n" +
-"     v   v\n" +
-"  G(13) F(9)\n" +
-"     \\   /\n" +
-"       +\n" +
-"       |\n" +
-"    H (2)\n" +
-"       |\n" +
-"    (fin)"
+          svg:
+            '<svg viewBox="0 0 1090 352" role="img" aria-label="Proceso de referencia: la actividad A alimenta una compuerta exclusiva que envía 70 por ciento a C y 30 por ciento a B y luego a C; sigue un ciclo D, E e inspección I con 10 por ciento de retrabajo; después una compuerta paralela ejecuta G y F simultáneamente y converge en H">'
+            + '<defs><marker id="pa-proc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker>'
+            + '<marker id="pa-proc-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta-viva" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
+            + '<rect class="zona" x="138" y="150" width="280" height="178" rx="16"/>'
+            + '<text class="rotulo-viva" x="278" y="142" text-anchor="middle">RUTAS MÚLTIPLES · Σ p·T</text>'
+            + '<rect class="zona" x="432" y="96" width="258" height="138" rx="16"/>'
+            + '<text class="rotulo-viva" x="561" y="88" text-anchor="middle">RETRABAJO · (1+r)·T</text>'
+            + '<rect class="zona" x="714" y="96" width="236" height="214" rx="16"/>'
+            + '<text class="rotulo-viva" x="832" y="88" text-anchor="middle">RUTAS PARALELAS · máx</text>'
+            + '<circle class="caja" cx="26" cy="200" r="12"/>'
+            + '<path class="arista" d="M40,200 L48,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="52" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="90" y="196" text-anchor="middle">A</text>'
+            + '<text class="rotulo-sm" x="90" y="212" text-anchor="middle">10 min</text>'
+            + '<path class="arista" d="M128,200 L142,200" marker-end="url(#pa-proc)"/>'
+            + '<polygon class="caja-viva" points="168,177 191,200 168,223 145,200"/>'
+            + '<text class="rotulo" x="168" y="205" text-anchor="middle">×</text>'
+            + '<path class="arista" d="M191,200 L326,200" marker-end="url(#pa-proc)"/>'
+            + '<text class="rotulo-sm" x="258" y="192" text-anchor="middle">0.7</text>'
+            + '<path class="arista" d="M168,223 C168,266 196,292 222,292" marker-end="url(#pa-proc)"/>'
+            + '<text class="rotulo-sm" x="150" y="262" text-anchor="middle">0.3</text>'
+            + '<rect class="caja" x="227" y="266" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="265" y="288" text-anchor="middle">B</text>'
+            + '<text class="rotulo-sm" x="265" y="304" text-anchor="middle">20 min</text>'
+            + '<path class="arista" d="M303,292 C332,292 350,262 358,230" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="332" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="370" y="196" text-anchor="middle">C</text>'
+            + '<text class="rotulo-sm" x="370" y="212" text-anchor="middle">23 min</text>'
+            + '<path class="arista" d="M408,200 L434,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="440" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="478" y="196" text-anchor="middle">D</text>'
+            + '<text class="rotulo-sm" x="478" y="212" text-anchor="middle">10 min</text>'
+            + '<path class="arista" d="M516,200 L524,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="530" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="568" y="196" text-anchor="middle">E</text>'
+            + '<text class="rotulo-sm" x="568" y="212" text-anchor="middle">20 min</text>'
+            + '<path class="arista" d="M606,200 L630,200" marker-end="url(#pa-proc)"/>'
+            + '<polygon class="caja-viva" points="658,176 681,200 658,224 635,200"/>'
+            + '<text class="rotulo-sm" x="658" y="204" text-anchor="middle">I · 5</text>'
+            + '<path class="arista-viva" d="M652,178 C630,126 520,112 478,170" marker-end="url(#pa-proc-v)"/>'
+            + '<text class="rotulo-viva" x="566" y="112" text-anchor="middle">0.1 rechazo → regresa a D</text>'
+            + '<path class="arista" d="M681,200 L716,200" marker-end="url(#pa-proc)"/>'
+            + '<text class="rotulo-sm" x="700" y="192" text-anchor="middle">0.9</text>'
+            + '<polygon class="caja-viva" points="740,180 758,200 740,220 722,200"/>'
+            + '<text class="rotulo" x="740" y="205" text-anchor="middle">+</text>'
+            + '<path class="arista" d="M740,180 C740,148 776,138 790,133" marker-end="url(#pa-proc)"/>'
+            + '<path class="arista" d="M740,220 C740,252 776,262 790,267" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="794" y="104" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="832" y="126" text-anchor="middle">G</text>'
+            + '<text class="rotulo-sm" x="832" y="142" text-anchor="middle">13 min</text>'
+            + '<rect class="caja" x="794" y="244" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="832" y="266" text-anchor="middle">F</text>'
+            + '<text class="rotulo-sm" x="832" y="282" text-anchor="middle">9 min</text>'
+            + '<path class="arista" d="M870,130 C898,140 906,160 916,186" marker-end="url(#pa-proc)"/>'
+            + '<path class="arista" d="M870,270 C898,260 906,240 916,214" marker-end="url(#pa-proc)"/>'
+            + '<polygon class="caja-viva" points="924,180 942,200 924,220 906,200"/>'
+            + '<text class="rotulo" x="924" y="205" text-anchor="middle">+</text>'
+            + '<path class="arista" d="M942,200 L954,200" marker-end="url(#pa-proc)"/>'
+            + '<rect class="caja" x="958" y="174" width="76" height="52" rx="9"/>'
+            + '<text class="rotulo" x="996" y="196" text-anchor="middle">H</text>'
+            + '<text class="rotulo-sm" x="996" y="212" text-anchor="middle">2 min</text>'
+            + '<path class="arista" d="M1034,200 L1044,200" marker-end="url(#pa-proc)"/>'
+            + '<circle class="caja" cx="1060" cy="200" r="12"/><circle class="caja" cx="1060" cy="200" r="7"/>'
+            + '</svg>'
         },
         preguntas: [
           { etiqueta: "Tramo de rutas múltiples (B, C)", respuesta: 29, unidad: "min", tolerancia: 0.05 },

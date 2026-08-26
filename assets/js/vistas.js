@@ -61,6 +61,15 @@
         nodo.appendChild(el("pre", { class: "diagrama", text: b.cuerpo || "" }));
         break;
 
+      case "svg": {
+        const fig = el("figure", { class: "figura" });
+        const caja = el("div", { class: "figura-lienzo", html: b.svg || "" });
+        fig.appendChild(caja);
+        if (b.pie) fig.appendChild(el("figcaption", { html: b.pie }));
+        nodo.appendChild(fig);
+        break;
+      }
+
       case "defs": {
         const dl = el("dl", { class: "defs" });
         (b.items || []).forEach(function (d) {

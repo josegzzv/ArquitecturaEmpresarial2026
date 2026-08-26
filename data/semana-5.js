@@ -199,23 +199,20 @@ EA.registrarSemana({
           ]
         },
         {
-          tipo: "diagrama",
+          tipo: "tabla",
           titulo: "Fórmulas de referencia",
-          cuerpo:
-"Margen de contribución  MC = Precio − Costo variable unitario\n" +
-"Punto de equilibrio     PE = Costos fijos / MC\n" +
-"ROI                     ROI = (Beneficio total − Inversión) / Inversión\n" +
-"Payback simple          PB = Inversión / Flujo anual\n" +
-"\n" +
-"                              n     Ft\n" +
-"Valor Presente Neto     VPN = Σ  ---------  −  Inversión\n" +
-"                             t=1  (1 + k)^t\n" +
-"\n" +
-"Factor de anualidad     FA = [1 − (1 + k)^-n] / k     (flujos iguales)\n" +
-"                        VPN = Flujo × FA − Inversión\n" +
-"\n" +
-"TIR                     tasa k tal que VPN = 0\n" +
-"Índice de rentabilidad  IR = (Flujo × FA) / Inversión"
+          encabezados: ["Indicador", "Fórmula", "Cómo se lee"],
+          filas: [
+            ["Margen de contribución", "<code>MC = Precio − Costo variable unitario</code>", "Lo que aporta cada unidad para cubrir fijos"],
+            ["Punto de equilibrio", "<code>PE = Costos fijos / MC</code>", "Volumen en el que la utilidad es cero"],
+            ["Retorno sobre la inversión", "<code>ROI = (Beneficio total − Inversión) / Inversión</code>", "Cuánto gano por cada peso invertido"],
+            ["Periodo de recuperación", "<code>PB = Inversión / Flujo por periodo</code>", "En cuánto tiempo recupero lo invertido"],
+            ["Factor de anualidad", "<code>FA = [1 − (1 + k)<sup>−n</sup>] / k</code>", "Atajo para descontar <i>n</i> flujos iguales a la tasa <i>k</i>"],
+            ["Valor Presente Neto", "<code>VPN = Flujo × FA − Inversión</code>", "Si es mayor que cero, el proyecto crea valor"],
+            ["VPN, forma general", "<code>VPN = Σ [ F<sub>t</sub> / (1 + k)<sup>t</sup> ] − Inversión</code>", "Cuando los flujos son distintos entre sí"],
+            ["Tasa Interna de Retorno", "<code>TIR = la tasa k que hace VPN = 0</code>", "Se compara contra la TREMA exigida"],
+            ["Índice de rentabilidad", "<code>IR = (Flujo × FA) / Inversión</code>", "Para priorizar con presupuesto limitado"]
+          ]
         },
         {
           tipo: "tabla",

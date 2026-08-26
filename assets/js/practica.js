@@ -378,7 +378,10 @@
         if (ej.enunciado) panel.appendChild(el("div", { class: "escenario-caja", html: ej.enunciado }));
 
         if (ej.datos) panel.appendChild(EA.vistas.renderBloque(ej.datos));
-        if (ej.diagrama) panel.appendChild(EA.vistas.renderBloque({ tipo: "diagrama", titulo: ej.diagrama.titulo, cuerpo: ej.diagrama.cuerpo }));
+        if (ej.diagrama) {
+          panel.appendChild(EA.vistas.renderBloque(Object.assign(
+            { tipo: ej.diagrama.svg ? "svg" : "diagrama" }, ej.diagrama)));
+        }
 
         /* Campos de respuesta */
         const campos = el("div", { class: "campos-calculo" });

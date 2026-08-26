@@ -71,19 +71,45 @@ EA.registrarSemana({
           cuerpo: "<p>Si reemplazo un Excel por una pantalla web pero mantengo exactamente el mismo proceso, ¿transformé el negocio? <b>No necesariamente.</b></p>"
         },
         {
-          tipo: "diagrama",
+          tipo: "svg",
           titulo: "Ecosistema de aplicaciones empresariales",
-          cuerpo:
-"                         EMPRESA\n" +
-" Ventas        Operación       Finanzas       Personas\n" +
-"   |               |              |              |\n" +
-" CRM             MES             ERP            HCM\n" +
-"   |               |              |              |\n" +
-"   +-------------- ERP / Integración ------------+\n" +
-"                       |\n" +
-"                  Data Platform\n" +
-"                       |\n" +
-"                    BI / AI"
+          pie: "Cada área trae su propio sistema. Lo que los vuelve un ecosistema —y no cuatro islas— es la capa de integración; en muchas empresas el ERP cumple además ese papel de núcleo.",
+          svg:
+'<svg viewBox="0 0 660 372" role="img" aria-label="Cuatro áreas con su sistema — ventas con CRM, operación con MES, finanzas con ERP, personas con HCM — conectadas por una capa de integración que alimenta la plataforma de datos y esta a BI e inteligencia artificial">'
++ '<defs><marker id="pa-eco" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
++ '<text class="rotulo-alt" x="90" y="18" text-anchor="middle">VENTAS</text>'
++ '<text class="rotulo-alt" x="250" y="18" text-anchor="middle">OPERACIÓN</text>'
++ '<text class="rotulo-alt" x="410" y="18" text-anchor="middle">FINANZAS</text>'
++ '<text class="rotulo-alt" x="570" y="18" text-anchor="middle">PERSONAS</text>'
++ '<rect class="caja" x="20" y="30" width="140" height="46" rx="10"/>'
++ '<text class="rotulo" x="90" y="51" text-anchor="middle">CRM</text>'
++ '<text class="rotulo-sm" x="90" y="66" text-anchor="middle">clientes y ventas</text>'
++ '<rect class="caja" x="180" y="30" width="140" height="46" rx="10"/>'
++ '<text class="rotulo" x="250" y="51" text-anchor="middle">MES</text>'
++ '<text class="rotulo-sm" x="250" y="66" text-anchor="middle">piso de planta</text>'
++ '<rect class="caja" x="340" y="30" width="140" height="46" rx="10"/>'
++ '<text class="rotulo" x="410" y="51" text-anchor="middle">ERP</text>'
++ '<text class="rotulo-sm" x="410" y="66" text-anchor="middle">transacciones</text>'
++ '<rect class="caja" x="500" y="30" width="140" height="46" rx="10"/>'
++ '<text class="rotulo" x="570" y="51" text-anchor="middle">HCM</text>'
++ '<text class="rotulo-sm" x="570" y="66" text-anchor="middle">capital humano</text>'
++ '<path class="arista" d="M90,78 L90,110" marker-end="url(#pa-eco)"/>'
++ '<path class="arista" d="M250,78 L250,110" marker-end="url(#pa-eco)"/>'
++ '<path class="arista" d="M410,78 L410,110" marker-end="url(#pa-eco)"/>'
++ '<path class="arista" d="M570,78 L570,110" marker-end="url(#pa-eco)"/>'
++ '<rect class="caja-viva" x="20" y="114" width="620" height="46" rx="12"/>'
++ '<text class="rotulo" x="330" y="135" text-anchor="middle">Capa de integración</text>'
++ '<text class="rotulo-sm" x="330" y="150" text-anchor="middle">APIs, eventos, middleware · el dato se captura una sola vez</text>'
++ '<path class="arista" d="M330,162 L330,192" marker-end="url(#pa-eco)"/>'
++ '<rect class="caja" x="190" y="196" width="280" height="46" rx="10"/>'
++ '<text class="rotulo" x="330" y="217" text-anchor="middle">Plataforma de datos</text>'
++ '<text class="rotulo-sm" x="330" y="232" text-anchor="middle">dato maestro y consolidado</text>'
++ '<path class="arista" d="M330,244 L330,274" marker-end="url(#pa-eco)"/>'
++ '<rect class="caja-alt" x="190" y="278" width="280" height="46" rx="10"/>'
++ '<text class="rotulo" x="330" y="299" text-anchor="middle">BI / Analítica / IA</text>'
++ '<text class="rotulo-sm" x="330" y="314" text-anchor="middle">decisiones basadas en datos integrados</text>'
++ '<text class="rotulo-sm" x="330" y="348" text-anchor="middle">Sin la capa de integración, cada sistema es una isla y el mismo dato se teclea cuatro veces.</text>'
++ '</svg>'
         },
         {
           tipo: "defs",
@@ -276,22 +302,60 @@ EA.registrarSemana({
                 + "<p>No tiene que ser un diagrama: puede ser catálogo, matriz, mapa, modelo, diagrama, estándar, principio, roadmap, assessment o heatmap.</p>"
         },
         {
-          tipo: "diagrama",
+          tipo: "svg",
           titulo: "Artefacto 1 · Process Map AS-IS (alta de proveedores)",
-          cuerpo:
-"Proveedor\n" +
-"   |\n" +
-"Compras\n" +
-"   |\n" +
-"Excel\n" +
-"   |\n" +
-"Email al gerente\n" +
-"   |\n" +
-"Legal\n" +
-"   |\n" +
-"Finanzas\n" +
-"   |\n" +
-"Captura en ERP"
+          pie: "El mapa AS-IS documenta la realidad, no el manual. Al poner debajo de cada etapa la herramienta que la soporta, la fragmentación queda a la vista: seis manos, cuatro sistemas y el mismo dato capturado tres veces.",
+          svg:
+'<svg viewBox="0 0 880 232" role="img" aria-label="Cadena de seis etapas del alta de proveedores, cada una con el área responsable y la herramienta que usa: correo, Excel, email, SharePoint, email y ERP">'
++ '<defs><marker id="pa-asis" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
++ '<text class="rotulo-alt" x="82" y="20" text-anchor="middle">PROVEEDOR</text>'
++ '<text class="rotulo-alt" x="225" y="20" text-anchor="middle">COMPRAS</text>'
++ '<text class="rotulo-alt" x="368" y="20" text-anchor="middle">GERENTE</text>'
++ '<text class="rotulo-alt" x="511" y="20" text-anchor="middle">LEGAL</text>'
++ '<text class="rotulo-alt" x="654" y="20" text-anchor="middle">FINANZAS</text>'
++ '<text class="rotulo-alt" x="797" y="20" text-anchor="middle">COMPRAS</text>'
++ '<rect class="caja" x="20" y="32" width="125" height="46" rx="10"/>'
++ '<text class="rotulo" x="82" y="53" text-anchor="middle">Envía datos</text>'
++ '<text class="rotulo-sm" x="82" y="68" text-anchor="middle">y documentos</text>'
++ '<rect class="caja" x="163" y="32" width="125" height="46" rx="10"/>'
++ '<text class="rotulo" x="225" y="53" text-anchor="middle">Captura</text>'
++ '<text class="rotulo-sm" x="225" y="68" text-anchor="middle">solicitud</text>'
++ '<rect class="caja" x="306" y="32" width="125" height="46" rx="10"/>'
++ '<text class="rotulo" x="368" y="53" text-anchor="middle">Aprueba</text>'
++ '<text class="rotulo-sm" x="368" y="68" text-anchor="middle">18 h de espera</text>'
++ '<rect class="caja" x="449" y="32" width="125" height="46" rx="10"/>'
++ '<text class="rotulo" x="511" y="53" text-anchor="middle">Revisa</text>'
++ '<text class="rotulo-sm" x="511" y="68" text-anchor="middle">contrato</text>'
++ '<rect class="caja" x="592" y="32" width="125" height="46" rx="10"/>'
++ '<text class="rotulo" x="654" y="53" text-anchor="middle">Valida</text>'
++ '<text class="rotulo-sm" x="654" y="68" text-anchor="middle">fiscal y bancario</text>'
++ '<rect class="caja" x="735" y="32" width="125" height="46" rx="10"/>'
++ '<text class="rotulo" x="797" y="53" text-anchor="middle">Alta</text>'
++ '<text class="rotulo-sm" x="797" y="68" text-anchor="middle">en el maestro</text>'
++ '<path class="arista" d="M147,55 L159,55" marker-end="url(#pa-asis)"/>'
++ '<path class="arista" d="M290,55 L302,55" marker-end="url(#pa-asis)"/>'
++ '<path class="arista" d="M433,55 L445,55" marker-end="url(#pa-asis)"/>'
++ '<path class="arista" d="M576,55 L588,55" marker-end="url(#pa-asis)"/>'
++ '<path class="arista" d="M719,55 L731,55" marker-end="url(#pa-asis)"/>'
++ '<path class="arista-punteada" d="M82,80 L82,100"/><path class="arista-punteada" d="M225,80 L225,100"/>'
++ '<path class="arista-punteada" d="M368,80 L368,100"/><path class="arista-punteada" d="M511,80 L511,100"/>'
++ '<path class="arista-punteada" d="M654,80 L654,100"/><path class="arista-punteada" d="M797,80 L797,100"/>'
++ '<rect class="caja-viva" x="32" y="102" width="100" height="28" rx="8"/>'
++ '<text class="rotulo-sm" x="82" y="120" text-anchor="middle">Correo</text>'
++ '<rect class="caja-viva" x="175" y="102" width="100" height="28" rx="8"/>'
++ '<text class="rotulo-sm" x="225" y="120" text-anchor="middle">Excel</text>'
++ '<rect class="caja-viva" x="318" y="102" width="100" height="28" rx="8"/>'
++ '<text class="rotulo-sm" x="368" y="120" text-anchor="middle">Outlook</text>'
++ '<rect class="caja-viva" x="461" y="102" width="100" height="28" rx="8"/>'
++ '<text class="rotulo-sm" x="511" y="120" text-anchor="middle">SharePoint</text>'
++ '<rect class="caja-viva" x="604" y="102" width="100" height="28" rx="8"/>'
++ '<text class="rotulo-sm" x="654" y="120" text-anchor="middle">Outlook</text>'
++ '<rect class="caja-viva" x="747" y="102" width="100" height="28" rx="8"/>'
++ '<text class="rotulo-sm" x="797" y="120" text-anchor="middle">ERP</text>'
++ '<path class="arista" d="M20,158 L20,168 L860,168 L860,158"/>'
++ '<text class="rotulo" x="440" y="192" text-anchor="middle">Lead time total: 72 horas</text>'
++ '<text class="rotulo-sm" x="440" y="210" text-anchor="middle">6 personas · 4 sistemas · 3 capturas del mismo dato · 8 % de retrabajo</text>'
++ '</svg>'
         },
         {
           tipo: "tabla",
@@ -322,20 +386,39 @@ EA.registrarSemana({
           cuerpo: "<p>Permite <b>descubrir la fragmentación</b>: ninguna aplicación cubre el proceso completo y la información salta de herramienta en herramienta.</p>"
         },
         {
-          tipo: "diagrama",
+          tipo: "svg",
           titulo: "Artefacto 4 · Diagrama de integración TO-BE",
-          cuerpo:
-"Portal proveedor\n" +
-"       |\n" +
-"       v\n" +
-"Workflow / BPM\n" +
-"       |\n" +
-" +-----+------+\n" +
-" v     v      v\n" +
-"ERP   DMS   Compliance\n" +
-"       |\n" +
-"       v\n" +
-"     Data"
+          pie: "El cambio de fondo no es el portal: es que el proveedor captura sus propios datos una sola vez y un motor de workflow orquesta las validaciones en paralelo, contra un dato maestro único.",
+          svg:
+'<svg viewBox="0 0 640 388" role="img" aria-label="Arquitectura objetivo: el portal de proveedores alimenta un motor de workflow que orquesta en paralelo el ERP, el gestor documental y la validación de cumplimiento, todos sobre un dato maestro único">'
++ '<defs><marker id="pa-tobe" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
++ '<rect class="caja-alt" x="200" y="14" width="240" height="50" rx="12"/>'
++ '<text class="rotulo" x="320" y="36" text-anchor="middle">Portal de proveedores</text>'
++ '<text class="rotulo-sm" x="320" y="52" text-anchor="middle">el proveedor captura sus datos</text>'
++ '<path class="arista-viva" d="M320,66 L320,92" marker-end="url(#pa-tobe)"/>'
++ '<text class="rotulo-viva" x="332" y="84">1 sola captura</text>'
++ '<rect class="caja-viva" x="180" y="96" width="280" height="52" rx="12"/>'
++ '<text class="rotulo" x="320" y="119" text-anchor="middle">Motor de workflow / BPM</text>'
++ '<text class="rotulo-sm" x="320" y="135" text-anchor="middle">reglas, trazabilidad y validaciones en paralelo</text>'
++ '<path class="arista" d="M250,150 C250,180 120,170 110,198" marker-end="url(#pa-tobe)"/>'
++ '<path class="arista" d="M320,150 L320,198" marker-end="url(#pa-tobe)"/>'
++ '<path class="arista" d="M390,150 C390,180 520,170 530,198" marker-end="url(#pa-tobe)"/>'
++ '<rect class="caja" x="25" y="202" width="170" height="52" rx="10"/>'
++ '<text class="rotulo" x="110" y="225" text-anchor="middle">ERP</text>'
++ '<text class="rotulo-sm" x="110" y="241" text-anchor="middle">maestro de proveedor</text>'
++ '<rect class="caja" x="235" y="202" width="170" height="52" rx="10"/>'
++ '<text class="rotulo" x="320" y="225" text-anchor="middle">Gestor documental</text>'
++ '<text class="rotulo-sm" x="320" y="241" text-anchor="middle">contratos y expediente</text>'
++ '<rect class="caja" x="445" y="202" width="170" height="52" rx="10"/>'
++ '<text class="rotulo" x="530" y="225" text-anchor="middle">Cumplimiento</text>'
++ '<text class="rotulo-sm" x="530" y="241" text-anchor="middle">validación fiscal y listas</text>'
++ '<path class="arista" d="M110,256 C110,286 240,280 252,304" marker-end="url(#pa-tobe)"/>'
++ '<path class="arista" d="M320,256 L320,304" marker-end="url(#pa-tobe)"/>'
++ '<path class="arista" d="M530,256 C530,286 400,280 388,304" marker-end="url(#pa-tobe)"/>'
++ '<rect class="caja-alt" x="180" y="308" width="280" height="50" rx="12"/>'
++ '<text class="rotulo" x="320" y="330" text-anchor="middle">Dato maestro único</text>'
++ '<text class="rotulo-sm" x="320" y="346" text-anchor="middle">una definición, un responsable</text>'
++ '</svg>'
         },
         {
           tipo: "flujo",
@@ -402,34 +485,62 @@ EA.registrarSemana({
           cuerpo: "<p>«Explícale la arquitectura del proyecto al CEO.» Treinta segundos. Después: «Ahora explícasela al arquitecto de integración.» El grupo descubre de inmediato por qué necesitamos distintas vistas.</p>"
         },
         {
-          tipo: "diagrama",
+          tipo: "svg",
           titulo: "Imagen conceptual que amarra toda la semana",
-          cuerpo:
-"                     ESTRATEGIA\n" +
-"                         |\n" +
-"                    CAPACIDADES\n" +
-"                         |\n" +
-"                      PROCESOS\n" +
-"              +----------+----------+\n" +
-"              v          v          v\n" +
-"            DATOS   APLICACIONES  PERSONAS\n" +
-"              +----------+----------+\n" +
-"                         |\n" +
-"                    TECNOLOGÍA\n" +
-"                         |\n" +
-"                     SERVICIOS\n" +
-"                         |\n" +
-"                    RESULTADOS\n" +
-"                         |\n" +
-"                        KPI\n" +
-"\n" +
-"Alrededor de todo:\n" +
-"  TOGAF  — arquitectura\n" +
-"  COBIT  — gobierno\n" +
-"  ITIL   — servicios\n" +
-"  ISO    — requisitos y estándares\n" +
-"  Lean / Six Sigma — mejora\n" +
-"  BPMN   — representación del proceso"
+          pie: "Una sola cadena descendente y, a su lado, el marco que responde por cada tramo. Ningún marco cubre toda la columna: por eso conviven.",
+          svg:
+'<svg viewBox="0 0 866 500" role="img" aria-label="Cadena descendente de estrategia a KPI, con los marcos de referencia que gobiernan cada tramo listados al costado">'
++ '<defs><marker id="pa-sem" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
++ '<rect class="caja-alt" x="75" y="14" width="250" height="42" rx="10"/>'
++ '<text class="rotulo" x="200" y="40" text-anchor="middle">Estrategia</text>'
++ '<path class="arista" d="M200,58 L200,74" marker-end="url(#pa-sem)"/>'
++ '<rect class="caja" x="75" y="78" width="250" height="42" rx="10"/>'
++ '<text class="rotulo" x="200" y="104" text-anchor="middle">Capacidades</text>'
++ '<path class="arista" d="M200,122 L200,138" marker-end="url(#pa-sem)"/>'
++ '<rect class="caja" x="75" y="142" width="250" height="42" rx="10"/>'
++ '<text class="rotulo" x="200" y="168" text-anchor="middle">Procesos</text>'
++ '<path class="arista" d="M140,186 C120,200 95,196 82,208" marker-end="url(#pa-sem)"/>'
++ '<path class="arista" d="M200,186 L200,208" marker-end="url(#pa-sem)"/>'
++ '<path class="arista" d="M260,186 C280,200 305,196 318,208" marker-end="url(#pa-sem)"/>'
++ '<rect class="caja" x="22" y="212" width="120" height="42" rx="10"/>'
++ '<text class="rotulo" x="82" y="238" text-anchor="middle">Datos</text>'
++ '<rect class="caja" x="140" y="212" width="120" height="42" rx="10"/>'
++ '<text class="rotulo" x="200" y="238" text-anchor="middle">Aplicaciones</text>'
++ '<rect class="caja" x="258" y="212" width="120" height="42" rx="10"/>'
++ '<text class="rotulo" x="318" y="238" text-anchor="middle">Personas</text>'
++ '<path class="arista" d="M82,256 C82,272 170,268 190,282" marker-end="url(#pa-sem)"/>'
++ '<path class="arista" d="M200,256 L200,282" marker-end="url(#pa-sem)"/>'
++ '<path class="arista" d="M318,256 C318,272 230,268 210,282" marker-end="url(#pa-sem)"/>'
++ '<rect class="caja" x="75" y="286" width="250" height="42" rx="10"/>'
++ '<text class="rotulo" x="200" y="312" text-anchor="middle">Tecnología</text>'
++ '<path class="arista" d="M200,330 L200,346" marker-end="url(#pa-sem)"/>'
++ '<rect class="caja" x="75" y="350" width="250" height="42" rx="10"/>'
++ '<text class="rotulo" x="200" y="376" text-anchor="middle">Servicios</text>'
++ '<path class="arista" d="M200,394 L200,410" marker-end="url(#pa-sem)"/>'
++ '<rect class="caja-viva" x="48" y="414" width="304" height="52" rx="12"/>'
++ '<text class="rotulo" x="200" y="437" text-anchor="middle">Resultados</text>'
++ '<text class="rotulo-sm" x="200" y="453" text-anchor="middle">medidos con KPI</text>'
++ '<rect class="caja" x="430" y="66" width="418" height="390" rx="14"/>'
++ '<text class="rotulo" x="639" y="96" text-anchor="middle">Alrededor de toda la cadena</text>'
++ '<rect class="caja-viva" x="452" y="108" width="126" height="30" rx="8"/>'
++ '<text class="rotulo-sm" x="515" y="127" text-anchor="middle">TOGAF</text>'
++ '<text class="rotulo-sm" x="592" y="127">diseña y hace evolucionar la arquitectura</text>'
++ '<rect class="caja-viva" x="452" y="162" width="126" height="30" rx="8"/>'
++ '<text class="rotulo-sm" x="515" y="181" text-anchor="middle">COBIT</text>'
++ '<text class="rotulo-sm" x="592" y="181">gobierna y controla TI</text>'
++ '<rect class="caja-viva" x="452" y="216" width="126" height="30" rx="8"/>'
++ '<text class="rotulo-sm" x="515" y="235" text-anchor="middle">ITIL</text>'
++ '<text class="rotulo-sm" x="592" y="235">gestiona los servicios de TI</text>'
++ '<rect class="caja-viva" x="452" y="270" width="126" height="30" rx="8"/>'
++ '<text class="rotulo-sm" x="515" y="289" text-anchor="middle">ISO</text>'
++ '<text class="rotulo-sm" x="592" y="289">establece requisitos certificables</text>'
++ '<rect class="caja-viva" x="452" y="324" width="126" height="30" rx="8"/>'
++ '<text class="rotulo-sm" x="515" y="343" text-anchor="middle">Lean / Six Sigma</text>'
++ '<text class="rotulo-sm" x="592" y="343">mejora el proceso</text>'
++ '<rect class="caja-viva" x="452" y="378" width="126" height="30" rx="8"/>'
++ '<text class="rotulo-sm" x="515" y="397" text-anchor="middle">BPMN</text>'
++ '<text class="rotulo-sm" x="592" y="397">representa el proceso</text>'
++ '</svg>'
         }
       ]
     }

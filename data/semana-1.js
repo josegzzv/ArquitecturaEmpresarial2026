@@ -288,22 +288,52 @@ EA.registrarSemana({
           ]
         },
         {
-          tipo: "diagrama",
+          tipo: "svg",
           titulo: "El ciclo ADM",
-          cuerpo:
-"            Preliminar\n" +
-"                 |\n" +
-"           A. Visión\n" +
-"                 |\n" +
-"  B. Negocio -> C. Datos y aplicaciones -> D. Tecnología\n" +
-"                 |\n" +
-"     E. Soluciones -> F. Migración\n" +
-"                 |\n" +
-"     G. Implementación -> H. Cambio\n" +
-"                 |\n" +
-"        (regresa a A: es un ciclo)\n" +
-"\n" +
-"   [ Centro del diagrama: GESTIÓN DE REQUERIMIENTOS ]"
+          pie: "Las fases se recorren en ciclo: al terminar H se vuelve a empezar. La gestión de requerimientos está al centro porque todas las fases identifican, revisan y actualizan requerimientos.",
+          svg:
+'<svg viewBox="0 0 720 445" role="img" aria-label="Ciclo ADM de TOGAF: fase preliminar y ocho fases A a H dispuestas en círculo, con la gestión de requerimientos al centro">'
++ '<defs><marker id="pa-adm" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker><marker id="pa-adm-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta-viva" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
++ '<rect class="caja-alt" x="30" y="20" width="160" height="38" rx="10"/>'
++ '<text class="rotulo" x="110" y="44" text-anchor="middle">Preliminar</text>'
++ '<path class="arista" d="M192,40 C240,30 252,48 281,64" marker-end="url(#pa-adm)"/>'
++ '<path class="arista" d="M423.9,77.8 A232,150 0 0 1 472.5,90.8" marker-end="url(#pa-adm)"/>'
++ '<path class="arista" d="M562.9,149.3 A232,150 0 0 1 583,180.7" marker-end="url(#pa-adm)"/>'
++ '<path class="arista" d="M583,263.3 A232,150 0 0 1 562.9,294.7" marker-end="url(#pa-adm)"/>'
++ '<path class="arista" d="M472.5,353.2 A232,150 0 0 1 423.9,366.2" marker-end="url(#pa-adm)"/>'
++ '<path class="arista" d="M296.1,366.2 A232,150 0 0 1 247.5,353.2" marker-end="url(#pa-adm)"/>'
++ '<path class="arista" d="M157.1,294.7 A232,150 0 0 1 137,263.3" marker-end="url(#pa-adm)"/>'
++ '<path class="arista" d="M137,180.7 A232,150 0 0 1 157.1,149.3" marker-end="url(#pa-adm)"/>'
++ '<path class="arista-viva" d="M277,122 C302,138 326,128 334,102" marker-end="url(#pa-adm-v)"/>'
++ '<text class="rotulo-viva" x="306" y="156" text-anchor="middle">cierra el ciclo</text>'
++ '<rect class="caja" x="281" y="48" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="360" y="69" text-anchor="middle">A · Visión</text>'
++ '<text class="rotulo-sm" x="360" y="85" text-anchor="middle">alcance e interesados</text>'
++ '<rect class="caja" x="445" y="92" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="524" y="113" text-anchor="middle">B · Negocio</text>'
++ '<text class="rotulo-sm" x="524" y="129" text-anchor="middle">capacidades y procesos</text>'
++ '<rect class="caja" x="513" y="198" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="592" y="219" text-anchor="middle">C · Datos y apps</text>'
++ '<text class="rotulo-sm" x="592" y="235" text-anchor="middle">datos primero</text>'
++ '<rect class="caja" x="445" y="304" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="524" y="325" text-anchor="middle">D · Tecnología</text>'
++ '<text class="rotulo-sm" x="524" y="341" text-anchor="middle">infraestructura</text>'
++ '<rect class="caja" x="281" y="348" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="360" y="369" text-anchor="middle">E · Soluciones</text>'
++ '<text class="rotulo-sm" x="360" y="385" text-anchor="middle">brechas → iniciativas</text>'
++ '<rect class="caja" x="117" y="304" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="196" y="325" text-anchor="middle">F · Migración</text>'
++ '<text class="rotulo-sm" x="196" y="341" text-anchor="middle">priorizar y roadmap</text>'
++ '<rect class="caja" x="49" y="198" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="128" y="219" text-anchor="middle">G · Gobierno</text>'
++ '<text class="rotulo-sm" x="128" y="235" text-anchor="middle">de implementación</text>'
++ '<rect class="caja" x="117" y="92" width="158" height="48" rx="10"/>'
++ '<text class="rotulo" x="196" y="113" text-anchor="middle">H · Cambio</text>'
++ '<text class="rotulo-sm" x="196" y="129" text-anchor="middle">¿sigue vigente?</text>'
++ '<rect class="caja-viva" x="252" y="191" width="216" height="62" rx="12"/>'
++ '<text class="rotulo" x="360" y="216" text-anchor="middle">Gestión de requerimientos</text>'
++ '<text class="rotulo-sm" x="360" y="234" text-anchor="middle">atraviesa todas las fases</text>'
++ '</svg>'
         },
         {
           tipo: "defs",
@@ -456,20 +486,38 @@ EA.registrarSemana({
           cuerpo: "<p>La Arquitectura Empresarial define <b>dirección, restricciones y relaciones</b>; la metodología de desarrollo organiza <b>cómo construir y entregar</b> la solución.</p>"
         },
         {
-          tipo: "diagrama",
+          tipo: "svg",
           titulo: "Formato de la actividad integradora",
-          cuerpo:
-"Estrategia\n" +
-"   |\n" +
-"Capacidad de negocio\n" +
-"   |\n" +
-"Proceso end-to-end\n" +
-"   |\n" +
-"Datos  <->  Aplicaciones\n" +
-"   |\n" +
-"Infraestructura\n" +
-"   |\n" +
-"Resultado y valor para el cliente"
+          pie: "Cada equipo entrega una hoja con esta cadena completa: la tecnología aparece al final porque responde a todo lo anterior, y el valor para el cliente es el resultado que justifica la cadena.",
+          svg:
+'<svg viewBox="0 0 520 424" role="img" aria-label="Cadena descendente: estrategia, capacidad de negocio, proceso end-to-end, datos y aplicaciones, infraestructura, resultado y valor para el cliente">'
++ '<defs><marker id="pa-int" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker>'
++ '<marker id="pa-int2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
++ '<rect class="caja-alt" x="140" y="14" width="240" height="42" rx="10"/>'
++ '<text class="rotulo" x="260" y="40" text-anchor="middle">Estrategia</text>'
++ '<path class="arista" d="M260,58 L260,78" marker-end="url(#pa-int)"/>'
++ '<rect class="caja" x="140" y="82" width="240" height="42" rx="10"/>'
++ '<text class="rotulo" x="260" y="108" text-anchor="middle">Capacidad de negocio</text>'
++ '<path class="arista" d="M260,126 L260,146" marker-end="url(#pa-int)"/>'
++ '<rect class="caja" x="140" y="150" width="240" height="42" rx="10"/>'
++ '<text class="rotulo" x="260" y="176" text-anchor="middle">Proceso end-to-end</text>'
++ '<path class="arista" d="M245,194 C226,206 192,206 175,214" marker-end="url(#pa-int)"/>'
++ '<path class="arista" d="M275,194 C294,206 328,206 345,214" marker-end="url(#pa-int)"/>'
++ '<rect class="caja" x="104" y="220" width="138" height="42" rx="10"/>'
++ '<text class="rotulo" x="173" y="246" text-anchor="middle">Datos</text>'
++ '<rect class="caja" x="278" y="220" width="138" height="42" rx="10"/>'
++ '<text class="rotulo" x="347" y="246" text-anchor="middle">Aplicaciones</text>'
++ '<path class="arista" d="M248,241 L272,241" marker-end="url(#pa-int2)" marker-start="url(#pa-int2)"/>'
++ '<text class="rotulo-sm" x="260" y="212" text-anchor="middle">se necesitan mutuamente</text>'
++ '<path class="arista" d="M173,264 C173,278 238,278 252,288" marker-end="url(#pa-int)"/>'
++ '<path class="arista" d="M347,264 C347,278 282,278 268,288" marker-end="url(#pa-int)"/>'
++ '<rect class="caja" x="140" y="292" width="240" height="42" rx="10"/>'
++ '<text class="rotulo" x="260" y="318" text-anchor="middle">Infraestructura</text>'
++ '<path class="arista" d="M260,336 L260,356" marker-end="url(#pa-int)"/>'
++ '<rect class="caja-viva" x="112" y="360" width="296" height="46" rx="12"/>'
++ '<text class="rotulo" x="260" y="381" text-anchor="middle">Resultado y valor</text>'
++ '<text class="rotulo-sm" x="260" y="397" text-anchor="middle">medido con un indicador que el cliente percibe</text>'
++ '</svg>'
         }
       ]
     }

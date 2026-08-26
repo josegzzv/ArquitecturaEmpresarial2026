@@ -242,15 +242,118 @@ EA.registrarSemana({
           ]
         },
         {
+          tipo: "texto",
+          titulo: "La ley de Little",
+          cuerpo: "<p>Publicada por <b>John D. C. Little en 1961</b>, relaciona las tres magnitudes fundamentales de cualquier proceso con una sola identidad:</p>"
+                + "<p style=\"text-align:center;font-size:1.1rem\"><b>WIP = Throughput × Lead time</b></p>"
+                + "<p>En notación de teoría de colas se escribe <b>L = λW</b>: el número promedio de entidades dentro del sistema es igual a la tasa de llegada por el tiempo promedio que cada una permanece.</p>"
+                + "<p>Lo notable es que <b>no es una aproximación ni un modelo con supuestos</b>: es una identidad demostrada que se cumple sin importar cómo se distribuyan las llegadas, cuánto varíen los tiempos de servicio, cuántos servidores haya, ni el orden en que se atienda. Eso es raro en ingeniería de procesos, donde casi toda fórmula de colas exige supuestos fuertes.</p>"
+        },
+        {
+          tipo: "svg",
+          titulo: "Qué pasa cuando sube el trabajo en curso",
+          pie: "El mismo proceso, con la misma capacidad, recibiendo el doble de trabajo. No sale más: cada solicitud simplemente espera el doble.",
+          svg:
+            '<svg viewBox="0 0 760 286" role="img" aria-label="Comparación de dos escenarios con el mismo throughput de 18 solicitudes por hora: con 45 solicitudes dentro el lead time es de 2.5 horas; al duplicar el trabajo en curso a 90 el lead time se duplica a 5 horas">'
+            + '<defs><marker id="pa-lit" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta" d="M0,0 L10,5 L0,10 z"/></marker>'
+            + '<marker id="pa-lit-v" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="punta-viva" d="M0,0 L10,5 L0,10 z"/></marker></defs>'
+            + '<text class="rotulo" x="174" y="26" text-anchor="middle">Situación actual</text>'
+            + '<text class="rotulo" x="554" y="26" text-anchor="middle">Se suelta el doble de trabajo</text>'
+            + '<path class="arista" d="M22,105 L68,105" marker-end="url(#pa-lit)"/>'
+            + '<text class="rotulo-sm" x="45" y="96" text-anchor="middle">18/h</text>'
+            + '<rect class="caja" x="74" y="58" width="200" height="92" rx="12"/>'
+            + '<text class="rotulo" x="174" y="78" text-anchor="middle">WIP = 45</text>'
+            + '<circle class="caja-alt" cx="100" cy="104" r="6"/>'
+            + '<circle class="caja-alt" cx="130" cy="104" r="6"/>'
+            + '<circle class="caja-alt" cx="160" cy="104" r="6"/>'
+            + '<circle class="caja-alt" cx="190" cy="104" r="6"/>'
+            + '<circle class="caja-alt" cx="220" cy="104" r="6"/>'
+            + '<circle class="caja-alt" cx="250" cy="104" r="6"/>'
+            + '<circle class="caja-alt" cx="100" cy="128" r="6"/>'
+            + '<circle class="caja-alt" cx="130" cy="128" r="6"/>'
+            + '<circle class="caja-alt" cx="160" cy="128" r="6"/>'
+            + '<circle class="caja-alt" cx="190" cy="128" r="6"/>'
+            + '<circle class="caja-alt" cx="220" cy="128" r="6"/>'
+            + '<circle class="caja-alt" cx="250" cy="128" r="6"/>'
+            + '<path class="arista" d="M278,105 L324,105" marker-end="url(#pa-lit)"/>'
+            + '<text class="rotulo-sm" x="301" y="96" text-anchor="middle">18/h</text>'
+            + '<path class="arista" d="M74,160 L74,170 L274,170 L274,160"/>'
+            + '<text class="rotulo" x="174" y="190" text-anchor="middle">Lead time = 2.5 h</text>'
+            + '<path class="arista" d="M402,105 L448,105" marker-end="url(#pa-lit)"/>'
+            + '<text class="rotulo-sm" x="425" y="96" text-anchor="middle">18/h</text>'
+            + '<rect class="caja" x="454" y="58" width="200" height="92" rx="12"/>'
+            + '<text class="rotulo" x="554" y="78" text-anchor="middle">WIP = 90</text>'
+            + '<circle class="caja-alt" cx="480" cy="94" r="5"/>'
+            + '<circle class="caja-alt" cx="510" cy="94" r="5"/>'
+            + '<circle class="caja-alt" cx="540" cy="94" r="5"/>'
+            + '<circle class="caja-alt" cx="570" cy="94" r="5"/>'
+            + '<circle class="caja-alt" cx="600" cy="94" r="5"/>'
+            + '<circle class="caja-alt" cx="630" cy="94" r="5"/>'
+            + '<circle class="caja-alt" cx="480" cy="110" r="5"/>'
+            + '<circle class="caja-alt" cx="510" cy="110" r="5"/>'
+            + '<circle class="caja-alt" cx="540" cy="110" r="5"/>'
+            + '<circle class="caja-alt" cx="570" cy="110" r="5"/>'
+            + '<circle class="caja-alt" cx="600" cy="110" r="5"/>'
+            + '<circle class="caja-alt" cx="630" cy="110" r="5"/>'
+            + '<circle class="caja-alt" cx="480" cy="126" r="5"/>'
+            + '<circle class="caja-alt" cx="510" cy="126" r="5"/>'
+            + '<circle class="caja-alt" cx="540" cy="126" r="5"/>'
+            + '<circle class="caja-alt" cx="570" cy="126" r="5"/>'
+            + '<circle class="caja-alt" cx="600" cy="126" r="5"/>'
+            + '<circle class="caja-alt" cx="630" cy="126" r="5"/>'
+            + '<circle class="caja-alt" cx="480" cy="142" r="5"/>'
+            + '<circle class="caja-alt" cx="510" cy="142" r="5"/>'
+            + '<circle class="caja-alt" cx="540" cy="142" r="5"/>'
+            + '<circle class="caja-alt" cx="570" cy="142" r="5"/>'
+            + '<circle class="caja-alt" cx="600" cy="142" r="5"/>'
+            + '<circle class="caja-alt" cx="630" cy="142" r="5"/>'
+            + '<path class="arista" d="M658,105 L704,105" marker-end="url(#pa-lit)"/>'
+            + '<text class="rotulo-sm" x="681" y="96" text-anchor="middle">18/h</text>'
+            + '<path class="arista-viva" d="M454,160 L454,170 L654,170 L654,160"/>'
+            + '<text class="rotulo" x="554" y="190" text-anchor="middle" fill="currentColor">Lead time = 5 h</text>'
+            + '<text class="rotulo-viva" x="554" y="207" text-anchor="middle">el doble de espera</text>'
+            + '<text class="rotulo" x="380" y="243" text-anchor="middle">El throughput NO cambió: siguen saliendo 18 por hora.</text>'
+            + '<text class="rotulo-sm" x="174" y="266" text-anchor="middle">LT = 45 / 18 = 2.5 h</text>'
+            + '<text class="rotulo-sm" x="554" y="266" text-anchor="middle">LT = 90 / 18 = 5 h</text>'
+            + '</svg>'
+        },
+        {
           tipo: "clave",
-          titulo: "Las tres lecturas de la ley de Little",
-          cuerpo: "<p>La misma ecuación se despeja de tres formas, y cada una responde una pregunta distinta:</p>"
-                + "<ul>"
-                + "<li><b>WIP = Throughput × Lead time</b> → ¿cuánto trabajo tengo atorado dentro?</li>"
-                + "<li><b>Lead time = WIP / Throughput</b> → ¿cuánto tarda un job si hay tanto trabajo en curso? Es la que usarás casi siempre.</li>"
-                + "<li><b>Throughput = WIP / Lead time</b> → ¿a qué ritmo estoy realmente completando trabajo?</li>"
-                + "</ul>"
-                + "<p><b>La consecuencia que importa:</b> si el throughput está topado por el cuello de botella, meter más trabajo al proceso <b>no produce más</b> — solo alarga el tiempo que cada job pasa esperando. Es la justificación matemática de los límites de WIP en un tablero Kanban.</p>"
+          titulo: "La consecuencia que hay que llevarse de la semana",
+          cuerpo: "<p>Si el throughput está topado por el cuello de botella, <b>meter más trabajo al proceso no produce más</b>: solo alarga lo que cada job espera.</p>"
+                + "<p>Un gerente ve pedidos retrasados y su instinto es lanzar más trabajo al piso. La ley de Little dice que eso empeora el lead time de forma proporcional sin ganar una sola unidad de salida.</p>"
+                + "<p>De ahí sale, con demostración y no con opinión, la razón de los <b>límites de WIP</b> en un tablero Kanban: para entregar más rápido hay que <b>empezar menos cosas</b>, no más.</p>"
+        },
+        {
+          tipo: "tabla",
+          titulo: "Los tres despejes",
+          encabezados: ["Forma", "Pregunta que responde", "Cuándo se usa"],
+          filas: [
+            ["<code>WIP = Th × LT</code>", "¿Cuánto trabajo tengo atorado adentro?", "Dimensionar inventario en proceso o filas de espera"],
+            ["<code>LT = WIP / Th</code>", "¿Cuánto tarda un job?", "La más usada: estimar el tiempo de entrega prometido"],
+            ["<code>Th = WIP / LT</code>", "¿A qué ritmo estoy completando trabajo?", "Verificar el rendimiento real contra la capacidad teórica"]
+          ]
+        },
+        {
+          tipo: "lista",
+          titulo: "Las tres condiciones para aplicarla",
+          items: [
+            "<b>Estado estable:</b> el sistema no está creciendo ni vaciándose de forma sostenida. En promedio, lo que entra sale.",
+            "<b>Unidades consistentes:</b> si el throughput es por hora, el lead time va en horas. La verificación es automática: <i>unidades = (unidades/tiempo) × tiempo</i>.",
+            "<b>Promedios de largo plazo:</b> no describe un instante ni un caso individual, sino el comportamiento promedio del proceso."
+          ]
+        },
+        {
+          tipo: "nota",
+          titulo: "Tres errores frecuentes",
+          cuerpo: "<p><b>1. Confundir throughput con capacidad.</b> El throughput es lo que <i>efectivamente</i> sale; la capacidad es el máximo posible. Solo coinciden cuando el proceso está saturado.</p>"
+                + "<p><b>2. Aplicarla a un sistema que no está en estado estable.</b> Si el WIP viene creciendo mes con mes, el sistema no está estable y la identidad no describe nada útil.</p>"
+                + "<p><b>3. Creer que explica el porqué.</b> Es una identidad, no un modelo causal: dice que las tres variables están amarradas, no cuál causa a cuál. Diagnostica; no prescribe.</p>"
+        },
+        {
+          tipo: "clave",
+          titulo: "Para el pizarrón",
+          cuerpo: "<p style=\"font-size:1.05rem\">Poco WIP, poco lead time. <b>Es aritmética, no filosofía de gestión.</b></p>"
         },
         {
           tipo: "svg",
@@ -872,6 +975,23 @@ EA.registrarSemana({
           + "<p>Y al revés: meter más trabajo al proceso sin aumentar capacidad no produce más — solo alarga el tiempo que cada trabajo pasa esperando.</p>"
       },
       {
+        tema: "Ley de Little",
+        titulo: "Límite de WIP en una mesa de servicio",
+        enunciado: "Una mesa de servicio cierra <b>24 tickets por hora</b> y en promedio hay <b>168 tickets abiertos</b>. El acuerdo de nivel de servicio (SLA) promete resolver en <b>4 horas</b>. La capacidad del equipo no va a cambiar en el corto plazo.",
+        preguntas: [
+          { etiqueta: "Lead time promedio actual", respuesta: 7, unidad: "h", tolerancia: 0.05,
+            pista: "LT = WIP / Throughput" },
+          { etiqueta: "¿Cuánto excede el SLA?", respuesta: 3, unidad: "h", tolerancia: 0.05 },
+          { etiqueta: "WIP máximo para cumplir el SLA de 4 h", respuesta: 96, unidad: "tickets", tolerancia: 0.5 },
+          { etiqueta: "Tickets que hay que dejar de admitir (o cerrar) para llegar a ese límite", respuesta: 72, unidad: "tickets", tolerancia: 0.5 }
+        ],
+        solucion:
+          '<div class="paso-calc">LT actual = WIP / Th = 168 / 24 = <span class="resaltado">7 horas</span>\nExceso sobre el SLA = 7 − 4 = <span class="resaltado">3 horas</span>\n\nDespejando el WIP objetivo:\n  WIP = Th × LT = 24 × 4 = <span class="resaltado">96 tickets</span>\n  Reducción necesaria = 168 − 96 = <span class="resaltado">72 tickets</span></div>'
+          + "<p><b>Lo que este número le dice al jefe de la mesa.</b> No hace falta contratar a nadie ni acelerar a los técnicos: con la capacidad actual, el SLA de 4 horas se cumple si el trabajo en curso no pasa de 96 tickets.</p>"
+          + "<p>La palanca es <b>controlar cuánto entra</b>: filtrar en el primer contacto, cerrar los tickets zombis, o poner un límite explícito de WIP. Todo eso es gratis comparado con contratar.</p>"
+          + "<p><b>Y el matiz honesto:</b> la ley de Little no dice <i>cómo</i> bajar el WIP ni qué pasa con los tickets que no se admiten. Es un diagnóstico, no un plan. Si la demanda real excede la capacidad de forma sostenida, el sistema no está en estado estable y entonces sí hace falta capacidad.</p>"
+      },
+      {
         tema: "Costos del proceso",
         titulo: "Costo por transacción y costo del retrabajo",
         enunciado: "El proceso de alta de proveedores procesa <b>400 altas al mes</b>. Intervienen tres roles: analista de compras (<b>$180/h</b>, 25 min por alta), abogado (<b>$450/h</b>, 12 min por alta) y analista de finanzas (<b>$220/h</b>, 18 min por alta). El <b>8 %</b> de las altas se rehace por completo.",
@@ -1182,6 +1302,69 @@ EA.registrarSemana({
           1: "El throughput está limitado por el cuello de botella, no por cuánto trabajo se empuje.",
           2: "Las tres variables están ligadas por la ecuación.",
           3: "Meter más trabajo nunca acorta el tiempo de cada trabajo."
+        }
+      },
+      {
+        tema: "Ley de Little",
+        pregunta: "¿Por qué la ley de Little es notable frente a otras fórmulas de teoría de colas?",
+        opciones: [
+          "Es una identidad demostrada que se cumple sin importar la distribución de llegadas, la de servicios, el número de servidores ni el orden de atención",
+          "Porque permite calcular la capacidad del cuello de botella sin medir nada",
+          "Porque solo aplica cuando las llegadas siguen una distribución de Poisson",
+          "Porque predice cuánto va a tardar un job en particular"
+        ],
+        correcta: 0,
+        explicacion: "La mayoría de las fórmulas de colas exige supuestos fuertes sobre las distribuciones. Esta no: es una identidad matemática, y por eso se puede aplicar a casi cualquier proceso real.",
+        porQueNo: {
+          1: "No sustituye la medición: WIP y throughput hay que medirlos.",
+          2: "Justamente lo contrario: no depende de ninguna distribución en particular.",
+          3: "Describe promedios de largo plazo, nunca un caso individual."
+        }
+      },
+      {
+        tema: "Ley de Little",
+        pregunta: "Una mesa de servicio cierra 24 tickets por hora y tiene 168 abiertos. ¿Cuál es el lead time promedio?",
+        opciones: ["7 horas", "4,032 horas", "0.14 horas", "No se puede saber sin conocer el número de técnicos"],
+        correcta: 0,
+        explicacion: "LT = WIP / Throughput = 168 / 24 = 7 horas.",
+        porQueNo: {
+          1: "Multiplicar da un número sin significado aquí; el WIP ya es el producto.",
+          2: "24 / 168 invierte la relación.",
+          3: "La ley de Little no requiere conocer el número de servidores: esa es justamente su fortaleza."
+        }
+      },
+      {
+        tema: "Ley de Little",
+        pregunta: "El WIP de un proceso viene creciendo mes con mes desde hace un año. ¿Qué implica para aplicar la ley de Little?",
+        opciones: [
+          "El sistema no está en estado estable, así que la identidad no describe nada útil: primero hay que estabilizarlo",
+          "Nada: la ley se cumple siempre, en cualquier condición",
+          "Que hay que usar el WIP máximo del año en lugar del promedio",
+          "Que el throughput debe recalcularse como WIP por lead time"
+        ],
+        correcta: 0,
+        explicacion: "La condición de estado estable es una de las tres que exige la ley. Un WIP creciente significa que entra más de lo que sale, y ahí el promedio no representa el comportamiento del sistema.",
+        porQueNo: {
+          1: "El estado estable es requisito; sin él la identidad pierde sentido práctico.",
+          2: "Usar un extremo en lugar del promedio no repara la falta de estabilidad.",
+          3: "Ese despeje es válido, pero no resuelve el problema de fondo."
+        }
+      },
+      {
+        tema: "Ley de Little",
+        pregunta: "Un gerente ve pedidos retrasados y ordena lanzar más trabajo al piso para «apurar la producción». ¿Qué predice la ley de Little?",
+        opciones: [
+          "El throughput no aumentará y el lead time de cada pedido se alargará proporcionalmente",
+          "El throughput aumentará en la misma proporción que el WIP",
+          "El lead time bajará porque habrá más trabajo disponible para los recursos ociosos",
+          "No se puede predecir sin conocer la tasa de retrabajo"
+        ],
+        correcta: 0,
+        explicacion: "Con el throughput topado por el cuello de botella, WIP = Th × LT obliga a que un WIP mayor se traduzca en un lead time mayor. Es la justificación matemática de los límites de WIP en Kanban.",
+        porQueNo: {
+          1: "El throughput lo determina la restricción, no cuánto trabajo se empuje.",
+          2: "Los recursos no cuello de botella ya tenían holgura; darles más trabajo solo forma cola frente a la restricción.",
+          3: "El retrabajo influye en el throughput, pero la relación entre WIP y lead time se mantiene."
         }
       },
       {
@@ -1581,6 +1764,11 @@ EA.registrarSemana({
       { frente: "Lead time vs. tiempo de ciclo", reverso: "El tiempo de ciclo mira hacia adentro (cuánto tarda el proceso); el lead time mira hacia afuera (cuánto espera el cliente). Coinciden si el proceso opera de forma continua; difieren si hay horarios, turnos o colas previas. Declara siempre cuál mides y entre qué eventos." },
       { frente: "Los cinco tiempos", reverso: "Procesamiento (se trabaja) · Espera (nadie trabaja) · Tiempo de ciclo (procesamiento + espera dentro del proceso) · Lead time (lo que percibe el cliente, en calendario) · Takt (ritmo que exige la demanda, se calcula)." },
       { frente: "Ley de Little", reverso: "WIP = Throughput × Lead time. Si el throughput está fijo por la capacidad, más WIP significa más lead time." },
+      { frente: "L = λW", reverso: "Notación de teoría de colas de la ley de Little: entidades promedio en el sistema = tasa de llegada × tiempo promedio dentro. Publicada por John D. C. Little en 1961." },
+      { frente: "Por qué la ley de Little es especial", reverso: "Es una identidad demostrada, no una aproximación: se cumple sin importar las distribuciones de llegada y servicio, el número de servidores ni el orden de atención." },
+      { frente: "Las 3 condiciones de la ley de Little", reverso: "Estado estable (lo que entra sale) · unidades consistentes · promedios de largo plazo. No describe un caso individual." },
+      { frente: "Errores con la ley de Little", reverso: "Confundir throughput con capacidad · aplicarla a un sistema que no está estable · creer que explica el porqué. Es diagnóstico, no modelo causal." },
+      { frente: "Límite de WIP en Kanban", reverso: "Se justifica con la ley de Little: para entregar más rápido con la misma capacidad hay que empezar menos cosas, no más." },
       { frente: "Las tres lecturas de la ley de Little", reverso: "WIP = Th × LT (cuánto hay atorado) · LT = WIP / Th (cuánto tarda un job) · Th = WIP / LT (a qué ritmo se completa). Las unidades cuadran: unidades = (unidades/tiempo) × tiempo." },
       { frente: "WIP", reverso: "Work in Process: todos los jobs que están dentro del proceso en un momento dado." },
       { frente: "Throughput", reverso: "Jobs completados por unidad de tiempo. Es la capacidad efectivamente alcanzada." },

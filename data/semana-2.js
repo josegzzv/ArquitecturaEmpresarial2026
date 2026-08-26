@@ -438,7 +438,7 @@ EA.registrarSemana({
   /* ==================== GLOSARIO ==================== */
   terminos: [
     { termino: "SIPOC", sigla: "Supplier, Input, Process, Output, Customer", definicion: "Artefacto que delimita un proceso identificando quién provee, qué entra, qué se hace, qué sale y quién lo recibe." },
-    { termino: "Lead time", definicion: "Tiempo total transcurrido de extremo a extremo del proceso, incluyendo esperas." },
+    { termino: "Lead time", sigla: "tiempo de entrega", definicion: "Tiempo total transcurrido de extremo a extremo, desde que el cliente lo pide hasta que lo recibe. Es tiempo de calendario: incluye procesamiento, esperas, noches y fines de semana. Es el tiempo que el cliente percibe. Cuando el proceso opera de forma continua coincide con el tiempo de ciclo; cuando hay horarios o colas previas, no." },
     { termino: "Processing time", definicion: "Tiempo de trabajo real invertido en las actividades, sin contar esperas." },
     { termino: "Lean", definicion: "Enfoque de mejora centrado en eliminar desperdicio: espera, retrabajo, sobreproceso, transporte, inventario, movimiento y defectos." },
     { termino: "Six Sigma", definicion: "Enfoque de mejora centrado en reducir variación y defectos con base estadística." },

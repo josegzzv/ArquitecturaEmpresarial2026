@@ -162,12 +162,27 @@ EA.registrarSemana({
       bloques: [
         {
           tipo: "defs",
-          titulo: "Los tres tiempos que hay que distinguir",
+          titulo: "Los cinco tiempos que hay que distinguir",
           items: [
-            { termino: "Tiempo de ciclo — CT (Cycle Time)", definicion: "Tiempo promedio que toma un proceso en completar un trabajo (<i>job</i>), de principio a fin. Incluye <b>procesamiento y espera</b>. Se puede medir con cronómetro." },
-            { termino: "Tiempo teórico de ciclo — TCT", definicion: "El mismo cálculo pero considerando <b>solo el tiempo de procesamiento</b>, es decir, suponiendo cero esperas. Es el piso al que el proceso podría aspirar sin cambiar la tecnología." },
+            { termino: "Tiempo de procesamiento", definicion: "Tiempo en que <b>alguien o algo está efectivamente trabajando</b> en el job. Es el único que consume capacidad del recurso." },
+            { termino: "Tiempo de espera", definicion: "Tiempo en que el job <b>está en el proceso pero nadie trabaja en él</b>: cola, aprobación pendiente, traslado, almacenamiento, inspección en fila. Alarga el reloj sin ocupar al recurso." },
+            { termino: "Lead time — tiempo de entrega", definicion: "Tiempo total transcurrido <b>desde que el cliente lo pide hasta que lo recibe</b>. Es tiempo de calendario medido con reloj de pared: incluye procesamiento, espera, noches, fines de semana y todo lo que ocurra en medio. Es el tiempo que el cliente percibe." },
+            { termino: "Tiempo de ciclo — CT (Cycle Time)", definicion: "Tiempo promedio que toma el <b>proceso</b> en completar un trabajo, de principio a fin. Incluye procesamiento y espera. Se puede medir con cronómetro." },
+            { termino: "Tiempo teórico de ciclo — TCT", definicion: "El mismo cálculo pero con <b>solo el tiempo de procesamiento</b>, suponiendo cero esperas. Es el piso al que el proceso podría aspirar sin cambiar la tecnología." },
             { termino: "Takt time", definicion: "Ritmo al que hay que producir para satisfacer la demanda. <b>No se mide con cronómetro: se calcula.</b> Del alemán <i>Takt</i>, compás o ritmo." }
           ]
+        },
+        {
+          tipo: "nota",
+          titulo: "Lead time y tiempo de ciclo: la confusión más común del módulo",
+          cuerpo: "<p>En muchos textos —y en este curso— se usan casi como sinónimos, y en la mayoría de los ejercicios <b>dan el mismo número</b>. Pero no son lo mismo, y conviene tener clara la diferencia:</p>"
+                + "<ul>"
+                + "<li>El <b>tiempo de ciclo</b> mira hacia adentro: cuánto tarda <i>el proceso</i> en producir una unidad, contando solo el tiempo en que el trabajo está dentro de sus fronteras.</li>"
+                + "<li>El <b>lead time</b> mira hacia afuera: cuánto espera <i>el cliente</i> desde que pide hasta que recibe, en tiempo de calendario.</li>"
+                + "</ul>"
+                + "<p><b>Ejemplo.</b> El alta de un proveedor tiene un tiempo de ciclo de 45 minutos de trabajo más esperas internas. Pero si la solicitud llega un viernes a las 6 de la tarde y nadie la toca hasta el lunes, el <b>lead time</b> que el proveedor percibe es de 72 horas. El proceso no fue más lento: el calendario sí.</p>"
+                + "<p>Regla práctica: cuando el proceso opera de forma continua y el trabajo entra al proceso en el momento en que se solicita, <b>lead time ≈ tiempo de ciclo</b>, y es válido usarlos indistintamente. Cuando hay horarios, turnos, colas previas al arranque o el cliente espera fuera del proceso, <b>hay que medir y reportar el lead time</b>: es el número que le duele al cliente.</p>"
+                + "<p>En tu entrega, <b>declara cuál estás midiendo</b> y desde qué evento hasta qué evento. Un indicador sin sus fronteras definidas no es comparable con nada.</p>"
         },
         {
           tipo: "clave",
@@ -220,10 +235,22 @@ EA.registrarSemana({
           titulo: "Carga, WIP y throughput",
           items: [
             { termino: "Job", definicion: "Un trabajo o unidad que atraviesa el proceso: un pedido, un alta de proveedor, una tostadora." },
-            { termino: "WIP — Work in Process", definicion: "Todos los jobs que están dentro del proceso en un momento dado, terminados o no." },
-            { termino: "Throughput", definicion: "Cantidad de jobs que el proceso completa por unidad de tiempo. Es la capacidad efectivamente alcanzada." },
-            { termino: "Ley de Little", definicion: "<b>WIP = Throughput × Lead time.</b> Relaciona los tres: si el WIP sube y la capacidad no, el tiempo de ciclo se alarga proporcionalmente." }
+            { termino: "WIP — Work in Process", definicion: "Todos los jobs que están dentro del proceso en un momento dado, terminados o no. Se mide en <b>unidades</b> (30 solicitudes, 120 piezas)." },
+            { termino: "Throughput", definicion: "Cantidad de jobs que el proceso completa por unidad de tiempo. Es la capacidad efectivamente alcanzada. Se mide en <b>unidades por tiempo</b> (18 solicitudes/hora)." },
+            { termino: "Lead time", definicion: "Tiempo total que un job permanece dentro del proceso, desde que entra hasta que sale. Se mide en <b>tiempo</b> (2.5 horas)." },
+            { termino: "Ley de Little", definicion: "<b>WIP = Throughput × Lead time.</b> Las unidades cuadran: unidades = (unidades/tiempo) × tiempo. Relaciona los tres: si el WIP sube y la capacidad no, el lead time se alarga proporcionalmente." }
           ]
+        },
+        {
+          tipo: "clave",
+          titulo: "Las tres lecturas de la ley de Little",
+          cuerpo: "<p>La misma ecuación se despeja de tres formas, y cada una responde una pregunta distinta:</p>"
+                + "<ul>"
+                + "<li><b>WIP = Throughput × Lead time</b> → ¿cuánto trabajo tengo atorado dentro?</li>"
+                + "<li><b>Lead time = WIP / Throughput</b> → ¿cuánto tarda un job si hay tanto trabajo en curso? Es la que usarás casi siempre.</li>"
+                + "<li><b>Throughput = WIP / Lead time</b> → ¿a qué ritmo estoy realmente completando trabajo?</li>"
+                + "</ul>"
+                + "<p><b>La consecuencia que importa:</b> si el throughput está topado por el cuello de botella, meter más trabajo al proceso <b>no produce más</b> — solo alarga el tiempo que cada job pasa esperando. Es la justificación matemática de los límites de WIP en un tablero Kanban.</p>"
         },
         {
           tipo: "diagrama",
@@ -510,6 +537,9 @@ EA.registrarSemana({
     { termino: "Tiempo teórico de ciclo", sigla: "TCT", definicion: "Tiempo de ciclo calculado considerando solo el tiempo de procesamiento, es decir, con cero esperas." },
     { termino: "Eficiencia del ciclo", definicion: "TCT / CT. Qué proporción del tiempo total es trabajo real; el resto es desperdicio de espera." },
     { termino: "Tiempo de actividad", definicion: "Tiempo de procesamiento + tiempo de espera de una actividad." },
+    { termino: "Tiempo de procesamiento", definicion: "Tiempo en que alguien o algo está efectivamente trabajando en el job. Es el único que consume capacidad del recurso, y por eso es el que entra en el cálculo de carga." },
+    { termino: "Tiempo de espera", definicion: "Tiempo en que el job está dentro del proceso pero nadie trabaja en él: cola, aprobación pendiente, traslado, almacenamiento. Alarga el tiempo de ciclo sin ocupar al recurso." },
+    { termino: "Lead time frente a tiempo de ciclo", definicion: "El tiempo de ciclo mira hacia adentro (cuánto tarda el proceso); el lead time mira hacia afuera (cuánto espera el cliente, en tiempo de calendario). Coinciden cuando el proceso opera de forma continua; difieren cuando hay horarios, turnos o colas previas al arranque. Declara siempre cuál mides y entre qué dos eventos." },
     { termino: "Takt time", definicion: "Tiempo neto disponible / demanda del cliente. Ritmo al que hay que producir. No se mide: se calcula." },
     { termino: "Rutas múltiples", definicion: "Compuerta exclusiva: el tiempo esperado es Σ pᵢ·Tᵢ, la suma de cada rama por su probabilidad." },
     { termino: "Rutas paralelas", definicion: "Compuerta AND: el tiempo es máx(T₁…Tₙ), porque la convergencia espera a la rama más lenta." },
@@ -518,7 +548,7 @@ EA.registrarSemana({
     { termino: "WIP", sigla: "Work in Process", definicion: "Todos los jobs que se encuentran dentro del proceso en un momento dado." },
     { termino: "Job", definicion: "Un trabajo o unidad que atraviesa el proceso: un pedido, un alta, una pieza." },
     { termino: "Throughput", definicion: "Jobs completados por unidad de tiempo; la capacidad efectivamente alcanzada." },
-    { termino: "Ley de Little", definicion: "WIP = Throughput × Lead time." },
+    { termino: "Ley de Little", definicion: "WIP = Throughput × Lead time. Se despeja de tres formas: WIP = Th × LT (cuánto hay atorado), LT = WIP / Th (cuánto tarda un job) y Th = WIP / LT (a qué ritmo se completa). Las unidades cuadran: unidades = (unidades/tiempo) × tiempo." },
     { termino: "Factor de carga", definicion: "Fracción de los trabajos que pasa por una actividad. Común = 1; rama del 40 % con 15 % de reproceso = 0.4 × 1.15 = 0.46." },
     { termino: "Carga por job", definicion: "Σ (tiempo de procesamiento × factor de carga) de las actividades que atiende un recurso. Usa procesamiento, no espera." },
     { termino: "Capacidad teórica", definicion: "Mínimo entre las capacidades de todos los recursos del proceso." },
@@ -1002,6 +1032,57 @@ EA.registrarSemana({
         }
       },
       {
+        tema: "Lead time",
+        pregunta: "¿Qué mide el lead time?",
+        opciones: [
+          "El tiempo total transcurrido desde que el cliente lo pide hasta que lo recibe, en tiempo de calendario",
+          "Únicamente el tiempo en que alguien está trabajando en el job",
+          "El ritmo al que hay que producir para satisfacer la demanda",
+          "El tiempo que el recurso cuello de botella está ocupado por cada job"
+        ],
+        correcta: 0,
+        explicacion: "El lead time es el tiempo que el cliente percibe: incluye procesamiento, esperas y todo lo que ocurra en medio, noches y fines de semana incluidos.",
+        porQueNo: {
+          1: "Eso es el tiempo de procesamiento, que es solo una parte del lead time.",
+          2: "Ese es el takt time, y se calcula a partir de la demanda, no se mide.",
+          3: "Esa es la carga por job del recurso, que se usa para calcular capacidad."
+        }
+      },
+      {
+        tema: "Lead time",
+        pregunta: "Una solicitud llega el viernes a las 18:00 y nadie la toca hasta el lunes. El proceso, una vez iniciado, tarda 45 minutos de trabajo y 3 horas de espera interna. ¿Qué se concluye?",
+        opciones: [
+          "El tiempo de ciclo no cambió, pero el lead time que percibe el cliente es de aproximadamente 72 horas",
+          "El tiempo de ciclo fue de 72 horas porque incluye toda la espera",
+          "El lead time es de 3 horas 45 minutos, igual que el tiempo de ciclo",
+          "No se puede calcular ninguno de los dos sin conocer el takt time"
+        ],
+        correcta: 0,
+        explicacion: "El tiempo de ciclo mira hacia adentro del proceso; el lead time mira hacia afuera, en tiempo de calendario. El proceso no fue más lento: el calendario sí.",
+        porQueNo: {
+          1: "El tiempo de ciclo cuenta el tiempo dentro de las fronteras del proceso, que no arrancó hasta el lunes.",
+          2: "Ese es el tiempo de ciclo; el cliente esperó mucho más.",
+          3: "El takt time depende de la demanda y no interviene en este cálculo."
+        }
+      },
+      {
+        tema: "Lead time",
+        pregunta: "En tu entrega reportas «tiempo de proceso: 8 horas». ¿Qué le falta al indicador para ser defendible?",
+        opciones: [
+          "Declarar cuál de los tiempos es y entre qué dos eventos se mide",
+          "Convertirlo a minutos para mayor precisión",
+          "Compararlo contra el takt time del proceso",
+          "Expresarlo como porcentaje del tiempo total disponible"
+        ],
+        correcta: 0,
+        explicacion: "«Tiempo de proceso» puede significar procesamiento, tiempo de ciclo o lead time, y las tres dan números muy distintos. Un indicador sin sus fronteras definidas no es comparable con nada.",
+        porQueNo: {
+          1: "La unidad no resuelve la ambigüedad de qué se está midiendo.",
+          2: "Es útil, pero solo después de saber qué mide el número.",
+          3: "Un porcentaje sobre una base indefinida arrastra la misma ambigüedad."
+        }
+      },
+      {
         tema: "WIP y Ley de Little",
         pregunta: "Un proceso completa 18 solicitudes por hora y cada una permanece 2.5 horas dentro. ¿Cuál es el WIP promedio?",
         opciones: ["45 solicitudes", "7.2 solicitudes", "20.5 solicitudes", "No se puede saber sin conocer la capacidad"],
@@ -1423,7 +1504,11 @@ EA.registrarSemana({
       { frente: "Capacidad en uso", reverso: "Demanda / capacidad teórica. Con 100 unidades sobre 132.96 de capacidad: 75.2 %." },
       { frente: "Los 5 pasos de la teoría de restricciones", reverso: "Identificar → Explotar → Subordinar → Elevar → Repetir. Explotar (gratis) siempre antes que elevar (caro)." },
       { frente: "Qué pasa al eliminar un cuello de botella", reverso: "Se desplaza a otro recurso; no desaparece del proceso. Por eso el quinto paso de TOC es repetir." },
+      { frente: "Lead time", reverso: "Tiempo total transcurrido desde que el cliente lo pide hasta que lo recibe, en tiempo de calendario: procesamiento + esperas + noches y fines de semana. Es el tiempo que el cliente percibe." },
+      { frente: "Lead time vs. tiempo de ciclo", reverso: "El tiempo de ciclo mira hacia adentro (cuánto tarda el proceso); el lead time mira hacia afuera (cuánto espera el cliente). Coinciden si el proceso opera de forma continua; difieren si hay horarios, turnos o colas previas. Declara siempre cuál mides y entre qué eventos." },
+      { frente: "Los cinco tiempos", reverso: "Procesamiento (se trabaja) · Espera (nadie trabaja) · Tiempo de ciclo (procesamiento + espera dentro del proceso) · Lead time (lo que percibe el cliente, en calendario) · Takt (ritmo que exige la demanda, se calcula)." },
       { frente: "Ley de Little", reverso: "WIP = Throughput × Lead time. Si el throughput está fijo por la capacidad, más WIP significa más lead time." },
+      { frente: "Las tres lecturas de la ley de Little", reverso: "WIP = Th × LT (cuánto hay atorado) · LT = WIP / Th (cuánto tarda un job) · Th = WIP / LT (a qué ritmo se completa). Las unidades cuadran: unidades = (unidades/tiempo) × tiempo." },
       { frente: "WIP", reverso: "Work in Process: todos los jobs que están dentro del proceso en un momento dado." },
       { frente: "Throughput", reverso: "Jobs completados por unidad de tiempo. Es la capacidad efectivamente alcanzada." },
       { frente: "Modelo AS-IS", reverso: "El proceso tal como opera hoy, con esperas, retrabajos y excepciones reales. No es el manual de procedimientos." },

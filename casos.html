@@ -3,14 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Casos · Arquitectura Empresarial</title>
+<title data-t-titulo="casos.tituloDoc">Casos · Arquitectura Empresarial</title>
 <meta name="description" content="Catálogo de casos reales de diseño de procesos y arquitectura empresarial para analizar en clase.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23b3400a'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='sans-serif' font-weight='bold' fill='white'>AE</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=202608312151">
-<script src="assets/js/nucleo.js?v=202608312151"></script>
+<link rel="stylesheet" href="assets/css/styles.css?v=202608312253">
+<script src="assets/js/nucleo.js?v=202608312253"></script>
+<script src="assets/js/idioma.js?v=202608312253"></script>
 </head>
 <body>
 
@@ -20,31 +21,31 @@
   <div class="contenedor">
 
     <section class="hero">
-      <div class="kicker">Catálogo</div>
-      <h1>Casos para analizar</h1>
-      <p class="lead">Situaciones reconocibles de empresas reales, analizadas con las herramientas del curso: cuellos de botella, tiempo de ciclo, rutas del proceso, capacidad, orquestación y continuidad.</p>
+      <div class="kicker" data-t="casos.kicker">Catálogo</div>
+      <h1 data-t="casos.titulo">Casos para analizar</h1>
+      <p class="lead" data-t="casos.lead">Situaciones reconocibles de empresas reales, analizadas con las herramientas del curso: cuellos de botella, tiempo de ciclo, rutas del proceso, capacidad, orquestación y continuidad.</p>
     </section>
 
     <div class="pestanas" role="tablist">
-      <button id="tab-casos" role="tab" aria-selected="true">Catálogo</button>
-      <button id="tab-practica" role="tab" aria-selected="false">Práctica</button>
+      <button id="tab-casos" role="tab" aria-selected="true" data-t="casos.tab">Catálogo</button>
+      <button id="tab-practica" role="tab" aria-selected="false" data-t="tab.practica">Práctica</button>
     </div>
 
     <div id="panel-casos" role="tabpanel">
 
       <div class="bloque nota" style="margin-bottom:1.2rem">
-        <h4>Sobre las cifras de estos casos</h4>
-        <p>Las empresas son reales y los procesos son reconocibles, pero <b>los números son ilustrativos</b>: se
+        <h4 data-t="casos.avisoTitulo">Sobre las cifras de estos casos</h4>
+        <p data-t="casos.avisoP1">Las empresas son reales y los procesos son reconocibles, pero <b>los números son ilustrativos</b>: se
         construyeron para poder practicar el cálculo y <b>no corresponden a la operación real</b> de ninguna de
         estas organizaciones. Están marcados como tales en cada ficha.</p>
-        <p>El análisis es una lectura académica desde afuera, con fines didácticos. Ninguna de estas empresas
+        <p data-t="casos.avisoP2">El análisis es una lectura académica desde afuera, con fines didácticos. Ninguna de estas empresas
         participó ni avaló este material.</p>
       </div>
 
       <div class="barra-filtros">
         <div class="chips" id="filtros"></div>
         <div class="busqueda-casos">
-          <input id="buscar-caso" type="search" placeholder="Buscar: cola, capacidad, pago, incidente, cita…">
+          <input id="buscar-caso" type="search" data-t-attr="placeholder:casos.buscar" placeholder="Buscar: cola, capacidad, pago, incidente, cita…">
           <span class="contador" id="contador"></span>
         </div>
       </div>
@@ -59,16 +60,16 @@
 
 <footer class="sitio"><div class="contenedor"></div></footer>
 
-<script src="data/curso.js?v=202608312151"></script>
-<script src="data/semana-1.js?v=202608312151"></script>
-<script src="data/semana-2.js?v=202608312151"></script>
-<script src="data/semana-3.js?v=202608312151"></script>
-<script src="data/semana-4.js?v=202608312151"></script>
-<script src="data/semana-5.js?v=202608312151"></script>
-<script src="assets/js/vistas.js?v=202608312151"></script>
-<script src="assets/js/practica.js?v=202608312151"></script>
-<script src="assets/js/casos.js?v=202608312151"></script>
-<script src="data/casos.js?v=202608312151"></script>
+<script src="data/curso.js?v=202608312253"></script>
+<script src="data/semana-1.js?v=202608312253"></script>
+<script src="data/semana-2.js?v=202608312253"></script>
+<script src="data/semana-3.js?v=202608312253"></script>
+<script src="data/semana-4.js?v=202608312253"></script>
+<script src="data/semana-5.js?v=202608312253"></script>
+<script src="assets/js/vistas.js?v=202608312253"></script>
+<script src="assets/js/practica.js?v=202608312253"></script>
+<script src="assets/js/casos.js?v=202608312253"></script>
+<script src="data/casos.js?v=202608312253"></script>
 <script>
 (function () {
   EA.montarCascaron("casos");

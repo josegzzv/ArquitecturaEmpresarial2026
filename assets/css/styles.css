@@ -111,6 +111,29 @@ header.sitio {
 }
 .btn-tema:hover { color: var(--text); border-color: var(--accent); }
 
+/* ---------- Conmutador de idioma ---------- */
+.conmutador-idioma {
+  display: inline-flex; align-items: center; margin-left: .3rem;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface); overflow: hidden;
+}
+.opcion-idioma {
+  border: 0; background: none; color: var(--muted); cursor: pointer;
+  font: inherit; font-size: .72rem; font-weight: 700; letter-spacing: .05em;
+  padding: .3rem .55rem; line-height: 1.5;
+}
+.opcion-idioma:hover { color: var(--text); }
+.opcion-idioma[aria-pressed="true"] {
+  background: var(--accent-soft); color: var(--accent); cursor: default;
+}
+.conmutador-idioma:focus-within { border-color: var(--accent); }
+
+@media (max-width: 640px) {
+  .opcion-idioma { padding: .28rem .45rem; font-size: .68rem; }
+}
+
+@media print { .conmutador-idioma { display: none; } }
+
 main { padding-block: 2.2rem 4rem; }
 
 /* ---------- Hero ---------- */
@@ -623,6 +646,7 @@ footer.sitio .contenedor {
 }
 .ficha-seccion.preguntas > h5 { color: var(--accent-2); }
 .etiqueta-ilustrativa {
+  margin-left: .5rem; white-space: nowrap;
   font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
   background: var(--warn-soft); color: var(--warn); padding: .15rem .45rem; border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent);

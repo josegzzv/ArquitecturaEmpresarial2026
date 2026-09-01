@@ -1,32 +1,77 @@
 /* ============================================================
-   nucleo.js — registro de contenido, tema y utilidades comunes
-   Se carga ANTES que cualquier archivo de /data.
+   nucleo.js — registro de contenido, tema, idioma y utilidades
+   Se carga ANTES que idioma.js y que cualquier archivo de /data.
    ============================================================ */
 
 window.EA = (function () {
   const semanas = {};
+  const semanasEn = {};
   let curso = {
     titulo: "Diseño de Procesos y Arquitectura Empresarial",
     subtitulo: "Curso de 5 semanas",
     caso: "",
     totalSemanas: 5
   };
+  let cursoEn = null;
+
+  /* Atajo al diccionario; idioma.js se carga después de este archivo,
+     pero t() solo se invoca en tiempo de render. */
+  function T(clave, vars) {
+    return window.EA && window.EA.t ? window.EA.t(clave, vars) : clave;
+  }
+
+  function enIngles() {
+    return document.documentElement.getAttribute("data-idioma") === "en";
+  }
 
   /* ---------- Registro de contenido ---------- */
   function registrarCurso(meta) { curso = Object.assign(curso, meta); }
+  function registrarCursoEn(meta) { cursoEn = Object.assign(cursoEn || {}, meta); }
 
   function registrarSemana(def) {
     if (!def || !def.id) { console.error("Semana sin id", def); return; }
     semanas[String(def.id)] = def;
   }
 
-  function obtenerSemana(id) { return semanas[String(id)] || null; }
-
-  function listaSemanas() {
-    return Object.values(semanas).sort((a, b) => a.id - b.id);
+  function registrarSemanaEn(def) {
+    if (!def || !def.id) { console.error("Semana en inglés sin id", def); return; }
+    semanasEn[String(def.id)] = def;
   }
 
-  function obtenerCurso() { return curso; }
+  /* Devuelve la versión del idioma activo, con respaldo al español.
+     El respaldo es a nivel de semana completa: una semana sin traducir
+     se muestra en español en lugar de quedar vacía. */
+  function obtenerSemana(id) {
+    const k = String(id);
+    if (enIngles() && semanasEn[k]) return semanasEn[k];
+    return semanas[k] || null;
+  }
+
+  function listaSemanas() {
+    return Object.keys(semanas)
+      .map(function (k) { return obtenerSemana(k); })
+      .filter(Boolean)
+      .sort(function (a, b) { return a.id - b.id; });
+  }
+
+  function obtenerCurso() {
+    return enIngles() && cursoEn ? Object.assign({}, curso, cursoEn) : curso;
+  }
+
+  /* ---------- Catálogo de casos ----------
+     Vive aquí y no en casos.js porque los archivos de /data se cargan
+     antes que el JS de la página: si el registro estuviera en casos.js,
+     data/en/casos.js se ejecutaría sin tener a quién llamar. */
+  let casos = { categorias: [], casos: [], practica: {} };
+  let casosEn = null;
+
+  function registrarCasos(def) { casos = Object.assign(casos, def || {}); }
+  function registrarCasosEn(def) { casosEn = Object.assign(casosEn || {}, def || {}); }
+
+  /* Respaldo por catálogo completo: sin traducción, se muestra el español. */
+  function obtenerCasos() {
+    return (enIngles() && casosEn && (casosEn.casos || []).length) ? casosEn : casos;
+  }
 
   /* ---------- Conteo de reactivos ---------- */
   function contarReactivos(semana) {
@@ -35,6 +80,7 @@ window.EA = (function () {
          + (p.escenarios || []).length
          + (p.clasificar || []).length
          + (p.ordenar || []).length
+         + (p.calculos || []).length
          + (p.flashcards || []).length;
   }
 
@@ -60,7 +106,7 @@ window.EA = (function () {
     const btn = document.querySelector(".btn-tema");
     if (btn) {
       btn.textContent = t === "oscuro" ? "☀" : "☾";
-      btn.setAttribute("aria-label", t === "oscuro" ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
+      btn.setAttribute("aria-label", t === "oscuro" ? T("tema.aClaro") : T("tema.aOscuro"));
     }
   }
 
@@ -136,24 +182,28 @@ window.EA = (function () {
   /* ---------- Cabecera y pie comunes ---------- */
   function montarCascaron(paginaActual) {
     const c = obtenerCurso();
+
+    // Traduce el marcado estático antes de construir el cascarón
+    if (window.EA && window.EA.traducirDocumento) window.EA.traducirDocumento();
+
     const header = document.querySelector("header.sitio .barra");
     if (header) {
-      const enlaces = [{ href: "index.html", texto: "Inicio", id: "inicio" }];
+      const enlaces = [{ href: "index.html", texto: T("nav.inicio"), id: "inicio" }];
       listaSemanas().forEach(function (s) {
         enlaces.push({
           href: s.estado === "publicada" ? "semana.html?s=" + s.id : null,
-          texto: "S" + s.id,
+          texto: (window.EA && window.EA.esIngles && window.EA.esIngles() ? "W" : "S") + s.id,
           id: "semana-" + s.id,
           inactivo: s.estado !== "publicada"
         });
       });
-      enlaces.push({ href: "casos.html", texto: "Casos", id: "casos" });
-      enlaces.push({ href: "glosario.html", texto: "Glosario", id: "glosario" });
+      enlaces.push({ href: "casos.html", texto: T("nav.casos"), id: "casos" });
+      enlaces.push({ href: "glosario.html", texto: T("nav.glosario"), id: "glosario" });
 
       const nav = el("nav", { class: "nav" });
       enlaces.forEach(function (e) {
         if (e.inactivo) {
-          nav.appendChild(el("a", { class: "inactivo", title: "Próximamente", style: "opacity:.4;cursor:default" }, [e.texto]));
+          nav.appendChild(el("a", { class: "inactivo", title: T("nav.proximamente"), style: "opacity:.4;cursor:default" }, [e.texto]));
         } else {
           nav.appendChild(el("a", {
             href: e.href,
@@ -162,13 +212,17 @@ window.EA = (function () {
         }
       });
 
+      if (window.EA && window.EA.conmutadorIdioma) {
+        nav.appendChild(window.EA.conmutadorIdioma());
+      }
+
       const btn = el("button", { class: "btn-tema", onclick: alternarTema, type: "button" });
       nav.appendChild(btn);
 
       header.appendChild(el("a", { class: "marca", href: "index.html" }, [
         el("span", { class: "logo", text: "AE" }),
         el("span", {}, [
-          el("strong", { text: "Arquitectura Empresarial" }),
+          el("strong", { text: T("marca.titulo") }),
           el("span", { text: c.subtitulo || "" })
         ])
       ]));
@@ -181,19 +235,22 @@ window.EA = (function () {
       pie.appendChild(el("div", { class: "pie-autoria" }, [
         el("strong", { text: c.titulo }),
         el("span", {}, [
-          document.createTextNode("Material generado por "),
+          document.createTextNode(T("pie.generadoPor")),
           el("a", { href: "mailto:" + (c.correo || ""), class: "pie-correo", text: c.correo || "" })
         ])
       ]));
       pie.appendChild(el("div", { class: "pie-legal" }, [
-        el("a", { href: "aviso-legal.html", text: "Aviso legal y atribuciones" }),
-        el("span", { text: "Material de apoyo para estudiantes · " + new Date().getFullYear() })
+        el("a", { href: "aviso-legal.html", text: T("pie.aviso") }),
+        el("span", { text: T("pie.apoyo", { anio: new Date().getFullYear() }) })
       ]));
     }
   }
 
   return {
-    registrarCurso, registrarSemana, obtenerSemana, listaSemanas, obtenerCurso,
+    registrarCurso, registrarCursoEn,
+    registrarSemana, registrarSemanaEn,
+    registrarCasos, registrarCasosEn, obtenerCasos,
+    obtenerSemana, listaSemanas, obtenerCurso,
     contarReactivos, aplicarTema, alternarTema, temaInicial,
     guardarResultado, mejorPorSemana, leerProgreso,
     el, barajar, parametro, montarCascaron

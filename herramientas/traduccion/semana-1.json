@@ -1,0 +1,4372 @@
+[
+ {
+  "ruta": "titulo",
+  "es": "Fundamentos de Arquitectura Empresarial",
+  "en": "Foundations of Enterprise Architecture"
+ },
+ {
+  "ruta": "subtitulo",
+  "es": "Dominios, procesos, marcos de referencia y roles profesionales.",
+  "en": "Domains, processes, frameworks and professional roles."
+ },
+ {
+  "ruta": "objetivos/0",
+  "es": "Explicar qué es la Arquitectura Empresarial y por qué comienza con las necesidades del negocio.",
+  "en": "Explain what Enterprise Architecture is and why it starts with business needs."
+ },
+ {
+  "ruta": "objetivos/1",
+  "es": "Distinguir arquitectura empresarial, arquitectura de soluciones, TI y Transformación Digital.",
+  "en": "Distinguish enterprise architecture, solution architecture, IT and Digital Transformation."
+ },
+ {
+  "ruta": "objetivos/2",
+  "es": "Reconocer los dominios de negocio, datos, aplicaciones y tecnología.",
+  "en": "Recognize the business, data, application and technology domains."
+ },
+ {
+  "ruta": "objetivos/3",
+  "es": "Diferenciar TOGAF, ADM, Zachman y el enfoque de Gartner.",
+  "en": "Differentiate TOGAF, ADM, Zachman and the Gartner approach."
+ },
+ {
+  "ruta": "objetivos/4",
+  "es": "Explicar BPM, BPMN, procesos end-to-end y cadena de valor.",
+  "en": "Explain BPM, BPMN, end-to-end processes and the value chain."
+ },
+ {
+  "ruta": "objetivos/5",
+  "es": "Elaborar un diagnóstico básico AS-IS y una propuesta TO-BE.",
+  "en": "Produce a basic AS-IS diagnosis and a TO-BE proposal."
+ },
+ {
+  "ruta": "dias/0/nombre",
+  "es": "Lunes · Sesión 1",
+  "en": "Monday · Session 1"
+ },
+ {
+  "ruta": "dias/0/tema",
+  "es": "Introducción a la Arquitectura Empresarial",
+  "en": "Introduction to Enterprise Architecture"
+ },
+ {
+  "ruta": "dias/0/proposito",
+  "es": "Entender que la Arquitectura Empresarial no es solamente tecnología: es una forma de conectar estrategia, operación, información y sistemas para transformar una organización.",
+  "en": "Understand that Enterprise Architecture is not only technology: it is a way of connecting strategy, operations, information and systems in order to transform an organization."
+ },
+ {
+  "ruta": "dias/0/bloques/0/titulo",
+  "es": "Pregunta detonadora",
+  "en": "Trigger question"
+ },
+ {
+  "ruta": "dias/0/bloques/0/cuerpo",
+  "es": "<p>Una empresa acerera mexicana compra varias plantas en Argentina. Cada empresa utiliza procesos, aplicaciones, bases de datos, proveedores y tecnologías diferentes. El corporativo desea operar como una sola organización.</p><p><b>¿Qué problemas podrían aparecer?</b> Datos duplicados o incompatibles; definiciones distintas de cliente, producto o inventario; procesos distintos para comprar, producir y vender; aplicaciones que no se comunican; riesgos de seguridad y cumplimiento; interrupciones operativas; decisiones tecnológicas sin justificación de negocio.</p>",
+  "en": "<p>A Mexican steel company buys several plants in Argentina. Each company uses different processes, applications, databases, suppliers and technologies. Corporate headquarters wants to operate as a single organization.</p><p><b>What problems could appear?</b> Duplicated or incompatible data; different definitions of customer, product or inventory; different processes for buying, producing and selling; applications that do not talk to each other; security and compliance risks; operational disruptions; technology decisions with no business justification.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/1/titulo",
+  "es": "Definición",
+  "en": "Definition"
+ },
+ {
+  "ruta": "dias/0/bloques/1/cuerpo",
+  "es": "<p>La Arquitectura Empresarial es una <b>disciplina que describe cómo funciona actualmente una organización y diseña cómo deberá funcionar en el futuro</b>, alineando sus capacidades, procesos, datos, aplicaciones y tecnología con sus objetivos estratégicos.</p>",
+  "en": "<p>Enterprise Architecture is a <b>discipline that describes how an organization works today and designs how it should work in the future</b>, aligning its capabilities, processes, data, applications and technology with its strategic objectives.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/2/titulo",
+  "es": "Lo que NO es Arquitectura Empresarial",
+  "en": "What Enterprise Architecture is NOT"
+ },
+ {
+  "ruta": "dias/0/bloques/2/items/0",
+  "es": "No es solamente un inventario de sistemas.",
+  "en": "It is not just an inventory of systems."
+ },
+ {
+  "ruta": "dias/0/bloques/2/items/1",
+  "es": "No es un organigrama.",
+  "en": "It is not an org chart."
+ },
+ {
+  "ruta": "dias/0/bloques/2/items/2",
+  "es": "No es comprar tecnología nueva.",
+  "en": "It is not buying new technology."
+ },
+ {
+  "ruta": "dias/0/bloques/2/items/3",
+  "es": "No sustituye la estrategia empresarial.",
+  "en": "It does not replace business strategy."
+ },
+ {
+  "ruta": "dias/0/bloques/2/items/4",
+  "es": "No es un único diagrama.",
+  "en": "It is not a single diagram."
+ },
+ {
+  "ruta": "dias/0/bloques/2/items/5",
+  "es": "Sí es una práctica continua de análisis, diseño, priorización y gobierno.",
+  "en": "It is a continuous practice of analysis, design, prioritization and governance."
+ },
+ {
+  "ruta": "dias/0/bloques/3/titulo",
+  "es": "La cadena de alineación",
+  "en": "The alignment chain"
+ },
+ {
+  "ruta": "dias/0/bloques/3/pasos/0",
+  "es": "Estrategia",
+  "en": "Strategy"
+ },
+ {
+  "ruta": "dias/0/bloques/3/pasos/1",
+  "es": "Capacidades",
+  "en": "Capabilities"
+ },
+ {
+  "ruta": "dias/0/bloques/3/pasos/2",
+  "es": "Procesos",
+  "en": "Processes"
+ },
+ {
+  "ruta": "dias/0/bloques/3/pasos/3",
+  "es": "Datos y aplicaciones",
+  "en": "Data and applications"
+ },
+ {
+  "ruta": "dias/0/bloques/3/pasos/4",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "dias/0/bloques/4/titulo",
+  "es": "Pregunta de comprobación",
+  "en": "Check question"
+ },
+ {
+  "ruta": "dias/0/bloques/4/cuerpo",
+  "es": "<p>Si una empresa compra inteligencia artificial pero no tiene un problema de negocio claramente definido, ¿está haciendo Arquitectura Empresarial?</p><p><b>No necesariamente.</b> Está adquiriendo tecnología, pero no demuestra alineación estratégica ni generación de valor.</p>",
+  "en": "<p>If a company buys artificial intelligence but has no clearly defined business problem, is it doing Enterprise Architecture?</p><p><b>Not necessarily.</b> It is acquiring technology, but it is not demonstrating strategic alignment or value creation.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/5/titulo",
+  "es": "Los cuatro dominios",
+  "en": "The four domains"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/0/termino",
+  "es": "1 · Arquitectura de negocio",
+  "en": "1 · Business architecture"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/0/definicion",
+  "es": "Objetivos y estrategias, productos y servicios, capacidades, procesos, estructura organizacional, actores, clientes, proveedores, reglas y políticas. <br><i>Pregunta que responde:</i> ¿qué necesita hacer la empresa para cumplir su estrategia?",
+  "en": "Objectives and strategies, products and services, capabilities, processes, organizational structure, actors, customers, suppliers, rules and policies. <br><i>Question it answers:</i> what does the company need to do to deliver its strategy?"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/1/termino",
+  "es": "2 · Arquitectura de datos",
+  "en": "2 · Data architecture"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/1/definicion",
+  "es": "Qué datos existen, quién es responsable, dónde se originan y almacenan, cómo se comparten, su calidad, seguridad, significado y posibles duplicidades. <br><i>Pregunta que responde:</i> ¿qué información necesita la empresa para operar y decidir?",
+  "en": "What data exists, who is accountable for it, where it originates and is stored, how it is shared, plus its quality, security, meaning and possible duplication. <br><i>Question it answers:</i> what information does the company need in order to operate and decide?"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/2/termino",
+  "es": "3 · Arquitectura de aplicaciones",
+  "en": "3 · Application architecture"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/2/definicion",
+  "es": "Sistemas que apoyan los procesos, funciones de cada aplicación, integraciones, interfaces, dependencias y aplicaciones redundantes u obsoletas. <br><i>Pregunta que responde:</i> ¿qué sistemas utilizan o producen los datos necesarios para operar?",
+  "en": "Systems that support the processes, the functions of each application, integrations, interfaces, dependencies and redundant or obsolete applications. <br><i>Question it answers:</i> which systems use or produce the data needed to operate?"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/3/termino",
+  "es": "4 · Arquitectura tecnológica",
+  "en": "4 · Technology architecture"
+ },
+ {
+  "ruta": "dias/0/bloques/5/items/3/definicion",
+  "es": "Servidores, nube, redes y telecomunicaciones, dispositivos, sistemas operativos, plataformas y mecanismos de seguridad. <br><i>Pregunta que responde:</i> ¿sobre qué infraestructura funcionan las aplicaciones?",
+  "en": "Servers, cloud, networks and telecommunications, devices, operating systems, platforms and security mechanisms. <br><i>Question it answers:</i> on what infrastructure do the applications run?"
+ },
+ {
+  "ruta": "dias/0/bloques/6/titulo",
+  "es": "Mapa inicial de la acerera",
+  "en": "Initial map of the steel company"
+ },
+ {
+  "ruta": "dias/0/bloques/6/encabezados/0",
+  "es": "Negocio",
+  "en": "Business"
+ },
+ {
+  "ruta": "dias/0/bloques/6/encabezados/1",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "dias/0/bloques/6/encabezados/2",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "dias/0/bloques/6/encabezados/3",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/0/0",
+  "es": "Producción y venta de acero",
+  "en": "Steel production and sales"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/0/1",
+  "es": "Clientes, inventario, calidad",
+  "en": "Customers, inventory, quality"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/0/2",
+  "es": "ERP, CRM, sistema de producción",
+  "en": "ERP, CRM, production system"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/0/3",
+  "es": "Servidores, nube, redes",
+  "en": "Servers, cloud, networks"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/1/0",
+  "es": "Compras y logística",
+  "en": "Purchasing and logistics"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/1/1",
+  "es": "Proveedores, pedidos",
+  "en": "Suppliers, orders"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/1/2",
+  "es": "Sistema logístico",
+  "en": "Logistics system"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/1/3",
+  "es": "Telecomunicaciones",
+  "en": "Telecommunications"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/2/0",
+  "es": "Control de calidad",
+  "en": "Quality control"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/2/1",
+  "es": "Lotes y pruebas",
+  "en": "Batches and tests"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/2/2",
+  "es": "Sistema de calidad",
+  "en": "Quality system"
+ },
+ {
+  "ruta": "dias/0/bloques/6/filas/2/3",
+  "es": "Sensores industriales",
+  "en": "Industrial sensors"
+ },
+ {
+  "ruta": "dias/0/bloques/7/titulo",
+  "es": "Conclusión de la actividad",
+  "en": "Conclusion of the activity"
+ },
+ {
+  "ruta": "dias/0/bloques/7/cuerpo",
+  "es": "<p>Ningún dominio debe analizarse de manera aislada. Cambiar un proceso puede exigir nuevos datos; esos datos pueden requerir aplicaciones y las aplicaciones, nueva infraestructura.</p>",
+  "en": "<p>No domain should be analyzed in isolation. Changing a process may demand new data; that data may require applications, and the applications, new infrastructure.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/8/titulo",
+  "es": "AS-IS, TO-BE, brecha y roadmap",
+  "en": "AS-IS, TO-BE, gap and roadmap"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/0/termino",
+  "es": "AS-IS",
+  "en": "AS-IS"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/0/definicion",
+  "es": "Situación actual. Cómo opera realmente la organización hoy.",
+  "en": "Current situation. How the organization actually operates today."
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/1/termino",
+  "es": "TO-BE",
+  "en": "TO-BE"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/1/definicion",
+  "es": "Situación futura deseada.",
+  "en": "Desired future situation."
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/2/termino",
+  "es": "Brecha (gap)",
+  "en": "Gap"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/2/definicion",
+  "es": "Diferencia entre el estado actual y el deseado.",
+  "en": "Difference between the current state and the desired one."
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/3/termino",
+  "es": "Roadmap",
+  "en": "Roadmap"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/3/definicion",
+  "es": "Iniciativas ordenadas y priorizadas para cerrar las brechas.",
+  "en": "Sequenced and prioritized initiatives to close the gaps."
+ },
+ {
+  "ruta": "dias/0/bloques/9/titulo",
+  "es": "Ejemplo AS-IS / TO-BE en la acerera",
+  "en": "AS-IS / TO-BE example at the steel company"
+ },
+ {
+  "ruta": "dias/0/bloques/9/encabezados/0",
+  "es": "Elemento",
+  "en": "Element"
+ },
+ {
+  "ruta": "dias/0/bloques/9/encabezados/1",
+  "es": "AS-IS",
+  "en": "AS-IS"
+ },
+ {
+  "ruta": "dias/0/bloques/9/encabezados/2",
+  "es": "TO-BE",
+  "en": "TO-BE"
+ },
+ {
+  "ruta": "dias/0/bloques/9/encabezados/3",
+  "es": "Brecha",
+  "en": "Gap"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/0/0",
+  "es": "Clientes",
+  "en": "Customers"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/0/1",
+  "es": "Bases separadas por país",
+  "en": "Separate databases per country"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/0/2",
+  "es": "Visión única del cliente",
+  "en": "Single view of the customer"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/0/3",
+  "es": "Integrar y depurar datos",
+  "en": "Integrate and clean up data"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/1/0",
+  "es": "Inventario",
+  "en": "Inventory"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/1/1",
+  "es": "Actualización manual",
+  "en": "Manual updating"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/1/2",
+  "es": "Visibilidad casi en tiempo real",
+  "en": "Near real-time visibility"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/1/3",
+  "es": "Sensores e integración",
+  "en": "Sensors and integration"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/2/0",
+  "es": "Compras",
+  "en": "Purchasing"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/2/1",
+  "es": "Procesos distintos",
+  "en": "Different processes"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/2/2",
+  "es": "Política regional común",
+  "en": "Common regional policy"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/2/3",
+  "es": "Rediseñar el proceso",
+  "en": "Redesign the process"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/3/0",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/3/1",
+  "es": "ERP diferentes",
+  "en": "Different ERPs"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/3/2",
+  "es": "Ecosistema interoperable",
+  "en": "Interoperable ecosystem"
+ },
+ {
+  "ruta": "dias/0/bloques/9/filas/3/3",
+  "es": "Interfaces y estándares",
+  "en": "Interfaces and standards"
+ },
+ {
+  "ruta": "dias/0/bloques/10/titulo",
+  "es": "Aclaración importante",
+  "en": "Important clarification"
+ },
+ {
+  "ruta": "dias/0/bloques/10/cuerpo",
+  "es": "<p>El TO-BE <b>no siempre implica reemplazar todos los sistemas</b>. Puede consistir en integrar, estandarizar, reutilizar o retirar únicamente aquello que no genera valor.</p>",
+  "en": "<p>The TO-BE <b>does not always mean replacing every system</b>. It may consist of integrating, standardizing, reusing or retiring only what does not create value.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/11/titulo",
+  "es": "Beneficios de la Arquitectura Empresarial",
+  "en": "Benefits of Enterprise Architecture"
+ },
+ {
+  "ruta": "dias/0/bloques/11/items/0",
+  "es": "Alinea inversiones tecnológicas con objetivos de negocio.",
+  "en": "It aligns technology investments with business objectives."
+ },
+ {
+  "ruta": "dias/0/bloques/11/items/1",
+  "es": "Reduce duplicidades y costos innecesarios.",
+  "en": "It reduces duplication and unnecessary costs."
+ },
+ {
+  "ruta": "dias/0/bloques/11/items/2",
+  "es": "Facilita fusiones y adquisiciones.",
+  "en": "It makes mergers and acquisitions easier."
+ },
+ {
+  "ruta": "dias/0/bloques/11/items/3",
+  "es": "Mejora la interoperabilidad.",
+  "en": "It improves interoperability."
+ },
+ {
+  "ruta": "dias/0/bloques/11/items/4",
+  "es": "Hace visibles riesgos y dependencias.",
+  "en": "It makes risks and dependencies visible."
+ },
+ {
+  "ruta": "dias/0/bloques/11/items/5",
+  "es": "Ayuda a priorizar proyectos y fortalece la continuidad operativa.",
+  "en": "It helps prioritize projects and strengthens operational continuity."
+ },
+ {
+  "ruta": "dias/0/bloques/11/items/6",
+  "es": "Permite decidir con visión integral y apoya la transformación digital.",
+  "en": "It lets you decide with an end-to-end view and supports digital transformation."
+ },
+ {
+  "ruta": "dias/0/bloques/12/titulo",
+  "es": "Limitaciones",
+  "en": "Limitations"
+ },
+ {
+  "ruta": "dias/0/bloques/12/items/0",
+  "es": "No genera valor si se queda como documentación.",
+  "en": "It creates no value if it stays as documentation."
+ },
+ {
+  "ruta": "dias/0/bloques/12/items/1",
+  "es": "Puede volverse burocrática si intenta modelarlo todo.",
+  "en": "It can turn bureaucratic if it tries to model everything."
+ },
+ {
+  "ruta": "dias/0/bloques/12/items/2",
+  "es": "Necesita participación del negocio, no solamente de TI.",
+  "en": "It needs participation from the business, not only from IT."
+ },
+ {
+  "ruta": "dias/0/bloques/12/items/3",
+  "es": "Requiere gobierno y actualización continua.",
+  "en": "It requires governance and continuous updating."
+ },
+ {
+  "ruta": "dias/1/nombre",
+  "es": "Martes · Sesión 2",
+  "en": "Tuesday · Session 2"
+ },
+ {
+  "ruta": "dias/1/tema",
+  "es": "Procesos, BPM y generación de valor",
+  "en": "Processes, BPM and value creation"
+ },
+ {
+  "ruta": "dias/1/proposito",
+  "es": "Comprender cómo los procesos conectan diferentes áreas de la empresa y cómo se mide el valor que reciben el cliente y la organización.",
+  "en": "Understand how processes connect different areas of the company and how the value received by the customer and the organization is measured."
+ },
+ {
+  "ruta": "dias/1/bloques/0/titulo",
+  "es": "Proceso frente a proyecto",
+  "en": "Process versus project"
+ },
+ {
+  "ruta": "dias/1/bloques/0/items/0/termino",
+  "es": "Proceso",
+  "en": "Process"
+ },
+ {
+  "ruta": "dias/1/bloques/0/items/0/definicion",
+  "es": "Conjunto <b>repetible</b> de actividades que transforma entradas en resultados para un cliente. Ejemplo: recibir, preparar y entregar un pedido.",
+  "en": "A <b>repeatable</b> set of activities that turns inputs into results for a customer. Example: receiving, preparing and delivering an order."
+ },
+ {
+  "ruta": "dias/1/bloques/0/items/1/termino",
+  "es": "Proyecto",
+  "en": "Project"
+ },
+ {
+  "ruta": "dias/1/bloques/0/items/1/definicion",
+  "es": "Esfuerzo <b>temporal</b> realizado para producir un resultado único. Ejemplo: implementar un nuevo sistema de pedidos.",
+  "en": "A <b>temporary</b> effort carried out to produce a unique result. Example: implementing a new order system."
+ },
+ {
+  "ruta": "dias/1/bloques/0/items/2/termino",
+  "es": "Idea clave",
+  "en": "Key idea"
+ },
+ {
+  "ruta": "dias/1/bloques/0/items/2/definicion",
+  "es": "El proyecto termina; el proceso continúa operando.",
+  "en": "The project ends; the process keeps operating."
+ },
+ {
+  "ruta": "dias/1/bloques/1/titulo",
+  "es": "Componentes de un proceso",
+  "en": "Components of a process"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/0",
+  "es": "Cliente",
+  "en": "Customer"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/1",
+  "es": "Proveedor",
+  "en": "Supplier"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/2",
+  "es": "Entrada",
+  "en": "Input"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/3",
+  "es": "Actividades",
+  "en": "Activities"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/4",
+  "es": "Roles y responsables",
+  "en": "Roles and owners"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/5",
+  "es": "Reglas",
+  "en": "Rules"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/6",
+  "es": "Recursos",
+  "en": "Resources"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/7",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/8",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/9",
+  "es": "Controles",
+  "en": "Controls"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/10",
+  "es": "Salidas",
+  "en": "Outputs"
+ },
+ {
+  "ruta": "dias/1/bloques/1/items/11",
+  "es": "Indicadores",
+  "en": "Indicators"
+ },
+ {
+  "ruta": "dias/1/bloques/2/titulo",
+  "es": "Proceso end-to-end y trabajo cross-functional",
+  "en": "End-to-end process and cross-functional work"
+ },
+ {
+  "ruta": "dias/1/bloques/2/cuerpo",
+  "es": "<p>Un proceso <b>end-to-end</b> se analiza desde la necesidad inicial hasta el resultado recibido por el cliente. <b>Cross-functional</b> significa que el trabajo atraviesa varias funciones o departamentos.</p><p>El cliente no percibe departamentos; percibe una sola experiencia.</p>",
+  "en": "<p>An <b>end-to-end</b> process is analyzed from the initial need through to the result the customer receives. <b>Cross-functional</b> means the work cuts across several functions or departments.</p><p>The customer does not perceive departments; the customer perceives a single experience.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/3/titulo",
+  "es": "Ejemplo end-to-end",
+  "en": "End-to-end example"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/0",
+  "es": "Cliente solicita",
+  "en": "Customer requests"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/1",
+  "es": "Ventas registra",
+  "en": "Sales records"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/2",
+  "es": "Crédito valida",
+  "en": "Credit validates"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/3",
+  "es": "Producción fabrica",
+  "en": "Production manufactures"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/4",
+  "es": "Logística entrega",
+  "en": "Logistics delivers"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/5",
+  "es": "Finanzas factura",
+  "en": "Finance invoices"
+ },
+ {
+  "ruta": "dias/1/bloques/4/titulo",
+  "es": "Pregunta detonadora",
+  "en": "Trigger question"
+ },
+ {
+  "ruta": "dias/1/bloques/4/cuerpo",
+  "es": "<p>Si cada departamento cumple sus propios indicadores, pero el pedido llega tarde, ¿el proceso fue exitoso?</p><p><b>No.</b> Hubo eficiencia local, pero falta de efectividad integral.</p>",
+  "en": "<p>If every department meets its own indicators but the order arrives late, was the process successful?</p><p><b>No.</b> There was local efficiency, but a lack of end-to-end effectiveness.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/5/titulo",
+  "es": "Cliente, valor y cadena de valor",
+  "en": "Customer, value and value chain"
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/0/termino",
+  "es": "Cliente",
+  "en": "Customer"
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/0/definicion",
+  "es": "Receptor del resultado del proceso; puede ser externo o interno.",
+  "en": "Recipient of the process result; may be external or internal."
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/1/termino",
+  "es": "Customer value",
+  "en": "Customer value"
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/1/definicion",
+  "es": "Beneficio que el cliente percibe frente al costo, tiempo o esfuerzo realizado.",
+  "en": "The benefit the customer perceives relative to the cost, time or effort involved."
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/2/termino",
+  "es": "Actividad con valor",
+  "en": "Value-added activity"
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/2/definicion",
+  "es": "Transforma el producto o servicio, el cliente reconoce su utilidad, se realiza correctamente y contribuye al resultado esperado.",
+  "en": "It transforms the product or service, the customer recognizes its usefulness, it is done right, and it contributes to the expected result."
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/3/termino",
+  "es": "Actividad necesaria",
+  "en": "Necessary activity"
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/3/definicion",
+  "es": "No agrega valor al cliente, pero el negocio o el cumplimiento la exigen (por ejemplo, un control regulatorio).",
+  "en": "It adds no value for the customer, but the business or compliance requires it (for example, a regulatory control)."
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/4/termino",
+  "es": "Actividad sin valor",
+  "en": "Non-value-added activity"
+ },
+ {
+  "ruta": "dias/1/bloques/5/items/4/definicion",
+  "es": "Espera, retrabajo, captura duplicada, traslado innecesario.",
+  "en": "Waiting, rework, duplicate data entry, unnecessary movement."
+ },
+ {
+  "ruta": "dias/1/bloques/6/titulo",
+  "es": "BPM y BPMN no son lo mismo",
+  "en": "BPM and BPMN are not the same"
+ },
+ {
+  "ruta": "dias/1/bloques/6/cuerpo",
+  "es": "<p><b>BPM — Business Process Management</b> es la <b>disciplina</b> para identificar, diseñar, ejecutar, medir, controlar y mejorar procesos.</p><p><b>BPMN — Business Process Model and Notation</b> es una <b>notación gráfica estandarizada</b> para representarlos. Sus elementos básicos incluyen eventos, actividades, compuertas, flujos y participantes, y busca que un mismo modelo sea comprensible tanto para usuarios del negocio como para equipos técnicos.</p><p>Frase para clase: <i>“BPM es administrar cómo se realiza el trabajo de principio a fin. BPMN es una forma estandarizada de dibujar ese trabajo.”</i></p>",
+  "en": "<p><b>BPM — Business Process Management</b> is the <b>discipline</b> for identifying, designing, executing, measuring, controlling and improving processes.</p><p><b>BPMN — Business Process Model and Notation</b> is a <b>standardized graphical notation</b> for representing them. Its basic elements include events, activities, gateways, flows and participants, and it aims to make one and the same model understandable to business users and technical teams alike.</p><p>A line to use in class: <i>“BPM is managing how the work gets done from beginning to end. BPMN is a standardized way of drawing that work.”</i></p>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/titulo",
+  "es": "Ciclo BPM simplificado",
+  "en": "Simplified BPM cycle"
+ },
+ {
+  "ruta": "dias/1/bloques/7/items/0",
+  "es": "Identificar",
+  "en": "Identify"
+ },
+ {
+  "ruta": "dias/1/bloques/7/items/1",
+  "es": "Descubrir y documentar",
+  "en": "Discover and document"
+ },
+ {
+  "ruta": "dias/1/bloques/7/items/2",
+  "es": "Analizar",
+  "en": "Analyze"
+ },
+ {
+  "ruta": "dias/1/bloques/7/items/3",
+  "es": "Rediseñar",
+  "en": "Redesign"
+ },
+ {
+  "ruta": "dias/1/bloques/7/items/4",
+  "es": "Implementar",
+  "en": "Implement"
+ },
+ {
+  "ruta": "dias/1/bloques/7/items/5",
+  "es": "Monitorear",
+  "en": "Monitor"
+ },
+ {
+  "ruta": "dias/1/bloques/7/items/6",
+  "es": "Mejorar nuevamente",
+  "en": "Improve again"
+ },
+ {
+  "ruta": "dias/1/bloques/8/titulo",
+  "es": "Efectividad, eficiencia y calidad",
+  "en": "Effectiveness, efficiency and quality"
+ },
+ {
+  "ruta": "dias/1/bloques/8/items/0/termino",
+  "es": "Efectividad",
+  "en": "Effectiveness"
+ },
+ {
+  "ruta": "dias/1/bloques/8/items/0/definicion",
+  "es": "Grado en que se logra el resultado esperado.",
+  "en": "The degree to which the expected result is achieved."
+ },
+ {
+  "ruta": "dias/1/bloques/8/items/1/termino",
+  "es": "Eficiencia",
+  "en": "Efficiency"
+ },
+ {
+  "ruta": "dias/1/bloques/8/items/1/definicion",
+  "es": "Relación entre el resultado obtenido y los recursos utilizados.",
+  "en": "The relationship between the result obtained and the resources used."
+ },
+ {
+  "ruta": "dias/1/bloques/8/items/2/termino",
+  "es": "Calidad",
+  "en": "Quality"
+ },
+ {
+  "ruta": "dias/1/bloques/8/items/2/definicion",
+  "es": "Cumplimiento de requisitos y ausencia de defectos.",
+  "en": "Meeting requirements and the absence of defects."
+ },
+ {
+  "ruta": "dias/1/bloques/9/titulo",
+  "es": "Indicadores posibles",
+  "en": "Possible indicators"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/0",
+  "es": "Tiempo total del proceso (lead time)",
+  "en": "Total process time (lead time)"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/1",
+  "es": "Costo por transacción",
+  "en": "Cost per transaction"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/2",
+  "es": "Porcentaje de pedidos a tiempo",
+  "en": "Percentage of on-time orders"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/3",
+  "es": "Tasa de errores",
+  "en": "Error rate"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/4",
+  "es": "Retrabajos",
+  "en": "Rework"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/5",
+  "es": "Satisfacción del cliente",
+  "en": "Customer satisfaction"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/6",
+  "es": "Tiempo de espera",
+  "en": "Wait time"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/7",
+  "es": "Productividad",
+  "en": "Productivity"
+ },
+ {
+  "ruta": "dias/1/bloques/10/titulo",
+  "es": "Automatización, digitalización y transformación digital",
+  "en": "Automation, digitalization and digital transformation"
+ },
+ {
+  "ruta": "dias/1/bloques/10/items/0/termino",
+  "es": "Automatización",
+  "en": "Automation"
+ },
+ {
+  "ruta": "dias/1/bloques/10/items/0/definicion",
+  "es": "La tecnología ejecuta una actividad que antes hacía una persona.",
+  "en": "Technology performs an activity a person used to do."
+ },
+ {
+  "ruta": "dias/1/bloques/10/items/1/termino",
+  "es": "Digitalización",
+  "en": "Digitalization"
+ },
+ {
+  "ruta": "dias/1/bloques/10/items/1/definicion",
+  "es": "Información o actividades pasan a medios digitales.",
+  "en": "Information or activities move to digital media."
+ },
+ {
+  "ruta": "dias/1/bloques/10/items/2/termino",
+  "es": "Transformación digital",
+  "en": "Digital transformation"
+ },
+ {
+  "ruta": "dias/1/bloques/10/items/2/definicion",
+  "es": "Cambian capacidades, procesos, experiencia del cliente o modelo de negocio mediante tecnología.",
+  "en": "Capabilities, processes, customer experience or the business model change through technology."
+ },
+ {
+  "ruta": "dias/1/bloques/11/titulo",
+  "es": "Advertencia",
+  "en": "Warning"
+ },
+ {
+  "ruta": "dias/1/bloques/11/cuerpo",
+  "es": "<p>Digitalizar un formato defectuoso no mejora necesariamente el proceso: puede producir <b>un proceso defectuoso más rápido</b>.</p>",
+  "en": "<p>Digitizing a flawed form does not necessarily improve the process: it can produce <b>a faster flawed process</b>.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/12/titulo",
+  "es": "Evolución industrial",
+  "en": "Industrial evolution"
+ },
+ {
+  "ruta": "dias/1/bloques/12/encabezados/0",
+  "es": "Etapa",
+  "en": "Stage"
+ },
+ {
+  "ruta": "dias/1/bloques/12/encabezados/1",
+  "es": "Elemento principal",
+  "en": "Main element"
+ },
+ {
+  "ruta": "dias/1/bloques/12/encabezados/2",
+  "es": "Ejemplo",
+  "en": "Example"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/0/0",
+  "es": "Industria 2.0",
+  "en": "Industry 2.0"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/0/1",
+  "es": "Electricidad y producción en masa",
+  "en": "Electricity and mass production"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/0/2",
+  "es": "Línea de ensamblaje",
+  "en": "Assembly line"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/1/0",
+  "es": "Industria 3.0",
+  "en": "Industry 3.0"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/1/1",
+  "es": "Electrónica, computación y automatización",
+  "en": "Electronics, computing and automation"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/1/2",
+  "es": "Robot industrial programado, PLC, ERP",
+  "en": "Programmed industrial robot, PLC, ERP"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/2/0",
+  "es": "Industria 4.0",
+  "en": "Industry 4.0"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/2/1",
+  "es": "Conectividad, datos e inteligencia (IoT, nube, IA, gemelos digitales)",
+  "en": "Connectivity, data and intelligence (IoT, cloud, AI, digital twins)"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/2/2",
+  "es": "Mantenimiento predictivo",
+  "en": "Predictive maintenance"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/3/0",
+  "es": "Industria 5.0",
+  "en": "Industry 5.0"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/3/1",
+  "es": "Personas, sostenibilidad y resiliencia",
+  "en": "People, sustainability and resilience"
+ },
+ {
+  "ruta": "dias/1/bloques/12/filas/3/2",
+  "es": "Colaboración humano-robot responsable",
+  "en": "Responsible human-robot collaboration"
+ },
+ {
+  "ruta": "dias/1/bloques/13/titulo",
+  "es": "3.0 frente a 4.0",
+  "en": "3.0 versus 4.0"
+ },
+ {
+  "ruta": "dias/1/bloques/13/cuerpo",
+  "es": "<p>En la Industria 3.0 <b>una máquina está automatizada</b>. En la Industria 4.0 <b>las máquinas, los sistemas y las personas están conectados y comparten datos</b> para tomar mejores decisiones.</p>",
+  "en": "<p>In Industry 3.0 <b>a machine is automated</b>. In Industry 4.0 <b>machines, systems and people are connected and share data</b> in order to make better decisions.</p>"
+ },
+ {
+  "ruta": "dias/2/nombre",
+  "es": "Miércoles · Sesión 3",
+  "en": "Wednesday · Session 3"
+ },
+ {
+  "ruta": "dias/2/tema",
+  "es": "Marcos de Arquitectura Empresarial y estándares",
+  "en": "Enterprise Architecture frameworks and standards"
+ },
+ {
+  "ruta": "dias/2/proposito",
+  "es": "Diferenciar los principales marcos y comprender que un marco organiza el trabajo, mientras que un estándar establece criterios comunes.",
+  "en": "Differentiate the main frameworks and understand that a framework organizes the work, whereas a standard sets common criteria."
+ },
+ {
+  "ruta": "dias/2/bloques/0/titulo",
+  "es": "¿Qué proporciona un marco de referencia?",
+  "en": "What does a framework give you?"
+ },
+ {
+  "ruta": "dias/2/bloques/0/items/0",
+  "es": "Conceptos compartidos",
+  "en": "Shared concepts"
+ },
+ {
+  "ruta": "dias/2/bloques/0/items/1",
+  "es": "Método o estructura de trabajo",
+  "en": "A method or working structure"
+ },
+ {
+  "ruta": "dias/2/bloques/0/items/2",
+  "es": "Productos o artefactos",
+  "en": "Products or artifacts"
+ },
+ {
+  "ruta": "dias/2/bloques/0/items/3",
+  "es": "Roles",
+  "en": "Roles"
+ },
+ {
+  "ruta": "dias/2/bloques/0/items/4",
+  "es": "Principios",
+  "en": "Principles"
+ },
+ {
+  "ruta": "dias/2/bloques/0/items/5",
+  "es": "Mecanismos de gobierno",
+  "en": "Governance mechanisms"
+ },
+ {
+  "ruta": "dias/2/bloques/1/titulo",
+  "es": "Analogía",
+  "en": "Analogy"
+ },
+ {
+  "ruta": "dias/2/bloques/1/cuerpo",
+  "es": "<p>El marco es como una guía para planear una ciudad: ayuda a decidir qué estudiar, cómo representarlo y cómo coordinar a los participantes, <b>pero no diseña automáticamente cada edificio</b>.</p>",
+  "en": "<p>A framework is like a guide for planning a city: it helps you decide what to study, how to represent it and how to coordinate the participants, <b>but it does not automatically design each building</b>.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/2/titulo",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "dias/2/bloques/2/cuerpo",
+  "es": "<p><b>TOGAF</b> significa <i>The Open Group Architecture Framework</i>. Es un estándar y marco para desarrollar y gobernar la Arquitectura Empresarial; The Open Group publica actualmente su décima edición.</p><p>Mensaje fundamental: <b>TOGAF comienza con el negocio</b>. La tecnología se justifica por los resultados, capacidades y requerimientos que debe soportar.</p>",
+  "en": "<p><b>TOGAF</b> stands for <i>The Open Group Architecture Framework</i>. It is a standard and a framework for developing and governing Enterprise Architecture; The Open Group currently publishes its tenth edition.</p><p>Core message: <b>TOGAF starts with the business</b>. Technology is justified by the outcomes, capabilities and requirements it has to support.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/3/titulo",
+  "es": "ADM — Architecture Development Method",
+  "en": "ADM — Architecture Development Method"
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/0",
+  "es": "<b>Preliminar:</b> preparar la capacidad de arquitectura (principios, roles, gobierno, herramientas).",
+  "en": "<b>Preliminary:</b> prepare the architecture capability (principles, roles, governance, tools)."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/1",
+  "es": "<b>A · Visión de arquitectura:</b> alcance, interesados, objetivos, riesgos, visión inicial AS-IS/TO-BE.",
+  "en": "<b>A · Architecture Vision:</b> scope, stakeholders, objectives, risks, initial AS-IS/TO-BE view."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/2",
+  "es": "<b>B · Arquitectura de negocio:</b> capacidades, cadena de valor, procesos, organización, indicadores.",
+  "en": "<b>B · Business Architecture:</b> capabilities, value chain, processes, organization, indicators."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/3",
+  "es": "<b>C · Arquitecturas de sistemas de información:</b> datos primero, después aplicaciones.",
+  "en": "<b>C · Information Systems Architectures:</b> data first, applications afterwards."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/4",
+  "es": "<b>D · Arquitectura tecnológica:</b> infraestructura, nube, redes, plataformas, seguridad.",
+  "en": "<b>D · Technology Architecture:</b> infrastructure, cloud, networks, platforms, security."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/5",
+  "es": "<b>E · Oportunidades y soluciones:</b> convertir brechas en iniciativas y paquetes de trabajo.",
+  "en": "<b>E · Opportunities and Solutions:</b> turn gaps into initiatives and work packages."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/6",
+  "es": "<b>F · Planeación de la migración:</b> priorizar y construir el roadmap.",
+  "en": "<b>F · Migration Planning:</b> prioritize and build the roadmap."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/7",
+  "es": "<b>G · Gobierno de implementación:</b> verificar que los proyectos respeten la arquitectura.",
+  "en": "<b>G · Implementation Governance:</b> check that projects respect the architecture."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/8",
+  "es": "<b>H · Administración del cambio:</b> adaptar la arquitectura cuando cambia el entorno.",
+  "en": "<b>H · Architecture Change Management:</b> adapt the architecture when the environment changes."
+ },
+ {
+  "ruta": "dias/2/bloques/3/items/9",
+  "es": "<b>Gestión de requerimientos:</b> actividad central y continua, presente en todas las fases.",
+  "en": "<b>Requirements Management:</b> a central, continuous activity present in every phase."
+ },
+ {
+  "ruta": "dias/2/bloques/4/titulo",
+  "es": "El ciclo ADM",
+  "en": "The ADM cycle"
+ },
+ {
+  "ruta": "dias/2/bloques/4/pie",
+  "es": "Las fases se recorren en ciclo: al terminar H se vuelve a empezar. La gestión de requerimientos está al centro porque todas las fases identifican, revisan y actualizan requerimientos.",
+  "en": "The phases run as a cycle: when H ends, you start over. Requirements management sits at the center because every phase identifies, reviews and updates requirements."
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#0",
+  "es": "Preliminar",
+  "en": "Preliminary"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#1",
+  "es": "cierra el ciclo",
+  "en": "closes the cycle"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#2",
+  "es": "A · Visión",
+  "en": "A · Vision"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#3",
+  "es": "alcance e interesados",
+  "en": "scope and stakeholders"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#4",
+  "es": "B · Negocio",
+  "en": "B · Business"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#5",
+  "es": "capacidades y procesos",
+  "en": "capabilities and processes"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#6",
+  "es": "C · Datos y apps",
+  "en": "C · Data and apps"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#7",
+  "es": "datos primero",
+  "en": "data first"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#8",
+  "es": "D · Tecnología",
+  "en": "D · Technology"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#9",
+  "es": "infraestructura",
+  "en": "infrastructure"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#10",
+  "es": "E · Soluciones",
+  "en": "E · Solutions"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#11",
+  "es": "brechas → iniciativas",
+  "en": "gaps → initiatives"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#12",
+  "es": "F · Migración",
+  "en": "F · Migration"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#13",
+  "es": "priorizar y roadmap",
+  "en": "prioritize and roadmap"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#14",
+  "es": "G · Gobierno",
+  "en": "G · Governance"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#15",
+  "es": "de implementación",
+  "en": "of implementation"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#16",
+  "es": "H · Cambio",
+  "en": "H · Change"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#17",
+  "es": "¿sigue vigente?",
+  "en": "still valid?"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#18",
+  "es": "Gestión de requerimientos",
+  "en": "Requirements management"
+ },
+ {
+  "ruta": "dias/2/bloques/4/svg#19",
+  "es": "atraviesa todas las fases",
+  "en": "spans every phase"
+ },
+ {
+  "ruta": "dias/2/bloques/5/titulo",
+  "es": "Artefactos: catálogo, matriz, diagrama",
+  "en": "Artifacts: catalog, matrix, diagram"
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/0/termino",
+  "es": "Catálogo",
+  "en": "Catalog"
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/0/definicion",
+  "es": "Lista organizada. Ejemplo: catálogo de aplicaciones.",
+  "en": "An organized list. Example: an application catalog."
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/1/termino",
+  "es": "Matriz",
+  "en": "Matrix"
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/1/definicion",
+  "es": "Muestra relaciones entre dos dimensiones. Ejemplo: matriz proceso-aplicación.",
+  "en": "It shows relationships between two dimensions. Example: a process-application matrix."
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/2/termino",
+  "es": "Diagrama",
+  "en": "Diagram"
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/2/definicion",
+  "es": "Representa visualmente componentes y relaciones.",
+  "en": "It visually represents components and relationships."
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/3/termino",
+  "es": "Principio",
+  "en": "Principle"
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/3/definicion",
+  "es": "Regla que orienta decisiones. Ejemplo: “se reutilizarán capacidades existentes antes de adquirir nuevas soluciones”.",
+  "en": "A rule that guides decisions. Example: “existing capabilities will be reused before new solutions are acquired”."
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/4/termino",
+  "es": "Roadmap",
+  "en": "Roadmap"
+ },
+ {
+  "ruta": "dias/2/bloques/5/items/4/definicion",
+  "es": "Secuencia priorizada de iniciativas de transformación.",
+  "en": "A prioritized sequence of transformation initiatives."
+ },
+ {
+  "ruta": "dias/2/bloques/6/titulo",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "dias/2/bloques/6/cuerpo",
+  "es": "<p>Es principalmente una <b>estructura de clasificación u ontología</b>. Organiza las descripciones de la empresa mediante seis preguntas: <b>Qué</b> (datos), <b>Cómo</b> (funciones y procesos), <b>Dónde</b> (ubicaciones y redes), <b>Quién</b> (personas y responsabilidades), <b>Cuándo</b> (eventos y ciclos) y <b>Por qué</b> (motivaciones y estrategias), observadas desde distintas perspectivas.</p><p>Zachman ayuda a comprobar que no falten vistas, pero <b>no ofrece una secuencia de transformación</b> equivalente al ADM.</p>",
+  "en": "<p>It is mainly a <b>classification structure or ontology</b>. It organizes the descriptions of the enterprise through six questions: <b>What</b> (data), <b>How</b> (functions and processes), <b>Where</b> (locations and networks), <b>Who</b> (people and responsibilities), <b>When</b> (events and cycles) and <b>Why</b> (motivations and strategies), seen from different perspectives.</p><p>Zachman helps you check that no view is missing, but <b>it does not offer a transformation sequence</b> equivalent to the ADM.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/7/titulo",
+  "es": "Gartner",
+  "en": "Gartner"
+ },
+ {
+  "ruta": "dias/2/bloques/7/cuerpo",
+  "es": "<p>Su planteamiento se concentra en <b>conectar inversiones y decisiones tecnológicas con resultados empresariales</b>. Destaca la colaboración con los interesados y un gobierno adaptable, en lugar de convertir la arquitectura en una función puramente de control.</p>",
+  "en": "<p>Its approach concentrates on <b>connecting technology investments and decisions with business outcomes</b>. It emphasizes collaboration with stakeholders and adaptable governance, instead of turning architecture into a purely control function.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/8/titulo",
+  "es": "Comparación de enfoques",
+  "en": "Comparison of approaches"
+ },
+ {
+  "ruta": "dias/2/bloques/8/encabezados/0",
+  "es": "Enfoque",
+  "en": "Approach"
+ },
+ {
+  "ruta": "dias/2/bloques/8/encabezados/1",
+  "es": "Principal utilidad",
+  "en": "Main usefulness"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/0/0",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/0/1",
+  "es": "Método para desarrollar y gobernar la arquitectura",
+  "en": "A method for developing and governing the architecture"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/1/0",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/1/1",
+  "es": "Ciclo operativo de TOGAF",
+  "en": "The operating cycle of TOGAF"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/2/0",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/2/1",
+  "es": "Clasificar y ordenar las distintas vistas de la empresa",
+  "en": "Classifying and ordering the different views of the enterprise"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/3/0",
+  "es": "Gartner",
+  "en": "Gartner"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/3/1",
+  "es": "Orientar la arquitectura a resultados de negocio",
+  "en": "Steering the architecture toward business outcomes"
+ },
+ {
+  "ruta": "dias/2/bloques/9/titulo",
+  "es": "Los marcos se complementan",
+  "en": "The frameworks complement each other"
+ },
+ {
+  "ruta": "dias/2/bloques/9/cuerpo",
+  "es": "<p>No es obligatorio utilizar un marco de forma pura. Pueden coexistir porque resuelven problemas diferentes.</p>",
+  "en": "<p>You are not required to use a framework in its pure form. They can coexist because they solve different problems.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/10/titulo",
+  "es": "Estándares relacionados",
+  "en": "Related standards"
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/0",
+  "es": "<b>ISO/IEC 20000-1:</b> gestión de servicios de TI (planeación, diseño, transición, entrega y mejora).",
+  "en": "<b>ISO/IEC 20000-1:</b> IT service management (planning, design, transition, delivery and improvement)."
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/1",
+  "es": "<b>ISO/IEC 27001:</b> seguridad de la información.",
+  "en": "<b>ISO/IEC 27001:</b> information security."
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/2",
+  "es": "<b>ISO 9001:</b> gestión de calidad.",
+  "en": "<b>ISO 9001:</b> quality management."
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/3",
+  "es": "<b>ISO/IEC/IEEE 12207:</b> procesos del ciclo de vida del software; no obliga a una metodología de desarrollo específica.",
+  "en": "<b>ISO/IEC/IEEE 12207:</b> software life cycle processes; it does not mandate any specific development methodology."
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/4",
+  "es": "<b>ISO/IEC/IEEE 29148:</b> ingeniería de requerimientos.",
+  "en": "<b>ISO/IEC/IEEE 29148:</b> requirements engineering."
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/5",
+  "es": "<b>BPMN / ISO 19510:</b> representación gráfica de procesos.",
+  "en": "<b>BPMN / ISO 19510:</b> graphical representation of processes."
+ },
+ {
+  "ruta": "dias/2/bloques/11/titulo",
+  "es": "Obligatoriedad",
+  "en": "Mandatory status"
+ },
+ {
+  "ruta": "dias/2/bloques/11/cuerpo",
+  "es": "<p>Los estándares orientan o establecen requisitos, pero <b>no todos son obligatorios</b>. Su obligatoriedad depende de leyes, contratos, regulación o decisiones organizacionales.</p>",
+  "en": "<p>Standards guide or set requirements, but <b>not all of them are mandatory</b>. Whether they are mandatory depends on laws, contracts, regulation or organizational decisions.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/12/titulo",
+  "es": "Cierre del día",
+  "en": "Closing the day"
+ },
+ {
+  "ruta": "dias/2/bloques/12/cuerpo",
+  "es": "<p>¿Qué usarías para indicar <b>cómo desarrollar</b> una arquitectura, qué usarías para <b>organizar sus vistas</b> y qué usarías para <b>dibujar un proceso</b>?<br>TOGAF/ADM, Zachman y BPMN, respectivamente.</p>",
+  "en": "<p>What would you use to state <b>how to develop</b> an architecture, what would you use to <b>organize its views</b> and what would you use to <b>draw a process</b>?<br>TOGAF/ADM, Zachman and BPMN, respectively.</p>"
+ },
+ {
+  "ruta": "dias/3/nombre",
+  "es": "Jueves · Sesión 4",
+  "en": "Thursday · Session 4"
+ },
+ {
+  "ruta": "dias/3/tema",
+  "es": "Roles, Transformación Digital e integración",
+  "en": "Roles, Digital Transformation and integration"
+ },
+ {
+  "ruta": "dias/3/proposito",
+  "es": "Integrar estrategia, arquitectura, procesos y desarrollo de soluciones, aclarando responsabilidades profesionales.",
+  "en": "Integrate strategy, architecture, processes and solution development, clarifying professional responsibilities."
+ },
+ {
+  "ruta": "dias/3/bloques/0/titulo",
+  "es": "Arquitecto empresarial frente a arquitecto de soluciones",
+  "en": "Enterprise architect versus solution architect"
+ },
+ {
+  "ruta": "dias/3/bloques/0/encabezados/0",
+  "es": "Arquitecto empresarial",
+  "en": "Enterprise architect"
+ },
+ {
+  "ruta": "dias/3/bloques/0/encabezados/1",
+  "es": "Arquitecto de soluciones",
+  "en": "Solution architect"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/0/0",
+  "es": "Trabaja con alcance organizacional",
+  "en": "Works at organization-wide scope"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/0/1",
+  "es": "Trabaja sobre una necesidad o iniciativa concreta",
+  "en": "Works on a specific need or initiative"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/1/0",
+  "es": "Conecta estrategia y capacidades",
+  "en": "Connects strategy and capabilities"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/1/1",
+  "es": "Diseña los componentes de una solución",
+  "en": "Designs the components of a solution"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/2/0",
+  "es": "Analiza varios dominios y áreas",
+  "en": "Analyzes several domains and areas"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/2/1",
+  "es": "Define integraciones, seguridad y decisiones técnicas",
+  "en": "Defines integrations, security and technical decisions"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/3/0",
+  "es": "Define principios y arquitecturas objetivo",
+  "en": "Defines principles and target architectures"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/3/1",
+  "es": "Evalúa restricciones de costo, tiempo y calidad",
+  "en": "Assesses cost, time and quality constraints"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/4/0",
+  "es": "Identifica duplicidades y dependencias",
+  "en": "Identifies duplication and dependencies"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/4/1",
+  "es": "Coordina equipos técnicos",
+  "en": "Coordinates technical teams"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/5/0",
+  "es": "Construye roadmaps y participa en el gobierno",
+  "en": "Builds roadmaps and takes part in governance"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/5/1",
+  "es": "Verifica que la solución respete la arquitectura empresarial",
+  "en": "Checks that the solution respects the enterprise architecture"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/6/0",
+  "es": "<i>¿Cómo debe evolucionar la organización como un sistema completo?</i>",
+  "en": "<i>How should the organization evolve as a complete system?</i>"
+ },
+ {
+  "ruta": "dias/3/bloques/0/filas/6/1",
+  "es": "<i>¿Cómo construiremos esta solución específica?</i>",
+  "en": "<i>How will we build this specific solution?</i>"
+ },
+ {
+  "ruta": "dias/3/bloques/1/titulo",
+  "es": "Ejemplo",
+  "en": "Example"
+ },
+ {
+  "ruta": "dias/3/bloques/1/cuerpo",
+  "es": "<p>El <b>arquitecto empresarial</b> establece una visión regional de clientes. El <b>arquitecto de soluciones</b> diseña la integración entre CRM, ERP y plataforma de datos.</p>",
+  "en": "<p>The <b>enterprise architect</b> establishes a regional view of customers. The <b>solution architect</b> designs the integration between CRM, ERP and the data platform.</p>"
+ },
+ {
+  "ruta": "dias/3/bloques/2/titulo",
+  "es": "TI frente a Transformación Digital",
+  "en": "IT versus Digital Transformation"
+ },
+ {
+  "ruta": "dias/3/bloques/2/encabezados/0",
+  "es": "Departamento de TI",
+  "en": "IT department"
+ },
+ {
+  "ruta": "dias/3/bloques/2/encabezados/1",
+  "es": "Área de Transformación Digital",
+  "en": "Digital Transformation area"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/0/0",
+  "es": "Opera servicios y sistemas",
+  "en": "Operates services and systems"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/0/1",
+  "es": "Impulsa cambios en el negocio y la experiencia",
+  "en": "Drives changes in the business and the experience"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/1/0",
+  "es": "Administra infraestructura y soporte",
+  "en": "Manages infrastructure and support"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/1/1",
+  "es": "Explora modelos, productos y capacidades",
+  "en": "Explores models, products and capabilities"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/2/0",
+  "es": "Gestiona disponibilidad y seguridad",
+  "en": "Manages availability and security"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/2/1",
+  "es": "Coordina innovación y adopción",
+  "en": "Coordinates innovation and adoption"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/3/0",
+  "es": "Mantiene la continuidad operativa",
+  "en": "Maintains operational continuity"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/3/1",
+  "es": "Busca resultados de transformación",
+  "en": "Pursues transformation outcomes"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/4/0",
+  "es": "Implementa y gobierna tecnología",
+  "en": "Implements and governs technology"
+ },
+ {
+  "ruta": "dias/3/bloques/2/filas/4/1",
+  "es": "Articula negocio, datos, tecnología y cambio",
+  "en": "Connects business, data, technology and change"
+ },
+ {
+  "ruta": "dias/3/bloques/3/titulo",
+  "es": "No son rivales",
+  "en": "They are not rivals"
+ },
+ {
+  "ruta": "dias/3/bloques/3/cuerpo",
+  "es": "<p>TI aporta estabilidad y capacidad técnica; Transformación Digital moviliza el cambio; <b>Arquitectura Empresarial ayuda a orquestar ambas perspectivas</b>.</p>",
+  "en": "<p>IT provides stability and technical capability; Digital Transformation mobilizes change; <b>Enterprise Architecture helps orchestrate both perspectives</b>.</p>"
+ },
+ {
+  "ruta": "dias/3/bloques/4/titulo",
+  "es": "Estrategias y transformación",
+  "en": "Strategies and transformation"
+ },
+ {
+  "ruta": "dias/3/bloques/4/items/0/termino",
+  "es": "Estrategia comercial",
+  "en": "Commercial strategy"
+ },
+ {
+  "ruta": "dias/3/bloques/4/items/0/definicion",
+  "es": "Clientes, mercados, canales, productos, ingresos y posicionamiento.",
+  "en": "Customers, markets, channels, products, revenue and positioning."
+ },
+ {
+  "ruta": "dias/3/bloques/4/items/1/termino",
+  "es": "Estrategia organizacional",
+  "en": "Organizational strategy"
+ },
+ {
+  "ruta": "dias/3/bloques/4/items/1/definicion",
+  "es": "Capacidades, estructura, talento, operación, cultura y gobierno.",
+  "en": "Capabilities, structure, talent, operations, culture and governance."
+ },
+ {
+  "ruta": "dias/3/bloques/4/items/2/termino",
+  "es": "Transformación empresarial",
+  "en": "Enterprise transformation"
+ },
+ {
+  "ruta": "dias/3/bloques/4/items/2/definicion",
+  "es": "Iniciativas que cambian capacidades, procesos, productos o modelos operativos.",
+  "en": "Initiatives that change capabilities, processes, products or operating models."
+ },
+ {
+  "ruta": "dias/3/bloques/5/titulo",
+  "es": "Preguntas para identificar requerimientos estratégicos",
+  "en": "Questions to identify strategic requirements"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/0",
+  "es": "¿Qué resultado desea la organización?",
+  "en": "What outcome does the organization want?"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/1",
+  "es": "¿Cómo se medirá?",
+  "en": "How will it be measured?"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/2",
+  "es": "¿Qué capacidad necesita desarrollar?",
+  "en": "What capability does it need to develop?"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/3",
+  "es": "¿Qué proceso debe cambiar?",
+  "en": "What process must change?"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/4",
+  "es": "¿Qué datos requiere?",
+  "en": "What data does it require?"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/5",
+  "es": "¿Qué aplicaciones lo apoyarán?",
+  "en": "What applications will support it?"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/6",
+  "es": "¿Qué infraestructura y seguridad serán necesarias?",
+  "en": "What infrastructure and security will be needed?"
+ },
+ {
+  "ruta": "dias/3/bloques/5/items/7",
+  "es": "¿Qué personas y reglas deben cambiar?",
+  "en": "What people and rules must change?"
+ },
+ {
+  "ruta": "dias/3/bloques/6/titulo",
+  "es": "Ejemplo: reducir 20 % el tiempo de entrega",
+  "en": "Example: cut lead time by 20 %"
+ },
+ {
+  "ruta": "dias/3/bloques/6/pasos/0",
+  "es": "Estrategia: −20 % lead time",
+  "en": "Strategy: −20 % lead time"
+ },
+ {
+  "ruta": "dias/3/bloques/6/pasos/1",
+  "es": "Capacidad: planeación integrada",
+  "en": "Capability: integrated planning"
+ },
+ {
+  "ruta": "dias/3/bloques/6/pasos/2",
+  "es": "Proceso: pedido a entrega",
+  "en": "Process: order to delivery"
+ },
+ {
+  "ruta": "dias/3/bloques/6/pasos/3",
+  "es": "Datos: inventario y producción en tiempo real",
+  "en": "Data: real-time inventory and production"
+ },
+ {
+  "ruta": "dias/3/bloques/6/pasos/4",
+  "es": "Aplicación: plataforma de planeación",
+  "en": "Application: planning platform"
+ },
+ {
+  "ruta": "dias/3/bloques/6/pasos/5",
+  "es": "Tecnología: integración, nube y sensores",
+  "en": "Technology: integration, cloud and sensors"
+ },
+ {
+  "ruta": "dias/3/bloques/7/titulo",
+  "es": "Metodologías de desarrollo",
+  "en": "Development methodologies"
+ },
+ {
+  "ruta": "dias/3/bloques/7/items/0/termino",
+  "es": "Cascada",
+  "en": "Waterfall"
+ },
+ {
+  "ruta": "dias/3/bloques/7/items/0/definicion",
+  "es": "Fases secuenciales; útil cuando el alcance es estable.",
+  "en": "Sequential phases; useful when the scope is stable."
+ },
+ {
+  "ruta": "dias/3/bloques/7/items/1/termino",
+  "es": "Ágil",
+  "en": "Agile"
+ },
+ {
+  "ruta": "dias/3/bloques/7/items/1/definicion",
+  "es": "Desarrollo iterativo con entregas frecuentes.",
+  "en": "Iterative development with frequent releases."
+ },
+ {
+  "ruta": "dias/3/bloques/7/items/2/termino",
+  "es": "DevOps",
+  "en": "DevOps"
+ },
+ {
+  "ruta": "dias/3/bloques/7/items/2/definicion",
+  "es": "Colaboración entre desarrollo y operación, automatización y retroalimentación continua.",
+  "en": "Collaboration between development and operations, automation and continuous feedback."
+ },
+ {
+  "ruta": "dias/3/bloques/8/titulo",
+  "es": "Arquitectura y metodología no compiten",
+  "en": "Architecture and methodology do not compete"
+ },
+ {
+  "ruta": "dias/3/bloques/8/cuerpo",
+  "es": "<p>La Arquitectura Empresarial define <b>dirección, restricciones y relaciones</b>; la metodología de desarrollo organiza <b>cómo construir y entregar</b> la solución.</p>",
+  "en": "<p>Enterprise Architecture defines <b>direction, constraints and relationships</b>; the development methodology organizes <b>how to build and deliver</b> the solution.</p>"
+ },
+ {
+  "ruta": "dias/3/bloques/9/titulo",
+  "es": "Formato de la actividad integradora",
+  "en": "Format of the integrative activity"
+ },
+ {
+  "ruta": "dias/3/bloques/9/pie",
+  "es": "Cada equipo entrega una hoja con esta cadena completa: la tecnología aparece al final porque responde a todo lo anterior, y el valor para el cliente es el resultado que justifica la cadena.",
+  "en": "Each team turns in a sheet with this complete chain: technology comes last because it answers to everything before it, and customer value is the outcome that justifies the chain."
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#0",
+  "es": "Estrategia",
+  "en": "Strategy"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#1",
+  "es": "Capacidad de negocio",
+  "en": "Business capability"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#2",
+  "es": "Proceso end-to-end",
+  "en": "End-to-end process"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#3",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#4",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#5",
+  "es": "se necesitan mutuamente",
+  "en": "they need each other"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#6",
+  "es": "Infraestructura",
+  "en": "Infrastructure"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#7",
+  "es": "Resultado y valor",
+  "en": "Outcome and value"
+ },
+ {
+  "ruta": "dias/3/bloques/9/svg#8",
+  "es": "medido con un indicador que el cliente percibe",
+  "en": "measured by a metric the customer perceives"
+ },
+ {
+  "ruta": "terminos/0/termino",
+  "es": "Arquitectura Empresarial",
+  "en": "Enterprise Architecture"
+ },
+ {
+  "ruta": "terminos/0/definicion",
+  "es": "Disciplina que describe cómo funciona hoy una organización y diseña cómo deberá funcionar, alineando capacidades, procesos, datos, aplicaciones y tecnología con la estrategia.",
+  "en": "Discipline that describes how an organization works today and designs how it should work, aligning capabilities, processes, data, applications and technology with the strategy."
+ },
+ {
+  "ruta": "terminos/1/termino",
+  "es": "AS-IS",
+  "en": "AS-IS"
+ },
+ {
+  "ruta": "terminos/1/definicion",
+  "es": "Estado actual: cómo opera realmente la organización hoy.",
+  "en": "Current state: how the organization actually operates today."
+ },
+ {
+  "ruta": "terminos/2/termino",
+  "es": "TO-BE",
+  "en": "TO-BE"
+ },
+ {
+  "ruta": "terminos/2/definicion",
+  "es": "Estado futuro deseado de la arquitectura.",
+  "en": "Desired future state of the architecture."
+ },
+ {
+  "ruta": "terminos/3/termino",
+  "es": "Brecha",
+  "en": "Gap"
+ },
+ {
+  "ruta": "terminos/3/definicion",
+  "es": "Diferencia entre el AS-IS y el TO-BE; es lo que hay que cerrar.",
+  "en": "Difference between the AS-IS and the TO-BE; it is what you have to close."
+ },
+ {
+  "ruta": "terminos/4/termino",
+  "es": "Roadmap",
+  "en": "Roadmap"
+ },
+ {
+  "ruta": "terminos/4/definicion",
+  "es": "Secuencia priorizada de iniciativas que llevan del AS-IS al TO-BE.",
+  "en": "Prioritized sequence of initiatives that take you from the AS-IS to the TO-BE."
+ },
+ {
+  "ruta": "terminos/5/termino",
+  "es": "Arquitectura de negocio",
+  "en": "Business architecture"
+ },
+ {
+  "ruta": "terminos/5/definicion",
+  "es": "Dominio que describe estrategia, capacidades, procesos, organización, reglas, clientes y proveedores.",
+  "en": "Domain that describes strategy, capabilities, processes, organization, rules, customers and suppliers."
+ },
+ {
+  "ruta": "terminos/6/termino",
+  "es": "Arquitectura de datos",
+  "en": "Data architecture"
+ },
+ {
+  "ruta": "terminos/6/definicion",
+  "es": "Dominio que describe qué datos existen, quién los gobierna, dónde se originan, cómo se comparten y con qué calidad.",
+  "en": "Domain that describes what data exists, who governs it, where it originates, how it is shared and with what quality."
+ },
+ {
+  "ruta": "terminos/7/termino",
+  "es": "Arquitectura de aplicaciones",
+  "en": "Application architecture"
+ },
+ {
+  "ruta": "terminos/7/definicion",
+  "es": "Dominio que describe los sistemas que apoyan los procesos, sus funciones, integraciones y dependencias.",
+  "en": "Domain that describes the systems that support the processes, their functions, integrations and dependencies."
+ },
+ {
+  "ruta": "terminos/8/termino",
+  "es": "Arquitectura tecnológica",
+  "en": "Technology architecture"
+ },
+ {
+  "ruta": "terminos/8/definicion",
+  "es": "Dominio que describe infraestructura, redes, nube, plataformas, dispositivos y seguridad técnica.",
+  "en": "Domain that describes infrastructure, networks, cloud, platforms, devices and technical security."
+ },
+ {
+  "ruta": "terminos/9/termino",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "terminos/9/definicion",
+  "es": "Marco y estándar para desarrollar y gobernar la Arquitectura Empresarial; su edición vigente es la 10.ª.",
+  "en": "Framework and standard for developing and governing Enterprise Architecture; its current edition is the 10th."
+ },
+ {
+  "ruta": "terminos/10/termino",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "terminos/10/definicion",
+  "es": "Método central de TOGAF: ciclo iterativo de fases Preliminar y A a H, con gestión de requerimientos en el centro.",
+  "en": "Core method of TOGAF: iterative cycle of phases Preliminary and A to H, with requirements management at the center."
+ },
+ {
+  "ruta": "terminos/11/termino",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "terminos/11/definicion",
+  "es": "Ontología o esquema de clasificación que organiza las descripciones de la empresa con las preguntas Qué, Cómo, Dónde, Quién, Cuándo y Por qué desde distintas perspectivas.",
+  "en": "Ontology or classification schema that organizes the descriptions of the enterprise with the questions What, How, Where, Who, When and Why from different perspectives."
+ },
+ {
+  "ruta": "terminos/12/termino",
+  "es": "Enfoque Gartner",
+  "en": "Gartner approach"
+ },
+ {
+  "ruta": "terminos/12/definicion",
+  "es": "Planteamiento de arquitectura centrado en conectar inversiones tecnológicas con resultados de negocio, con gobierno adaptable.",
+  "en": "Architecture approach focused on connecting technology investments with business outcomes, with adaptable governance."
+ },
+ {
+  "ruta": "terminos/13/termino",
+  "es": "BPM",
+  "en": "BPM"
+ },
+ {
+  "ruta": "terminos/13/definicion",
+  "es": "Disciplina para identificar, documentar, analizar, rediseñar, implementar, monitorear y mejorar procesos.",
+  "en": "Discipline for identifying, documenting, analyzing, redesigning, implementing, monitoring and improving processes."
+ },
+ {
+  "ruta": "terminos/14/termino",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "terminos/14/definicion",
+  "es": "Notación gráfica estandarizada para modelar procesos: eventos, actividades, compuertas, flujos y participantes.",
+  "en": "Standardized graphical notation for modeling processes: events, activities, gateways, flows and participants."
+ },
+ {
+  "ruta": "terminos/15/termino",
+  "es": "Proceso end-to-end",
+  "en": "End-to-end process"
+ },
+ {
+  "ruta": "terminos/15/definicion",
+  "es": "Proceso analizado desde la necesidad inicial hasta el resultado recibido por el cliente, atravesando departamentos.",
+  "en": "Process analyzed from the initial need to the result received by the customer, crossing departments."
+ },
+ {
+  "ruta": "terminos/16/termino",
+  "es": "Cross-functional",
+  "en": "Cross-functional"
+ },
+ {
+  "ruta": "terminos/16/definicion",
+  "es": "Trabajo que atraviesa varias funciones o departamentos de la organización.",
+  "en": "Work that crosses several functions or departments of the organization."
+ },
+ {
+  "ruta": "terminos/17/termino",
+  "es": "Customer value",
+  "en": "Customer value"
+ },
+ {
+  "ruta": "terminos/17/definicion",
+  "es": "Beneficio que el cliente percibe frente al costo, tiempo o esfuerzo que le implica.",
+  "en": "Benefit the customer perceives against the cost, time or effort it takes them."
+ },
+ {
+  "ruta": "terminos/18/termino",
+  "es": "Efectividad",
+  "en": "Effectiveness"
+ },
+ {
+  "ruta": "terminos/18/definicion",
+  "es": "Grado en que se logra el resultado esperado.",
+  "en": "Degree to which the expected result is achieved."
+ },
+ {
+  "ruta": "terminos/19/termino",
+  "es": "Eficiencia",
+  "en": "Efficiency"
+ },
+ {
+  "ruta": "terminos/19/definicion",
+  "es": "Relación entre el resultado obtenido y los recursos utilizados.",
+  "en": "Relationship between the result obtained and the resources used."
+ },
+ {
+  "ruta": "terminos/20/termino",
+  "es": "Automatización",
+  "en": "Automation"
+ },
+ {
+  "ruta": "terminos/20/definicion",
+  "es": "La tecnología ejecuta una actividad que antes realizaba una persona.",
+  "en": "Technology performs an activity that a person used to do."
+ },
+ {
+  "ruta": "terminos/21/termino",
+  "es": "Digitalización",
+  "en": "Digitization"
+ },
+ {
+  "ruta": "terminos/21/definicion",
+  "es": "Información o actividades pasan a medios digitales, sin que necesariamente cambie el proceso.",
+  "en": "Information or activities move to digital media, without the process necessarily changing."
+ },
+ {
+  "ruta": "terminos/22/termino",
+  "es": "Transformación digital",
+  "en": "Digital transformation"
+ },
+ {
+  "ruta": "terminos/22/definicion",
+  "es": "Cambio de capacidades, procesos, experiencia del cliente o modelo de negocio habilitado por tecnología.",
+  "en": "Change of capabilities, processes, customer experience or business model enabled by technology."
+ },
+ {
+  "ruta": "terminos/23/termino",
+  "es": "Industria 4.0",
+  "en": "Industry 4.0"
+ },
+ {
+  "ruta": "terminos/23/definicion",
+  "es": "Integración del mundo físico y digital: IoT, sensores, sistemas ciberfísicos, nube, IA, analítica, gemelos digitales y decisiones en tiempo real.",
+  "en": "Integration of the physical and digital worlds: IoT, sensors, cyber-physical systems, cloud, AI, analytics, digital twins and real-time decisions."
+ },
+ {
+  "ruta": "terminos/24/termino",
+  "es": "Industria 5.0",
+  "en": "Industry 5.0"
+ },
+ {
+  "ruta": "terminos/24/definicion",
+  "es": "Complemento de Industria 4.0 centrado en las personas, la sostenibilidad y la resiliencia.",
+  "en": "Complement to Industry 4.0 centered on people, sustainability and resilience."
+ },
+ {
+  "ruta": "terminos/25/termino",
+  "es": "Arquitecto empresarial",
+  "en": "Enterprise architect"
+ },
+ {
+  "ruta": "terminos/25/definicion",
+  "es": "Rol con alcance organizacional que conecta estrategia y capacidades, define principios y arquitecturas objetivo y construye roadmaps.",
+  "en": "Role with organization-wide scope that connects strategy and capabilities, defines principles and target architectures and builds roadmaps."
+ },
+ {
+  "ruta": "terminos/26/termino",
+  "es": "Arquitecto de soluciones",
+  "en": "Solution architect"
+ },
+ {
+  "ruta": "terminos/26/definicion",
+  "es": "Rol que diseña una solución concreta: componentes, integraciones, seguridad y decisiones técnicas, respetando la arquitectura empresarial.",
+  "en": "Role that designs a specific solution: components, integrations, security and technical decisions, respecting the enterprise architecture."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/tema",
+  "es": "Definición de EA",
+  "en": "Definition of EA"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/pregunta",
+  "es": "¿Cuál de las siguientes describe mejor a la Arquitectura Empresarial?",
+  "en": "Which of the following best describes Enterprise Architecture?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/0",
+  "es": "Una disciplina que describe cómo funciona hoy la organización y diseña cómo deberá funcionar, alineando capacidades, procesos, datos, aplicaciones y tecnología con la estrategia",
+  "en": "A discipline that describes how the organization works today and designs how it should work, aligning capabilities, processes, data, applications and technology with the strategy"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/1",
+  "es": "El inventario actualizado de todos los sistemas y servidores de la empresa",
+  "en": "The up-to-date inventory of all the company's systems and servers"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/2",
+  "es": "El organigrama de la organización con sus áreas y reportes",
+  "en": "The organization chart with its areas and reporting lines"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/3",
+  "es": "El plan de compra de tecnología para los próximos tres años",
+  "en": "The technology purchasing plan for the next three years"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/explicacion",
+  "es": "La EA es una práctica continua de análisis, diseño, priorización y gobierno que conecta la estrategia con la operación, la información y los sistemas.",
+  "en": "EA is a continuous practice of analysis, design, prioritization and governance that connects the strategy with operations, information and systems."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/porQueNo/1",
+  "es": "Un inventario es un insumo (un catálogo, que sí es un artefacto), pero por sí solo no describe relaciones, reglas ni evolución.",
+  "en": "An inventory is an input (a catalog, which is indeed an artifact), but on its own it does not describe relationships, rules or evolution."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/porQueNo/2",
+  "es": "El organigrama describe estructura de reporte, no capacidades, procesos, datos ni tecnología.",
+  "en": "The organization chart describes reporting structure, not capabilities, processes, data or technology."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/porQueNo/3",
+  "es": "Un plan de compras es una consecuencia posible, nunca el punto de partida.",
+  "en": "A purchasing plan is a possible consequence, never the starting point."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/tema",
+  "es": "Alineación estratégica",
+  "en": "Strategic alignment"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/pregunta",
+  "es": "Una empresa adquiere una plataforma de inteligencia artificial sin haber definido qué problema de negocio resolverá. ¿Está haciendo Arquitectura Empresarial?",
+  "en": "A company buys an artificial intelligence platform without having defined what business problem it will solve. Is it doing Enterprise Architecture?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/0",
+  "es": "No necesariamente: adquiere tecnología, pero no demuestra alineación estratégica ni generación de valor",
+  "en": "Not necessarily: it acquires technology, but it does not demonstrate strategic alignment or value creation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/1",
+  "es": "Sí, porque incorporar tecnología moderna es en sí mismo arquitectura",
+  "en": "Yes, because adopting modern technology is architecture in itself"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/2",
+  "es": "Sí, siempre que la plataforma se integre con el ERP",
+  "en": "Yes, as long as the platform integrates with the ERP"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/3",
+  "es": "No, porque la IA no forma parte de ningún dominio de arquitectura",
+  "en": "No, because AI is not part of any architecture domain"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/explicacion",
+  "es": "La decisión tecnológica debe comenzar con un resultado de negocio esperado. Sin necesidad definida no hay alineación ni valor demostrable.",
+  "en": "A technology decision must start with an expected business outcome. Without a defined need there is no alignment and no demonstrable value."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/porQueNo/1",
+  "es": "Comprar tecnología no es diseñar la evolución de la organización como sistema.",
+  "en": "Buying technology is not designing the evolution of the organization as a system."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/porQueNo/2",
+  "es": "La integración técnica no sustituye la justificación de negocio.",
+  "en": "Technical integration does not replace the business justification."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/porQueNo/3",
+  "es": "La IA sí puede pertenecer a los dominios de aplicaciones y tecnología; el problema es la ausencia de necesidad.",
+  "en": "AI can indeed belong to the application and technology domains; the problem is the absence of a need."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/tema",
+  "es": "Dominios",
+  "en": "Domains"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/pregunta",
+  "es": "«Definir qué significa <i>cliente activo</i> y quién es responsable de ese dato en México y en Argentina» corresponde principalmente al dominio de…",
+  "en": "«Defining what <i>active customer</i> means and who is accountable for that data in Mexico and in Argentina» belongs mainly to the domain of…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/0",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/1",
+  "es": "Negocio",
+  "en": "Business"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/2",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/3",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/explicacion",
+  "es": "Significado, propiedad, calidad y responsabilidad del dato son materia de la arquitectura de datos.",
+  "en": "Meaning, ownership, quality and accountability for data are matters of data architecture."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/porQueNo/1",
+  "es": "Negocio definiría la capacidad y el proceso comercial, no la semántica y gobierno del dato.",
+  "en": "Business would define the capability and the commercial process, not the semantics and governance of the data."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/porQueNo/2",
+  "es": "Aplicaciones diría qué sistema lo almacena, no qué significa ni quién responde por él.",
+  "en": "Applications would say which system stores it, not what it means or who is accountable for it."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/porQueNo/3",
+  "es": "Tecnología describiría dónde corre la base de datos, no su significado.",
+  "en": "Technology would describe where the database runs, not its meaning."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/tema",
+  "es": "Dominios",
+  "en": "Domains"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/pregunta",
+  "es": "«Una planta usa SAP y otra un sistema local de producción; hay que decidir si se integran, migran o retiran» es una decisión del dominio de…",
+  "en": "«One plant uses SAP and another a local production system; you have to decide whether to integrate, migrate or retire them» is a decision of the domain of…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/0",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/1",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/2",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/3",
+  "es": "Negocio",
+  "en": "Business"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/explicacion",
+  "es": "La arquitectura de aplicaciones analiza qué sistemas existen, qué función cumplen, cómo se integran y cuáles conservar, integrar, reemplazar o retirar.",
+  "en": "Application architecture analyzes what systems exist, what function they serve, how they integrate and which ones to keep, integrate, replace or retire."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/porQueNo/1",
+  "es": "Datos definiría qué información deben compartir, no el destino de cada sistema.",
+  "en": "Data would define what information they must share, not the fate of each system."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/porQueNo/2",
+  "es": "Tecnología definiría la infraestructura sobre la que corren.",
+  "en": "Technology would define the infrastructure they run on."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/porQueNo/3",
+  "es": "Negocio definiría el proceso que ambos sistemas deben soportar.",
+  "en": "Business would define the process both systems must support."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/tema",
+  "es": "Dominios",
+  "en": "Domains"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/pregunta",
+  "es": "Los sensores industriales instalados en la línea de producción pertenecen al dominio de…",
+  "en": "The industrial sensors installed on the production line belong to the domain of…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/0",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/1",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/2",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/3",
+  "es": "Negocio",
+  "en": "Business"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/explicacion",
+  "es": "Dispositivos, redes, servidores, nube y plataformas forman la arquitectura tecnológica: la infraestructura sobre la que operan las aplicaciones.",
+  "en": "Devices, networks, servers, cloud and platforms make up the technology architecture: the infrastructure the applications run on."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/porQueNo/1",
+  "es": "Una aplicación es el sistema que procesa la información que los sensores generan.",
+  "en": "An application is the system that processes the information the sensors generate."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/porQueNo/2",
+  "es": "El dato es la lectura de temperatura o vibración, no el dispositivo.",
+  "en": "The data is the temperature or vibration reading, not the device."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/porQueNo/3",
+  "es": "El negocio define para qué se mide (por ejemplo, control de calidad).",
+  "en": "The business defines what it is measured for (for example, quality control)."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/tema",
+  "es": "AS-IS / TO-BE",
+  "en": "AS-IS / TO-BE"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/pregunta",
+  "es": "«Bases de clientes separadas por país» frente a «visión única del cliente». ¿Qué representa cada elemento?",
+  "en": "«Customer databases separated by country» versus «a single customer view». What does each element represent?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/0",
+  "es": "El primero es el AS-IS y el segundo el TO-BE; integrar y depurar datos es la brecha",
+  "en": "The first is the AS-IS and the second the TO-BE; integrating and cleaning up data is the gap"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/1",
+  "es": "El primero es el TO-BE y el segundo el AS-IS",
+  "en": "The first is the TO-BE and the second the AS-IS"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/2",
+  "es": "Ambos son estados TO-BE alternativos",
+  "en": "Both are alternative TO-BE states"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/3",
+  "es": "El primero es la brecha y el segundo el roadmap",
+  "en": "The first is the gap and the second the roadmap"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/explicacion",
+  "es": "AS-IS es la situación actual, TO-BE la deseada, la brecha es la diferencia entre ambas y el roadmap la secuencia de iniciativas para cerrarla.",
+  "en": "AS-IS is the current situation, TO-BE the desired one, the gap is the difference between them and the roadmap the sequence of initiatives to close it."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/porQueNo/1",
+  "es": "El estado deseado nunca es el punto de partida del diagnóstico.",
+  "en": "The desired state is never the starting point of the diagnosis."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/porQueNo/2",
+  "es": "Solo uno de los dos describe el futuro deseado.",
+  "en": "Only one of the two describes the desired future."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/porQueNo/3",
+  "es": "La brecha no es un estado, es la diferencia; el roadmap es la ruta, no el destino.",
+  "en": "The gap is not a state, it is the difference; the roadmap is the route, not the destination."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/tema",
+  "es": "AS-IS / TO-BE",
+  "en": "AS-IS / TO-BE"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/pregunta",
+  "es": "¿Cuál afirmación sobre el TO-BE es correcta?",
+  "en": "Which statement about the TO-BE is correct?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/0",
+  "es": "Puede consistir en integrar, estandarizar, reutilizar o retirar solo aquello que no genera valor",
+  "en": "It may consist of integrating, standardizing, reusing or retiring only what does not create value"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/1",
+  "es": "Siempre implica reemplazar todos los sistemas heredados",
+  "en": "It always means replacing every legacy system"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/2",
+  "es": "Debe alcanzarse en un único proyecto para evitar estados intermedios",
+  "en": "It must be reached in a single project to avoid intermediate states"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/3",
+  "es": "Se define antes de conocer los objetivos del negocio",
+  "en": "It is defined before knowing the business objectives"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/explicacion",
+  "es": "El TO-BE responde a valor, costo y riesgo. Reemplazar todo rara vez es la decisión con mejor relación entre esos tres.",
+  "en": "The TO-BE answers to value, cost and risk. Replacing everything is rarely the decision with the best balance among those three."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/porQueNo/1",
+  "es": "Reemplazar todo es una opción entre varias, no la regla.",
+  "en": "Replacing everything is one option among several, not the rule."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/porQueNo/2",
+  "es": "La fase F de migración existe precisamente porque hay estados intermedios y dependencias.",
+  "en": "Phase F for migration exists precisely because there are intermediate states and dependencies."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/porQueNo/3",
+  "es": "Sin objetivos de negocio no hay criterio para decidir el estado futuro.",
+  "en": "Without business objectives there is no criterion for deciding the future state."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/tema",
+  "es": "Proceso y proyecto",
+  "en": "Process and project"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/pregunta",
+  "es": "¿Cuál es la diferencia esencial entre un proceso y un proyecto?",
+  "en": "What is the essential difference between a process and a project?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/0",
+  "es": "El proyecto es temporal y produce un resultado único; el proceso es repetible y continúa operando",
+  "en": "The project is temporary and produces a unique result; the process is repeatable and keeps operating"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/1",
+  "es": "El proceso lo ejecuta TI y el proyecto el negocio",
+  "en": "The process is run by IT and the project by the business"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/2",
+  "es": "El proyecto siempre involucra tecnología y el proceso no",
+  "en": "The project always involves technology and the process does not"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/3",
+  "es": "El proceso tiene presupuesto y el proyecto no",
+  "en": "The process has a budget and the project does not"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/explicacion",
+  "es": "«El proyecto termina; el proceso continúa operando.» Implementar un sistema de pedidos es proyecto; atender pedidos es proceso.",
+  "en": "«The project ends; the process keeps operating.» Implementing an order system is a project; fulfilling orders is a process."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/porQueNo/1",
+  "es": "Ambos involucran al negocio y a TI en distinta medida.",
+  "en": "Both involve the business and IT to different degrees."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/porQueNo/2",
+  "es": "Existen proyectos sin tecnología y procesos intensivos en tecnología.",
+  "en": "There are projects without technology and processes that are technology-intensive."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/porQueNo/3",
+  "es": "Ambos consumen recursos y pueden tener presupuesto.",
+  "en": "Both consume resources and can have a budget."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/tema",
+  "es": "Procesos end-to-end",
+  "en": "End-to-end processes"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/pregunta",
+  "es": "Cada departamento cumple sus indicadores, pero el pedido del cliente llega tarde. ¿Cómo se interpreta?",
+  "en": "Every department meets its indicators, but the customer's order arrives late. How do you read this?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/0",
+  "es": "Hubo eficiencia local pero falta de efectividad integral en el proceso end-to-end",
+  "en": "There was local efficiency but a lack of overall effectiveness in the end-to-end process"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/1",
+  "es": "El proceso fue exitoso porque todos los indicadores se cumplieron",
+  "en": "The process was successful because all the indicators were met"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/2",
+  "es": "Es un problema de calidad del producto, no del proceso",
+  "en": "It is a product quality problem, not a process problem"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/3",
+  "es": "Significa que los indicadores departamentales eran demasiado exigentes",
+  "en": "It means the departmental indicators were too demanding"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/explicacion",
+  "es": "El cliente no percibe departamentos, percibe una sola experiencia. Optimizar cada función por separado puede degradar el resultado global.",
+  "en": "The customer does not perceive departments, they perceive a single experience. Optimizing each function separately can degrade the overall result."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/porQueNo/1",
+  "es": "El resultado esperado por el cliente no se logró: no hubo efectividad.",
+  "en": "The result the customer expected was not achieved: there was no effectiveness."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/porQueNo/2",
+  "es": "El defecto está en el tiempo de ciclo del flujo, no en el producto.",
+  "en": "The defect is in the cycle time of the flow, not in the product."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/porQueNo/3",
+  "es": "El problema no es su exigencia sino que miden partes aisladas del flujo.",
+  "en": "The problem is not how demanding they are but that they measure isolated parts of the flow."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/tema",
+  "es": "Valor",
+  "en": "Value"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/pregunta",
+  "es": "Capturar dos veces el mismo pedido en dos sistemas distintos es una actividad…",
+  "en": "Entering the same order twice in two different systems is an activity that is…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/0",
+  "es": "Sin valor: es captura duplicada, uno de los desperdicios típicos",
+  "en": "Non-value-added: it is duplicate data entry, one of the typical wastes"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/1",
+  "es": "Con valor para el cliente, porque garantiza el registro",
+  "en": "Value-added for the customer, because it guarantees the record"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/2",
+  "es": "Necesaria para el negocio por razones de cumplimiento",
+  "en": "Necessary for the business for compliance reasons"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/3",
+  "es": "Con valor porque transforma el producto",
+  "en": "Value-added because it transforms the product"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/explicacion",
+  "es": "Espera, retrabajo, captura duplicada y traslado innecesario son actividades sin valor. El cliente no reconoce utilidad en ellas.",
+  "en": "Waiting, rework, duplicate data entry and unnecessary movement are non-value-added activities. The customer sees no usefulness in them."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/porQueNo/1",
+  "es": "El cliente no percibe beneficio alguno por capturar dos veces.",
+  "en": "The customer perceives no benefit at all from entering the order twice."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/porQueNo/2",
+  "es": "Ninguna regulación exige duplicar captura; exigiría trazabilidad, no duplicidad.",
+  "en": "No regulation requires duplicate data entry; it would require traceability, not duplication."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/porQueNo/3",
+  "es": "No transforma el producto ni el servicio.",
+  "en": "It transforms neither the product nor the service."
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/tema",
+  "es": "BPM y BPMN",
+  "en": "BPM and BPMN"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/pregunta",
+  "es": "¿Cuál es la distinción correcta entre BPM y BPMN?",
+  "en": "What is the correct distinction between BPM and BPMN?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/0",
+  "es": "BPM es la disciplina para administrar y mejorar procesos; BPMN es la notación gráfica estandarizada para representarlos",
+  "en": "BPM is the discipline for managing and improving processes; BPMN is the standardized graphical notation for representing them"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/1",
+  "es": "BPM es la notación y BPMN la disciplina",
+  "en": "BPM is the notation and BPMN the discipline"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/2",
+  "es": "BPM es un software y BPMN un estándar ISO de calidad",
+  "en": "BPM is a software product and BPMN an ISO quality standard"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/3",
+  "es": "Son sinónimos; BPMN es solo la abreviatura en inglés",
+  "en": "They are synonyms; BPMN is just the English abbreviation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/explicacion",
+  "es": "«BPM es administrar cómo se realiza el trabajo de principio a fin; BPMN es una forma estandarizada de dibujar ese trabajo.»",
+  "en": "«BPM is managing how the work is done from start to finish; BPMN is a standardized way of drawing that work.»"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/porQueNo/1",
+  "es": "Está invertido.",
+  "en": "It is the other way around."
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/porQueNo/2",
+  "es": "BPM no es un producto; BPMN corresponde a ISO 19510, no a un estándar de calidad.",
+  "en": "BPM is not a product; BPMN corresponds to ISO 19510, not to a quality standard."
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/porQueNo/3",
+  "es": "Son cosas distintas: una disciplina y una notación.",
+  "en": "They are different things: a discipline and a notation."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/tema",
+  "es": "BPM",
+  "en": "BPM"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/pregunta",
+  "es": "En el ciclo BPM simplificado, ¿qué actividad sigue inmediatamente después de «Analizar»?",
+  "en": "In the simplified BPM cycle, which activity comes immediately after «Analyze»?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/0",
+  "es": "Rediseñar",
+  "en": "Redesign"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/1",
+  "es": "Identificar",
+  "en": "Identify"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/2",
+  "es": "Monitorear",
+  "en": "Monitor"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/3",
+  "es": "Documentar",
+  "en": "Document"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/explicacion",
+  "es": "El ciclo es: identificar → descubrir y documentar → analizar → rediseñar → implementar → monitorear → mejorar nuevamente.",
+  "en": "The cycle is: identify → discover and document → analyze → redesign → implement → monitor → improve again."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/porQueNo/1",
+  "es": "Identificar es el primer paso del ciclo.",
+  "en": "Identify is the first step of the cycle."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/porQueNo/2",
+  "es": "Monitorear ocurre después de implementar.",
+  "en": "Monitor comes after implement."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/porQueNo/3",
+  "es": "Documentar es previo al análisis.",
+  "en": "Document comes before the analysis."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/tema",
+  "es": "Efectividad y eficiencia",
+  "en": "Effectiveness and efficiency"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/pregunta",
+  "es": "Un proceso entrega el resultado esperado pero consumiendo el doble de recursos previstos. Este proceso es…",
+  "en": "A process delivers the expected result but consumes twice the resources planned. This process is…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/0",
+  "es": "Efectivo pero poco eficiente",
+  "en": "Effective but not very efficient"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/1",
+  "es": "Eficiente pero poco efectivo",
+  "en": "Efficient but not very effective"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/2",
+  "es": "Ni efectivo ni eficiente",
+  "en": "Neither effective nor efficient"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/3",
+  "es": "De calidad deficiente por definición",
+  "en": "Of poor quality by definition"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/explicacion",
+  "es": "Efectividad es lograr el resultado esperado; eficiencia es la relación entre resultado y recursos utilizados.",
+  "en": "Effectiveness is achieving the expected result; efficiency is the relationship between result and resources used."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/porQueNo/1",
+  "es": "Está invertido: sí logró el resultado.",
+  "en": "It is the other way around: it did achieve the result."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/porQueNo/2",
+  "es": "Sí fue efectivo, porque el resultado se alcanzó.",
+  "en": "It was effective, because the result was reached."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/porQueNo/3",
+  "es": "La calidad es cumplimiento de requisitos y ausencia de defectos; puede ser alta aun con baja eficiencia.",
+  "en": "Quality is meeting requirements and having no defects; it can be high even with low efficiency."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/tema",
+  "es": "Transformación digital",
+  "en": "Digital transformation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/pregunta",
+  "es": "La empresa cambia un formato de papel por un PDF que se envía por correo, conservando exactamente las mismas firmas y capturas. Esto es…",
+  "en": "The company swaps a paper form for a PDF sent by email, keeping exactly the same signatures and data entry. This is…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/0",
+  "es": "Digitalización, no transformación digital",
+  "en": "Digitization, not digital transformation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/1",
+  "es": "Transformación digital, porque desapareció el papel",
+  "en": "Digital transformation, because the paper is gone"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/2",
+  "es": "Automatización, porque el sistema ejecuta la actividad",
+  "en": "Automation, because the system performs the activity"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/3",
+  "es": "Industria 4.0, porque hay medios digitales",
+  "en": "Industry 4.0, because there are digital media"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/explicacion",
+  "es": "Digitalizar un formato defectuoso no mejora el proceso: puede producir un proceso defectuoso más rápido. La transformación digital cambia capacidades, procesos, experiencia o modelo de negocio.",
+  "en": "Digitizing a flawed form does not improve the process: it can produce a faster flawed process. Digital transformation changes capabilities, processes, experience or business model."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/porQueNo/1",
+  "es": "No cambiaron capacidades, proceso, experiencia ni modelo de negocio.",
+  "en": "Capabilities, process, experience and business model did not change."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/porQueNo/2",
+  "es": "Sigue habiendo intervención manual en cada paso; la tecnología no ejecuta la actividad.",
+  "en": "There is still manual intervention at every step; the technology does not perform the activity."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/porQueNo/3",
+  "es": "Industria 4.0 implica conectividad, datos y decisiones integradas, no solo medios digitales.",
+  "en": "Industry 4.0 implies connectivity, data and integrated decisions, not just digital media."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/tema",
+  "es": "Industria 3.0 / 4.0",
+  "en": "Industry 3.0 / 4.0"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/pregunta",
+  "es": "¿Cuál es la diferencia central entre Industria 3.0 e Industria 4.0?",
+  "en": "What is the core difference between Industry 3.0 and Industry 4.0?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/0",
+  "es": "En 3.0 una máquina está automatizada; en 4.0 máquinas, sistemas y personas están conectados y comparten datos para decidir",
+  "en": "In 3.0 a machine is automated; in 4.0 machines, systems and people are connected and share data to decide"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/1",
+  "es": "En 3.0 se usa electricidad y en 4.0 electrónica",
+  "en": "In 3.0 electricity is used and in 4.0 electronics"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/2",
+  "es": "En 3.0 hay robots y en 4.0 desaparecen los robots",
+  "en": "In 3.0 there are robots and in 4.0 the robots disappear"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/3",
+  "es": "En 4.0 se elimina la intervención humana por completo",
+  "en": "In 4.0 human intervention is eliminated completely"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/explicacion",
+  "es": "La 3.0 automatiza con electrónica, PLC y computación; la 4.0 conecta el mundo físico y digital con IoT, nube, analítica e IA.",
+  "en": "3.0 automates with electronics, PLC and computing; 4.0 connects the physical and digital worlds with IoT, cloud, analytics and AI."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/porQueNo/1",
+  "es": "La electricidad y la producción en masa corresponden a la Industria 2.0.",
+  "en": "Electricity and mass production belong to Industry 2.0."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/porQueNo/2",
+  "es": "En 4.0 hay más robótica, ahora autónoma o colaborativa.",
+  "en": "In 4.0 there is more robotics, now autonomous or collaborative."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/porQueNo/3",
+  "es": "La Industria 5.0 justamente reincorpora a la persona al centro; la 4.0 no la elimina.",
+  "en": "Industry 5.0 is precisely what brings the person back to the center; 4.0 does not remove them."
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/tema",
+  "es": "Industria 5.0",
+  "en": "Industry 5.0"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/pregunta",
+  "es": "¿Cuáles son los tres pilares de la Industria 5.0?",
+  "en": "What are the three pillars of Industry 5.0?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/0",
+  "es": "Centrada en las personas, sostenible y resiliente",
+  "en": "Human-centric, sustainable and resilient"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/1",
+  "es": "Automatización, digitalización y conectividad",
+  "en": "Automation, digitization and connectivity"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/2",
+  "es": "Nube, inteligencia artificial y analítica",
+  "en": "Cloud, artificial intelligence and analytics"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/3",
+  "es": "Calidad, costo y tiempo de entrega",
+  "en": "Quality, cost and delivery time"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/explicacion",
+  "es": "La Industria 5.0 complementa a la 4.0 orientando la digitalización hacia el bienestar humano, la sostenibilidad y la capacidad de responder ante crisis.",
+  "en": "Industry 5.0 complements 4.0 by steering digitization toward human well-being, sustainability and the ability to respond to crises."
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/porQueNo/1",
+  "es": "Esos son rasgos de las etapas 3.0 y 4.0.",
+  "en": "Those are features of the 3.0 and 4.0 stages."
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/porQueNo/2",
+  "es": "Son tecnologías habilitadoras de la 4.0, no pilares de la 5.0.",
+  "en": "They are enabling technologies of 4.0, not pillars of 5.0."
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/porQueNo/3",
+  "es": "Es el triángulo clásico de gestión de proyectos.",
+  "en": "That is the classic project management triangle."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/tema",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/pregunta",
+  "es": "¿Qué significa TOGAF y qué es?",
+  "en": "What does TOGAF stand for and what is it?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/0",
+  "es": "The Open Group Architecture Framework: marco y estándar para desarrollar y gobernar la Arquitectura Empresarial",
+  "en": "The Open Group Architecture Framework: framework and standard for developing and governing Enterprise Architecture"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/1",
+  "es": "Total Organizational Governance and Architecture Framework: modelo de gobierno de TI",
+  "en": "Total Organizational Governance and Architecture Framework: an IT governance model"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/2",
+  "es": "Un software de modelado de procesos publicado por The Open Group",
+  "en": "A process modeling software product published by The Open Group"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/3",
+  "es": "Una certificación ISO obligatoria para arquitecturas de empresas industriales",
+  "en": "A mandatory ISO certification for industrial enterprise architectures"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/explicacion",
+  "es": "TOGAF es un marco de referencia adaptable, no un software ni una certificación obligatoria. Su edición vigente es la 10.ª.",
+  "en": "TOGAF is an adaptable framework, not a software product or a mandatory certification. Its current edition is the 10th."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/porQueNo/1",
+  "es": "El gobierno de TI corresponde más bien a COBIT.",
+  "en": "IT governance corresponds rather to COBIT."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/porQueNo/2",
+  "es": "TOGAF no es una herramienta; existen herramientas que lo soportan.",
+  "en": "TOGAF is not a tool; there are tools that support it."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/porQueNo/3",
+  "es": "No es una norma ISO ni es obligatorio.",
+  "en": "It is not an ISO standard and it is not mandatory."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/tema",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/pregunta",
+  "es": "En el ciclo ADM, ¿qué se coloca en el centro del diagrama y por qué?",
+  "en": "In the ADM cycle, what is placed at the center of the diagram and why?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/0",
+  "es": "La gestión de requerimientos, porque todas las fases identifican, revisan y actualizan requerimientos",
+  "en": "Requirements management, because every phase identifies, reviews and updates requirements"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/1",
+  "es": "La arquitectura tecnológica, porque toda la empresa depende de la infraestructura",
+  "en": "Technology architecture, because the whole enterprise depends on the infrastructure"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/2",
+  "es": "La fase A, porque es la primera del ciclo",
+  "en": "Phase A, because it is the first of the cycle"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/3",
+  "es": "El gobierno de implementación, porque supervisa a las demás fases",
+  "en": "Implementation governance, because it oversees the other phases"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/explicacion",
+  "es": "Los requerimientos se identifican, documentan, priorizan, validan y cambian a lo largo de todo el ciclo; por eso son la actividad central y continua.",
+  "en": "Requirements are identified, documented, prioritized, validated and changed throughout the whole cycle; that is why they are the central, continuous activity."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/porQueNo/1",
+  "es": "La tecnología es la fase D y se justifica por las fases anteriores.",
+  "en": "Technology is phase D and is justified by the earlier phases."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/porQueNo/2",
+  "es": "Ser la primera fase no la coloca en el centro; A está en el perímetro del ciclo.",
+  "en": "Being the first phase does not place it at the center; A sits on the perimeter of the cycle."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/porQueNo/3",
+  "es": "El gobierno es la fase G, con alcance sobre la implementación, no sobre todo el método.",
+  "en": "Governance is phase G, with scope over the implementation, not over the whole method."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/tema",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/pregunta",
+  "es": "¿En qué fase del ADM se agrupan las brechas en iniciativas y paquetes de trabajo?",
+  "en": "In which ADM phase are gaps grouped into initiatives and work packages?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/0",
+  "es": "E · Oportunidades y soluciones",
+  "en": "E · Opportunities and Solutions"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/1",
+  "es": "F · Planeación de la migración",
+  "en": "F · Migration Planning"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/2",
+  "es": "B · Arquitectura de negocio",
+  "en": "B · Business Architecture"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/3",
+  "es": "G · Gobierno de la implementación",
+  "en": "G · Implementation Governance"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/explicacion",
+  "es": "La fase E convierte brechas en iniciativas; la fase F las prioriza y ordena en el roadmap.",
+  "en": "Phase E turns gaps into initiatives; phase F prioritizes and sequences them in the roadmap."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/porQueNo/1",
+  "es": "F prioriza y secuencia lo que E ya identificó.",
+  "en": "F prioritizes and sequences what E has already identified."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/porQueNo/2",
+  "es": "B diseña cómo debe operar el negocio.",
+  "en": "B designs how the business must operate."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/porQueNo/3",
+  "es": "G verifica que lo construido respete la arquitectura.",
+  "en": "G verifies that what is built respects the architecture."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/tema",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/pregunta",
+  "es": "Dentro de la fase C del ADM, ¿qué se define primero?",
+  "en": "Within phase C of the ADM, what is defined first?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/0",
+  "es": "Los datos, y después las aplicaciones que los utilizarán",
+  "en": "The data, and then the applications that will use it"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/1",
+  "es": "Las aplicaciones, y después los datos que necesitan",
+  "en": "The applications, and then the data they need"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/2",
+  "es": "La infraestructura que soportará ambos",
+  "en": "The infrastructure that will support both"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/3",
+  "es": "Los proveedores de software candidatos",
+  "en": "The candidate software vendors"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/explicacion",
+  "es": "La fase C cubre arquitectura de datos (C1) y de aplicaciones (C2). Primero se determina qué información necesita el negocio y luego qué sistemas la producirán y compartirán.",
+  "en": "Phase C covers data architecture (C1) and application architecture (C2). First you determine what information the business needs and then what systems will produce and share it."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/porQueNo/1",
+  "es": "Elegir aplicaciones antes de conocer la información necesaria lleva a duplicidad y sistemas mal justificados.",
+  "en": "Choosing applications before knowing what information is needed leads to duplication and poorly justified systems."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/porQueNo/2",
+  "es": "La infraestructura corresponde a la fase D.",
+  "en": "Infrastructure belongs to phase D."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/porQueNo/3",
+  "es": "La selección de productos es una decisión de solución, posterior.",
+  "en": "Product selection is a solution decision, and comes later."
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/tema",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/pregunta",
+  "es": "¿Cuál es la utilidad principal del marco de Zachman?",
+  "en": "What is the main use of the Zachman framework?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/opciones/0",
+  "es": "Clasificar y ordenar las distintas vistas de la empresa mediante las preguntas Qué, Cómo, Dónde, Quién, Cuándo y Por qué",
+  "en": "Classifying and organizing the different views of the enterprise through the questions What, How, Where, Who, When and Why"
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/opciones/1",
+  "es": "Proporcionar una secuencia de fases para desarrollar la arquitectura",
+  "en": "Providing a sequence of phases for developing the architecture"
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/opciones/2",
+  "es": "Gobernar la entrega de servicios de TI",
+  "en": "Governing the delivery of IT services"
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/opciones/3",
+  "es": "Modelar gráficamente procesos de negocio",
+  "en": "Graphically modeling business processes"
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/explicacion",
+  "es": "Zachman es principalmente una ontología o esquema de clasificación: ayuda a comprobar que no falten vistas, pero no ofrece un ciclo de transformación como el ADM.",
+  "en": "Zachman is mainly an ontology or classification schema: it helps you check that no view is missing, but it does not offer a transformation cycle like the ADM."
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/porQueNo/1",
+  "es": "Esa es la función del ADM de TOGAF.",
+  "en": "That is the role of TOGAF's ADM."
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/porQueNo/2",
+  "es": "Eso corresponde a ITIL o ISO/IEC 20000-1.",
+  "en": "That corresponds to ITIL or ISO/IEC 20000-1."
+ },
+ {
+  "ruta": "practica/opcionMultiple/20/porQueNo/3",
+  "es": "Para modelar procesos se usa BPMN.",
+  "en": "To model processes you use BPMN."
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/tema",
+  "es": "Artefactos",
+  "en": "Artifacts"
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/pregunta",
+  "es": "Una lista organizada de todas las aplicaciones de la empresa con su función y responsable es un…",
+  "en": "An organized list of all the company's applications with their function and owner is a…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/opciones/0",
+  "es": "Catálogo",
+  "en": "Catalog"
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/opciones/1",
+  "es": "Matriz",
+  "en": "Matrix"
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/opciones/2",
+  "es": "Diagrama",
+  "en": "Diagram"
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/opciones/3",
+  "es": "Principio",
+  "en": "Principle"
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/explicacion",
+  "es": "Catálogo = lista organizada; matriz = relaciones entre dos dimensiones; diagrama = representación visual; principio = regla que orienta decisiones.",
+  "en": "Catalog = organized list; matrix = relationships between two dimensions; diagram = visual representation; principle = rule that guides decisions."
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/porQueNo/1",
+  "es": "Una matriz cruzaría, por ejemplo, procesos contra aplicaciones.",
+  "en": "A matrix would cross, for example, processes against applications."
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/porQueNo/2",
+  "es": "Un diagrama mostraría componentes y relaciones gráficamente.",
+  "en": "A diagram would show components and relationships graphically."
+ },
+ {
+  "ruta": "practica/opcionMultiple/21/porQueNo/3",
+  "es": "Un principio es una regla, no un inventario.",
+  "en": "A principle is a rule, not an inventory."
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/tema",
+  "es": "Roles",
+  "en": "Roles"
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/pregunta",
+  "es": "«Definir la visión regional única de clientes y el roadmap para lograrla» corresponde a…",
+  "en": "«Defining the single regional customer vision and the roadmap to achieve it» corresponds to…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/opciones/0",
+  "es": "El arquitecto empresarial",
+  "en": "The enterprise architect"
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/opciones/1",
+  "es": "El arquitecto de soluciones",
+  "en": "The solutions architect"
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/opciones/2",
+  "es": "El líder de infraestructura",
+  "en": "The infrastructure lead"
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/opciones/3",
+  "es": "El gerente de proyecto",
+  "en": "The project manager"
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/explicacion",
+  "es": "El arquitecto empresarial trabaja con alcance organizacional: conecta estrategia y capacidades, define arquitecturas objetivo y construye roadmaps.",
+  "en": "The enterprise architect works at organizational scope: they connect strategy and capabilities, define target architectures and build roadmaps."
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/porQueNo/1",
+  "es": "El arquitecto de soluciones diseñaría después la integración concreta entre CRM, ERP y plataforma de datos.",
+  "en": "The solutions architect would later design the concrete integration between CRM, ERP and the data platform."
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/porQueNo/2",
+  "es": "Infraestructura opera el dominio tecnológico.",
+  "en": "Infrastructure operates the technology domain."
+ },
+ {
+  "ruta": "practica/opcionMultiple/22/porQueNo/3",
+  "es": "El gerente de proyecto administra alcance, tiempo y costo de una iniciativa.",
+  "en": "The project manager manages the scope, time and cost of an initiative."
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/tema",
+  "es": "TI y Transformación Digital",
+  "en": "IT and Digital Transformation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/pregunta",
+  "es": "¿Cuál es la relación correcta entre TI, Transformación Digital y Arquitectura Empresarial?",
+  "en": "What is the correct relationship between IT, Digital Transformation and Enterprise Architecture?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/opciones/0",
+  "es": "TI aporta estabilidad y capacidad técnica, Transformación Digital moviliza el cambio y la Arquitectura Empresarial orquesta ambas perspectivas",
+  "en": "IT provides stability and technical capability, Digital Transformation mobilizes change, and Enterprise Architecture orchestrates both perspectives"
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/opciones/1",
+  "es": "Transformación Digital sustituye al departamento de TI",
+  "en": "Digital Transformation replaces the IT department"
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/opciones/2",
+  "es": "La Arquitectura Empresarial es un área dentro de Transformación Digital que no interactúa con TI",
+  "en": "Enterprise Architecture is an area within Digital Transformation that does not interact with IT"
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/opciones/3",
+  "es": "TI debe decidir la estrategia de transformación por ser dueña de la tecnología",
+  "en": "IT should decide the transformation strategy because it owns the technology"
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/explicacion",
+  "es": "No deben presentarse como rivales: cumplen funciones distintas y complementarias.",
+  "en": "They should not be presented as rivals: they perform distinct and complementary functions."
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/porQueNo/1",
+  "es": "La continuidad operativa y la seguridad siguen siendo indispensables.",
+  "en": "Operational continuity and security remain indispensable."
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/porQueNo/2",
+  "es": "La EA necesita participación del negocio y de TI, no aislamiento.",
+  "en": "EA needs participation from the business and from IT, not isolation."
+ },
+ {
+  "ruta": "practica/opcionMultiple/23/porQueNo/3",
+  "es": "La estrategia la define el negocio; TI la habilita.",
+  "en": "The business defines the strategy; IT enables it."
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/tema",
+  "es": "Metodologías",
+  "en": "Methodologies"
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/pregunta",
+  "es": "¿Qué relación existe entre la Arquitectura Empresarial y metodologías como Ágil o DevOps?",
+  "en": "What relationship is there between Enterprise Architecture and methodologies such as Agile or DevOps?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/opciones/0",
+  "es": "La arquitectura define dirección, restricciones y relaciones; la metodología organiza cómo construir y entregar la solución",
+  "en": "Architecture defines direction, constraints and relationships; the methodology organizes how to build and deliver the solution"
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/opciones/1",
+  "es": "La arquitectura sustituye a la metodología de desarrollo",
+  "en": "Architecture replaces the development methodology"
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/opciones/2",
+  "es": "Ágil elimina la necesidad de arquitectura empresarial",
+  "en": "Agile eliminates the need for enterprise architecture"
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/opciones/3",
+  "es": "DevOps es un marco de arquitectura empresarial equivalente a TOGAF",
+  "en": "DevOps is an enterprise architecture framework equivalent to TOGAF"
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/explicacion",
+  "es": "Son capas distintas y complementarias: una decide el rumbo y los límites, la otra organiza la construcción y la entrega.",
+  "en": "They are distinct and complementary layers: one decides the direction and the limits, the other organizes construction and delivery."
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/porQueNo/1",
+  "es": "Son complementarias, no sustitutas.",
+  "en": "They are complementary, not substitutes."
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/porQueNo/2",
+  "es": "Ágil entrega iterativamente dentro de las restricciones que la arquitectura define.",
+  "en": "Agile delivers iteratively within the constraints that architecture defines."
+ },
+ {
+  "ruta": "practica/opcionMultiple/24/porQueNo/3",
+  "es": "DevOps es una práctica de colaboración y automatización entre desarrollo y operación.",
+  "en": "DevOps is a practice of collaboration and automation between development and operations."
+ },
+ {
+  "ruta": "practica/escenarios/0/escenario",
+  "es": "El corporativo necesita rediseñar y gobernar la arquitectura completa después de adquirir tres plantas en Argentina, y quiere un método que vaya de la visión al roadmap.",
+  "en": "The corporate group needs to redesign and govern the entire architecture after acquiring three plants in Argentina, and wants a method that goes from vision to roadmap."
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/0",
+  "es": "TOGAF y su ADM",
+  "en": "TOGAF and its ADM"
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/1",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/2",
+  "es": "ISO 9001",
+  "en": "ISO 9001"
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/3",
+  "es": "Six Sigma",
+  "en": "Six Sigma"
+ },
+ {
+  "ruta": "practica/escenarios/0/explicacion",
+  "es": "TOGAF ofrece el marco y el ADM el ciclo de fases para desarrollar y gobernar la arquitectura de extremo a extremo.",
+  "en": "TOGAF provides the framework and the ADM the cycle of phases to develop and govern the architecture end to end."
+ },
+ {
+  "ruta": "practica/escenarios/0/porQueNo/1",
+  "es": "BPMN sirve para dibujar procesos, no para conducir una transformación completa.",
+  "en": "BPMN is used to draw processes, not to drive a complete transformation."
+ },
+ {
+  "ruta": "practica/escenarios/0/porQueNo/2",
+  "es": "ISO 9001 gestiona calidad, no arquitectura.",
+  "en": "ISO 9001 manages quality, not architecture."
+ },
+ {
+  "ruta": "practica/escenarios/0/porQueNo/3",
+  "es": "Six Sigma reduce variación y defectos en procesos específicos.",
+  "en": "Six Sigma reduces variation and defects in specific processes."
+ },
+ {
+  "ruta": "practica/escenarios/1/escenario",
+  "es": "Quieren representar gráficamente el proceso «pedido a entrega» de modo que lo entiendan tanto el área comercial como los desarrolladores.",
+  "en": "They want to represent the «order to delivery» process graphically so that both the commercial area and the developers understand it."
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/0",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/1",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/2",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/3",
+  "es": "ISO/IEC 27001",
+  "en": "ISO/IEC 27001"
+ },
+ {
+  "ruta": "practica/escenarios/1/explicacion",
+  "es": "BPMN es una notación estandarizada pensada precisamente para que un mismo modelo sea comprensible por el negocio y por los equipos técnicos.",
+  "en": "BPMN is a standardized notation designed precisely so that one same model is understandable by the business and by the technical teams."
+ },
+ {
+  "ruta": "practica/escenarios/1/porQueNo/1",
+  "es": "Zachman clasifica vistas, no es una notación de procesos.",
+  "en": "Zachman classifies views; it is not a process notation."
+ },
+ {
+  "ruta": "practica/escenarios/1/porQueNo/2",
+  "es": "TOGAF orienta el desarrollo de la arquitectura completa.",
+  "en": "TOGAF guides the development of the complete architecture."
+ },
+ {
+  "ruta": "practica/escenarios/1/porQueNo/3",
+  "es": "ISO/IEC 27001 gestiona la seguridad de la información.",
+  "en": "ISO/IEC 27001 manages information security."
+ },
+ {
+  "ruta": "practica/escenarios/2/escenario",
+  "es": "La dirección sospecha que faltan perspectivas en la documentación: hay muchos diagramas de sistemas pero nadie sabe si están cubiertos el «quién», el «cuándo» y el «por qué».",
+  "en": "Management suspects that perspectives are missing from the documentation: there are many system diagrams but nobody knows whether the «who», the «when» and the «why» are covered."
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/0",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/1",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/2",
+  "es": "BPM",
+  "en": "BPM"
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/3",
+  "es": "DevOps",
+  "en": "DevOps"
+ },
+ {
+  "ruta": "practica/escenarios/2/explicacion",
+  "es": "Zachman es una ontología de clasificación: sirve justamente para comprobar que las seis preguntas y las distintas perspectivas estén cubiertas.",
+  "en": "Zachman is a classification ontology: it serves precisely to check that the six questions and the different perspectives are covered."
+ },
+ {
+  "ruta": "practica/escenarios/2/porQueNo/1",
+  "es": "El ADM da secuencia de trabajo, no una comprobación de completitud de vistas.",
+  "en": "The ADM gives a work sequence, not a completeness check of the views."
+ },
+ {
+  "ruta": "practica/escenarios/2/porQueNo/2",
+  "es": "BPM administra procesos, no el conjunto de descripciones de la empresa.",
+  "en": "BPM manages processes, not the whole set of descriptions of the enterprise."
+ },
+ {
+  "ruta": "practica/escenarios/2/porQueNo/3",
+  "es": "DevOps es una práctica de construcción y operación de software.",
+  "en": "DevOps is a practice for building and operating software."
+ },
+ {
+  "ruta": "practica/escenarios/3/escenario",
+  "es": "Antes de integrar sistemas, el corporativo quiere establecer una definición única de «cliente activo», un responsable por cada dato maestro y reglas de calidad y protección.",
+  "en": "Before integrating systems, the corporate group wants to establish a single definition of «active customer», an owner for each master data element and rules for quality and protection."
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/0",
+  "es": "Arquitectura de datos y gobierno de datos",
+  "en": "Data architecture and data governance"
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/1",
+  "es": "Arquitectura tecnológica",
+  "en": "Technology architecture"
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/2",
+  "es": "Metodología ágil",
+  "en": "Agile methodology"
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/3",
+  "es": "Arquitectura de aplicaciones",
+  "en": "Application architecture"
+ },
+ {
+  "ruta": "practica/escenarios/3/explicacion",
+  "es": "Significado, propiedad, calidad, seguridad y compartición del dato pertenecen a la arquitectura de datos.",
+  "en": "Meaning, ownership, quality, security and sharing of the data belong to the data architecture."
+ },
+ {
+  "ruta": "practica/escenarios/3/porQueNo/1",
+  "es": "La tecnología define la infraestructura donde reside el dato, no su gobierno.",
+  "en": "Technology defines the infrastructure where the data resides, not its governance."
+ },
+ {
+  "ruta": "practica/escenarios/3/porQueNo/2",
+  "es": "Ágil organiza la entrega, no define semántica de datos.",
+  "en": "Agile organizes delivery; it does not define data semantics."
+ },
+ {
+  "ruta": "practica/escenarios/3/porQueNo/3",
+  "es": "Aplicaciones definiría qué sistema es fuente de ese dato, después de acordar su significado.",
+  "en": "Applications would define which system is the source of that data, after agreeing on its meaning."
+ },
+ {
+  "ruta": "practica/escenarios/4/escenario",
+  "es": "El proceso de compras tiene 23 horas de espera contra 22 minutos de trabajo real, con retrabajos y capturas duplicadas.",
+  "en": "The purchasing process has 23 hours of waiting against 22 minutes of real work, with rework and duplicate data entry."
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/0",
+  "es": "Lean y mejora de procesos (BPM)",
+  "en": "Lean and process improvement (BPM)"
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/1",
+  "es": "ISO/IEC 20000-1",
+  "en": "ISO/IEC 20000-1"
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/2",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/3",
+  "es": "Arquitectura tecnológica",
+  "en": "Technology architecture"
+ },
+ {
+  "ruta": "practica/escenarios/4/explicacion",
+  "es": "El problema es desperdicio: espera, retrabajo y captura duplicada. Lean y el ciclo BPM atacan exactamente eso.",
+  "en": "The problem is waste: waiting, rework and duplicate data entry. Lean and the BPM cycle attack exactly that."
+ },
+ {
+  "ruta": "practica/escenarios/4/porQueNo/1",
+  "es": "ISO/IEC 20000-1 gestiona servicios de TI, no el proceso de compras.",
+  "en": "ISO/IEC 20000-1 manages IT services, not the purchasing process."
+ },
+ {
+  "ruta": "practica/escenarios/4/porQueNo/2",
+  "es": "Zachman clasifica vistas; no elimina desperdicio.",
+  "en": "Zachman classifies views; it does not eliminate waste."
+ },
+ {
+  "ruta": "practica/escenarios/4/porQueNo/3",
+  "es": "Comprar más infraestructura no elimina esperas de aprobación.",
+  "en": "Buying more infrastructure does not eliminate approval waits."
+ },
+ {
+  "ruta": "practica/escenarios/5/escenario",
+  "es": "Una iniciativa concreta requiere diseñar cómo se integrarán el CRM, el ERP y la plataforma de datos, con qué interfaces, qué controles de seguridad y bajo qué restricciones de costo y tiempo.",
+  "en": "A specific initiative requires designing how the CRM, the ERP and the data platform will be integrated, with which interfaces, which security controls and under which cost and time constraints."
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/0",
+  "es": "Arquitecto de soluciones",
+  "en": "Solutions architect"
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/1",
+  "es": "Arquitecto empresarial",
+  "en": "Enterprise architect"
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/2",
+  "es": "Área de Transformación Digital",
+  "en": "Digital Transformation area"
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/3",
+  "es": "Comité de dirección",
+  "en": "Steering committee"
+ },
+ {
+  "ruta": "practica/escenarios/5/explicacion",
+  "es": "El arquitecto de soluciones trabaja sobre una necesidad concreta: componentes, integraciones, seguridad y decisiones técnicas, respetando la arquitectura empresarial.",
+  "en": "The solutions architect works on a specific need: components, integrations, security and technical decisions, respecting the enterprise architecture."
+ },
+ {
+  "ruta": "practica/escenarios/5/porQueNo/1",
+  "es": "El arquitecto empresarial ya definió la visión regional; no baja al diseño de esta solución.",
+  "en": "The enterprise architect already defined the regional vision; they do not go down to the design of this solution."
+ },
+ {
+  "ruta": "practica/escenarios/5/porQueNo/2",
+  "es": "Transformación Digital moviliza el cambio, no diseña la integración técnica.",
+  "en": "Digital Transformation mobilizes change; it does not design the technical integration."
+ },
+ {
+  "ruta": "practica/escenarios/5/porQueNo/3",
+  "es": "El comité prioriza y autoriza, no diseña.",
+  "en": "The committee prioritizes and authorizes; it does not design."
+ },
+ {
+  "ruta": "practica/escenarios/6/escenario",
+  "es": "Un proyecto quiere crear su propia base de datos aislada de clientes, aunque la arquitectura ya definió una fuente única de datos de cliente.",
+  "en": "A project wants to create its own isolated customer database, even though the architecture already defined a single source of customer data."
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/0",
+  "es": "Fase G · Gobierno de la implementación",
+  "en": "Phase G · Implementation governance"
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/1",
+  "es": "Fase B · Arquitectura de negocio",
+  "en": "Phase B · Business architecture"
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/2",
+  "es": "Fase H · Gestión del cambio",
+  "en": "Phase H · Change management"
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/3",
+  "es": "Fase A · Visión",
+  "en": "Phase A · Vision"
+ },
+ {
+  "ruta": "practica/escenarios/6/explicacion",
+  "es": "La fase G verifica que lo que se está construyendo cumpla los principios y el diseño acordados, y administra las excepciones justificadas.",
+  "en": "Phase G verifies that what is being built complies with the agreed principles and design, and manages the justified exceptions."
+ },
+ {
+  "ruta": "practica/escenarios/6/porQueNo/1",
+  "es": "B diseña cómo debe operar el negocio, no supervisa proyectos.",
+  "en": "B designs how the business should operate; it does not supervise projects."
+ },
+ {
+  "ruta": "practica/escenarios/6/porQueNo/2",
+  "es": "H evalúa cambios del entorno que obliguen a actualizar la arquitectura.",
+  "en": "H assesses changes in the environment that force the architecture to be updated."
+ },
+ {
+  "ruta": "practica/escenarios/6/porQueNo/3",
+  "es": "A define alcance y visión al inicio del ciclo.",
+  "en": "A defines scope and vision at the start of the cycle."
+ },
+ {
+  "ruta": "practica/escenarios/7/escenario",
+  "es": "Cambió la regulación ambiental en Argentina y aparecieron nuevos competidores regionales; hay que evaluar si la arquitectura objetivo sigue siendo válida.",
+  "en": "Environmental regulation changed in Argentina and new regional competitors appeared; you have to assess whether the target architecture is still valid."
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/0",
+  "es": "Fase H · Administración del cambio de arquitectura",
+  "en": "Phase H · Architecture change management"
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/1",
+  "es": "Fase F · Planeación de la migración",
+  "en": "Phase F · Migration planning"
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/2",
+  "es": "Fase D · Arquitectura tecnológica",
+  "en": "Phase D · Technology architecture"
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/3",
+  "es": "Fase Preliminar",
+  "en": "Preliminary Phase"
+ },
+ {
+  "ruta": "practica/escenarios/7/explicacion",
+  "es": "La fase H evalúa cambios internos y externos —estrategias, regulaciones, tecnologías, competidores, riesgos— y decide si se inicia otro ciclo.",
+  "en": "Phase H assesses internal and external changes —strategies, regulations, technologies, competitors, risks— and decides whether another cycle starts."
+ },
+ {
+  "ruta": "practica/escenarios/7/porQueNo/1",
+  "es": "F ordena y prioriza iniciativas ya definidas.",
+  "en": "F sequences and prioritizes initiatives that are already defined."
+ },
+ {
+  "ruta": "practica/escenarios/7/porQueNo/2",
+  "es": "D define infraestructura y plataformas.",
+  "en": "D defines infrastructure and platforms."
+ },
+ {
+  "ruta": "practica/escenarios/7/porQueNo/3",
+  "es": "La preliminar prepara la capacidad de arquitectura al inicio.",
+  "en": "The Preliminary phase prepares the architecture capability at the start."
+ },
+ {
+  "ruta": "practica/clasificar/0/consigna",
+  "es": "Clasifica cada elemento de la acerera en el dominio de arquitectura que le corresponde.",
+  "en": "Classify each element of the steel company into the architecture domain it belongs to."
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/0",
+  "es": "Negocio",
+  "en": "Business"
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/1",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/2",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/3",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/0/texto",
+  "es": "Proceso de compras regional",
+  "en": "Regional purchasing process"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/1/texto",
+  "es": "Capacidad de control de calidad",
+  "en": "Quality control capability"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/2/texto",
+  "es": "Política de crédito a clientes",
+  "en": "Customer credit policy"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/3/texto",
+  "es": "Definición de «cliente activo»",
+  "en": "Definition of «active customer»"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/4/texto",
+  "es": "Catálogo maestro de proveedores",
+  "en": "Supplier master catalog"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/5/texto",
+  "es": "Resultados de pruebas por lote",
+  "en": "Batch test results"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/6/texto",
+  "es": "SAP ERP",
+  "en": "SAP ERP"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/7/texto",
+  "es": "CRM comercial",
+  "en": "Commercial CRM"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/8/texto",
+  "es": "Sistema local de producción",
+  "en": "Local production system"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/9/texto",
+  "es": "Sensores industriales de vibración",
+  "en": "Industrial vibration sensors"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/10/texto",
+  "es": "Enlace de telecomunicaciones México–Argentina",
+  "en": "Mexico–Argentina telecommunications link"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/11/texto",
+  "es": "Nube y servidores",
+  "en": "Cloud and servers"
+ },
+ {
+  "ruta": "practica/clasificar/0/explicacion",
+  "es": "Regla práctica: el <b>negocio</b> dice qué hay que hacer; los <b>datos</b>, qué información se necesita; las <b>aplicaciones</b>, qué sistemas la producen y procesan; la <b>tecnología</b>, sobre qué infraestructura corren.",
+  "en": "Rule of thumb: the <b>business</b> says what has to be done; the <b>data</b>, what information is needed; the <b>applications</b>, what systems produce and process it; the <b>technology</b>, what infrastructure they run on."
+ },
+ {
+  "ruta": "practica/clasificar/1/consigna",
+  "es": "Clasifica cada actividad del proceso «pedido a entrega» según su aporte de valor.",
+  "en": "Classify each activity of the «order to delivery» process according to the value it contributes."
+ },
+ {
+  "ruta": "practica/clasificar/1/categorias/0",
+  "es": "Con valor para el cliente",
+  "en": "Value for the customer"
+ },
+ {
+  "ruta": "practica/clasificar/1/categorias/1",
+  "es": "Necesaria para el negocio",
+  "en": "Necessary for the business"
+ },
+ {
+  "ruta": "practica/clasificar/1/categorias/2",
+  "es": "Sin valor (desperdicio)",
+  "en": "No value (waste)"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/0/texto",
+  "es": "Fabricar el producto conforme a especificación",
+  "en": "Manufacture the product according to specification"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/1/texto",
+  "es": "Entregar el pedido en la planta del cliente",
+  "en": "Deliver the order at the customer's plant"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/2/texto",
+  "es": "Realizar la prueba de calidad del lote",
+  "en": "Run the batch quality test"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/3/texto",
+  "es": "Validar el crédito del cliente",
+  "en": "Validate the customer's credit"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/4/texto",
+  "es": "Emitir la factura fiscal",
+  "en": "Issue the tax invoice"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/5/texto",
+  "es": "Registrar la trazabilidad exigida por norma",
+  "en": "Record the traceability required by regulation"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/6/texto",
+  "es": "Esperar 18 horas la firma del gerente",
+  "en": "Wait 18 hours for the manager's signature"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/7/texto",
+  "es": "Capturar el pedido en Excel y luego en el ERP",
+  "en": "Enter the order in Excel and then in the ERP"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/8/texto",
+  "es": "Rehacer la orden por un dato mal capturado",
+  "en": "Redo the order because of a mistyped data entry"
+ },
+ {
+  "ruta": "practica/clasificar/1/explicacion",
+  "es": "Una actividad agrega valor cuando transforma el producto o servicio, el cliente reconoce su utilidad y contribuye al resultado esperado. Espera, retrabajo y captura duplicada nunca lo hacen.",
+  "en": "An activity adds value when it transforms the product or service, the customer recognizes its usefulness and it contributes to the expected result. Waiting, rework and duplicate data entry never do."
+ },
+ {
+  "ruta": "practica/clasificar/2/consigna",
+  "es": "¿A qué corresponde cada elemento: al marco/método, o al lenguaje y los estándares?",
+  "en": "What does each element correspond to: the framework/method, or the language and the standards?"
+ },
+ {
+  "ruta": "practica/clasificar/2/categorias/0",
+  "es": "Marco o método de arquitectura",
+  "en": "Architecture framework or method"
+ },
+ {
+  "ruta": "practica/clasificar/2/categorias/1",
+  "es": "Notación o estándar",
+  "en": "Notation or standard"
+ },
+ {
+  "ruta": "practica/clasificar/2/categorias/2",
+  "es": "Disciplina de procesos",
+  "en": "Process discipline"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/0/texto",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/1/texto",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/2/texto",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/3/texto",
+  "es": "Enfoque Gartner",
+  "en": "Gartner approach"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/4/texto",
+  "es": "BPMN / ISO 19510",
+  "en": "BPMN / ISO 19510"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/5/texto",
+  "es": "ISO/IEC 27001",
+  "en": "ISO/IEC 27001"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/6/texto",
+  "es": "ISO/IEC 20000-1",
+  "en": "ISO/IEC 20000-1"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/7/texto",
+  "es": "ISO 9001",
+  "en": "ISO 9001"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/8/texto",
+  "es": "BPM",
+  "en": "BPM"
+ },
+ {
+  "ruta": "practica/clasificar/2/explicacion",
+  "es": "Un marco organiza el trabajo y aporta método, roles y gobierno. Un estándar establece criterios comunes o requisitos, y una notación define cómo representar. BPM es la disciplina de administración de procesos: no es notación ni norma.",
+  "en": "A framework organizes the work and provides method, roles and governance. A standard establishes common criteria or requirements, and a notation defines how to represent. BPM is the discipline of process management: it is neither a notation nor a standard."
+ },
+ {
+  "ruta": "practica/ordenar/0/consigna",
+  "es": "Ordena las fases del ciclo ADM de TOGAF, desde la preparación hasta la administración del cambio.",
+  "en": "Put the phases of the TOGAF ADM cycle in order, from preparation to change management."
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/0",
+  "es": "Preliminar · preparar la capacidad de arquitectura",
+  "en": "Preliminary · prepare the architecture capability"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/1",
+  "es": "A · Visión de arquitectura",
+  "en": "A · Architecture vision"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/2",
+  "es": "B · Arquitectura de negocio",
+  "en": "B · Business architecture"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/3",
+  "es": "C · Arquitecturas de datos y aplicaciones",
+  "en": "C · Data and application architectures"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/4",
+  "es": "D · Arquitectura tecnológica",
+  "en": "D · Technology architecture"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/5",
+  "es": "E · Oportunidades y soluciones",
+  "en": "E · Opportunities and solutions"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/6",
+  "es": "F · Planeación de la migración",
+  "en": "F · Migration planning"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/7",
+  "es": "G · Gobierno de la implementación",
+  "en": "G · Implementation governance"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/8",
+  "es": "H · Administración del cambio",
+  "en": "H · Change management"
+ },
+ {
+  "ruta": "practica/ordenar/0/explicacion",
+  "es": "La gestión de requerimientos no ocupa una posición en la secuencia: está en el centro porque atraviesa todas las fases.",
+  "en": "Requirements management does not occupy a position in the sequence: it sits at the center because it cuts across all the phases."
+ },
+ {
+  "ruta": "practica/ordenar/1/consigna",
+  "es": "Ordena la cadena de alineación que debe seguir toda decisión tecnológica.",
+  "en": "Put in order the alignment chain that every technology decision must follow."
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/0",
+  "es": "Estrategia",
+  "en": "Strategy"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/1",
+  "es": "Capacidades",
+  "en": "Capabilities"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/2",
+  "es": "Procesos",
+  "en": "Processes"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/3",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/4",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/5",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "practica/ordenar/1/explicacion",
+  "es": "La tecnología está al final porque debe responder a una necesidad del negocio, no al revés.",
+  "en": "Technology comes last because it must respond to a business need, not the other way around."
+ },
+ {
+  "ruta": "practica/ordenar/2/consigna",
+  "es": "Ordena el ciclo BPM simplificado.",
+  "en": "Put the simplified BPM cycle in order."
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/0",
+  "es": "Identificar",
+  "en": "Identify"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/1",
+  "es": "Descubrir y documentar",
+  "en": "Discover and document"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/2",
+  "es": "Analizar",
+  "en": "Analyze"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/3",
+  "es": "Rediseñar",
+  "en": "Redesign"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/4",
+  "es": "Implementar",
+  "en": "Implement"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/5",
+  "es": "Monitorear",
+  "en": "Monitor"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/6",
+  "es": "Mejorar nuevamente",
+  "en": "Improve again"
+ },
+ {
+  "ruta": "practica/ordenar/2/explicacion",
+  "es": "El ciclo es continuo: monitorear alimenta la siguiente mejora, y el proceso vuelve a analizarse.",
+  "en": "The cycle is continuous: monitoring feeds the next improvement, and the process is analyzed again."
+ },
+ {
+  "ruta": "practica/ordenar/3/consigna",
+  "es": "Ordena la secuencia de diagnóstico y transformación.",
+  "en": "Put the diagnosis and transformation sequence in order."
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/0",
+  "es": "AS-IS · situación actual",
+  "en": "AS-IS · current state"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/1",
+  "es": "Análisis de brechas",
+  "en": "Gap analysis"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/2",
+  "es": "TO-BE · situación deseada",
+  "en": "TO-BE · target state"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/3",
+  "es": "Roadmap · iniciativas priorizadas",
+  "en": "Roadmap · prioritized initiatives"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/4",
+  "es": "Implementación y gobierno",
+  "en": "Implementation and governance"
+ },
+ {
+  "ruta": "practica/ordenar/3/explicacion",
+  "es": "Sin AS-IS documentado no hay brecha demostrable, y sin brecha el TO-BE es una lista de deseos.",
+  "en": "Without a documented AS-IS there is no demonstrable gap, and without a gap the TO-BE is a wish list."
+ },
+ {
+  "ruta": "practica/flashcards/0/frente",
+  "es": "Arquitectura Empresarial",
+  "en": "Enterprise Architecture"
+ },
+ {
+  "ruta": "practica/flashcards/0/reverso",
+  "es": "Disciplina que describe cómo funciona hoy la organización y diseña cómo deberá funcionar, alineando capacidades, procesos, datos, aplicaciones y tecnología con la estrategia.",
+  "en": "Discipline that describes how the organization works today and designs how it should work, aligning capabilities, processes, data, applications and technology with the strategy."
+ },
+ {
+  "ruta": "practica/flashcards/1/frente",
+  "es": "Los cuatro dominios",
+  "en": "The four domains"
+ },
+ {
+  "ruta": "practica/flashcards/1/reverso",
+  "es": "Negocio · Datos · Aplicaciones · Tecnología.",
+  "en": "Business · Data · Applications · Technology."
+ },
+ {
+  "ruta": "practica/flashcards/2/frente",
+  "es": "AS-IS",
+  "en": "AS-IS"
+ },
+ {
+  "ruta": "practica/flashcards/2/reverso",
+  "es": "Situación actual: cómo opera realmente la organización hoy.",
+  "en": "Current state: how the organization really operates today."
+ },
+ {
+  "ruta": "practica/flashcards/3/frente",
+  "es": "TO-BE",
+  "en": "TO-BE"
+ },
+ {
+  "ruta": "practica/flashcards/3/reverso",
+  "es": "Situación futura deseada. No implica necesariamente reemplazar todos los sistemas.",
+  "en": "Desired future state. It does not necessarily imply replacing every system."
+ },
+ {
+  "ruta": "practica/flashcards/4/frente",
+  "es": "Brecha (gap)",
+  "en": "Gap"
+ },
+ {
+  "ruta": "practica/flashcards/4/reverso",
+  "es": "Diferencia entre el estado actual y el deseado.",
+  "en": "Difference between the current state and the desired one."
+ },
+ {
+  "ruta": "practica/flashcards/5/frente",
+  "es": "Roadmap",
+  "en": "Roadmap"
+ },
+ {
+  "ruta": "practica/flashcards/5/reverso",
+  "es": "Iniciativas ordenadas y priorizadas para cerrar las brechas.",
+  "en": "Initiatives sequenced and prioritized to close the gaps."
+ },
+ {
+  "ruta": "practica/flashcards/6/frente",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/flashcards/6/reverso",
+  "es": "The Open Group Architecture Framework: marco y estándar para desarrollar y gobernar la Arquitectura Empresarial. Edición vigente: 10.ª.",
+  "en": "The Open Group Architecture Framework: framework and standard to develop and govern Enterprise Architecture. Current edition: 10th."
+ },
+ {
+  "ruta": "practica/flashcards/7/frente",
+  "es": "ADM",
+  "en": "ADM"
+ },
+ {
+  "ruta": "practica/flashcards/7/reverso",
+  "es": "Architecture Development Method: método central de TOGAF; ciclo Preliminar y fases A–H con gestión de requerimientos en el centro.",
+  "en": "Architecture Development Method: the core method of TOGAF; Preliminary cycle and phases A–H with requirements management at the center."
+ },
+ {
+  "ruta": "practica/flashcards/8/frente",
+  "es": "Fase A del ADM",
+  "en": "Phase A of the ADM"
+ },
+ {
+  "ruta": "practica/flashcards/8/reverso",
+  "es": "Visión de arquitectura: problema u oportunidad, objetivos, alcance, interesados, riesgos y visión inicial AS-IS/TO-BE.",
+  "en": "Architecture vision: problem or opportunity, objectives, scope, stakeholders, risks and initial AS-IS/TO-BE vision."
+ },
+ {
+  "ruta": "practica/flashcards/9/frente",
+  "es": "Fase C del ADM",
+  "en": "Phase C of the ADM"
+ },
+ {
+  "ruta": "practica/flashcards/9/reverso",
+  "es": "Arquitecturas de sistemas de información: primero datos (C1), después aplicaciones (C2).",
+  "en": "Information systems architectures: data first (C1), then applications (C2)."
+ },
+ {
+  "ruta": "practica/flashcards/10/frente",
+  "es": "Fase G del ADM",
+  "en": "Phase G of the ADM"
+ },
+ {
+  "ruta": "practica/flashcards/10/reverso",
+  "es": "Gobierno de la implementación: verificar que lo que se construye respete principios, estándares y el TO-BE.",
+  "en": "Implementation governance: verify that what is built respects principles, standards and the TO-BE."
+ },
+ {
+  "ruta": "practica/flashcards/11/frente",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/flashcards/11/reverso",
+  "es": "Ontología de clasificación: Qué, Cómo, Dónde, Quién, Cuándo, Por qué, desde distintas perspectivas. No es un método de transformación.",
+  "en": "Classification ontology: What, How, Where, Who, When, Why, from different perspectives. It is not a transformation method."
+ },
+ {
+  "ruta": "practica/flashcards/12/frente",
+  "es": "Enfoque Gartner",
+  "en": "Gartner approach"
+ },
+ {
+  "ruta": "practica/flashcards/12/reverso",
+  "es": "Arquitectura orientada a resultados de negocio, con colaboración con interesados y gobierno adaptable.",
+  "en": "Architecture oriented to business results, with stakeholder collaboration and adaptable governance."
+ },
+ {
+  "ruta": "practica/flashcards/13/frente",
+  "es": "BPM",
+  "en": "BPM"
+ },
+ {
+  "ruta": "practica/flashcards/13/reverso",
+  "es": "Business Process Management: disciplina para identificar, documentar, analizar, rediseñar, implementar, monitorear y mejorar procesos.",
+  "en": "Business Process Management: discipline to identify, document, analyze, redesign, implement, monitor and improve processes."
+ },
+ {
+  "ruta": "practica/flashcards/14/frente",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "practica/flashcards/14/reverso",
+  "es": "Notación gráfica estandarizada (ISO 19510) para modelar procesos: eventos, actividades, compuertas, flujos y participantes.",
+  "en": "Standardized graphical notation (ISO 19510) for modeling processes: events, activities, gateways, flows and participants."
+ },
+ {
+  "ruta": "practica/flashcards/15/frente",
+  "es": "Proceso frente a proyecto",
+  "en": "Process versus project"
+ },
+ {
+  "ruta": "practica/flashcards/15/reverso",
+  "es": "El proyecto es temporal y produce un resultado único; el proceso es repetible y sigue operando.",
+  "en": "A project is temporary and produces a unique result; a process is repeatable and keeps operating."
+ },
+ {
+  "ruta": "practica/flashcards/16/frente",
+  "es": "Proceso end-to-end",
+  "en": "End-to-end process"
+ },
+ {
+  "ruta": "practica/flashcards/16/reverso",
+  "es": "Se analiza desde la necesidad inicial hasta el resultado que recibe el cliente, atravesando departamentos.",
+  "en": "It is analyzed from the initial need to the result the customer receives, cutting across departments."
+ },
+ {
+  "ruta": "practica/flashcards/17/frente",
+  "es": "Efectividad vs. eficiencia",
+  "en": "Effectiveness vs. efficiency"
+ },
+ {
+  "ruta": "practica/flashcards/17/reverso",
+  "es": "Efectividad: se logra el resultado esperado. Eficiencia: relación entre resultado y recursos utilizados.",
+  "en": "Effectiveness: the expected result is achieved. Efficiency: relationship between result and resources used."
+ },
+ {
+  "ruta": "practica/flashcards/18/frente",
+  "es": "Actividad sin valor",
+  "en": "Non-value-added activity"
+ },
+ {
+  "ruta": "practica/flashcards/18/reverso",
+  "es": "Espera, retrabajo, captura duplicada, traslado innecesario.",
+  "en": "Waiting, rework, duplicate data entry, unnecessary movement."
+ },
+ {
+  "ruta": "practica/flashcards/19/frente",
+  "es": "Automatización / digitalización / transformación digital",
+  "en": "Automation / digitalization / digital transformation"
+ },
+ {
+  "ruta": "practica/flashcards/19/reverso",
+  "es": "Automatizar: la tecnología ejecuta la actividad. Digitalizar: la información pasa a medios digitales. Transformar: cambian capacidades, procesos, experiencia o modelo de negocio.",
+  "en": "Automate: technology performs the activity. Digitalize: information moves to digital media. Transform: capabilities, processes, experience or business model change."
+ },
+ {
+  "ruta": "practica/flashcards/20/frente",
+  "es": "Industria 4.0",
+  "en": "Industry 4.0"
+ },
+ {
+  "ruta": "practica/flashcards/20/reverso",
+  "es": "Automatización + conectividad + datos: IoT, sistemas ciberfísicos, nube, IA, analítica, gemelos digitales, decisiones en tiempo real.",
+  "en": "Automation + connectivity + data: IoT, cyber-physical systems, cloud, AI, analytics, digital twins, real-time decisions."
+ },
+ {
+  "ruta": "practica/flashcards/21/frente",
+  "es": "Industria 5.0",
+  "en": "Industry 5.0"
+ },
+ {
+  "ruta": "practica/flashcards/21/reverso",
+  "es": "Complementa a la 4.0: centrada en las personas, sostenible y resiliente.",
+  "en": "Complements 4.0: people-centered, sustainable and resilient."
+ },
+ {
+  "ruta": "practica/flashcards/22/frente",
+  "es": "Arquitecto empresarial",
+  "en": "Enterprise architect"
+ },
+ {
+  "ruta": "practica/flashcards/22/reverso",
+  "es": "Alcance organizacional: conecta estrategia y capacidades, define principios y arquitecturas objetivo, construye roadmaps y participa en el gobierno.",
+  "en": "Organizational scope: connects strategy and capabilities, defines principles and target architectures, builds roadmaps and takes part in governance."
+ },
+ {
+  "ruta": "practica/flashcards/23/frente",
+  "es": "Arquitecto de soluciones",
+  "en": "Solutions architect"
+ },
+ {
+  "ruta": "practica/flashcards/23/reverso",
+  "es": "Alcance de una iniciativa: diseña componentes, integraciones, seguridad y decisiones técnicas respetando la arquitectura empresarial.",
+  "en": "Scope of one initiative: designs components, integrations, security and technical decisions, respecting the enterprise architecture."
+ },
+ {
+  "ruta": "practica/flashcards/24/frente",
+  "es": "Catálogo, matriz y diagrama",
+  "en": "Catalog, matrix and diagram"
+ },
+ {
+  "ruta": "practica/flashcards/24/reverso",
+  "es": "Catálogo: lista organizada. Matriz: relaciones entre dos dimensiones. Diagrama: representación visual de componentes y relaciones.",
+  "en": "Catalog: an organized list. Matrix: relationships between two dimensions. Diagram: visual representation of components and relationships."
+ }
+]

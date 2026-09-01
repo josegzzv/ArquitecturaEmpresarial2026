@@ -6,13 +6,8 @@
 (function (EA) {
   const el = EA.el;
 
-  /* ---------- Registro ---------- */
-  let banco = { categorias: [], casos: [], practica: {} };
-
-  EA.registrarCasos = function (def) {
-    banco = Object.assign(banco, def || {});
-  };
-  EA.obtenerCasos = function () { return banco; };
+  /* El registro del catálogo vive en nucleo.js: los archivos de /data
+     se cargan antes que este archivo. Aquí solo se pinta. */
 
   /* ---------- Ficha completa ---------- */
   function renderFicha(c) {
@@ -20,7 +15,7 @@
 
     if (c.contexto) {
       cuerpo.appendChild(el("div", { class: "ficha-seccion" }, [
-        el("h5", { text: "Contexto" }),
+        el("h5", { text: EA.t("ficha.contexto") }),
         el("div", { html: c.contexto })
       ]));
     }
@@ -32,13 +27,13 @@
         f.appendChild(el("span", { class: "paso", text: p }));
       });
       cuerpo.appendChild(el("div", { class: "ficha-seccion" }, [
-        el("h5", { text: "El proceso, a grandes rasgos" }), f
+        el("h5", { text: EA.t("ficha.flujo") }), f
       ]));
     }
 
     if (c.analisis) {
       cuerpo.appendChild(el("div", { class: "ficha-seccion" }, [
-        el("h5", { text: "Qué hay que ver aquí" }),
+        el("h5", { text: EA.t("ficha.analisis") }),
         el("div", { html: c.analisis })
       ]));
     }
@@ -57,8 +52,8 @@
       env.appendChild(t);
       cuerpo.appendChild(el("div", { class: "ficha-seccion" }, [
         el("h5", {}, [
-          document.createTextNode(c.cifras.titulo || "Cifras del caso"),
-          el("span", { class: "etiqueta-ilustrativa", text: "cifras ilustrativas" })
+          document.createTextNode(c.cifras.titulo || EA.t("ficha.cifras")),
+          el("span", { class: "etiqueta-ilustrativa", text: EA.t("ficha.ilustrativas") })
         ]),
         env
       ]));
@@ -66,20 +61,20 @@
 
     if (c.indicadores && c.indicadores.length) {
       cuerpo.appendChild(el("div", { class: "ficha-seccion" }, [
-        el("h5", { text: "Qué mediría un analista" }),
+        el("h5", { text: EA.t("ficha.indicadores") }),
         el("ul", {}, c.indicadores.map(function (i) { return el("li", { html: i }); }))
       ]));
     }
 
     if (c.preguntas && c.preguntas.length) {
       cuerpo.appendChild(el("div", { class: "ficha-seccion preguntas" }, [
-        el("h5", { text: "Para discutir en clase" }),
+        el("h5", { text: EA.t("ficha.preguntas") }),
         el("ol", {}, c.preguntas.map(function (q) { return el("li", { html: q }); }))
       ]));
     }
 
     if (c.conecta) {
-      cuerpo.appendChild(el("div", { class: "ficha-conecta", html: "<b>Conecta con:</b> " + c.conecta }));
+      cuerpo.appendChild(el("div", { class: "ficha-conecta", html: EA.t("ficha.conecta") + c.conecta }));
     }
 
     return cuerpo;
@@ -93,8 +88,9 @@
     (c.patrones || []).forEach(function (p) {
       chips.appendChild(el("span", { class: "pastilla viva", text: p }));
     });
+    const inicial = EA.esIngles() ? "W" : "S";
     (c.semanas || []).forEach(function (s) {
-      chips.appendChild(el("span", { class: "pastilla", text: "S" + s }));
+      chips.appendChild(el("span", { class: "pastilla", text: inicial + s }));
     });
 
     const boton = el("button", { class: "ficha-cabecera", type: "button", "aria-expanded": "false" }, [
@@ -124,8 +120,9 @@
 
   /* ---------- Página ---------- */
   function renderCatalogo(destino, filtros, campoBusqueda, contador) {
-    const cats = banco.categorias || [];
-    const casos = banco.casos || [];
+    const activo = EA.obtenerCasos();
+    const cats = activo.categorias || [];
+    const casos = activo.casos || [];
     let categoriaActiva = "todas";
     let texto = "";
 
@@ -147,7 +144,7 @@
       return b;
     }
     if (filtros) {
-      filtros.appendChild(chip("todas", "Todos", casos.length));
+      filtros.appendChild(chip("todas", EA.t("casos.todos"), casos.length));
       cats.forEach(function (cat) {
         const n = casos.filter(function (c) { return c.categoria === cat.id; }).length;
         if (n) filtros.appendChild(chip(cat.id, cat.nombre, n));
@@ -176,14 +173,14 @@
 
       if (contador) {
         contador.textContent = visibles.length === casos.length
-          ? casos.length + " casos"
-          : visibles.length + " de " + casos.length + " casos";
+          ? EA.t("casos.contador", { n: casos.length })
+          : EA.t("casos.contadorFiltro", { v: visibles.length, n: casos.length });
       }
 
       if (!visibles.length) {
         destino.appendChild(el("div", { class: "vacio" }, [
-          el("h3", { text: "Sin resultados" }),
-          el("p", { text: "Prueba con otra palabra: cola, capacidad, pago, incidente, cita…" })
+          el("h3", { text: EA.t("casos.sinResultados") }),
+          el("p", { text: EA.t("casos.pista") })
         ]));
         return;
       }

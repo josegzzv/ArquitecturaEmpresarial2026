@@ -1,0 +1,27 @@
+[
+ {
+  "ruta": "titulo",
+  "es": "Diseño de Procesos y Arquitectura Empresarial",
+  "en": "Process Design and Enterprise Architecture"
+ },
+ {
+  "ruta": "subtitulo",
+  "es": "Curso de 5 semanas",
+  "en": "A 5-week course"
+ },
+ {
+  "ruta": "autor",
+  "es": "Antonio González",
+  "en": "Antonio González"
+ },
+ {
+  "ruta": "correo",
+  "es": "antonio.gonzalez@tec.mx",
+  "en": "antonio.gonzalez@tec.mx"
+ },
+ {
+  "ruta": "caso",
+  "es": "<b>Caso conductor del curso.</b> Pendiente por definir.",
+  "en": "<b>Anchor case for the course.</b> To be defined."
+ }
+]

@@ -111,14 +111,14 @@
       const prog = publicada ? EA.mejorPorSemana(s.id) : null;
 
       const pie = el("footer", {}, [
-        el("span", { class: "pastilla", text: (s.sesiones || 0) + " sesiones" }),
-        publicada ? el("span", { class: "pastilla viva", text: n + " reactivos" })
-                  : el("span", { class: "pastilla", text: "Próximamente" }),
-        prog ? el("span", { class: "pastilla ok", text: "Mejor: " + prog.promedio + "%" }) : null
+        el("span", { class: "pastilla", text: EA.t("portada.sesiones", { n: s.sesiones || 0 }) }),
+        publicada ? el("span", { class: "pastilla viva", text: EA.t("portada.reactivos", { n: n }) })
+                  : el("span", { class: "pastilla", text: EA.t("portada.proximamente") }),
+        prog ? el("span", { class: "pastilla ok", text: EA.t("portada.mejor", { n: prog.promedio }) }) : null
       ]);
 
       const cuerpo = [
-        el("div", { class: "num", text: "Semana " + s.id }),
+        el("div", { class: "num", text: EA.t("portada.semana", { n: s.id }) }),
         el("h3", { text: s.titulo }),
         el("p", { text: s.subtitulo || "" }),
         pie
@@ -143,14 +143,15 @@
   /* ---------------- Página de semana ---------------- */
 
   function renderSemana(semana, destinoConceptos, destinoCabecera) {
-    destinoCabecera.appendChild(el("div", { class: "kicker", text: "Semana " + semana.id + " · " + (semana.sesiones || 0) + " sesiones" }));
+    destinoCabecera.appendChild(el("div", { class: "kicker",
+      text: EA.t("semana.kicker", { n: semana.id, s: semana.sesiones || 0 }) }));
     destinoCabecera.appendChild(el("h1", { text: semana.titulo }));
     if (semana.subtitulo) destinoCabecera.appendChild(el("p", { class: "lead", text: semana.subtitulo }));
 
     if (semana.objetivos && semana.objetivos.length) {
       destinoConceptos.appendChild(renderBloque({
         tipo: "lista",
-        titulo: "Al terminar la semana el estudiante podrá",
+        titulo: EA.t("semana.objetivos"),
         items: semana.objetivos
       }));
     }
@@ -167,7 +168,7 @@
       });
     });
     terminos.sort(function (a, b) {
-      return a.termino.localeCompare(b.termino, "es", { sensitivity: "base" });
+      return a.termino.localeCompare(b.termino, EA.idioma(), { sensitivity: "base" });
     });
 
     function pinta(filtro) {
@@ -182,8 +183,8 @@
 
       if (!visibles.length) {
         destino.appendChild(el("div", { class: "vacio" }, [
-          el("h3", { text: "Sin resultados" }),
-          el("p", { text: "Prueba con otra palabra: TOGAF, proceso, dato, gobierno…" })
+          el("h3", { text: EA.t("glosario.sinResultados") }),
+          el("p", { text: EA.t("glosario.pista") })
         ]));
         return;
       }
@@ -192,7 +193,7 @@
       visibles.forEach(function (t) {
         dl.appendChild(el("div", {}, [
           el("dt", { html: t.termino + (t.sigla ? ' <span style="color:var(--muted);font-weight:500">· ' + t.sigla + "</span>" : "") }),
-          el("dd", { html: t.definicion + ' <span class="pastilla" style="margin-left:.3rem">S' + t.semana + "</span>" })
+          el("dd", { html: t.definicion + ' <span class="pastilla" style="margin-left:.3rem">' + (EA.esIngles() ? "W" : "S") + t.semana + "</span>" })
         ]));
       });
       destino.appendChild(el("div", { class: "bloque" }, [dl]));

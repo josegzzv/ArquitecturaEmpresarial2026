@@ -6,13 +6,15 @@
 (function (EA) {
   const el = EA.el;
 
+  /* El nombre y la descripción de cada modo salen del diccionario de idioma;
+     aquí solo vive lo que no cambia entre idiomas. */
   const MODOS = [
-    { clave: "opcionMultiple", icono: "◉", nombre: "Opción múltiple", desc: "Reactivos con retroalimentación de por qué cada opción es o no correcta." },
-    { clave: "escenarios",     icono: "⚖", nombre: "Escenario → marco", desc: "Lee la situación y decide qué marco, estándar o metodología aplica." },
-    { clave: "clasificar",     icono: "▦", nombre: "Clasificar", desc: "Arrastra cada elemento a la categoría o dominio que le corresponde." },
-    { clave: "ordenar",        icono: "↕", nombre: "Ordenar secuencia", desc: "Coloca las fases o pasos en el orden correcto." },
-    { clave: "calculos",       icono: "∑", nombre: "Cálculo de tiempos y capacidad", desc: "Ejercicios numéricos: CT, TCT, eficiencia, takt, cuello de botella y capacidad, con solución paso a paso." },
-    { clave: "flashcards",     icono: "🗂", nombre: "Tarjetas de repaso", desc: "Concepto de un lado, definición del otro. Repaso rápido." }
+    { clave: "opcionMultiple", icono: "◉", unidad: "unidad.reactivos" },
+    { clave: "escenarios",     icono: "⚖", unidad: "unidad.reactivos" },
+    { clave: "clasificar",     icono: "▦", unidad: "unidad.reactivos" },
+    { clave: "ordenar",        icono: "↕", unidad: "unidad.reactivos" },
+    { clave: "calculos",       icono: "∑", unidad: "unidad.ejercicios" },
+    { clave: "flashcards",     icono: "🗂", unidad: "unidad.tarjetas" }
   ];
 
   /* Normaliza lo que escribe el alumno: coma decimal, %, espacios, separador de miles */
@@ -42,8 +44,8 @@
 
     if (!disponibles.length) {
       contenedor.appendChild(el("div", { class: "vacio" }, [
-        el("h3", { text: "Aún no hay reactivos para esta semana" }),
-        el("p", { text: "El material de práctica se publicará junto con las sesiones." })
+        el("h3", { text: EA.t("practica.sinTitulo") }),
+        el("p", { text: EA.t("practica.sinCuerpo") })
       ]));
       return;
     }
@@ -58,11 +60,10 @@
     disponibles.forEach(function (m) {
       const b = el("button", { class: "modo", type: "button", "aria-pressed": "false" }, [
         el("span", { class: "icono", text: m.icono }),
-        el("span", { class: "nombre", text: m.nombre }),
-        el("span", { class: "desc", text: m.desc }),
+        el("span", { class: "nombre", text: EA.t("modo." + m.clave + ".nombre") }),
+        el("span", { class: "desc", text: EA.t("modo." + m.clave + ".desc") }),
         el("span", { class: "pastilla", style: "align-self:flex-start;margin-top:.4rem",
-          text: (practica[m.clave] || []).length + (m.clave === "flashcards" ? " tarjetas"
-                 : m.clave === "calculos" ? " ejercicios" : " reactivos") })
+          text: EA.t(m.unidad, { n: (practica[m.clave] || []).length }) })
       ]);
       b.addEventListener("click", function () {
         barraModos.querySelectorAll(".modo").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
@@ -91,11 +92,11 @@
         el("div", { class: "relleno", style: "width:" + Math.round((indice / total) * 100) + "%" })
       ]);
       return el("div", { class: "barra-progreso" }, [
-        el("span", { text: (indice + 1) + " de " + total }),
+        el("span", { text: EA.t("practica.deTotal", { i: indice + 1, n: total }) }),
         pista,
         el("span", {}, [
           el("span", { class: "marcador", text: String(aciertos) }),
-          document.createTextNode(" aciertos")
+          document.createTextNode(EA.t("practica.aciertos"))
         ])
       ]);
     }
@@ -116,7 +117,7 @@
 
         if (esEscenario) {
           panel.appendChild(el("div", { class: "escenario-caja", html: q.escenario }));
-          panel.appendChild(el("p", { class: "pregunta", text: q.pregunta || "¿Qué marco, estándar o metodología usarías?" }));
+          panel.appendChild(el("p", { class: "pregunta", text: q.pregunta || EA.t("practica.escenarioPreg") }));
         } else {
           panel.appendChild(el("p", { class: "pregunta", html: q.pregunta }));
         }
@@ -152,12 +153,12 @@
 
           const retro = el("div", { class: "retro " + (bien ? "bien" : "mal") });
           retro.appendChild(el("div", { class: "veredicto" }, [
-            el("span", { text: bien ? "✓ Correcto" : "✗ Incorrecto" })
+            el("span", { text: bien ? EA.t("practica.correcto") : EA.t("practica.incorrecto") })
           ]));
           retro.appendChild(el("p", { html: q.explicacion || "" }));
 
           if (!bien && q.porQueNo && q.porQueNo[elegida]) {
-            retro.appendChild(el("p", { html: "<b>Sobre tu respuesta:</b> " + q.porQueNo[elegida] }));
+            retro.appendChild(el("p", { html: EA.t("practica.sobreTu") + q.porQueNo[elegida] }));
           }
           if (q.porQueNo && Object.keys(q.porQueNo).length > 1) {
             const ul = el("ul");
@@ -166,14 +167,14 @@
               ul.appendChild(el("li", { html: "<b>" + q.opciones[Number(k)] + ":</b> " + q.porQueNo[k] }));
             });
             if (ul.childNodes.length) {
-              retro.appendChild(el("p", { html: "<b>Las demás opciones:</b>" }));
+              retro.appendChild(el("p", { html: EA.t("practica.lasDemas") }));
               retro.appendChild(ul);
             }
           }
           panel.appendChild(retro);
 
           const sig = el("button", { class: "btn primario", type: "button",
-            text: i === lista.length - 1 ? "Ver resultado" : "Siguiente →" });
+            text: i === lista.length - 1 ? EA.t("practica.verResultado") : EA.t("practica.siguiente") });
           sig.addEventListener("click", function () { i++; pinta(); });
           panel.appendChild(el("div", { class: "acciones" }, [sig]));
           sig.focus();
@@ -193,7 +194,8 @@
         const ej = lista[i];
         panel.appendChild(encabezado(i, lista.length, aciertosTotales));
         panel.appendChild(el("p", { class: "pregunta", html: ej.consigna }));
-        panel.appendChild(el("p", { html: '<span style="font-size:.84rem;color:var(--muted)">Arrastra cada elemento a su columna, o toca el elemento y después la columna.</span>' }));
+        panel.appendChild(el("p", { html: '<span style="font-size:.84rem;color:var(--muted)">'
+          + EA.t("practica.arrastra") + '</span>' }));
 
         const banco = el("div", { class: "banco-items" });
         const columnas = el("div", { class: "columnas-dominio" });
@@ -248,7 +250,7 @@
         panel.appendChild(banco);
         panel.appendChild(columnas);
 
-        const revisar = el("button", { class: "btn primario", type: "button", text: "Revisar" });
+        const revisar = el("button", { class: "btn primario", type: "button", text: EA.t("practica.revisar") });
         const acciones = el("div", { class: "acciones" }, [revisar]);
         panel.appendChild(acciones);
 
@@ -267,7 +269,7 @@
           });
           Array.prototype.forEach.call(banco.children, function (f) {
             f.classList.add("mal");
-            f.appendChild(el("span", { class: "correccion", text: "sin clasificar → " + f.getAttribute("data-categoria") }));
+            f.appendChild(el("span", { class: "correccion", text: EA.t("practica.sinClasificar") + f.getAttribute("data-categoria") }));
             f.draggable = false;
           });
 
@@ -275,13 +277,13 @@
           itemsTotales += ej.items.length;
 
           const retro = el("div", { class: "retro " + (bien === ej.items.length ? "bien" : "mal") });
-          retro.appendChild(el("div", { class: "veredicto", text: bien + " de " + ej.items.length + " bien clasificados" }));
+          retro.appendChild(el("div", { class: "veredicto", text: EA.t("practica.bienClasif", { a: bien, b: ej.items.length }) }));
           if (ej.explicacion) retro.appendChild(el("p", { html: ej.explicacion }));
           panel.appendChild(retro);
 
           acciones.innerHTML = "";
           const sig = el("button", { class: "btn primario", type: "button",
-            text: i === lista.length - 1 ? "Ver resultado" : "Siguiente →" });
+            text: i === lista.length - 1 ? EA.t("practica.verResultado") : EA.t("practica.siguiente") });
           sig.addEventListener("click", function () { i++; pinta(); });
           acciones.appendChild(sig);
           panel.appendChild(acciones);
@@ -320,10 +322,11 @@
             if (revisado) li.className = o.correcto === idx ? "bien" : "mal";
             li.appendChild(el("span", { class: "indice", text: String(idx + 1) }));
             li.appendChild(el("span", { class: "texto", html: o.texto + (revisado && o.correcto !== idx
-              ? ' <span style="color:var(--bad);font-size:.8rem">(va en ' + (o.correcto + 1) + ")</span>" : "") }));
+              ? ' <span style="color:var(--bad);font-size:.8rem">'
+                + EA.t("practica.vaEn", { n: o.correcto + 1 }) + "</span>" : "") }));
             if (!revisado) {
-              const arriba = el("button", { type: "button", text: "▲", title: "Subir" });
-              const abajo = el("button", { type: "button", text: "▼", title: "Bajar" });
+              const arriba = el("button", { type: "button", text: "▲", title: EA.t("practica.subir") });
+              const abajo = el("button", { type: "button", text: "▼", title: EA.t("practica.bajar") });
               arriba.disabled = idx === 0;
               abajo.disabled = idx === orden.length - 1;
               arriba.addEventListener("click", function () {
@@ -339,7 +342,7 @@
         }
         pintaLista(false);
 
-        const revisar = el("button", { class: "btn primario", type: "button", text: "Revisar orden" });
+        const revisar = el("button", { class: "btn primario", type: "button", text: EA.t("practica.revisarOrden") });
         acciones.appendChild(revisar);
         revisar.addEventListener("click", function () {
           const bien = orden.filter(function (o, idx) { return o.correcto === idx; }).length;
@@ -348,13 +351,13 @@
           pintaLista(true);
 
           const retro = el("div", { class: "retro " + (bien === ej.pasos.length ? "bien" : "mal") });
-          retro.appendChild(el("div", { class: "veredicto", text: bien + " de " + ej.pasos.length + " en la posición correcta" }));
+          retro.appendChild(el("div", { class: "veredicto", text: EA.t("practica.posCorrecta", { a: bien, b: ej.pasos.length }) }));
           if (ej.explicacion) retro.appendChild(el("p", { html: ej.explicacion }));
           panel.appendChild(retro);
 
           acciones.innerHTML = "";
           const sig = el("button", { class: "btn primario", type: "button",
-            text: i === lista.length - 1 ? "Ver resultado" : "Siguiente →" });
+            text: i === lista.length - 1 ? EA.t("practica.verResultado") : EA.t("practica.siguiente") });
           sig.addEventListener("click", function () { i++; pinta(); });
           acciones.appendChild(sig);
           panel.appendChild(acciones);
@@ -406,7 +409,7 @@
         });
         panel.appendChild(campos);
 
-        const revisar = el("button", { class: "btn primario", type: "button", text: "Revisar respuestas" });
+        const revisar = el("button", { class: "btn primario", type: "button", text: EA.t("practica.revisarResp") });
         const acciones = el("div", { class: "acciones" }, [revisar]);
         panel.appendChild(acciones);
 
@@ -430,19 +433,19 @@
           camposTotales += ej.preguntas.length;
 
           const retro = el("div", { class: "retro " + (bien === ej.preguntas.length ? "bien" : "mal") });
-          retro.appendChild(el("div", { class: "veredicto", text: bien + " de " + ej.preguntas.length + " valores correctos" }));
+          retro.appendChild(el("div", { class: "veredicto", text: EA.t("practica.valoresOk", { a: bien, b: ej.preguntas.length }) }));
           panel.appendChild(retro);
 
           if (ej.solucion) {
             panel.appendChild(el("div", { class: "bloque solucion" }, [
-              el("h4", { text: "Solución paso a paso" }),
+              el("h4", { text: EA.t("practica.solucion") }),
               el("div", { html: ej.solucion })
             ]));
           }
 
           acciones.innerHTML = "";
           const sig = el("button", { class: "btn primario", type: "button",
-            text: i === lista.length - 1 ? "Ver resultado" : "Siguiente ejercicio →" });
+            text: i === lista.length - 1 ? EA.t("practica.verResultado") : EA.t("practica.siguienteEj") });
           sig.addEventListener("click", function () { i++; pinta(); });
           acciones.appendChild(sig);
           panel.appendChild(acciones);
@@ -464,9 +467,9 @@
         panel.appendChild(encabezado(i, lista.length, sabidas));
 
         const tarjeta = el("div", { class: "tarjeta-flash", role: "button", tabindex: "0" }, [
-          el("span", { class: "cara-etiqueta", text: volteada ? "Definición" : "Concepto" }),
+          el("span", { class: "cara-etiqueta", text: volteada ? EA.t("flash.definicion") : EA.t("flash.concepto") }),
           el("div", { class: "contenido" + (volteada ? "" : " frente"), html: volteada ? t.reverso : t.frente }),
-          el("span", { class: "pista-clic", text: volteada ? "Clic para volver" : "Clic para revelar" })
+          el("span", { class: "pista-clic", text: volteada ? EA.t("flash.clicVolver") : EA.t("flash.clicRevelar") })
         ]);
         function voltea() { volteada = !volteada; pinta(); }
         tarjeta.addEventListener("click", voltea);
@@ -477,13 +480,13 @@
 
         const acciones = el("div", { class: "acciones" });
         if (volteada) {
-          const si = el("button", { class: "btn primario", type: "button", text: "✓ La sabía" });
-          const no = el("button", { class: "btn", type: "button", text: "↻ Repasar después" });
+          const si = el("button", { class: "btn primario", type: "button", text: EA.t("flash.laSabia") });
+          const no = el("button", { class: "btn", type: "button", text: EA.t("flash.repasar") });
           si.addEventListener("click", function () { sabidas++; volteada = false; i++; pinta(); });
           no.addEventListener("click", function () { volteada = false; i++; pinta(); });
           acciones.appendChild(si); acciones.appendChild(no);
         } else {
-          const rev = el("button", { class: "btn primario", type: "button", text: "Revelar definición" });
+          const rev = el("button", { class: "btn primario", type: "button", text: EA.t("flash.revelar") });
           rev.addEventListener("click", voltea);
           acciones.appendChild(rev);
         }
@@ -499,21 +502,21 @@
       EA.guardarResultado(semana.id, modo, aciertos, total);
 
       const nivel = pct >= 80 ? "alta" : pct >= 60 ? "media" : "baja";
-      const mensaje = pct >= 80 ? "Dominio sólido del tema."
-        : pct >= 60 ? "Vas bien; revisa los conceptos que fallaste."
-        : "Conviene volver a la sección de conceptos antes de repetir.";
+      const mensaje = pct >= 80 ? EA.t("resultado.alta")
+        : pct >= 60 ? EA.t("resultado.media")
+        : EA.t("resultado.baja");
 
       const caja = el("div", { class: "resultado" }, [
         el("div", { class: "cifra " + nivel, text: pct + "%" }),
-        el("p", { text: aciertos + " de " + total + " · " + mensaje })
+        el("p", { text: EA.t("resultado.linea", { a: aciertos, b: total, m: mensaje }) })
       ]);
 
       if (errores.length) {
-        const rep = el("div", { class: "repaso-errores" }, [el("h4", { text: "Para repasar" })]);
+        const rep = el("div", { class: "repaso-errores" }, [el("h4", { text: EA.t("resultado.paraRepasar") })]);
         const ul = el("ul");
         errores.forEach(function (e) {
           const enunciado = e.esEscenario ? e.q.escenario : e.q.pregunta;
-          ul.appendChild(el("li", { html: "<b>" + enunciado + "</b><br>Respuesta correcta: "
+          ul.appendChild(el("li", { html: "<b>" + enunciado + "</b><br>" + EA.t("resultado.respCorrecta")
             + e.q.opciones[e.q.correcta] }));
         });
         rep.appendChild(ul);
@@ -521,14 +524,14 @@
       }
       panel.appendChild(caja);
 
-      const otra = el("button", { class: "btn primario", type: "button", text: "Intentar de nuevo" });
+      const otra = el("button", { class: "btn primario", type: "button", text: EA.t("resultado.otraVez") });
       otra.addEventListener("click", function () { iniciar(modoActivo); });
-      const volver = el("button", { class: "btn", type: "button", text: "Elegir otro modo" });
+      const volver = el("button", { class: "btn", type: "button", text: EA.t("resultado.otroModo") });
       volver.addEventListener("click", function () {
         panel.innerHTML = "";
         panel.appendChild(el("div", { class: "vacio" }, [
-          el("h3", { text: "Elige un modo de práctica" }),
-          el("p", { text: "Cada modo entrena una habilidad distinta." })
+          el("h3", { text: EA.t("practica.elegirTitulo") }),
+          el("p", { text: EA.t("practica.elegirCorta") })
         ]));
         barraModos.querySelectorAll(".modo").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
         window.scrollTo({ top: barraModos.offsetTop - 80, behavior: "smooth" });
@@ -538,8 +541,8 @@
 
     // Estado inicial del panel
     panel.appendChild(el("div", { class: "vacio" }, [
-      el("h3", { text: "Elige un modo de práctica" }),
-      el("p", { text: "Cada modo entrena una habilidad distinta: reconocer conceptos, decidir qué marco aplicar, clasificar por dominio, ordenar un método o repasar vocabulario." })
+      el("h3", { text: EA.t("practica.elegirTitulo") }),
+      el("p", { text: EA.t("practica.elegirDesc") })
     ]));
   }
 

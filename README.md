@@ -1,237 +1,138 @@
 # Diseño de Procesos y Arquitectura Empresarial
 
-Sitio de apoyo para estudiantes: conceptos por semana y práctica interactiva.
-Sin dependencias, sin build, sin servidor. Se publica tal cual en GitHub Pages.
+Material de estudio de un curso de cinco semanas. Conceptos, casos de empresas
+reales y práctica interactiva sobre cómo se diseña, se mide y se rediseña el
+trabajo dentro de una organización — y cómo la tecnología que lo sostiene se
+ordena para que no estorbe.
 
-## Estructura
+---
 
-```
-index.html            Portada: tarjetas de las 5 semanas
-semana.html           Página genérica de semana (semana.html?s=1)
-casos.html            Catálogo de casos de empresas reales + práctica propia
-glosario.html         Glosario buscable, alimentado por todas las semanas
-aviso-legal.html      Autoría, atribuciones, marcas de terceros y condiciones de uso
-publicar.sh           Publica o actualiza el sitio en GitHub Pages
-assets/css/styles.css Único archivo de estilos (tema claro y oscuro)
-assets/js/nucleo.js   Registro de contenido, tema, progreso local, utilidades
-assets/js/vistas.js   Render de portada, conceptos y glosario
-assets/js/practica.js Motor de práctica: 6 modos
-assets/js/casos.js    Render del catálogo de casos (filtros, búsqueda, fichas)
-data/curso.js         Metadatos generales del curso
-data/casos.js         Catálogo de casos y su banco de reactivos
-data/semana-1.js      Contenido y reactivos de la Semana 1
-data/semana-2.js      Contenido y reactivos de la Semana 2
-data/semana-3.js      Contenido y reactivos de la Semana 3
-data/semana-4.js      Contenido y reactivos de la Semana 4
-data/semana-5.js      Contenido y reactivos de la Semana 5
-```
+## Por qué este material
 
-Los archivos de `data/` son JavaScript (no JSON puro) por una sola razón práctica:
-así el sitio funciona también al abrir `index.html` directamente desde el disco,
-sin necesidad de levantar un servidor local. El contenido interno es JSON literal.
+Casi todo lo que una empresa entrega a un cliente es el resultado de un proceso
+que alguien diseñó alguna vez. La mayoría de las veces nadie lo diseñó: creció.
+Se le fueron agregando pasos, aprobaciones, sistemas y excepciones hasta que
+nadie recuerda por qué existe la mitad de ellos, y lo que se cobra como
+"complejidad del negocio" es en realidad complejidad acumulada.
 
-## Cómo agregar una semana nueva
+**Diseñar procesos** es la disciplina de recuperar esa intención: entender qué
+pasos crean valor, cuáles solo lo transportan y cuáles lo destruyen; medir cuánto
+tarda el trabajo de verdad y no cuánto creemos que tarda; encontrar el recurso
+que limita a todo lo demás y decidir qué hacer con él.
 
-1. Abre `data/semana-N.js` de la semana que vas a llenar.
-2. Cambia `estado: "proximamente"` por `estado: "publicada"`.
-3. Llena `titulo`, `subtitulo`, `sesiones`, `objetivos`, `dias`, `terminos` y `practica`.
-4. Guarda y haz push. No hay que tocar HTML, CSS ni JS.
+**La arquitectura empresarial** es la misma disciplina un nivel arriba. Un
+proceso rediseñado en aislamiento choca contra los sistemas, los datos y las
+capacidades que ya existen. La arquitectura empresarial es lo que mantiene
+alineadas cuatro capas —negocio, datos, aplicaciones y tecnología— para que una
+decisión de proceso sea ejecutable y no solo un diagrama bonito.
 
-Las semanas con `estado: "proximamente"` aparecen en la portada como tarjeta
-atenuada y no son navegables.
+Un profesional que domina ambas cosas puede responder preguntas que en la
+práctica valen mucho dinero:
 
-### Bloques disponibles dentro de cada día
+- ¿Por qué este trámite tarda tres días si la suma del trabajo real son cuarenta minutos?
+- Si contratamos a otra persona, ¿la fila se acorta o solo se mueve de lugar?
+- ¿Automatizar este paso mejora el resultado o solo acelera un desperdicio?
+- ¿Cuánto nos cuesta al año *no* hacer nada?
+- Este proyecto de sistemas, ¿a qué capacidad de negocio sirve, o a ninguna?
 
-| `tipo`     | Campos                          | Uso |
-|------------|---------------------------------|-----|
-| `texto`    | `titulo`, `cuerpo` (HTML)       | Explicación en prosa |
-| `lista`    | `titulo`, `items[]` (HTML)      | Viñetas |
-| `pasos`    | `titulo`, `items[]` (HTML)      | Lista numerada |
-| `tabla`    | `titulo`, `encabezados[]`, `filas[][]` | Comparaciones, AS-IS/TO-BE |
-| `flujo`    | `titulo`, `pasos[]`             | Cadena horizontal con flechas |
-| `diagrama` | `titulo`, `cuerpo` (texto plano)| Diagrama ASCII monoespaciado |
-| `svg`      | `titulo`, `svg` (markup), `pie` | Diagrama vectorial; usa las clases de `.figura` |
-| `defs`     | `titulo`, `items[{termino, definicion}]` | Definiciones |
-| `nota`     | `titulo`, `cuerpo` (HTML)       | Caja ámbar: advertencias, preguntas al grupo |
-| `clave`    | `titulo`, `cuerpo` (HTML)       | Caja de acento: idea central del tema |
+Ese es el objetivo del curso: que estas preguntas dejen de ser opinión y se
+vuelvan cálculo, evidencia y criterio.
 
-### Los seis modos de práctica
+---
 
-```js
-practica: {
-  // 1 · Opción múltiple con retroalimentación
-  opcionMultiple: [{
-    tema: "Dominios",
-    pregunta: "…",
-    opciones: ["correcta", "distractor 1", "distractor 2", "distractor 3"],
-    correcta: 0,                       // índice en el arreglo `opciones`
-    explicacion: "por qué la correcta lo es",
-    porQueNo: { 1: "…", 2: "…", 3: "…" }   // opcional, por índice
-  }],
+## Qué se lleva el alumno
 
-  // 2 · Escenario → marco correcto
-  escenarios: [{
-    escenario: "situación de la empresa…",
-    opciones: ["TOGAF", "COBIT", "ITIL", "BPMN"],
-    correcta: 0,
-    explicacion: "…",
-    porQueNo: { 1: "…" }
-  }],
+Al terminar las cinco semanas debe poder, sin ayuda:
 
-  // 3 · Clasificar (arrastrar y soltar, con alternativa por toque)
-  clasificar: [{
-    consigna: "…",
-    categorias: ["Negocio", "Datos", "Aplicaciones", "Tecnología"],
-    items: [{ texto: "SAP ERP", categoria: "Aplicaciones" }],
-    explicacion: "…"
-  }],
+| Capacidad | Se demuestra cuando… |
+|---|---|
+| **Leer un proceso** | Levanta el AS-IS de una operación real, lo modela y distingue lo que agrega valor de lo que no |
+| **Medirlo** | Calcula tiempo de ciclo, tiempo total de ciclo, lead time, takt time y eficiencia de ciclo, y sabe cuál usar en cada pregunta |
+| **Encontrar el límite** | Identifica el cuello de botella, calcula la capacidad del proceso y predice qué pasa al reforzar cada recurso |
+| **Rediseñarlo** | Propone un TO-BE con rutas, paralelismo y retrabajo bien modelados, y justifica el cambio con números |
+| **Justificarlo** | Construye el caso de negocio: VPN, TIR, ROI, punto de equilibrio, periodo de recuperación y análisis de sensibilidad |
+| **Ubicarlo en la arquitectura** | Sitúa el rediseño en un marco (TOGAF, Zachman, DoDAF, IAF) y sabe por qué se eligió ese y no otro |
+| **Gobernarlo** | Distingue qué gobierna COBIT, qué opera ITIL y dónde entra la gestión del cambio para que el rediseño sobreviva al go-live |
 
-  // 4 · Ordenar secuencia
-  ordenar: [{
-    consigna: "…",
-    pasos: ["primero", "segundo", "tercero"],   // en el orden CORRECTO
-    explicacion: "…"
-  }],
+La prueba real no es recordar las siglas. Es mirar una fila en una sucursal, un
+mostrador de comida rápida o una mesa de servicio de TI, y saber exactamente qué
+medir primero.
 
-  // 5 · Ejercicios numéricos (cálculo de tiempos, capacidad, costos)
-  calculos: [{
-    tema: "Rutas múltiples",
-    titulo: "Título del ejercicio",
-    enunciado: "Planteamiento en HTML…",
-    datos:    { tipo: "tabla", titulo: "…", encabezados: [...], filas: [[...]] },  // opcional
-    diagrama: { titulo: "…", cuerpo: "diagrama ASCII" },                          // opcional
-    preguntas: [
-      { etiqueta: "Tiempo de ciclo (CT)", respuesta: 31.22, unidad: "min",
-        tolerancia: 0.05, pista: "texto opcional" }
-    ],
-    solucion: "<p>…</p><div class='paso-calc'>desarrollo monoespaciado</div>"
-  }],
+---
 
-  // 6 · Tarjetas de repaso
-  flashcards: [{ frente: "TOGAF", reverso: "The Open Group Architecture Framework…" }]
-}
-```
+## Cómo está organizado
 
-**Sobre el modo `calculos`.** Acepta punto o coma decimal y tolera `%` y espacios.
-`tolerancia` es absoluta (si se omite, 0.01); usa un valor holgado para porcentajes
-(0.5–0.8) y estrecho para enteros (0.01). A diferencia de los demás modos, los
-ejercicios **no se barajan**: se presentan en el orden del arreglo, para que puedan
-construirse uno sobre otro. Dentro de `solucion`, la clase `paso-calc` da formato
-monoespaciado al desarrollo y `resaltado` marca el resultado.
+**Cinco semanas, en orden deliberado.** De lo general a lo ejecutable: primero el
+lenguaje y los marcos, luego el modelado, luego la medición, luego el gobierno y
+la comparación de marcos, y al final la mejora, la justificación financiera y la
+implantación.
 
-Las opciones y el orden de los reactivos se barajan automáticamente en cada
-intento: escribe siempre la respuesta correcta en la posición que quieras y
-apunta a ella con `correcta`.
+| | Tema |
+|---|---|
+| **Semana 1** | Qué es la arquitectura empresarial, sus cuatro dominios, TOGAF y el ciclo ADM |
+| **Semana 2** | Modelado de procesos, BPM y BPMN, ecosistemas de aplicaciones, AS-IS y TO-BE |
+| **Semana 3** | Tiempos, capacidad y cuellos de botella: la semana de los cálculos, incluida la Ley de Little |
+| **Semana 4** | Comparación de marcos (DoDAF, IAF, ATOM), gobierno con COBIT, operación con ITIL, continuidad |
+| **Semana 5** | Recopilación de requerimientos, Lean, factibilidad y caso de negocio, implantación y gestión del cambio |
 
-### Diagramas vectoriales (`tipo: "svg"`)
+**Cada semana** trae conceptos explicados en prosa, diagramas, tablas
+comparativas, definiciones y un banco de práctica.
 
-El SVG se escribe **sin colores literales**: se pintan con clases de CSS para que
-el diagrama cambie con el tema claro/oscuro. Clases disponibles:
+**Seis modos de práctica**, porque distintos conceptos se aprenden distinto:
+opción múltiple con retroalimentación, escenario → marco correcto, clasificar
+arrastrando, ordenar una secuencia, **ejercicios numéricos** con verificación de
+la respuesta, y tarjetas de repaso. El progreso se guarda en el navegador del
+alumno y no se envía a ningún lado.
 
-| Clase | Para qué |
-|-------|----------|
-| `caja` / `caja-viva` / `caja-alt` | Rectángulos: neutro, de acento, secundario |
-| `rotulo` / `rotulo-sm` / `rotulo-viva` | Texto normal, chico y de acento |
-| `arista` / `arista-viva` / `arista-punteada` | Conectores |
-| `punta` / `punta-viva` | Relleno de las puntas de flecha (`marker`) |
-| `zona` | Región agrupadora de fondo |
+**Un catálogo de casos** de empresas reconocibles —Starbucks, Ford, Banamex,
+Rappi, Costco, Salud Digna, CrowdStrike y otras— agrupados no por industria sino
+por el *patrón de proceso* que enseñan: capacidad y cuellos de botella, tiempos
+de ciclo y espera, rutas y variantes, orquestación, servicios de TI y
+continuidad, y datos y punto de venta. La agrupación es intencional: el objetivo
+es que el alumno reconozca el mismo problema estructural en una cafetería, un
+banco y una línea de ensamble.
 
-Usa siempre `viewBox` y **nunca** `width`/`height` fijos: la figura escala sola
-dentro de `.figura-lienzo` y no desborda en móvil.
+**Un glosario** que reúne los términos de las cinco semanas y marca en cuál se
+introdujo cada uno.
 
-### Catálogo de casos
+---
 
-`data/casos.js` registra el catálogo con `EA.registrarCasos({ categorias, casos, practica })`.
+## Sobre el rigor de este material
 
-```js
-categorias: [{ id: "capacidad", nombre: "Capacidad y cuellos de botella", resumen: "…" }],
-casos: [{
-  id: "starbucks",                 // ancla de URL: casos.html#caso-starbucks
-  titulo: "…", subtitulo: "…",
-  categoria: "capacidad",
-  semanas: [3],                    // pastillas S3, S4…
-  patrones: ["cuello de botella"], // pastillas de acento y términos de búsqueda
-  flujo: ["Paso 1", "Paso 2"],
-  contexto: "HTML",
-  analisis: "HTML",
-  cifras: { titulo, encabezados: [...], filas: [[...]] },   // se marca solo como ilustrativa
-  indicadores: ["…"],
-  preguntas: ["…"],
-  conecta: "texto corto"
-}],
-practica: { /* mismo esquema que el de una semana: los 6 modos */ }
-```
+Dos cosas que conviene decir de frente, porque forman parte de lo que se enseña:
 
-Para agregar casos nuevos basta con añadir objetos al arreglo `casos`; los chips
-de filtro, el contador y la búsqueda se recalculan solos. Si el caso es de una
-categoría nueva, agrega primero su entrada en `categorias`.
+**Las cifras de los casos son ilustrativas.** Las empresas son reales y los
+procesos son reconocibles desde afuera, pero los números se construyeron para
+que los ejercicios sean calculables. No corresponden a la operación real de
+ninguna de esas organizaciones, ninguna participó ni avaló el material, y cada
+tabla lo dice. Distinguir un supuesto de un dato es parte del oficio.
 
-**Cifras ilustrativas.** Las empresas son reales, los números no: cada tabla se
-etiqueta automáticamente y la página lleva un aviso general. No cambies eso sin
-antes tener cifras públicas verificables.
+**Los cálculos sí están verificados.** Cada resultado numérico del sitio —tiempos
+de ciclo, capacidades, VPN, TIR, puntos de equilibrio, matrices ponderadas— se
+comprobó de forma independiente antes de publicarse. Si un alumno encuentra una
+discrepancia, es un hallazgo legítimo y vale la pena revisarlo.
 
-### Glosario
+---
 
-Cada semana aporta su arreglo `terminos: [{ termino, sigla, definicion }]`.
-El glosario los reúne, ordena alfabéticamente y marca la semana de origen.
-No hay que editar `glosario.html`.
+## Notas sobre el sitio
 
-## Publicación en GitHub Pages
+Funciona sin conexión y sin instalar nada: basta abrir `index.html`. No usa
+frameworks ni librerías; la única dependencia externa son dos tipografías, y sin
+red la página se ve igual con las del sistema. Tiene tema claro y oscuro, y está
+disponible en español e inglés.
 
-Repositorio destino: `josegzzv/ArquitecturaEmpresarial2026` (cuenta personal).
-La máquina tiene dos identidades SSH configuradas en `~/.ssh/config`, así que el
-remote **debe usar el alias**, no `github.com` a secas — de lo contrario el push
-puede salir con la llave de trabajo:
+El progreso de práctica vive solo en el navegador de cada estudiante
+(`localStorage`): no viaja a ningún servidor y el profesor no lo ve. Es una
+herramienta de autoevaluación, no de calificación.
 
-```bash
-git remote add origin git@github.com-personal:josegzzv/ArquitecturaEmpresarial2026.git
-```
+La documentación técnica —estructura de archivos, tipos de bloque, esquema de
+los reactivos, cómo agregar contenido nuevo— está en [`CONTRIBUIR.md`](CONTRIBUIR.md).
 
-Todo el proceso está en `publicar.sh`:
+---
 
-```bash
-cd ea-curso
-bash publicar.sh
-```
+## Autoría
 
-El script verifica con qué cuenta responde el alias, reinicia el historial con tu
-identidad de Git, agrega el remote con el alias correcto y hace push.
-**Requisito previo:** el repositorio debe existir en GitHub y estar vacío
-(sin README, sin `.gitignore`, sin licencia).
+Material elaborado por **Antonio González** · antonio.gonzalez@tec.mx
 
-Después, activar Pages: **Settings → Pages → Source: Deploy from a branch →
-`main` / `(root)`**, o bien:
-
-```bash
-gh api -X POST repos/josegzzv/ArquitecturaEmpresarial2026/pages \
-  -f 'source[branch]=main' -f 'source[path]=/'
-```
-
-El sitio queda en `https://josegzzv.github.io/ArquitecturaEmpresarial2026/`.
-El archivo `.nojekyll` evita que GitHub procese el sitio con Jekyll.
-
-### Actualizaciones posteriores
-
-```bash
-bash publicar.sh "Semana 4"
-```
-
-El script detecta que el repositorio ya está configurado y solo hace
-`add` + `commit` + `push`, conservando el historial. También sirve el camino manual:
-
-```bash
-git add -A && git commit -m "Semana 4" && git push
-```
-
-Pages redespliega solo, en menos de un minuto.
-
-## Notas
-
-- El progreso de cada estudiante se guarda solo en su navegador (`localStorage`);
-  no se envía a ningún servidor y el profesor no lo ve.
-- El tema claro/oscuro respeta la preferencia del sistema y puede cambiarse
-  con el botón de la barra superior.
-- El sitio no usa librerías ni frameworks. La única dependencia externa son dos
-  tipografías de Google Fonts (Archivo para títulos, IBM Plex Mono para los
-  diagramas), cargadas con `display=swap`: si no hay red, la página se muestra
-  igual con las tipografías del sistema.
+Las marcas, metodologías y marcos de referencia mencionados son propiedad de sus
+respectivos titulares. Ver [aviso legal y atribuciones](aviso-legal.html).

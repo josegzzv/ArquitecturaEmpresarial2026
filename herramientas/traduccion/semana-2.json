@@ -1,0 +1,4492 @@
+[
+ {
+  "ruta": "titulo",
+  "es": "Estrategia, marcos de gobierno y artefactos",
+  "en": "Strategy, governance frameworks and artifacts"
+ },
+ {
+  "ruta": "subtitulo",
+  "es": "De la necesidad de negocio al artefacto de arquitectura, con evidencia cuantitativa.",
+  "en": "From the business need to the architecture artifact, with quantitative evidence."
+ },
+ {
+  "ruta": "objetivos/0",
+  "es": "Explicar por qué un proyecto de TI no comienza seleccionando tecnología.",
+  "en": "Explain why an IT project does not start by selecting technology."
+ },
+ {
+  "ruta": "objetivos/1",
+  "es": "Distinguir automatización, digitalización y transformación digital sobre un mismo proceso.",
+  "en": "Distinguish automation, digitalization and digital transformation on one and the same process."
+ },
+ {
+  "ruta": "objetivos/2",
+  "es": "Reconocer los tipos de aplicaciones empresariales y el problema del ecosistema fragmentado.",
+  "en": "Recognize the types of enterprise applications and the problem of the fragmented ecosystem."
+ },
+ {
+  "ruta": "objetivos/3",
+  "es": "Elegir el marco, estándar o metodología adecuado según el problema: TOGAF, Zachman, COBIT, ITIL, ISO, BPMN, Lean/Six Sigma.",
+  "en": "Choose the right framework, standard or methodology for the problem: TOGAF, Zachman, COBIT, ITIL, ISO, BPMN, Lean/Six Sigma."
+ },
+ {
+  "ruta": "objetivos/4",
+  "es": "Construir artefactos de arquitectura: SIPOC, process map, application landscape, matriz proceso-aplicación, flujo de datos, TO-BE, gap y roadmap.",
+  "en": "Build architecture artifacts: SIPOC, process map, application landscape, process-application matrix, data flow, TO-BE, gap and roadmap."
+ },
+ {
+  "ruta": "objetivos/5",
+  "es": "Distinguir deliverable de artefacto y view de viewpoint.",
+  "en": "Distinguish deliverable from artifact and view from viewpoint."
+ },
+ {
+  "ruta": "objetivos/6",
+  "es": "Sustentar la mejora con datos duros: lead time, processing time, costo por transacción y tasa de error.",
+  "en": "Back the improvement with hard data: lead time, processing time, cost per transaction and error rate."
+ },
+ {
+  "ruta": "dias/0/nombre",
+  "es": "Martes · Sesión 1",
+  "en": "Tuesday · Session 1"
+ },
+ {
+  "ruta": "dias/0/tema",
+  "es": "De la estrategia al proyecto tecnológico",
+  "en": "From strategy to the technology project"
+ },
+ {
+  "ruta": "dias/0/proposito",
+  "es": "Entender que un proyecto de TI no comienza seleccionando tecnología, y aprender a levantar los datos duros que demuestran dónde está realmente el problema.",
+  "en": "Understand that an IT project does not start by selecting technology, and learn to gather the hard data that shows where the problem really is."
+ },
+ {
+  "ruta": "dias/0/bloques/0/titulo",
+  "es": "La secuencia correcta",
+  "en": "The correct sequence"
+ },
+ {
+  "ruta": "dias/0/bloques/0/cuerpo",
+  "es": "<p>Necesidad del negocio → Proceso → Problema u oportunidad → Datos → Capacidades → Requerimientos → Arquitectura → Tecnología.</p><p><b>Y no:</b> «encontré una herramienta de IA, ¿dónde la podemos usar?».</p>",
+  "en": "<p>Business need → Process → Problem or opportunity → Data → Capabilities → Requirements → Architecture → Technology.</p><p><b>And not:</b> “I found an AI tool, where can we use it?”.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/1/titulo",
+  "es": "Del objetivo estratégico a la tecnología",
+  "en": "From the strategic objective to technology"
+ },
+ {
+  "ruta": "dias/0/bloques/1/encabezados/0",
+  "es": "Nivel",
+  "en": "Level"
+ },
+ {
+  "ruta": "dias/0/bloques/1/encabezados/1",
+  "es": "Ejemplo",
+  "en": "Example"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/0/0",
+  "es": "Objetivo estratégico",
+  "en": "Strategic objective"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/0/1",
+  "es": "Reducir el tiempo de entrega al cliente",
+  "en": "Reduce customer lead time"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/1/0",
+  "es": "KPI",
+  "en": "KPI"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/1/1",
+  "es": "Lead time",
+  "en": "Lead time"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/2/0",
+  "es": "Meta",
+  "en": "Target"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/2/1",
+  "es": "5 días → 2 días",
+  "en": "5 days → 2 days"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/3/0",
+  "es": "Proceso afectado",
+  "en": "Affected process"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/3/1",
+  "es": "Order-to-Cash",
+  "en": "Order-to-Cash"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/4/0",
+  "es": "Problema",
+  "en": "Problem"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/4/1",
+  "es": "Captura manual y cadena de aprobaciones",
+  "en": "Manual data entry and approval chain"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/5/0",
+  "es": "Capacidad requerida",
+  "en": "Required capability"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/5/1",
+  "es": "Procesamiento automático de pedidos",
+  "en": "Automated order processing"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/6/0",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/6/1",
+  "es": "ERP + WMS + portal de clientes",
+  "en": "ERP + WMS + customer portal"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/7/0",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/7/1",
+  "es": "Cliente, pedido, inventario",
+  "en": "Customer, order, inventory"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/8/0",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "dias/0/bloques/1/filas/8/1",
+  "es": "APIs, workflow, nube",
+  "en": "APIs, workflow, cloud"
+ },
+ {
+  "ruta": "dias/0/bloques/2/titulo",
+  "es": "Idea central",
+  "en": "Core idea"
+ },
+ {
+  "ruta": "dias/0/bloques/2/cuerpo",
+  "es": "<p>La tecnología es <b>consecuencia</b> de una decisión de negocio, no el punto de partida.</p>",
+  "en": "<p>Technology is a <b>consequence</b> of a business decision, not the starting point.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/3/titulo",
+  "es": "Un mismo caso, tres niveles: solicitud de vacaciones",
+  "en": "One case, three levels: vacation request"
+ },
+ {
+  "ruta": "dias/0/bloques/3/cuerpo",
+  "es": "<p><b>Situación original.</b> Empleado llena formato en papel → firma el jefe → RH captura → archiva.</p><p><b>Digitalización.</b> El formato se vuelve PDF. Ya no hay papel, pero el flujo es idéntico: empleado llena PDF → manda correo → jefe firma → RH captura.</p><p><b>Automatización.</b> El empleado captura la solicitud, el sistema consulta el saldo, envía la aprobación y actualiza automáticamente. Se elimina trabajo manual.</p><p><b>Transformación digital.</b> Se cuestiona el proceso completo: ¿por qué debe intervenir RH? El empleado solicita desde una app, el sistema conoce saldo, calendario, cobertura del equipo y políticas, y autoriza automáticamente determinados casos.</p>",
+  "en": "<p><b>Original situation.</b> The employee fills in a paper form → the manager signs it → HR keys it in → files it.</p><p><b>Digitalization.</b> The form becomes a PDF. There is no more paper, but the flow is identical: the employee fills in the PDF → sends an email → the manager signs → HR keys it in.</p><p><b>Automation.</b> The employee enters the request, the system checks the balance, sends the approval and updates automatically. Manual work is eliminated.</p><p><b>Digital transformation.</b> The whole process is questioned: why does HR have to be involved at all? The employee requests it from an app, and the system knows the balance, the calendar, team coverage and policies, and automatically authorizes certain cases.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/4/titulo",
+  "es": "Pregunta para el grupo",
+  "en": "Question for the group"
+ },
+ {
+  "ruta": "dias/0/bloques/4/cuerpo",
+  "es": "<p>Si reemplazo un Excel por una pantalla web pero mantengo exactamente el mismo proceso, ¿transformé el negocio? <b>No necesariamente.</b></p>",
+  "en": "<p>If I replace an Excel file with a web screen but keep exactly the same process, have I transformed the business? <b>Not necessarily.</b></p>"
+ },
+ {
+  "ruta": "dias/0/bloques/5/titulo",
+  "es": "Ecosistema de aplicaciones empresariales",
+  "en": "Enterprise application ecosystem"
+ },
+ {
+  "ruta": "dias/0/bloques/5/pie",
+  "es": "Cada área trae su propio sistema. Lo que los vuelve un ecosistema —y no cuatro islas— es la capa de integración; en muchas empresas el ERP cumple además ese papel de núcleo.",
+  "en": "Every area brings its own system. What makes them an ecosystem —and not four islands— is the integration layer; in many companies the ERP also plays that core role."
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#0",
+  "es": "VENTAS",
+  "en": "SALES"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#1",
+  "es": "OPERACIÓN",
+  "en": "OPS"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#2",
+  "es": "FINANZAS",
+  "en": "FINANCE"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#3",
+  "es": "PERSONAS",
+  "en": "PEOPLE"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#4",
+  "es": "CRM",
+  "en": "CRM"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#5",
+  "es": "clientes y ventas",
+  "en": "customers & sales"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#6",
+  "es": "MES",
+  "en": "MES"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#7",
+  "es": "piso de planta",
+  "en": "shop floor"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#8",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#9",
+  "es": "transacciones",
+  "en": "transactions"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#10",
+  "es": "HCM",
+  "en": "HCM"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#11",
+  "es": "capital humano",
+  "en": "human capital"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#12",
+  "es": "Capa de integración",
+  "en": "Integration layer"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#13",
+  "es": "APIs, eventos, middleware · el dato se captura una sola vez",
+  "en": "APIs, events, middleware · data is captured only once"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#14",
+  "es": "Plataforma de datos",
+  "en": "Data platform"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#15",
+  "es": "dato maestro y consolidado",
+  "en": "master & consolidated data"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#16",
+  "es": "BI / Analítica / IA",
+  "en": "BI / Analytics / AI"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#17",
+  "es": "decisiones basadas en datos integrados",
+  "en": "decisions based on integrated data"
+ },
+ {
+  "ruta": "dias/0/bloques/5/svg#18",
+  "es": "Sin la capa de integración, cada sistema es una isla y el mismo dato se teclea cuatro veces.",
+  "en": "Without integration, each system is an island and the same data is keyed in four times."
+ },
+ {
+  "ruta": "dias/0/bloques/6/titulo",
+  "es": "Tipos de aplicaciones empresariales",
+  "en": "Types of enterprise applications"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/0/termino",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/0/definicion",
+  "es": "Enterprise Resource Planning: recursos y transacciones centrales.",
+  "en": "Enterprise Resource Planning: core resources and transactions."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/1/termino",
+  "es": "CRM",
+  "en": "CRM"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/1/definicion",
+  "es": "Customer Relationship Management: clientes y ventas.",
+  "en": "Customer Relationship Management: customers and sales."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/2/termino",
+  "es": "HCM / HRM",
+  "en": "HCM / HRM"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/2/definicion",
+  "es": "Gestión del capital humano y personas.",
+  "en": "Human capital and people management."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/3/termino",
+  "es": "SCM",
+  "en": "SCM"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/3/definicion",
+  "es": "Supply Chain Management: cadena de suministro.",
+  "en": "Supply Chain Management: the supply chain."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/4/termino",
+  "es": "MES",
+  "en": "MES"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/4/definicion",
+  "es": "Manufacturing Execution System: ejecución de manufactura en planta.",
+  "en": "Manufacturing Execution System: manufacturing execution on the shop floor."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/5/termino",
+  "es": "WMS",
+  "en": "WMS"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/5/definicion",
+  "es": "Warehouse Management System: almacenes.",
+  "en": "Warehouse Management System: warehouses."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/6/termino",
+  "es": "PLM",
+  "en": "PLM"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/6/definicion",
+  "es": "Product Lifecycle Management: ciclo de vida del producto.",
+  "en": "Product Lifecycle Management: the product lifecycle."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/7/termino",
+  "es": "ECM / DMS",
+  "en": "ECM / DMS"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/7/definicion",
+  "es": "Gestión de contenido y documentos.",
+  "en": "Content and document management."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/8/termino",
+  "es": "BI / Analytics",
+  "en": "BI / Analytics"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/8/definicion",
+  "es": "Análisis de información y tableros.",
+  "en": "Information analysis and dashboards."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/9/termino",
+  "es": "BPM / Workflow",
+  "en": "BPM / Workflow"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/9/definicion",
+  "es": "Orquestación y automatización de procesos.",
+  "en": "Process orchestration and automation."
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/10/termino",
+  "es": "ITSM",
+  "en": "ITSM"
+ },
+ {
+  "ruta": "dias/0/bloques/6/items/10/definicion",
+  "es": "IT Service Management: gestión de servicios de TI.",
+  "en": "IT Service Management: management of IT services."
+ },
+ {
+  "ruta": "dias/0/bloques/7/titulo",
+  "es": "El problema «tutti frutti»",
+  "en": "The “tutti frutti” problem"
+ },
+ {
+  "ruta": "dias/0/bloques/7/cuerpo",
+  "es": "<p>Una empresa grande no tiene «un sistema». Tiene un <b>ecosistema de aplicaciones</b>, y de ahí nacen la fragmentación, la duplicidad y la falta de trazabilidad.</p>",
+  "en": "<p>A large company does not have “one system”. It has an <b>application ecosystem</b>, and that is where fragmentation, duplication and the lack of traceability come from.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/8/titulo",
+  "es": "Clasificación de procesos",
+  "en": "Process classification"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/0/termino",
+  "es": "Proceso",
+  "en": "Process"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/0/definicion",
+  "es": "Conjunto de actividades que transforma entradas en salidas que generan valor.",
+  "en": "A set of activities that transforms inputs into outputs that create value."
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/1/termino",
+  "es": "Estratégicos",
+  "en": "Strategic"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/1/definicion",
+  "es": "Definen rumbo, políticas y objetivos.",
+  "en": "They set direction, policies and objectives."
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/2/termino",
+  "es": "Core u operativos",
+  "en": "Core or operational"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/2/definicion",
+  "es": "Producen el valor que percibe el cliente.",
+  "en": "They produce the value the customer perceives."
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/3/termino",
+  "es": "De soporte",
+  "en": "Support"
+ },
+ {
+  "ruta": "dias/0/bloques/8/items/3/definicion",
+  "es": "Habilitan a los anteriores: RH, TI, finanzas, legal.",
+  "en": "They enable the previous ones: HR, IT, finance, legal."
+ },
+ {
+  "ruta": "dias/0/bloques/9/titulo",
+  "es": "SIPOC",
+  "en": "SIPOC"
+ },
+ {
+  "ruta": "dias/0/bloques/9/pasos/0",
+  "es": "Supplier",
+  "en": "Supplier"
+ },
+ {
+  "ruta": "dias/0/bloques/9/pasos/1",
+  "es": "Input",
+  "en": "Input"
+ },
+ {
+  "ruta": "dias/0/bloques/9/pasos/2",
+  "es": "Process",
+  "en": "Process"
+ },
+ {
+  "ruta": "dias/0/bloques/9/pasos/3",
+  "es": "Output",
+  "en": "Output"
+ },
+ {
+  "ruta": "dias/0/bloques/9/pasos/4",
+  "es": "Customer",
+  "en": "Customer"
+ },
+ {
+  "ruta": "dias/0/bloques/10/titulo",
+  "es": "Ejemplo: proceso de compras",
+  "en": "Example: purchasing process"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/0",
+  "es": "Usuario",
+  "en": "User"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/1",
+  "es": "Solicitud",
+  "en": "Request"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/2",
+  "es": "Aprobación",
+  "en": "Approval"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/3",
+  "es": "Cotización",
+  "en": "Quotation"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/4",
+  "es": "Orden de compra",
+  "en": "Purchase order"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/5",
+  "es": "Recepción",
+  "en": "Receipt"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/6",
+  "es": "Factura",
+  "en": "Invoice"
+ },
+ {
+  "ruta": "dias/0/bloques/10/pasos/7",
+  "es": "Pago",
+  "en": "Payment"
+ },
+ {
+  "ruta": "dias/0/bloques/11/titulo",
+  "es": "Datos duros del proceso: dónde está el problema real",
+  "en": "Hard process data: where the real problem is"
+ },
+ {
+  "ruta": "dias/0/bloques/11/encabezados/0",
+  "es": "Actividad",
+  "en": "Activity"
+ },
+ {
+  "ruta": "dias/0/bloques/11/encabezados/1",
+  "es": "Proceso (trabajo real)",
+  "en": "Process (actual work)"
+ },
+ {
+  "ruta": "dias/0/bloques/11/encabezados/2",
+  "es": "Espera",
+  "en": "Wait"
+ },
+ {
+  "ruta": "dias/0/bloques/11/encabezados/3",
+  "es": "Responsable",
+  "en": "Responsible"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/0/0",
+  "es": "Crear solicitud",
+  "en": "Create request"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/0/1",
+  "es": "10 min",
+  "en": "10 min"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/0/2",
+  "es": "—",
+  "en": "—"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/0/3",
+  "es": "Usuario",
+  "en": "User"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/1/0",
+  "es": "Aprobación",
+  "en": "Approval"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/1/1",
+  "es": "2 min",
+  "en": "2 min"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/1/2",
+  "es": "18 h",
+  "en": "18 h"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/1/3",
+  "es": "Gerente",
+  "en": "Manager"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/2/0",
+  "es": "Crear orden de compra",
+  "en": "Create purchase order"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/2/1",
+  "es": "8 min",
+  "en": "8 min"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/2/2",
+  "es": "4 h",
+  "en": "4 h"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/2/3",
+  "es": "Compras",
+  "en": "Purchasing"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/3/0",
+  "es": "Enviar a proveedor",
+  "en": "Send to supplier"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/3/1",
+  "es": "2 min",
+  "en": "2 min"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/3/2",
+  "es": "1 h",
+  "en": "1 h"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/3/3",
+  "es": "Compras",
+  "en": "Purchasing"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/4/0",
+  "es": "<b>Total</b>",
+  "en": "<b>Total</b>"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/4/1",
+  "es": "<b>22 min</b>",
+  "en": "<b>22 min</b>"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/4/2",
+  "es": "<b>23 h</b>",
+  "en": "<b>23 h</b>"
+ },
+ {
+  "ruta": "dias/0/bloques/11/filas/4/3",
+  "es": "—",
+  "en": "—"
+ },
+ {
+  "ruta": "dias/0/bloques/12/titulo",
+  "es": "La lectura correcta",
+  "en": "The correct reading"
+ },
+ {
+  "ruta": "dias/0/bloques/12/cuerpo",
+  "es": "<p>Tiempo trabajando realmente: <b>22 minutos</b>. Lead time: <b>23 h 22 min</b>.</p><p>El problema no está en acelerar los 22 minutos, sino en las <b>23 horas de espera</b>. Ahí entra Lean.</p>",
+  "en": "<p>Time actually spent working: <b>22 minutes</b>. Lead time: <b>23 h 22 min</b>.</p><p>The problem is not speeding up those 22 minutes, but the <b>23 hours of waiting</b>. That is where Lean comes in.</p>"
+ },
+ {
+  "ruta": "dias/0/bloques/13/titulo",
+  "es": "Lean, Six Sigma y Kaizen",
+  "en": "Lean, Six Sigma and Kaizen"
+ },
+ {
+  "ruta": "dias/0/bloques/13/items/0/termino",
+  "es": "Lean",
+  "en": "Lean"
+ },
+ {
+  "ruta": "dias/0/bloques/13/items/0/definicion",
+  "es": "Eliminar desperdicio: espera, retrabajo, movimiento, sobreproceso, inventario, transporte, defectos.",
+  "en": "Eliminate waste: waiting, rework, motion, overprocessing, inventory, transport, defects."
+ },
+ {
+  "ruta": "dias/0/bloques/13/items/1/termino",
+  "es": "Six Sigma",
+  "en": "Six Sigma"
+ },
+ {
+  "ruta": "dias/0/bloques/13/items/1/definicion",
+  "es": "Reducir variación y defectos mediante análisis estadístico.",
+  "en": "Reduce variation and defects through statistical analysis."
+ },
+ {
+  "ruta": "dias/0/bloques/13/items/2/termino",
+  "es": "Kaizen",
+  "en": "Kaizen"
+ },
+ {
+  "ruta": "dias/0/bloques/13/items/2/definicion",
+  "es": "Mejora continua incremental, con participación de quienes ejecutan el proceso.",
+  "en": "Incremental continuous improvement, with participation from the people who run the process."
+ },
+ {
+  "ruta": "dias/0/bloques/14/titulo",
+  "es": "DMAIC",
+  "en": "DMAIC"
+ },
+ {
+  "ruta": "dias/0/bloques/14/pasos/0",
+  "es": "Define",
+  "en": "Define"
+ },
+ {
+  "ruta": "dias/0/bloques/14/pasos/1",
+  "es": "Measure",
+  "en": "Measure"
+ },
+ {
+  "ruta": "dias/0/bloques/14/pasos/2",
+  "es": "Analyze",
+  "en": "Analyze"
+ },
+ {
+  "ruta": "dias/0/bloques/14/pasos/3",
+  "es": "Improve",
+  "en": "Improve"
+ },
+ {
+  "ruta": "dias/0/bloques/14/pasos/4",
+  "es": "Control",
+  "en": "Control"
+ },
+ {
+  "ruta": "dias/0/bloques/15/titulo",
+  "es": "Actividad del martes",
+  "en": "Tuesday activity"
+ },
+ {
+  "ruta": "dias/0/bloques/15/cuerpo",
+  "es": "<p>Una empresa tarda 72 horas en dar de alta un proveedor. Intervienen Compras, Finanzas, Legal y TI. El proceso usa Excel, correo, ERP y documentos PDF.</p><p>En equipos: objetivo → proceso → problemas → KPI → posibles mejoras → tecnología que podría intervenir. <b>Todavía no pueden escoger producto</b>: eso los obliga a pensar como arquitectos.</p>",
+  "en": "<p>A company takes 72 hours to onboard a supplier. Purchasing, Finance, Legal and IT are all involved. The process uses Excel, email, the ERP and PDF documents.</p><p>In teams: objective → process → problems → KPI → possible improvements → technology that could play a part. <b>You still cannot pick a product</b>: that forces you to think like architects.</p>"
+ },
+ {
+  "ruta": "dias/1/nombre",
+  "es": "Miércoles · Sesión 2",
+  "en": "Wednesday · Session 2"
+ },
+ {
+  "ruta": "dias/1/tema",
+  "es": "Marcos, estándares y gobierno",
+  "en": "Frameworks, standards and governance"
+ },
+ {
+  "ruta": "dias/1/proposito",
+  "es": "Resolver una confusión muy frecuente: no todo es un «framework» para lo mismo. Cada uno responde a una pregunta distinta y pueden coexistir.",
+  "en": "Clear up a very common confusion: not everything is a “framework” for the same thing. Each one answers a different question and they can coexist."
+ },
+ {
+  "ruta": "dias/1/bloques/0/titulo",
+  "es": "Cada marco responde a una pregunta distinta",
+  "en": "Each framework answers a different question"
+ },
+ {
+  "ruta": "dias/1/bloques/0/encabezados/0",
+  "es": "Marco o estándar",
+  "en": "Framework or standard"
+ },
+ {
+  "ruta": "dias/1/bloques/0/encabezados/1",
+  "es": "Pregunta principal que responde",
+  "en": "Main question it answers"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/0/0",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/0/1",
+  "es": "¿Cómo diseño y hago evolucionar la arquitectura empresarial?",
+  "en": "How do I design and evolve the enterprise architecture?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/1/0",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/1/1",
+  "es": "¿Cómo clasifico y describo la empresa desde distintas perspectivas?",
+  "en": "How do I classify and describe the enterprise from different perspectives?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/2/0",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/2/1",
+  "es": "¿Cómo gobierno y controlo TI?",
+  "en": "How do I govern and control IT?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/3/0",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/3/1",
+  "es": "¿Cómo gestiono los servicios de TI?",
+  "en": "How do I manage IT services?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/4/0",
+  "es": "ISO/IEC 27001",
+  "en": "ISO/IEC 27001"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/4/1",
+  "es": "¿Cómo gestiono la seguridad de la información?",
+  "en": "How do I manage information security?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/5/0",
+  "es": "ISO/IEC 20000-1",
+  "en": "ISO/IEC 20000-1"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/5/1",
+  "es": "¿Cómo gestiono formalmente los servicios de TI?",
+  "en": "How do I formally manage IT services?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/6/0",
+  "es": "ISO 9001",
+  "en": "ISO 9001"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/6/1",
+  "es": "¿Cómo gestiono la calidad?",
+  "en": "How do I manage quality?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/7/0",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/7/1",
+  "es": "¿Cómo modelo un proceso?",
+  "en": "How do I model a process?"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/8/0",
+  "es": "Lean / Six Sigma",
+  "en": "Lean / Six Sigma"
+ },
+ {
+  "ruta": "dias/1/bloques/0/filas/8/1",
+  "es": "¿Cómo mejoro un proceso?",
+  "en": "How do I improve a process?"
+ },
+ {
+  "ruta": "dias/1/bloques/1/titulo",
+  "es": "No se elige uno y se descartan los demás",
+  "en": "You do not pick one and discard the rest"
+ },
+ {
+  "ruta": "dias/1/bloques/1/cuerpo",
+  "es": "<p>Pueden coexistir porque resuelven problemas diferentes. Una empresa con varios problemas simultáneos usará varios marcos de manera complementaria.</p>",
+  "en": "<p>They can coexist because they solve different problems. A company with several simultaneous problems will use several frameworks in a complementary way.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/2/titulo",
+  "es": "TOGAF: por qué existe la arquitectura empresarial",
+  "en": "TOGAF: why enterprise architecture exists"
+ },
+ {
+  "ruta": "dias/1/bloques/2/cuerpo",
+  "es": "<p><b>Problema:</b> «quiero implementar e-commerce». El alumno normalmente piensa en la aplicación: Shopify.</p><p>El arquitecto pregunta por los cuatro dominios:</p><ul><li><b>Business:</b> ¿cómo cambia el proceso Order-to-Cash?</li><li><b>Data:</b> ¿dónde viven cliente, producto, precio e inventario?</li><li><b>Application:</b> ¿el e-commerce habla con ERP, CRM, WMS?</li><li><b>Technology:</b> ¿nube, API gateway, identidad, red?</li></ul><p>Esa sola discusión explica por qué existe la Arquitectura Empresarial.</p>",
+  "en": "<p><b>Problem:</b> “I want to implement e-commerce”. The student normally thinks about the application: Shopify.</p><p>The architect asks about the four domains:</p><ul><li><b>Business:</b> how does the Order-to-Cash process change?</li><li><b>Data:</b> where do customer, product, price and inventory live?</li><li><b>Application:</b> does the e-commerce platform talk to the ERP, CRM, WMS?</li><li><b>Technology:</b> cloud, API gateway, identity, network?</li></ul><p>That single discussion explains why Enterprise Architecture exists.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/3/titulo",
+  "es": "Lógica del ADM (sin memorizar todavía)",
+  "en": "The logic of the ADM (no memorizing yet)"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/0",
+  "es": "Vision",
+  "en": "Vision"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/1",
+  "es": "Business",
+  "en": "Business"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/2",
+  "es": "Information Systems (Data + Applications)",
+  "en": "Information Systems (Data + Applications)"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/3",
+  "es": "Technology",
+  "en": "Technology"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/4",
+  "es": "Opportunities & Solutions",
+  "en": "Opportunities & Solutions"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/5",
+  "es": "Migration Planning",
+  "en": "Migration Planning"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/6",
+  "es": "Implementation Governance",
+  "en": "Implementation Governance"
+ },
+ {
+  "ruta": "dias/1/bloques/3/pasos/7",
+  "es": "Change Management",
+  "en": "Change Management"
+ },
+ {
+  "ruta": "dias/1/bloques/4/titulo",
+  "es": "Zachman: la matriz",
+  "en": "Zachman: the matrix"
+ },
+ {
+  "ruta": "dias/1/bloques/4/cuerpo",
+  "es": "<p>Seis preguntas: <b>What</b> (datos), <b>How</b> (función), <b>Where</b> (red), <b>Who</b> (personas), <b>When</b> (tiempo), <b>Why</b> (motivación), observadas desde diferentes perspectivas.</p><p><b>TOGAF</b> se parece más a un <i>método</i> para desarrollar arquitectura. <b>Zachman</b> se parece más a una <i>taxonomía</i> para asegurarnos de que estamos describiendo todos los aspectos y perspectivas de la organización.</p>",
+  "en": "<p>Six questions: <b>What</b> (data), <b>How</b> (function), <b>Where</b> (network), <b>Who</b> (people), <b>When</b> (time), <b>Why</b> (motivation), looked at from different perspectives.</p><p><b>TOGAF</b> is more like a <i>method</i> for developing architecture. <b>Zachman</b> is more like a <i>taxonomy</i> for making sure we are describing every aspect and perspective of the organization.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/5/titulo",
+  "es": "COBIT frente a ITIL",
+  "en": "COBIT versus ITIL"
+ },
+ {
+  "ruta": "dias/1/bloques/5/cuerpo",
+  "es": "<p><b>COBIT — gobierno.</b> ¿Estamos haciendo las cosas correctas, controlando riesgos y generando valor?</p><p><b>ITIL — gestión del servicio.</b> ¿Cómo diseñamos, entregamos, soportamos y mejoramos el servicio?</p>",
+  "en": "<p><b>COBIT — governance.</b> Are we doing the right things, controlling risks and creating value?</p><p><b>ITIL — service management.</b> How do we design, deliver, support and improve the service?</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/6/titulo",
+  "es": "Ejemplo: se cae SAP",
+  "en": "Example: SAP goes down"
+ },
+ {
+  "ruta": "dias/1/bloques/6/encabezados/0",
+  "es": "Con lente ITIL",
+  "en": "Through an ITIL lens"
+ },
+ {
+  "ruta": "dias/1/bloques/6/encabezados/1",
+  "es": "Con lente COBIT",
+  "en": "Through a COBIT lens"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/0/0",
+  "es": "¿Cómo registramos el incidente?",
+  "en": "How do we log the incident?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/0/1",
+  "es": "¿Quién es accountable?",
+  "en": "Who is accountable?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/1/0",
+  "es": "¿Cómo lo priorizamos?",
+  "en": "How do we prioritize it?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/1/1",
+  "es": "¿Tenemos controles definidos?",
+  "en": "Do we have defined controls?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/2/0",
+  "es": "¿Cómo restauramos el servicio?",
+  "en": "How do we restore the service?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/2/1",
+  "es": "¿El riesgo es aceptable?",
+  "en": "Is the risk acceptable?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/3/0",
+  "es": "¿Es un problema recurrente?",
+  "en": "Is it a recurring problem?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/3/1",
+  "es": "¿Tenemos métricas de desempeño?",
+  "en": "Do we have performance metrics?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/4/0",
+  "es": "¿Requiere un change?",
+  "en": "Does it require a change?"
+ },
+ {
+  "ruta": "dias/1/bloques/6/filas/4/1",
+  "es": "¿Está alineado con los objetivos de negocio?",
+  "en": "Is it aligned with the business objectives?"
+ },
+ {
+  "ruta": "dias/1/bloques/7/titulo",
+  "es": "ISO frente a los marcos",
+  "en": "ISO versus the frameworks"
+ },
+ {
+  "ruta": "dias/1/bloques/7/cuerpo",
+  "es": "<p><b>ISO puede establecer requisitos certificables.</b> TOGAF, COBIT o ITIL funcionan generalmente como marcos, metodologías o buenas prácticas con propósitos distintos. No se trata de memorizar números de norma, sino de saber qué problema resuelve cada uno.</p>",
+  "en": "<p><b>ISO can set certifiable requirements.</b> TOGAF, COBIT or ITIL generally work as frameworks, methodologies or good practices with different purposes. It is not about memorizing standard numbers, but about knowing which problem each one solves.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/8/titulo",
+  "es": "Actividad del miércoles: ¿qué usarías?",
+  "en": "Wednesday activity: what would you use?"
+ },
+ {
+  "ruta": "dias/1/bloques/8/encabezados/0",
+  "es": "Caso",
+  "en": "Case"
+ },
+ {
+  "ruta": "dias/1/bloques/8/encabezados/1",
+  "es": "Respuesta",
+  "en": "Answer"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/0/0",
+  "es": "A · Rediseñar la arquitectura global después de adquirir tres empresas",
+  "en": "A · Redesign the global architecture after acquiring three companies"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/0/1",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/1/0",
+  "es": "B · Una auditoría detectó controles de TI deficientes",
+  "en": "B · An audit found weak IT controls"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/1/1",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/2/0",
+  "es": "C · Los usuarios se quejan de incidentes que tardan días",
+  "en": "C · Users complain about incidents that take days"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/2/1",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/3/0",
+  "es": "D · Se necesita implementar un SGSI certificable",
+  "en": "D · A certifiable ISMS needs to be implemented"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/3/1",
+  "es": "ISO/IEC 27001",
+  "en": "ISO/IEC 27001"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/4/0",
+  "es": "E · Representar gráficamente el proceso Order-to-Cash",
+  "en": "E · Graphically represent the Order-to-Cash process"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/4/1",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/5/0",
+  "es": "F · El proceso tiene demasiado tiempo de espera y retrabajo",
+  "en": "F · The process has too much wait time and rework"
+ },
+ {
+  "ruta": "dias/1/bloques/8/filas/5/1",
+  "es": "Lean / Six Sigma",
+  "en": "Lean / Six Sigma"
+ },
+ {
+  "ruta": "dias/1/bloques/9/titulo",
+  "es": "La pregunta interesante",
+  "en": "The interesting question"
+ },
+ {
+  "ruta": "dias/1/bloques/9/cuerpo",
+  "es": "<p>¿Qué pasa si nuestra empresa tiene todos esos problemas simultáneamente? <b>Probablemente utilizará varios marcos de manera complementaria.</b></p>",
+  "en": "<p>What happens if our company has all of those problems at the same time? <b>It will probably use several frameworks in a complementary way.</b></p>"
+ },
+ {
+  "ruta": "dias/2/nombre",
+  "es": "Jueves · Sesión 3",
+  "en": "Thursday · Session 3"
+ },
+ {
+  "ruta": "dias/2/tema",
+  "es": "Artefactos de Arquitectura Empresarial y reto",
+  "en": "Enterprise Architecture artifacts and the challenge"
+ },
+ {
+  "ruta": "dias/2/proposito",
+  "es": "Aprender a documentar el AS-IS, diseñar el TO-BE y demostrar cuantitativamente la mejora. Esta es la sesión más importante para la entrega del reto.",
+  "en": "Learn to document the AS-IS, design the TO-BE and demonstrate the improvement quantitatively. This is the most important session for the challenge deliverable."
+ },
+ {
+  "ruta": "dias/2/bloques/0/titulo",
+  "es": "¿Qué es un artefacto?",
+  "en": "What is an artifact?"
+ },
+ {
+  "ruta": "dias/2/bloques/0/cuerpo",
+  "es": "<p>Un artefacto de arquitectura es una <b>representación estructurada de algún aspecto relevante de la empresa o de su arquitectura</b>, creada para analizarla, comunicarla, decidir sobre ella o gobernarla.</p><p>No tiene que ser un diagrama: puede ser catálogo, matriz, mapa, modelo, diagrama, estándar, principio, roadmap, assessment o heatmap.</p>",
+  "en": "<p>An architecture artifact is a <b>structured representation of some relevant aspect of the enterprise or of its architecture</b>, created to analyze it, communicate it, decide on it or govern it.</p><p>It does not have to be a diagram: it can be a catalog, a matrix, a map, a model, a diagram, a standard, a principle, a roadmap, an assessment or a heatmap.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/1/titulo",
+  "es": "Artefacto 1 · Process Map AS-IS (alta de proveedores)",
+  "en": "Artifact 1 · Process Map AS-IS (supplier onboarding)"
+ },
+ {
+  "ruta": "dias/2/bloques/1/pie",
+  "es": "El mapa AS-IS documenta la realidad, no el manual. Al poner debajo de cada etapa la herramienta que la soporta, la fragmentación queda a la vista: seis manos, cuatro sistemas y el mismo dato capturado tres veces.",
+  "en": "The AS-IS map documents reality, not the manual. Putting the tool that supports each stage underneath it makes the fragmentation visible: six pairs of hands, four systems and the same data captured three times."
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#0",
+  "es": "PROVEEDOR",
+  "en": "SUPPLIER"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#1",
+  "es": "COMPRAS",
+  "en": "PURCH."
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#2",
+  "es": "GERENTE",
+  "en": "MANAGER"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#3",
+  "es": "LEGAL",
+  "en": "LEGAL"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#4",
+  "es": "FINANZAS",
+  "en": "FINANCE"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#5",
+  "es": "COMPRAS",
+  "en": "PURCH."
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#6",
+  "es": "Envía datos",
+  "en": "Send data"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#7",
+  "es": "y documentos",
+  "en": "& documents"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#8",
+  "es": "Captura",
+  "en": "Enter"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#9",
+  "es": "solicitud",
+  "en": "request"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#10",
+  "es": "Aprueba",
+  "en": "Approve"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#11",
+  "es": "18 h de espera",
+  "en": "18 h waiting"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#12",
+  "es": "Revisa",
+  "en": "Review"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#13",
+  "es": "contrato",
+  "en": "contract"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#14",
+  "es": "Valida",
+  "en": "Verify"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#15",
+  "es": "fiscal y bancario",
+  "en": "tax and banking"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#16",
+  "es": "Alta",
+  "en": "Add"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#17",
+  "es": "en el maestro",
+  "en": "to the master"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#18",
+  "es": "Correo",
+  "en": "Email"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#19",
+  "es": "Excel",
+  "en": "Excel"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#20",
+  "es": "Outlook",
+  "en": "Outlook"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#21",
+  "es": "SharePoint",
+  "en": "SharePoint"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#22",
+  "es": "Outlook",
+  "en": "Outlook"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#23",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#24",
+  "es": "Lead time total: 72 horas",
+  "en": "Total lead time: 72 hours"
+ },
+ {
+  "ruta": "dias/2/bloques/1/svg#25",
+  "es": "6 personas · 4 sistemas · 3 capturas del mismo dato · 8 % de retrabajo",
+  "en": "6 people · 4 systems · 3 entries of the same data · 8 % rework"
+ },
+ {
+  "ruta": "dias/2/bloques/2/titulo",
+  "es": "Artefacto 2 · Application Portfolio",
+  "en": "Artifact 2 · Application Portfolio"
+ },
+ {
+  "ruta": "dias/2/bloques/2/encabezados/0",
+  "es": "Aplicación",
+  "en": "Application"
+ },
+ {
+  "ruta": "dias/2/bloques/2/encabezados/1",
+  "es": "Función",
+  "en": "Function"
+ },
+ {
+  "ruta": "dias/2/bloques/2/encabezados/2",
+  "es": "Owner",
+  "en": "Owner"
+ },
+ {
+  "ruta": "dias/2/bloques/2/encabezados/3",
+  "es": "Criticidad",
+  "en": "Criticality"
+ },
+ {
+  "ruta": "dias/2/bloques/2/encabezados/4",
+  "es": "Problema",
+  "en": "Problem"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/0/0",
+  "es": "Excel",
+  "en": "Excel"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/0/1",
+  "es": "Captura",
+  "en": "Data entry"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/0/2",
+  "es": "Compras",
+  "en": "Purchasing"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/0/3",
+  "es": "Media",
+  "en": "Medium"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/0/4",
+  "es": "Manual",
+  "en": "Manual"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/1/0",
+  "es": "Outlook",
+  "en": "Outlook"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/1/1",
+  "es": "Workflow de facto",
+  "en": "De facto workflow"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/1/2",
+  "es": "TI",
+  "en": "IT"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/1/3",
+  "es": "Alta",
+  "en": "High"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/1/4",
+  "es": "Sin trazabilidad",
+  "en": "No traceability"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/2/0",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/2/1",
+  "es": "Maestro de proveedor",
+  "en": "Supplier master"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/2/2",
+  "es": "Finanzas",
+  "en": "Finance"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/2/3",
+  "es": "Crítica",
+  "en": "Critical"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/2/4",
+  "es": "Captura manual",
+  "en": "Manual data entry"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/3/0",
+  "es": "SharePoint",
+  "en": "SharePoint"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/3/1",
+  "es": "Documentos",
+  "en": "Documents"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/3/2",
+  "es": "Legal",
+  "en": "Legal"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/3/3",
+  "es": "Media",
+  "en": "Medium"
+ },
+ {
+  "ruta": "dias/2/bloques/2/filas/3/4",
+  "es": "Duplicidad",
+  "en": "Duplication"
+ },
+ {
+  "ruta": "dias/2/bloques/3/titulo",
+  "es": "Artefacto 3 · Matriz proceso-aplicación",
+  "en": "Artifact 3 · Process-application matrix"
+ },
+ {
+  "ruta": "dias/2/bloques/3/encabezados/0",
+  "es": "Etapa del proceso",
+  "en": "Process stage"
+ },
+ {
+  "ruta": "dias/2/bloques/3/encabezados/1",
+  "es": "Excel",
+  "en": "Excel"
+ },
+ {
+  "ruta": "dias/2/bloques/3/encabezados/2",
+  "es": "Email",
+  "en": "Email"
+ },
+ {
+  "ruta": "dias/2/bloques/3/encabezados/3",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "dias/2/bloques/3/encabezados/4",
+  "es": "SharePoint",
+  "en": "SharePoint"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/0/0",
+  "es": "Solicitud",
+  "en": "Request"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/0/1",
+  "es": "●",
+  "en": "●"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/1/0",
+  "es": "Aprobación",
+  "en": "Approval"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/1/2",
+  "es": "●",
+  "en": "●"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/2/0",
+  "es": "Validación",
+  "en": "Validation"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/2/2",
+  "es": "●",
+  "en": "●"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/2/4",
+  "es": "●",
+  "en": "●"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/3/0",
+  "es": "Alta",
+  "en": "Registration"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/3/3",
+  "es": "●",
+  "en": "●"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/4/0",
+  "es": "Documentación",
+  "en": "Documentation"
+ },
+ {
+  "ruta": "dias/2/bloques/3/filas/4/4",
+  "es": "●",
+  "en": "●"
+ },
+ {
+  "ruta": "dias/2/bloques/4/titulo",
+  "es": "Para qué sirve esta matriz",
+  "en": "What this matrix is for"
+ },
+ {
+  "ruta": "dias/2/bloques/4/cuerpo",
+  "es": "<p>Permite <b>descubrir la fragmentación</b>: ninguna aplicación cubre el proceso completo y la información salta de herramienta en herramienta.</p>",
+  "en": "<p>It lets you <b>discover the fragmentation</b>: no application covers the whole process and the information jumps from tool to tool.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/5/titulo",
+  "es": "Artefacto 4 · Diagrama de integración TO-BE",
+  "en": "Artifact 4 · TO-BE integration diagram"
+ },
+ {
+  "ruta": "dias/2/bloques/5/pie",
+  "es": "El cambio de fondo no es el portal: es que el proveedor captura sus propios datos una sola vez y un motor de workflow orquesta las validaciones en paralelo, contra un dato maestro único.",
+  "en": "The real change is not the portal: it is that the supplier enters its own data once and a workflow engine orchestrates the validations in parallel, against a single set of master data."
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#0",
+  "es": "Portal de proveedores",
+  "en": "Supplier portal"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#1",
+  "es": "el proveedor captura sus datos",
+  "en": "the supplier enters its data"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#2",
+  "es": "1 sola captura",
+  "en": "1 single entry"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#3",
+  "es": "Motor de workflow / BPM",
+  "en": "Workflow / BPM engine"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#4",
+  "es": "reglas, trazabilidad y validaciones en paralelo",
+  "en": "rules, traceability and parallel validations"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#5",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#6",
+  "es": "maestro de proveedor",
+  "en": "supplier master"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#7",
+  "es": "Gestor documental",
+  "en": "Document manager"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#8",
+  "es": "contratos y expediente",
+  "en": "contracts and file"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#9",
+  "es": "Cumplimiento",
+  "en": "Compliance"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#10",
+  "es": "validación fiscal y listas",
+  "en": "tax validation and lists"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#11",
+  "es": "Dato maestro único",
+  "en": "Single master data"
+ },
+ {
+  "ruta": "dias/2/bloques/5/svg#12",
+  "es": "una definición, un responsable",
+  "en": "one definition, one owner"
+ },
+ {
+  "ruta": "dias/2/bloques/6/titulo",
+  "es": "La secuencia que hay que dominar",
+  "en": "The sequence you must master"
+ },
+ {
+  "ruta": "dias/2/bloques/6/pasos/0",
+  "es": "AS-IS",
+  "en": "AS-IS"
+ },
+ {
+  "ruta": "dias/2/bloques/6/pasos/1",
+  "es": "Gap analysis",
+  "en": "Gap analysis"
+ },
+ {
+  "ruta": "dias/2/bloques/6/pasos/2",
+  "es": "TO-BE",
+  "en": "TO-BE"
+ },
+ {
+  "ruta": "dias/2/bloques/6/pasos/3",
+  "es": "Roadmap",
+  "en": "Roadmap"
+ },
+ {
+  "ruta": "dias/2/bloques/7/titulo",
+  "es": "Los 8 artefactos que se piden para el reto",
+  "en": "The 8 artifacts required for the challenge"
+ },
+ {
+  "ruta": "dias/2/bloques/7/encabezados/0",
+  "es": "#",
+  "en": "#"
+ },
+ {
+  "ruta": "dias/2/bloques/7/encabezados/1",
+  "es": "Artefacto",
+  "en": "Artifact"
+ },
+ {
+  "ruta": "dias/2/bloques/7/encabezados/2",
+  "es": "Para qué sirve",
+  "en": "What it is for"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/0/0",
+  "es": "1",
+  "en": "1"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/0/1",
+  "es": "Problem Statement",
+  "en": "Problem Statement"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/0/2",
+  "es": "Definir el problema",
+  "en": "Define the problem"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/1/0",
+  "es": "2",
+  "en": "2"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/1/1",
+  "es": "SIPOC / Process Map",
+  "en": "SIPOC / Process Map"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/1/2",
+  "es": "Entender el proceso",
+  "en": "Understand the process"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/2/0",
+  "es": "3",
+  "en": "3"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/2/1",
+  "es": "AS-IS Process",
+  "en": "AS-IS Process"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/2/2",
+  "es": "Documentar la situación actual",
+  "en": "Document the current situation"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/3/0",
+  "es": "4",
+  "en": "4"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/3/1",
+  "es": "Application Landscape",
+  "en": "Application Landscape"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/3/2",
+  "es": "Identificar los sistemas involucrados",
+  "en": "Identify the systems involved"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/4/0",
+  "es": "5",
+  "en": "5"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/4/1",
+  "es": "Process-Application Matrix",
+  "en": "Process-Application Matrix"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/4/2",
+  "es": "Relacionar proceso y tecnología",
+  "en": "Link process and technology"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/5/0",
+  "es": "6",
+  "en": "6"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/5/1",
+  "es": "Data / Information Flow",
+  "en": "Data / Information Flow"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/5/2",
+  "es": "Mostrar el movimiento de la información",
+  "en": "Show how information moves"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/6/0",
+  "es": "7",
+  "en": "7"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/6/1",
+  "es": "TO-BE Architecture / Process",
+  "en": "TO-BE Architecture / Process"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/6/2",
+  "es": "Diseñar la solución futura",
+  "en": "Design the future solution"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/7/0",
+  "es": "8",
+  "en": "8"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/7/1",
+  "es": "Gap Analysis + Roadmap",
+  "en": "Gap Analysis + Roadmap"
+ },
+ {
+  "ruta": "dias/2/bloques/7/filas/7/2",
+  "es": "Definir cómo se llega del AS-IS al TO-BE",
+  "en": "Define how you get from AS-IS to TO-BE"
+ },
+ {
+  "ruta": "dias/2/bloques/8/titulo",
+  "es": "Capa cuantitativa obligatoria · baseline y meta",
+  "en": "Mandatory quantitative layer · baseline and target"
+ },
+ {
+  "ruta": "dias/2/bloques/8/encabezados/0",
+  "es": "KPI",
+  "en": "KPI"
+ },
+ {
+  "ruta": "dias/2/bloques/8/encabezados/1",
+  "es": "AS-IS",
+  "en": "AS-IS"
+ },
+ {
+  "ruta": "dias/2/bloques/8/encabezados/2",
+  "es": "TO-BE",
+  "en": "TO-BE"
+ },
+ {
+  "ruta": "dias/2/bloques/8/encabezados/3",
+  "es": "Mejora",
+  "en": "Improvement"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/0/0",
+  "es": "Lead time",
+  "en": "Lead time"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/0/1",
+  "es": "72 h",
+  "en": "72 h"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/0/2",
+  "es": "8 h",
+  "en": "8 h"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/0/3",
+  "es": "−89 %",
+  "en": "−89 %"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/1/0",
+  "es": "Processing time",
+  "en": "Processing time"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/1/1",
+  "es": "45 min",
+  "en": "45 min"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/1/2",
+  "es": "15 min",
+  "en": "15 min"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/1/3",
+  "es": "−67 %",
+  "en": "−67 %"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/2/0",
+  "es": "Personas involucradas",
+  "en": "People involved"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/2/1",
+  "es": "6",
+  "en": "6"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/2/2",
+  "es": "3",
+  "en": "3"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/2/3",
+  "es": "−50 %",
+  "en": "−50 %"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/3/0",
+  "es": "Capturas manuales",
+  "en": "Manual data entries"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/3/1",
+  "es": "3",
+  "en": "3"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/3/2",
+  "es": "1",
+  "en": "1"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/3/3",
+  "es": "−67 %",
+  "en": "−67 %"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/4/0",
+  "es": "Tasa de error",
+  "en": "Error rate"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/4/1",
+  "es": "8 %",
+  "en": "8 %"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/4/2",
+  "es": "1 %",
+  "en": "1 %"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/4/3",
+  "es": "−87.5 %",
+  "en": "−87.5 %"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/5/0",
+  "es": "Costo por transacción",
+  "en": "Cost per transaction"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/5/1",
+  "es": "$180",
+  "en": "$180"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/5/2",
+  "es": "$70",
+  "en": "$70"
+ },
+ {
+  "ruta": "dias/2/bloques/8/filas/5/3",
+  "es": "−61 %",
+  "en": "−61 %"
+ },
+ {
+  "ruta": "dias/2/bloques/9/titulo",
+  "es": "El criterio de evaluación",
+  "en": "The evaluation criterion"
+ },
+ {
+  "ruta": "dias/2/bloques/9/cuerpo",
+  "es": "<p><b>Un diagrama demuestra cómo entendieron el proceso; los datos demuestran si su propuesta realmente lo mejora.</b></p>",
+  "en": "<p><b>A diagram shows how you understood the process; the data shows whether your proposal actually improves it.</b></p>"
+ },
+ {
+  "ruta": "dias/2/bloques/10/titulo",
+  "es": "Deliverable frente a artifact",
+  "en": "Deliverable versus artifact"
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/0/termino",
+  "es": "Deliverable (entregable)",
+  "en": "Deliverable"
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/0/definicion",
+  "es": "Algo que formalmente se entrega. Ejemplo: «Documento de Arquitectura de Solución».",
+  "en": "Something that is formally handed over. Example: “Solution Architecture Document”."
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/1/termino",
+  "es": "Artifact (artefacto)",
+  "en": "Artifact"
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/1/definicion",
+  "es": "Una pieza estructurada de información arquitectónica: process map, matriz de aplicaciones, data flow, diagrama de integración, gap analysis, roadmap.",
+  "en": "A structured piece of architectural information: process map, application matrix, data flow, integration diagram, gap analysis, roadmap."
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/2/termino",
+  "es": "Relación",
+  "en": "Relationship"
+ },
+ {
+  "ruta": "dias/2/bloques/10/items/2/definicion",
+  "es": "<b>Un deliverable puede contener múltiples artefactos.</b>",
+  "en": "<b>A deliverable can contain multiple artifacts.</b>"
+ },
+ {
+  "ruta": "dias/2/bloques/11/titulo",
+  "es": "View y viewpoint: la misma arquitectura no se presenta igual",
+  "en": "View and viewpoint: the same architecture is not presented the same way"
+ },
+ {
+  "ruta": "dias/2/bloques/11/encabezados/0",
+  "es": "Stakeholder",
+  "en": "Stakeholder"
+ },
+ {
+  "ruta": "dias/2/bloques/11/encabezados/1",
+  "es": "Qué le interesa",
+  "en": "What they care about"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/0/0",
+  "es": "CEO",
+  "en": "CEO"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/0/1",
+  "es": "Valor, riesgo, inversión",
+  "en": "Value, risk, investment"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/1/0",
+  "es": "CFO",
+  "en": "CFO"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/1/1",
+  "es": "Costos, ROI",
+  "en": "Costs, ROI"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/2/0",
+  "es": "CISO",
+  "en": "CISO"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/2/1",
+  "es": "Riesgos y controles",
+  "en": "Risks and controls"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/3/0",
+  "es": "Arquitecto",
+  "en": "Architect"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/3/1",
+  "es": "Sistemas, interfaces, datos",
+  "en": "Systems, interfaces, data"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/4/0",
+  "es": "Developer",
+  "en": "Developer"
+ },
+ {
+  "ruta": "dias/2/bloques/11/filas/4/1",
+  "es": "APIs, componentes, protocolos",
+  "en": "APIs, components, protocols"
+ },
+ {
+  "ruta": "dias/2/bloques/12/titulo",
+  "es": "Ejercicio de 30 segundos",
+  "en": "30-second exercise"
+ },
+ {
+  "ruta": "dias/2/bloques/12/cuerpo",
+  "es": "<p>«Explícale la arquitectura del proyecto al CEO.» Treinta segundos. Después: «Ahora explícasela al arquitecto de integración.» El grupo descubre de inmediato por qué necesitamos distintas vistas.</p>",
+  "en": "<p>“Explain the project architecture to the CEO.” Thirty seconds. Then: “Now explain it to the integration architect.” The group immediately discovers why we need different views.</p>"
+ },
+ {
+  "ruta": "dias/2/bloques/13/titulo",
+  "es": "Imagen conceptual que amarra toda la semana",
+  "en": "Concept image that ties the whole week together"
+ },
+ {
+  "ruta": "dias/2/bloques/13/pie",
+  "es": "Una sola cadena descendente y, a su lado, el marco que responde por cada tramo. Ningún marco cubre toda la columna: por eso conviven.",
+  "en": "A single descending chain and, beside it, the framework accountable for each segment. No framework covers the whole column: that is why they coexist."
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#0",
+  "es": "Estrategia",
+  "en": "Strategy"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#1",
+  "es": "Capacidades",
+  "en": "Capability"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#2",
+  "es": "Procesos",
+  "en": "Process"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#3",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#4",
+  "es": "Aplicaciones",
+  "en": "Applications"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#5",
+  "es": "Personas",
+  "en": "People"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#6",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#7",
+  "es": "Servicios",
+  "en": "Services"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#8",
+  "es": "Resultados",
+  "en": "Outcomes"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#9",
+  "es": "medidos con KPI",
+  "en": "measured by KPI"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#10",
+  "es": "Alrededor de toda la cadena",
+  "en": "Around the entire chain"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#11",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#12",
+  "es": "diseña y hace evolucionar la arquitectura",
+  "en": "designs and evolves the architecture"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#13",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#14",
+  "es": "gobierna y controla TI",
+  "en": "governs, controls IT"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#15",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#16",
+  "es": "gestiona los servicios de TI",
+  "en": "manages IT services"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#17",
+  "es": "ISO",
+  "en": "ISO"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#18",
+  "es": "establece requisitos certificables",
+  "en": "sets certifiable requirements"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#19",
+  "es": "Lean / Six Sigma",
+  "en": "Lean / Six Sigma"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#20",
+  "es": "mejora el proceso",
+  "en": "improves process"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#21",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "dias/2/bloques/13/svg#22",
+  "es": "representa el proceso",
+  "en": "depicts the process"
+ },
+ {
+  "ruta": "terminos/0/termino",
+  "es": "SIPOC",
+  "en": "SIPOC"
+ },
+ {
+  "ruta": "terminos/0/definicion",
+  "es": "Artefacto que delimita un proceso identificando quién provee, qué entra, qué se hace, qué sale y quién lo recibe.",
+  "en": "Artifact that bounds a process by identifying who supplies, what goes in, what is done, what comes out and who receives it."
+ },
+ {
+  "ruta": "terminos/1/termino",
+  "es": "Lead time",
+  "en": "Lead time"
+ },
+ {
+  "ruta": "terminos/1/definicion",
+  "es": "Tiempo total transcurrido de extremo a extremo, desde que el cliente lo pide hasta que lo recibe. Es tiempo de calendario: incluye procesamiento, esperas, noches y fines de semana. Es el tiempo que el cliente percibe. Cuando el proceso opera de forma continua coincide con el tiempo de ciclo; cuando hay horarios o colas previas, no.",
+  "en": "Total elapsed end-to-end time, from when the customer orders it until they receive it. It is calendar time: it includes processing, wait time, nights and weekends. It is the time the customer perceives. When the process runs continuously it matches the cycle time; when there are schedules or upstream queues, it does not."
+ },
+ {
+  "ruta": "terminos/2/termino",
+  "es": "Processing time",
+  "en": "Processing time"
+ },
+ {
+  "ruta": "terminos/2/definicion",
+  "es": "Tiempo de trabajo real invertido en las actividades, sin contar esperas.",
+  "en": "Actual working time spent on the activities, not counting wait time."
+ },
+ {
+  "ruta": "terminos/3/termino",
+  "es": "Lean",
+  "en": "Lean"
+ },
+ {
+  "ruta": "terminos/3/definicion",
+  "es": "Enfoque de mejora centrado en eliminar desperdicio: espera, retrabajo, sobreproceso, transporte, inventario, movimiento y defectos.",
+  "en": "Improvement approach focused on eliminating waste: waiting, rework, overprocessing, transport, inventory, motion and defects."
+ },
+ {
+  "ruta": "terminos/4/termino",
+  "es": "Six Sigma",
+  "en": "Six Sigma"
+ },
+ {
+  "ruta": "terminos/4/definicion",
+  "es": "Enfoque de mejora centrado en reducir variación y defectos con base estadística.",
+  "en": "Improvement approach focused on reducing variation and defects on a statistical basis."
+ },
+ {
+  "ruta": "terminos/5/termino",
+  "es": "Kaizen",
+  "en": "Kaizen"
+ },
+ {
+  "ruta": "terminos/5/definicion",
+  "es": "Mejora continua incremental con participación de quienes ejecutan el proceso.",
+  "en": "Incremental continuous improvement with the participation of the people who run the process."
+ },
+ {
+  "ruta": "terminos/6/termino",
+  "es": "DMAIC",
+  "en": "DMAIC"
+ },
+ {
+  "ruta": "terminos/6/definicion",
+  "es": "Ciclo de mejora de Six Sigma.",
+  "en": "Six Sigma improvement cycle."
+ },
+ {
+  "ruta": "terminos/7/termino",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "terminos/7/definicion",
+  "es": "Marco de gobierno y control de TI: responsabilidad, controles, riesgo, métricas y alineación con objetivos.",
+  "en": "IT governance and control framework: accountability, controls, risk, metrics and alignment with objectives."
+ },
+ {
+  "ruta": "terminos/8/termino",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "terminos/8/definicion",
+  "es": "Marco de gestión de servicios de TI: diseño, entrega, soporte y mejora del servicio; incidentes, problemas y cambios.",
+  "en": "IT service management framework: service design, delivery, support and improvement; incidents, problems and changes."
+ },
+ {
+  "ruta": "terminos/9/termino",
+  "es": "SGSI",
+  "en": "ISMS"
+ },
+ {
+  "ruta": "terminos/9/definicion",
+  "es": "Sistema de Gestión de Seguridad de la Información; certificable bajo ISO/IEC 27001.",
+  "en": "Information Security Management System; certifiable under ISO/IEC 27001."
+ },
+ {
+  "ruta": "terminos/10/termino",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "terminos/10/definicion",
+  "es": "Sistema de recursos y transacciones centrales de la empresa.",
+  "en": "System for the company's core resources and transactions."
+ },
+ {
+  "ruta": "terminos/11/termino",
+  "es": "CRM",
+  "en": "CRM"
+ },
+ {
+  "ruta": "terminos/11/definicion",
+  "es": "Sistema de gestión de clientes y ventas.",
+  "en": "Customer and sales management system."
+ },
+ {
+  "ruta": "terminos/12/termino",
+  "es": "MES",
+  "en": "MES"
+ },
+ {
+  "ruta": "terminos/12/definicion",
+  "es": "Sistema de ejecución de manufactura en planta.",
+  "en": "Manufacturing execution system on the shop floor."
+ },
+ {
+  "ruta": "terminos/13/termino",
+  "es": "WMS",
+  "en": "WMS"
+ },
+ {
+  "ruta": "terminos/13/definicion",
+  "es": "Sistema de gestión de almacenes.",
+  "en": "Warehouse management system."
+ },
+ {
+  "ruta": "terminos/14/termino",
+  "es": "PLM",
+  "en": "PLM"
+ },
+ {
+  "ruta": "terminos/14/definicion",
+  "es": "Gestión del ciclo de vida del producto.",
+  "en": "Product lifecycle management."
+ },
+ {
+  "ruta": "terminos/15/termino",
+  "es": "ITSM",
+  "en": "ITSM"
+ },
+ {
+  "ruta": "terminos/15/definicion",
+  "es": "Gestión de servicios de TI.",
+  "en": "IT service management."
+ },
+ {
+  "ruta": "terminos/16/termino",
+  "es": "Order-to-Cash",
+  "en": "Order-to-Cash"
+ },
+ {
+  "ruta": "terminos/16/definicion",
+  "es": "Proceso end-to-end que va del pedido del cliente hasta el cobro.",
+  "en": "End-to-end process that runs from the customer order to payment collection."
+ },
+ {
+  "ruta": "terminos/17/termino",
+  "es": "Artefacto",
+  "en": "Artifact"
+ },
+ {
+  "ruta": "terminos/17/definicion",
+  "es": "Representación estructurada de un aspecto de la empresa o su arquitectura, creada para analizar, comunicar, decidir o gobernar.",
+  "en": "Structured representation of an aspect of the enterprise or its architecture, created to analyze, communicate, decide or govern."
+ },
+ {
+  "ruta": "terminos/18/termino",
+  "es": "Deliverable",
+  "en": "Deliverable"
+ },
+ {
+  "ruta": "terminos/18/definicion",
+  "es": "Entregable formal; puede contener múltiples artefactos.",
+  "en": "Formal deliverable; it can contain multiple artifacts."
+ },
+ {
+  "ruta": "terminos/19/termino",
+  "es": "View",
+  "en": "View"
+ },
+ {
+  "ruta": "terminos/19/definicion",
+  "es": "Representación de la arquitectura dirigida a un conjunto de interesados y sus preocupaciones.",
+  "en": "Representation of the architecture aimed at a set of stakeholders and their concerns."
+ },
+ {
+  "ruta": "terminos/20/termino",
+  "es": "Viewpoint",
+  "en": "Viewpoint"
+ },
+ {
+  "ruta": "terminos/20/definicion",
+  "es": "Convención o plantilla que define cómo se construye e interpreta una vista.",
+  "en": "Convention or template that defines how a view is built and interpreted."
+ },
+ {
+  "ruta": "terminos/21/termino",
+  "es": "Gap analysis",
+  "en": "Gap analysis"
+ },
+ {
+  "ruta": "terminos/21/definicion",
+  "es": "Comparación entre AS-IS y TO-BE para determinar qué falta, qué cambia, qué se elimina y qué se conserva.",
+  "en": "Comparison between AS-IS and TO-BE to determine what is missing, what changes, what is removed and what is kept."
+ },
+ {
+  "ruta": "terminos/22/termino",
+  "es": "Application landscape",
+  "en": "Application landscape"
+ },
+ {
+  "ruta": "terminos/22/definicion",
+  "es": "Panorama de las aplicaciones existentes con su función, responsable, criticidad y problemas.",
+  "en": "Overview of the existing applications with their function, owner, criticality and problems."
+ },
+ {
+  "ruta": "terminos/23/termino",
+  "es": "Problem statement",
+  "en": "Problem statement"
+ },
+ {
+  "ruta": "terminos/23/definicion",
+  "es": "Enunciado formal del problema: qué ocurre, a quién afecta, con qué magnitud y qué pasa si no se resuelve.",
+  "en": "Formal statement of the problem: what happens, who it affects, how big it is and what happens if it is not solved."
+ },
+ {
+  "ruta": "terminos/24/termino",
+  "es": "Baseline",
+  "en": "Baseline"
+ },
+ {
+  "ruta": "terminos/24/definicion",
+  "es": "Medición inicial de los indicadores del proceso, contra la cual se compara la mejora propuesta.",
+  "en": "Initial measurement of the process indicators, against which the proposed improvement is compared."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/tema",
+  "es": "Estrategia y TI",
+  "en": "Strategy and IT"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/pregunta",
+  "es": "El negocio dice: «necesitamos reducir el tiempo de entrega de 5 a 2 días». ¿Cuál es la primera respuesta correcta desde arquitectura?",
+  "en": "The business says: “we need to cut delivery time from 5 to 2 days.” What is the first correct response from architecture?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/0",
+  "es": "Descubrir qué impide llegar a los 2 días: qué proceso, qué esperas, qué datos y qué capacidades faltan",
+  "en": "Discover what prevents reaching 2 days: which process, which wait times, which data and which capabilities are missing"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/1",
+  "es": "Proponer la implementación de un ERP moderno",
+  "en": "Propose implementing a modern ERP"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/2",
+  "es": "Evaluar tres proveedores de software de logística",
+  "en": "Evaluate three logistics software vendors"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/opciones/3",
+  "es": "Automatizar con IA la etapa más lenta del proceso",
+  "en": "Automate the slowest stage of the process with AI"
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/explicacion",
+  "es": "La secuencia es: necesidad → proceso → problema → datos → capacidades → requerimientos → arquitectura → tecnología. La tecnología es consecuencia, no punto de partida.",
+  "en": "The sequence is: need → process → problem → data → capabilities → requirements → architecture → technology. Technology is a consequence, not a starting point."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/porQueNo/1",
+  "es": "Elegir producto antes de conocer la causa raíz es exactamente el error que la EA busca evitar.",
+  "en": "Choosing a product before knowing the root cause is exactly the mistake EA sets out to avoid."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/porQueNo/2",
+  "es": "Evaluar proveedores presupone que la solución es comprar software.",
+  "en": "Evaluating vendors assumes the solution is to buy software."
+ },
+ {
+  "ruta": "practica/opcionMultiple/0/porQueNo/3",
+  "es": "Automatizar sin diagnóstico puede acelerar una actividad que no es el cuello de botella.",
+  "en": "Automating without a diagnosis may speed up an activity that is not the bottleneck."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/tema",
+  "es": "Digitalización",
+  "en": "Digitization"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/pregunta",
+  "es": "Un formato en papel se convierte en PDF que se manda por correo; el jefe firma y RH sigue capturando. ¿Qué nivel es?",
+  "en": "A paper form becomes a PDF that is emailed; the manager signs and HR still keys it in. Which level is this?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/0",
+  "es": "Digitalización",
+  "en": "Digitization"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/1",
+  "es": "Automatización",
+  "en": "Automation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/2",
+  "es": "Transformación digital",
+  "en": "Digital transformation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/opciones/3",
+  "es": "Rediseño de proceso",
+  "en": "Process redesign"
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/explicacion",
+  "es": "Desapareció el papel, pero el flujo es idéntico. Digitalizar es llevar información o actividades a medios digitales sin cambiar el proceso.",
+  "en": "The paper is gone, but the flow is identical. Digitizing means moving information or activities to digital media without changing the process."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/porQueNo/1",
+  "es": "Automatizar implica que el sistema ejecute la actividad: consultar el saldo, enviar la aprobación, actualizar el registro.",
+  "en": "Automating means the system performs the activity: checking the balance, sending the approval, updating the record."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/porQueNo/2",
+  "es": "La transformación cuestiona el proceso completo y cambia capacidades, experiencia o modelo.",
+  "en": "Transformation questions the whole process and changes capabilities, experience or model."
+ },
+ {
+  "ruta": "practica/opcionMultiple/1/porQueNo/3",
+  "es": "El proceso no fue rediseñado: conserva las mismas etapas y responsables.",
+  "en": "The process was not redesigned: it keeps the same stages and the same people responsible."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/tema",
+  "es": "Transformación digital",
+  "en": "Digital transformation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/pregunta",
+  "es": "En el caso de vacaciones, ¿cuál es el ejemplo de transformación digital?",
+  "en": "In the vacation case, which one is the example of digital transformation?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/0",
+  "es": "El empleado solicita desde una app y el sistema, conociendo saldo, calendario, cobertura y políticas, autoriza automáticamente determinados casos",
+  "en": "The employee requests it from an app and the system, knowing balance, calendar, coverage and policies, automatically approves certain cases"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/1",
+  "es": "El formato pasa a PDF y se envía por correo",
+  "en": "The form becomes a PDF and is sent by email"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/2",
+  "es": "RH captura la solicitud en el sistema en lugar de archivarla en papel",
+  "en": "HR keys the request into the system instead of filing it on paper"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/opciones/3",
+  "es": "El jefe firma electrónicamente en lugar de a mano",
+  "en": "The manager signs electronically instead of by hand"
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/explicacion",
+  "es": "Se cuestionó el proceso completo: ¿por qué debe intervenir RH? Cambió la capacidad, el flujo y la experiencia del empleado.",
+  "en": "The whole process was questioned: why does HR have to be involved? The capability, the flow and the employee experience changed."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/porQueNo/1",
+  "es": "Eso es digitalización.",
+  "en": "That is digitization."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/porQueNo/2",
+  "es": "Cambia el medio de registro, no el proceso.",
+  "en": "It changes the recording medium, not the process."
+ },
+ {
+  "ruta": "practica/opcionMultiple/2/porQueNo/3",
+  "es": "Sustituye un mecanismo de firma; el flujo de aprobación sigue igual.",
+  "en": "It replaces a signing mechanism; the approval flow stays the same."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/tema",
+  "es": "Aplicaciones empresariales",
+  "en": "Enterprise applications"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/pregunta",
+  "es": "El sistema que ejecuta y controla la manufactura en piso de planta es…",
+  "en": "The system that runs and controls manufacturing on the shop floor is…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/0",
+  "es": "MES",
+  "en": "MES"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/1",
+  "es": "WMS",
+  "en": "WMS"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/2",
+  "es": "PLM",
+  "en": "PLM"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/opciones/3",
+  "es": "ITSM",
+  "en": "ITSM"
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/explicacion",
+  "es": "MES (Manufacturing Execution System) opera la ejecución de manufactura; WMS gestiona almacenes; PLM, el ciclo de vida del producto; ITSM, los servicios de TI.",
+  "en": "MES (Manufacturing Execution System) runs manufacturing execution; WMS manages warehouses; PLM, the product lifecycle; ITSM, IT services."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/porQueNo/1",
+  "es": "WMS administra almacenes e inventario físico.",
+  "en": "WMS manages warehouses and physical inventory."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/porQueNo/2",
+  "es": "PLM administra el ciclo de vida del producto, del diseño al retiro.",
+  "en": "PLM manages the product lifecycle, from design to retirement."
+ },
+ {
+  "ruta": "practica/opcionMultiple/3/porQueNo/3",
+  "es": "ITSM administra servicios de TI, no manufactura.",
+  "en": "ITSM manages IT services, not manufacturing."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/tema",
+  "es": "Datos duros",
+  "en": "Hard data"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/pregunta",
+  "es": "Un proceso tiene 22 minutos de trabajo real y 23 horas de espera. ¿Dónde debe concentrarse la mejora?",
+  "en": "A process has 22 minutes of actual work and 23 hours of wait time. Where should the improvement focus?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/0",
+  "es": "En eliminar las esperas: aprobaciones, transferencias y colas",
+  "en": "On eliminating the wait times: approvals, handoffs and queues"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/1",
+  "es": "En acelerar las actividades de captura para bajar los 22 minutos",
+  "en": "On speeding up the data entry activities to bring down the 22 minutes"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/2",
+  "es": "En contratar más personal para ejecutar las actividades",
+  "en": "On hiring more staff to perform the activities"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/opciones/3",
+  "es": "En migrar el ERP a la nube para ganar desempeño",
+  "en": "On migrating the ERP to the cloud to gain performance"
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/explicacion",
+  "es": "El lead time está dominado por la espera. Reducir a la mitad los 22 minutos mejora el total en 11 minutos sobre 23 horas: irrelevante.",
+  "en": "The lead time is dominated by wait time. Halving the 22 minutes improves the total by 11 minutes out of 23 hours: irrelevant."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/porQueNo/1",
+  "es": "Optimizar el 1.6 % del tiempo total no mueve el indicador.",
+  "en": "Optimizing 1.6 % of the total time does not move the indicator."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/porQueNo/2",
+  "es": "Más personas no eliminan una espera de aprobación secuencial.",
+  "en": "More people do not eliminate a sequential approval wait."
+ },
+ {
+  "ruta": "practica/opcionMultiple/4/porQueNo/3",
+  "es": "El desempeño técnico no es la restricción; la restricción es organizativa.",
+  "en": "Technical performance is not the constraint; the constraint is organizational."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/tema",
+  "es": "Lead time",
+  "en": "Lead time"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/pregunta",
+  "es": "¿Cuál es la diferencia entre lead time y processing time?",
+  "en": "What is the difference between lead time and processing time?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/0",
+  "es": "Lead time es el tiempo total transcurrido incluyendo esperas; processing time es solo el trabajo real",
+  "en": "Lead time is the total elapsed time including wait time; processing time is only the actual work"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/1",
+  "es": "Lead time es el trabajo real y processing time incluye las esperas",
+  "en": "Lead time is the actual work and processing time includes the wait time"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/2",
+  "es": "Son sinónimos medidos en unidades distintas",
+  "en": "They are synonyms measured in different units"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/opciones/3",
+  "es": "Lead time aplica a manufactura y processing time a servicios",
+  "en": "Lead time applies to manufacturing and processing time to services"
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/explicacion",
+  "es": "La distancia entre ambos indicadores revela cuánto desperdicio de espera contiene el proceso.",
+  "en": "The distance between the two indicators reveals how much waiting waste the process contains."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/porQueNo/1",
+  "es": "Está invertido.",
+  "en": "It is the other way around."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/porQueNo/2",
+  "es": "Miden cosas distintas, no la misma cosa.",
+  "en": "They measure different things, not the same thing."
+ },
+ {
+  "ruta": "practica/opcionMultiple/5/porQueNo/3",
+  "es": "Ambos aplican a cualquier tipo de proceso.",
+  "en": "Both apply to any type of process."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/tema",
+  "es": "Lean y Six Sigma",
+  "en": "Lean and Six Sigma"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/pregunta",
+  "es": "Un proceso entrega resultados con demasiada variación: unas veces tarda 2 días y otras 9, sin causa aparente. ¿Qué enfoque ataca ese problema?",
+  "en": "A process delivers results with too much variation: sometimes it takes 2 days and other times 9, with no apparent cause. Which approach attacks that problem?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/0",
+  "es": "Six Sigma",
+  "en": "Six Sigma"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/1",
+  "es": "Lean",
+  "en": "Lean"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/2",
+  "es": "Kaizen",
+  "en": "Kaizen"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/opciones/3",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/explicacion",
+  "es": "Six Sigma se enfoca en reducir variación y defectos; Lean, en eliminar desperdicio; Kaizen, en mejora continua incremental.",
+  "en": "Six Sigma focuses on reducing variation and defects; Lean, on eliminating waste; Kaizen, on incremental continuous improvement."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/porQueNo/1",
+  "es": "Lean ataca el desperdicio, no la variabilidad estadística.",
+  "en": "Lean attacks waste, not statistical variability."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/porQueNo/2",
+  "es": "Kaizen es la filosofía de mejora incremental, no una herramienta de análisis de variación.",
+  "en": "Kaizen is the philosophy of incremental improvement, not a tool for variation analysis."
+ },
+ {
+  "ruta": "practica/opcionMultiple/6/porQueNo/3",
+  "es": "BPMN solo representa el proceso gráficamente.",
+  "en": "BPMN only represents the process graphically."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/tema",
+  "es": "DMAIC",
+  "en": "DMAIC"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/pregunta",
+  "es": "¿Cuál es el orden correcto de DMAIC?",
+  "en": "What is the correct order of DMAIC?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/0",
+  "es": "Define, Measure, Analyze, Improve, Control",
+  "en": "Define, Measure, Analyze, Improve, Control"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/1",
+  "es": "Design, Model, Analyze, Implement, Check",
+  "en": "Design, Model, Analyze, Implement, Check"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/2",
+  "es": "Define, Model, Automate, Integrate, Control",
+  "en": "Define, Model, Automate, Integrate, Control"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/opciones/3",
+  "es": "Discover, Measure, Adjust, Implement, Close",
+  "en": "Discover, Measure, Adjust, Implement, Close"
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/explicacion",
+  "es": "Definir el problema, medir el baseline, analizar causas, mejorar y controlar para que la mejora se sostenga.",
+  "en": "Define the problem, measure the baseline, analyze causes, improve and control so the improvement is sustained."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/porQueNo/1",
+  "es": "No corresponde a las siglas de DMAIC.",
+  "en": "It does not match the letters of DMAIC."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/porQueNo/2",
+  "es": "Confunde el ciclo con etapas de automatización.",
+  "en": "It confuses the cycle with automation stages."
+ },
+ {
+  "ruta": "practica/opcionMultiple/7/porQueNo/3",
+  "es": "No es el ciclo estándar.",
+  "en": "It is not the standard cycle."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/tema",
+  "es": "COBIT e ITIL",
+  "en": "COBIT and ITIL"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/pregunta",
+  "es": "«¿Quién es accountable, tenemos controles, el riesgo es aceptable y está alineado con los objetivos?» son preguntas propias de…",
+  "en": "“Who is accountable, do we have controls, is the risk acceptable and is it aligned with the objectives?” are questions typical of…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/0",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/1",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/2",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/opciones/3",
+  "es": "ISO 9001",
+  "en": "ISO 9001"
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/explicacion",
+  "es": "COBIT es gobierno: responsabilidad, control, riesgo, métricas y alineación con objetivos de negocio.",
+  "en": "COBIT is governance: accountability, control, risk, metrics and alignment with business objectives."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/porQueNo/1",
+  "es": "ITIL preguntaría cómo se registra, prioriza y restaura el servicio.",
+  "en": "ITIL would ask how the service is logged, prioritized and restored."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/porQueNo/2",
+  "es": "TOGAF preguntaría cómo debe evolucionar la arquitectura.",
+  "en": "TOGAF would ask how the architecture should evolve."
+ },
+ {
+  "ruta": "practica/opcionMultiple/8/porQueNo/3",
+  "es": "ISO 9001 se enfoca en el sistema de gestión de calidad.",
+  "en": "ISO 9001 focuses on the quality management system."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/tema",
+  "es": "COBIT e ITIL",
+  "en": "COBIT and ITIL"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/pregunta",
+  "es": "Se cae SAP. «¿Cómo registramos el incidente, cómo lo priorizamos, cómo restauramos el servicio, es recurrente, requiere un change?» corresponde a…",
+  "en": "SAP goes down. “How do we log the incident, how do we prioritize it, how do we restore the service, is it recurring, does it require a change?” corresponds to…"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/0",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/1",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/2",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/opciones/3",
+  "es": "Lean",
+  "en": "Lean"
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/explicacion",
+  "es": "ITIL es gestión del servicio: incidentes, problemas, cambios y mejora continua del servicio.",
+  "en": "ITIL is service management: incidents, problems, changes and continual service improvement."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/porQueNo/1",
+  "es": "COBIT preguntaría por accountability, controles y riesgo.",
+  "en": "COBIT would ask about accountability, controls and risk."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/porQueNo/2",
+  "es": "Zachman clasifica descripciones de la empresa.",
+  "en": "Zachman classifies descriptions of the enterprise."
+ },
+ {
+  "ruta": "practica/opcionMultiple/9/porQueNo/3",
+  "es": "Lean elimina desperdicio en procesos.",
+  "en": "Lean eliminates waste in processes."
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/tema",
+  "es": "ISO",
+  "en": "ISO"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/pregunta",
+  "es": "¿Cuál es la diferencia esencial entre una norma ISO y un marco como TOGAF, COBIT o ITIL?",
+  "en": "What is the essential difference between an ISO standard and a framework such as TOGAF, COBIT or ITIL?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/0",
+  "es": "La ISO puede establecer requisitos certificables; los marcos funcionan como metodologías o buenas prácticas",
+  "en": "An ISO standard can set certifiable requirements; frameworks work as methodologies or good practices"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/1",
+  "es": "La ISO es gratuita y los marcos son de pago",
+  "en": "ISO is free and the frameworks are paid"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/2",
+  "es": "La ISO aplica solo a manufactura y los marcos solo a TI",
+  "en": "ISO applies only to manufacturing and the frameworks only to IT"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/opciones/3",
+  "es": "Los marcos son obligatorios por ley y las ISO son opcionales",
+  "en": "The frameworks are required by law and ISO standards are optional"
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/explicacion",
+  "es": "La obligatoriedad de cualquiera de ellos depende de leyes, contratos, regulación o decisiones organizacionales.",
+  "en": "Whether any of them is mandatory depends on laws, contracts, regulation or organizational decisions."
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/porQueNo/1",
+  "es": "El modelo de licenciamiento no es la diferencia conceptual.",
+  "en": "The licensing model is not the conceptual difference."
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/porQueNo/2",
+  "es": "Existen normas ISO de TI (20000-1, 27001) y marcos aplicables fuera de TI.",
+  "en": "There are ISO standards for IT (20000-1, 27001) and frameworks that apply outside IT."
+ },
+ {
+  "ruta": "practica/opcionMultiple/10/porQueNo/3",
+  "es": "Ningún marco de arquitectura es obligatorio por ley por sí mismo.",
+  "en": "No architecture framework is required by law in itself."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/tema",
+  "es": "Artefactos",
+  "en": "Artifacts"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/pregunta",
+  "es": "¿Cuál es la definición correcta de artefacto de arquitectura?",
+  "en": "What is the correct definition of an architecture artifact?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/0",
+  "es": "Una representación estructurada de un aspecto relevante de la empresa o de su arquitectura, creada para analizar, comunicar, decidir o gobernar",
+  "en": "A structured representation of a relevant aspect of the enterprise or of its architecture, created to analyze, communicate, decide or govern"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/1",
+  "es": "Cualquier diagrama que se entrega al cliente al final del proyecto",
+  "en": "Any diagram handed to the client at the end of the project"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/2",
+  "es": "El documento formal que se firma al cerrar una fase del ADM",
+  "en": "The formal document signed when an ADM phase closes"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/opciones/3",
+  "es": "Un componente de software reutilizable",
+  "en": "A reusable software component"
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/explicacion",
+  "es": "Un artefacto no tiene que ser un diagrama: puede ser catálogo, matriz, mapa, modelo, principio, roadmap, assessment o heatmap.",
+  "en": "An artifact does not have to be a diagram: it can be a catalog, matrix, map, model, principle, roadmap, assessment or heatmap."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/porQueNo/1",
+  "es": "Limitarlo a diagramas deja fuera catálogos, matrices y principios.",
+  "en": "Limiting it to diagrams leaves out catalogs, matrices and principles."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/porQueNo/2",
+  "es": "Eso describe un deliverable, no un artefacto.",
+  "en": "That describes a deliverable, not an artifact."
+ },
+ {
+  "ruta": "practica/opcionMultiple/11/porQueNo/3",
+  "es": "Un componente reutilizable de arquitectura es un building block (ABB/SBB).",
+  "en": "A reusable architecture component is a building block (ABB/SBB)."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/tema",
+  "es": "Deliverable vs artifact",
+  "en": "Deliverable vs artifact"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/pregunta",
+  "es": "¿Cuál es la relación entre deliverable y artifact?",
+  "en": "What is the relationship between deliverable and artifact?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/0",
+  "es": "Un deliverable puede contener múltiples artefactos",
+  "en": "A deliverable can contain multiple artifacts"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/1",
+  "es": "Un artefacto puede contener múltiples deliverables",
+  "en": "An artifact can contain multiple deliverables"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/2",
+  "es": "Son sinónimos en TOGAF",
+  "en": "They are synonyms in TOGAF"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/opciones/3",
+  "es": "El deliverable es interno y el artefacto se entrega al cliente",
+  "en": "The deliverable is internal and the artifact is handed to the client"
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/explicacion",
+  "es": "El «Documento de Arquitectura de Solución» es un deliverable; dentro puede haber process map, matriz de aplicaciones, data flow, gap analysis y roadmap.",
+  "en": "The “Solution Architecture Document” is a deliverable; inside it you can find a process map, application matrix, data flow, gap analysis and roadmap."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/porQueNo/1",
+  "es": "Está invertido: el entregable es el contenedor.",
+  "en": "It is the other way around: the deliverable is the container."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/porQueNo/2",
+  "es": "Son cosas distintas: uno es entrega formal, el otro pieza de información.",
+  "en": "They are different things: one is a formal delivery, the other a piece of information."
+ },
+ {
+  "ruta": "practica/opcionMultiple/12/porQueNo/3",
+  "es": "La distinción no es interno/externo.",
+  "en": "The distinction is not internal versus external."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/tema",
+  "es": "View y viewpoint",
+  "en": "View and viewpoint"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/pregunta",
+  "es": "¿Por qué la misma arquitectura se presenta distinto al CEO y al arquitecto de integración?",
+  "en": "Why is the same architecture presented differently to the CEO and to the integration architect?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/0",
+  "es": "Porque cada stakeholder tiene preocupaciones distintas y la arquitectura se comunica mediante vistas dirigidas a esas preocupaciones",
+  "en": "Because each stakeholder has different concerns and the architecture is communicated through views aimed at those concerns"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/1",
+  "es": "Porque al CEO no se le puede mostrar información técnica por confidencialidad",
+  "en": "Because technical information cannot be shown to the CEO for confidentiality reasons"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/2",
+  "es": "Porque el arquitecto usa una arquitectura diferente a la del CEO",
+  "en": "Because the architect uses a different architecture from the CEO's"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/opciones/3",
+  "es": "Porque el CEO solo necesita el roadmap y nada más",
+  "en": "Because the CEO only needs the roadmap and nothing else"
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/explicacion",
+  "es": "El CEO atiende valor, riesgo e inversión; el CFO, costos y ROI; el CISO, riesgos y controles; el arquitecto, sistemas, interfaces y datos; el developer, APIs y protocolos.",
+  "en": "The CEO attends to value, risk and investment; the CFO, costs and ROI; the CISO, risks and controls; the architect, systems, interfaces and data; the developer, APIs and protocols."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/porQueNo/1",
+  "es": "No es un tema de confidencialidad sino de pertinencia.",
+  "en": "It is not a matter of confidentiality but of relevance."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/porQueNo/2",
+  "es": "La arquitectura es la misma; cambian las vistas sobre ella.",
+  "en": "The architecture is the same; what changes are the views of it."
+ },
+ {
+  "ruta": "practica/opcionMultiple/13/porQueNo/3",
+  "es": "El CEO también necesita entender riesgo, valor e implicaciones.",
+  "en": "The CEO also needs to understand risk, value and implications."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/tema",
+  "es": "Secuencia del reto",
+  "en": "Challenge sequence"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/pregunta",
+  "es": "¿Cuál es la secuencia correcta para el reto?",
+  "en": "What is the correct sequence for the challenge?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/0",
+  "es": "AS-IS → Gap analysis → TO-BE → Roadmap",
+  "en": "AS-IS → Gap analysis → TO-BE → Roadmap"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/1",
+  "es": "TO-BE → AS-IS → Roadmap → Gap analysis",
+  "en": "TO-BE → AS-IS → Roadmap → Gap analysis"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/2",
+  "es": "Roadmap → AS-IS → TO-BE → Gap analysis",
+  "en": "Roadmap → AS-IS → TO-BE → Gap analysis"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/opciones/3",
+  "es": "AS-IS → TO-BE → Roadmap, sin gap analysis",
+  "en": "AS-IS → TO-BE → Roadmap, without gap analysis"
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/explicacion",
+  "es": "Sin AS-IS documentado no hay brecha demostrable; sin brecha, el TO-BE es una lista de deseos y el roadmap no tiene justificación.",
+  "en": "Without a documented AS-IS there is no demonstrable gap; without a gap, the TO-BE is a wish list and the roadmap has no justification."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/porQueNo/1",
+  "es": "Diseñar el futuro sin conocer el presente impide cuantificar la mejora.",
+  "en": "Designing the future without knowing the present makes it impossible to quantify the improvement."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/porQueNo/2",
+  "es": "El roadmap es la última pieza, no la primera.",
+  "en": "The roadmap is the last piece, not the first."
+ },
+ {
+  "ruta": "practica/opcionMultiple/14/porQueNo/3",
+  "es": "Omitir el gap analysis elimina la justificación de cada iniciativa.",
+  "en": "Omitting the gap analysis removes the justification for each initiative."
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/tema",
+  "es": "Evidencia cuantitativa",
+  "en": "Quantitative evidence"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/pregunta",
+  "es": "El equipo entrega diagramas impecables del AS-IS y del TO-BE, pero sin ningún indicador medido. ¿Qué falta?",
+  "en": "The team delivers impeccable AS-IS and TO-BE diagrams, but without a single measured indicator. What is missing?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/0",
+  "es": "El baseline cuantitativo: lead time, processing time, personas, capturas, tasa de error y costo por transacción",
+  "en": "The quantitative baseline: lead time, processing time, people, manual data entries, error rate and cost per transaction"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/1",
+  "es": "Nada: el diagrama es suficiente evidencia de comprensión",
+  "en": "Nothing: the diagram is enough evidence of understanding"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/2",
+  "es": "El diagrama BPMN en notación formal",
+  "en": "The BPMN diagram in formal notation"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/opciones/3",
+  "es": "La firma del patrocinador del proyecto",
+  "en": "The project sponsor's signature"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/explicacion",
+  "es": "«Un diagrama demuestra cómo entendieron el proceso; los datos demuestran si su propuesta realmente lo mejora.»",
+  "en": "“A diagram shows how you understood the process; the data shows whether your proposal actually improves it.”"
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/porQueNo/1",
+  "es": "El diagrama demuestra comprensión, no mejora.",
+  "en": "The diagram demonstrates understanding, not improvement."
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/porQueNo/2",
+  "es": "La notación formal ayuda a comunicar, pero no cuantifica el beneficio.",
+  "en": "Formal notation helps you communicate, but it does not quantify the benefit."
+ },
+ {
+  "ruta": "practica/opcionMultiple/15/porQueNo/3",
+  "es": "El patrocinio no sustituye la evidencia técnica.",
+  "en": "Sponsorship does not replace technical evidence."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/tema",
+  "es": "Matriz proceso-aplicación",
+  "en": "Process-application matrix"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/pregunta",
+  "es": "¿Qué revela principalmente una matriz proceso-aplicación?",
+  "en": "What does a process-application matrix mainly reveal?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/0",
+  "es": "La fragmentación: qué etapas dependen de qué herramientas y dónde salta la información",
+  "en": "Fragmentation: which stages depend on which tools and where information jumps"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/1",
+  "es": "El costo total de licenciamiento del portafolio",
+  "en": "The total licensing cost of the portfolio"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/2",
+  "es": "El orden cronológico de implementación de los sistemas",
+  "en": "The chronological order in which the systems were implemented"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/opciones/3",
+  "es": "La capacidad de cómputo requerida por cada aplicación",
+  "en": "The computing capacity each application requires"
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/explicacion",
+  "es": "En el caso de alta de proveedores, la matriz muestra que ninguna aplicación cubre el proceso completo y que la información salta entre Excel, correo, ERP y SharePoint.",
+  "en": "In the supplier onboarding case, the matrix shows that no application covers the whole process and that information jumps between Excel, email, ERP and SharePoint."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/porQueNo/1",
+  "es": "El costo se documenta en el portafolio de aplicaciones, no en la matriz.",
+  "en": "Cost is documented in the application portfolio, not in the matrix."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/porQueNo/2",
+  "es": "La cronología es materia del roadmap.",
+  "en": "Chronology is a matter for the roadmap."
+ },
+ {
+  "ruta": "practica/opcionMultiple/16/porQueNo/3",
+  "es": "Los requisitos de cómputo pertenecen al dominio tecnológico.",
+  "en": "Computing requirements belong to the technology domain."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/tema",
+  "es": "Problem statement",
+  "en": "Problem statement"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/pregunta",
+  "es": "¿Cuál de estos enunciados sirve como problem statement del reto?",
+  "en": "Which of these statements works as the problem statement for the challenge?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/0",
+  "es": "El alta de un proveedor tarda 72 h con 6 personas, 4 sistemas, 3 capturas manuales y 8 % de error, lo que retrasa compras críticas",
+  "en": "Onboarding a supplier takes 72 h with 6 people, 4 systems, 3 manual data entries and 8 % error, which delays critical purchases"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/1",
+  "es": "Necesitamos implementar un portal de proveedores con workflow",
+  "en": "We need to implement a supplier portal with workflow"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/2",
+  "es": "El proceso de compras es ineficiente y hay que mejorarlo",
+  "en": "The purchasing process is inefficient and has to be improved"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/opciones/3",
+  "es": "Compras, Finanzas, Legal y TI participan en el alta de proveedores",
+  "en": "Purchasing, Finance, Legal and IT take part in supplier onboarding"
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/explicacion",
+  "es": "Un problem statement dice qué ocurre, con qué magnitud medida y qué consecuencia tiene. Es la base para justificar el TO-BE.",
+  "en": "A problem statement says what is happening, with what measured magnitude and what consequence it has. It is the basis for justifying the TO-BE."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/porQueNo/1",
+  "es": "Eso es una solución propuesta, no un problema.",
+  "en": "That is a proposed solution, not a problem."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/porQueNo/2",
+  "es": "«Ineficiente» sin magnitud no permite medir mejora alguna.",
+  "en": "“Inefficient” without a magnitude lets you measure no improvement at all."
+ },
+ {
+  "ruta": "practica/opcionMultiple/17/porQueNo/3",
+  "es": "Eso describe participantes; no enuncia el problema ni su impacto.",
+  "en": "That describes participants; it does not state the problem or its impact."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/tema",
+  "es": "Marcos complementarios",
+  "en": "Complementary frameworks"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/pregunta",
+  "es": "Una empresa tiene simultáneamente: arquitectura fragmentada tras adquisiciones, hallazgos de auditoría de TI, incidentes que tardan días y necesidad de certificar seguridad. ¿Qué hace?",
+  "en": "A company has all of these at once: a fragmented architecture after acquisitions, IT audit findings, incidents that take days, and the need to certify security. What does it do?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/0",
+  "es": "Usar varios marcos de manera complementaria: TOGAF, COBIT, ITIL e ISO/IEC 27001",
+  "en": "Use several frameworks in a complementary way: TOGAF, COBIT, ITIL and ISO/IEC 27001"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/1",
+  "es": "Elegir el marco más completo y descartar los demás",
+  "en": "Choose the most complete framework and discard the rest"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/2",
+  "es": "Esperar a resolver un problema antes de atender el siguiente",
+  "en": "Wait until one problem is solved before tackling the next"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/opciones/3",
+  "es": "Adoptar únicamente ISO 9001, que cubre todo lo relacionado con gestión",
+  "en": "Adopt ISO 9001 only, since it covers everything related to management"
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/explicacion",
+  "es": "Cada marco responde una pregunta distinta y pueden coexistir. No se trata de elegir un ganador.",
+  "en": "Each framework answers a different question and they can coexist. It is not about picking a winner."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/porQueNo/1",
+  "es": "Ningún marco cubre bien las cuatro preguntas a la vez.",
+  "en": "No framework covers all four questions well at the same time."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/porQueNo/2",
+  "es": "Los problemas son de naturaleza distinta y pueden atenderse en paralelo con responsables distintos.",
+  "en": "The problems are different in nature and can be addressed in parallel with different owners."
+ },
+ {
+  "ruta": "practica/opcionMultiple/18/porQueNo/3",
+  "es": "ISO 9001 gestiona calidad; no resuelve arquitectura, gobierno de TI ni seguridad.",
+  "en": "ISO 9001 manages quality; it does not solve architecture, IT governance or security."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/tema",
+  "es": "TOGAF aplicado",
+  "en": "TOGAF applied"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/pregunta",
+  "es": "Ante «quiero implementar e-commerce», ¿cuál es la pregunta del dominio de datos?",
+  "en": "Faced with “I want to implement e-commerce”, what is the data domain question?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/0",
+  "es": "¿Dónde viven y quién gobierna cliente, producto, precio e inventario?",
+  "en": "Where do customer, product, price and inventory live, and who governs them?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/1",
+  "es": "¿El e-commerce se integra con ERP, CRM y WMS?",
+  "en": "Does e-commerce integrate with ERP, CRM and WMS?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/2",
+  "es": "¿Necesitamos API gateway e identidad en la nube?",
+  "en": "Do we need an API gateway and cloud identity?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/opciones/3",
+  "es": "¿Cómo cambia el proceso Order-to-Cash?",
+  "en": "How does the Order-to-Cash process change?"
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/explicacion",
+  "es": "Datos: qué información se necesita, dónde se origina, quién responde por ella y con qué calidad.",
+  "en": "Data: what information is needed, where it originates, who is accountable for it and with what quality."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/porQueNo/1",
+  "es": "Esa es la pregunta del dominio de aplicaciones.",
+  "en": "That is the application domain question."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/porQueNo/2",
+  "es": "Esa es la pregunta del dominio tecnológico.",
+  "en": "That is the technology domain question."
+ },
+ {
+  "ruta": "practica/opcionMultiple/19/porQueNo/3",
+  "es": "Esa es la pregunta del dominio de negocio.",
+  "en": "That is the business domain question."
+ },
+ {
+  "ruta": "practica/escenarios/0/escenario",
+  "es": "Después de adquirir tres empresas hay que rediseñar la arquitectura global y decidir qué se integra, qué se estandariza y qué se retira.",
+  "en": "After acquiring three companies, you have to redesign the global architecture and decide what gets integrated, what gets standardized and what gets retired."
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/0",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/1",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/2",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/escenarios/0/opciones/3",
+  "es": "ISO 9001",
+  "en": "ISO 9001"
+ },
+ {
+  "ruta": "practica/escenarios/0/explicacion",
+  "es": "TOGAF responde a «¿cómo diseño y hago evolucionar la arquitectura empresarial?».",
+  "en": "TOGAF answers “how do I design and evolve the enterprise architecture?”."
+ },
+ {
+  "ruta": "practica/escenarios/0/porQueNo/1",
+  "es": "COBIT gobierna y controla TI.",
+  "en": "COBIT governs and controls IT."
+ },
+ {
+  "ruta": "practica/escenarios/0/porQueNo/2",
+  "es": "ITIL gestiona servicios de TI.",
+  "en": "ITIL manages IT services."
+ },
+ {
+  "ruta": "practica/escenarios/0/porQueNo/3",
+  "es": "ISO 9001 gestiona calidad.",
+  "en": "ISO 9001 manages quality."
+ },
+ {
+  "ruta": "practica/escenarios/1/escenario",
+  "es": "Una auditoría detectó controles de TI deficientes: no hay responsables claros, ni métricas, ni evidencia de que el riesgo esté acotado.",
+  "en": "An audit found deficient IT controls: there are no clear owners, no metrics, and no evidence that the risk is bounded."
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/0",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/1",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/2",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/escenarios/1/opciones/3",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "practica/escenarios/1/explicacion",
+  "es": "COBIT responde a «¿cómo gobierno y controlo TI?»: accountability, controles, riesgo, métricas y alineación.",
+  "en": "COBIT answers “how do I govern and control IT?”: accountability, controls, risk, metrics and alignment."
+ },
+ {
+  "ruta": "practica/escenarios/1/porQueNo/1",
+  "es": "ITIL diseña y opera servicios, no el sistema de control.",
+  "en": "ITIL designs and operates services, not the control system."
+ },
+ {
+  "ruta": "practica/escenarios/1/porQueNo/2",
+  "es": "TOGAF diseña la arquitectura.",
+  "en": "TOGAF designs the architecture."
+ },
+ {
+  "ruta": "practica/escenarios/1/porQueNo/3",
+  "es": "BPMN dibuja procesos.",
+  "en": "BPMN draws processes."
+ },
+ {
+  "ruta": "practica/escenarios/2/escenario",
+  "es": "Los usuarios se quejan de que los incidentes tardan días en resolverse y de que el mismo problema se repite cada mes.",
+  "en": "Users complain that incidents take days to resolve and that the same problem comes back every month."
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/0",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/1",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/2",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/escenarios/2/opciones/3",
+  "es": "ISO 9001",
+  "en": "ISO 9001"
+ },
+ {
+  "ruta": "practica/escenarios/2/explicacion",
+  "es": "ITIL responde a «¿cómo diseño, entrego, soporto y mejoro el servicio?»: incidentes, problemas, cambios y mejora continua.",
+  "en": "ITIL answers “how do I design, deliver, support and improve the service?”: incidents, problems, changes and continuous improvement."
+ },
+ {
+  "ruta": "practica/escenarios/2/porQueNo/1",
+  "es": "COBIT preguntaría por controles y responsabilidad, no por la operación del servicio.",
+  "en": "COBIT would ask about controls and accountability, not about running the service."
+ },
+ {
+  "ruta": "practica/escenarios/2/porQueNo/2",
+  "es": "Zachman clasifica vistas.",
+  "en": "Zachman classifies views."
+ },
+ {
+  "ruta": "practica/escenarios/2/porQueNo/3",
+  "es": "ISO 9001 es calidad en general.",
+  "en": "ISO 9001 is quality in general."
+ },
+ {
+  "ruta": "practica/escenarios/3/escenario",
+  "es": "El corporativo necesita implementar un sistema de gestión de seguridad de la información que sea certificable ante un tercero.",
+  "en": "The corporate office needs to implement an information security management system that can be certified by a third party."
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/0",
+  "es": "ISO/IEC 27001",
+  "en": "ISO/IEC 27001"
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/1",
+  "es": "ISO/IEC 20000-1",
+  "en": "ISO/IEC 20000-1"
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/2",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/escenarios/3/opciones/3",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/escenarios/3/explicacion",
+  "es": "ISO/IEC 27001 establece los requisitos certificables de un SGSI.",
+  "en": "ISO/IEC 27001 sets the certifiable requirements for an ISMS."
+ },
+ {
+  "ruta": "practica/escenarios/3/porQueNo/1",
+  "es": "ISO/IEC 20000-1 certifica gestión de servicios de TI, no seguridad.",
+  "en": "ISO/IEC 20000-1 certifies IT service management, not security."
+ },
+ {
+  "ruta": "practica/escenarios/3/porQueNo/2",
+  "es": "COBIT es marco de gobierno, no norma certificable.",
+  "en": "COBIT is a governance framework, not a certifiable standard."
+ },
+ {
+  "ruta": "practica/escenarios/3/porQueNo/3",
+  "es": "TOGAF es marco de arquitectura.",
+  "en": "TOGAF is an architecture framework."
+ },
+ {
+  "ruta": "practica/escenarios/4/escenario",
+  "es": "Se necesita representar gráficamente el proceso Order-to-Cash con eventos, compuertas y carriles por participante.",
+  "en": "You need to represent the Order-to-Cash process graphically, with events, gateways and lanes per participant."
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/0",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/1",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/2",
+  "es": "DMAIC",
+  "en": "DMAIC"
+ },
+ {
+  "ruta": "practica/escenarios/4/opciones/3",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/escenarios/4/explicacion",
+  "es": "BPMN es la notación estandarizada para modelar procesos con eventos, actividades, compuertas, flujos y participantes.",
+  "en": "BPMN is the standardized notation for modeling processes with events, activities, gateways, flows and participants."
+ },
+ {
+  "ruta": "practica/escenarios/4/porQueNo/1",
+  "es": "Zachman es una taxonomía de vistas.",
+  "en": "Zachman is a taxonomy of views."
+ },
+ {
+  "ruta": "practica/escenarios/4/porQueNo/2",
+  "es": "DMAIC es un ciclo de mejora, no una notación.",
+  "en": "DMAIC is an improvement cycle, not a notation."
+ },
+ {
+  "ruta": "practica/escenarios/4/porQueNo/3",
+  "es": "COBIT es gobierno de TI.",
+  "en": "COBIT is IT governance."
+ },
+ {
+  "ruta": "practica/escenarios/5/escenario",
+  "es": "El proceso de alta de proveedores tiene 72 horas de duración, con esperas largas, tres capturas del mismo dato y 8 % de errores que obligan a rehacer trabajo.",
+  "en": "The supplier onboarding process lasts 72 hours, with long waits, three entries of the same data and 8 % errors that force work to be redone."
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/0",
+  "es": "Lean y Six Sigma",
+  "en": "Lean and Six Sigma"
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/1",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/2",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/escenarios/5/opciones/3",
+  "es": "ISO/IEC 27001",
+  "en": "ISO/IEC 27001"
+ },
+ {
+  "ruta": "practica/escenarios/5/explicacion",
+  "es": "Lean elimina el desperdicio (esperas, capturas duplicadas, retrabajo) y Six Sigma ataca la tasa de error y la variación.",
+  "en": "Lean removes the waste (waits, duplicate data entry, rework) and Six Sigma attacks the error rate and the variation."
+ },
+ {
+  "ruta": "practica/escenarios/5/porQueNo/1",
+  "es": "ITIL aplica a servicios de TI, no a este proceso de negocio.",
+  "en": "ITIL applies to IT services, not to this business process."
+ },
+ {
+  "ruta": "practica/escenarios/5/porQueNo/2",
+  "es": "Zachman no mejora procesos.",
+  "en": "Zachman does not improve processes."
+ },
+ {
+  "ruta": "practica/escenarios/5/porQueNo/3",
+  "es": "La seguridad no es el problema planteado.",
+  "en": "Security is not the problem being posed."
+ },
+ {
+  "ruta": "practica/escenarios/6/escenario",
+  "es": "Hay muchos diagramas técnicos pero la dirección no encuentra respuesta a quién es responsable, cuándo ocurren los eventos y por qué existe cada capacidad.",
+  "en": "There are plenty of technical diagrams, but management finds no answer to who is accountable, when the events happen and why each capability exists."
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/0",
+  "es": "Zachman",
+  "en": "Zachman"
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/1",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/2",
+  "es": "Lean",
+  "en": "Lean"
+ },
+ {
+  "ruta": "practica/escenarios/6/opciones/3",
+  "es": "DMAIC",
+  "en": "DMAIC"
+ },
+ {
+  "ruta": "practica/escenarios/6/explicacion",
+  "es": "Zachman comprueba que estén cubiertas las seis preguntas: What, How, Where, Who, When y Why, desde distintas perspectivas.",
+  "en": "Zachman checks that the six questions are covered: What, How, Where, Who, When and Why, from different perspectives."
+ },
+ {
+  "ruta": "practica/escenarios/6/porQueNo/1",
+  "es": "ITIL gestiona servicios.",
+  "en": "ITIL manages services."
+ },
+ {
+  "ruta": "practica/escenarios/6/porQueNo/2",
+  "es": "Lean elimina desperdicio.",
+  "en": "Lean removes waste."
+ },
+ {
+  "ruta": "practica/escenarios/6/porQueNo/3",
+  "es": "DMAIC estructura un proyecto de mejora.",
+  "en": "DMAIC structures an improvement project."
+ },
+ {
+  "ruta": "practica/escenarios/7/escenario",
+  "es": "El equipo debe entregar un documento formal de arquitectura de solución que incluya process map, matriz de aplicaciones, data flow, gap analysis y roadmap.",
+  "en": "The team must deliver a formal solution architecture document that includes a process map, application matrix, data flow, gap analysis and roadmap."
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/0",
+  "es": "Un deliverable que contiene varios artefactos",
+  "en": "A deliverable that contains several artifacts"
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/1",
+  "es": "Un artefacto que contiene varios deliverables",
+  "en": "An artifact that contains several deliverables"
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/2",
+  "es": "Cinco deliverables independientes",
+  "en": "Five independent deliverables"
+ },
+ {
+  "ruta": "practica/escenarios/7/opciones/3",
+  "es": "Un viewpoint",
+  "en": "A viewpoint"
+ },
+ {
+  "ruta": "practica/escenarios/7/explicacion",
+  "es": "El deliverable es el entregable formal; los artefactos son las piezas estructuradas de información que contiene.",
+  "en": "The deliverable is the formal delivery; the artifacts are the structured pieces of information it contains."
+ },
+ {
+  "ruta": "practica/escenarios/7/porQueNo/1",
+  "es": "Está invertido.",
+  "en": "It is the other way around."
+ },
+ {
+  "ruta": "practica/escenarios/7/porQueNo/2",
+  "es": "Se entrega un documento, no cinco entregables separados.",
+  "en": "You deliver one document, not five separate deliverables."
+ },
+ {
+  "ruta": "practica/escenarios/7/porQueNo/3",
+  "es": "Un viewpoint es la convención para construir una vista, no un documento.",
+  "en": "A viewpoint is the convention for building a view, not a document."
+ },
+ {
+  "ruta": "practica/clasificar/0/consigna",
+  "es": "Asigna cada situación al marco, norma o metodología que la resuelve.",
+  "en": "Assign each situation to the framework, standard or methodology that solves it."
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/0",
+  "es": "TOGAF",
+  "en": "TOGAF"
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/1",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/2",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/3",
+  "es": "Lean / Six Sigma",
+  "en": "Lean / Six Sigma"
+ },
+ {
+  "ruta": "practica/clasificar/0/categorias/4",
+  "es": "BPMN",
+  "en": "BPMN"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/0/texto",
+  "es": "Rediseñar la arquitectura tras tres adquisiciones",
+  "en": "Redesign the architecture after three acquisitions"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/1/texto",
+  "es": "Definir el TO-BE y el roadmap de migración",
+  "en": "Define the TO-BE and the migration roadmap"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/2/texto",
+  "es": "Auditoría halló controles de TI deficientes",
+  "en": "Audit found deficient IT controls"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/3/texto",
+  "es": "Definir accountability y métricas de TI",
+  "en": "Define IT accountability and metrics"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/4/texto",
+  "es": "Incidentes que tardan días en resolverse",
+  "en": "Incidents that take days to resolve"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/5/texto",
+  "es": "Gestionar problemas recurrentes y cambios",
+  "en": "Manage recurring problems and changes"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/6/texto",
+  "es": "23 h de espera y 3 capturas duplicadas",
+  "en": "23 h of wait time and 3 duplicate data entries"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/7/texto",
+  "es": "Tasa de error del 8 % con alta variación",
+  "en": "8 % error rate with high variation"
+ },
+ {
+  "ruta": "practica/clasificar/0/items/8/texto",
+  "es": "Dibujar Order-to-Cash con carriles y compuertas",
+  "en": "Draw Order-to-Cash with lanes and gateways"
+ },
+ {
+  "ruta": "practica/clasificar/0/explicacion",
+  "es": "Regla mnemotécnica: <b>TOGAF</b> diseña la arquitectura, <b>COBIT</b> gobierna, <b>ITIL</b> opera el servicio, <b>Lean/Six Sigma</b> mejora el proceso y <b>BPMN</b> lo dibuja.",
+  "en": "Mnemonic rule: <b>TOGAF</b> designs the architecture, <b>COBIT</b> governs, <b>ITIL</b> operates the service, <b>Lean/Six Sigma</b> improves the process and <b>BPMN</b> draws it."
+ },
+ {
+  "ruta": "practica/clasificar/1/consigna",
+  "es": "Clasifica cada elemento del caso «alta de proveedores» según el tipo de artefacto.",
+  "en": "Classify each element of the “supplier onboarding” case by artifact type."
+ },
+ {
+  "ruta": "practica/clasificar/1/categorias/0",
+  "es": "Catálogo o inventario",
+  "en": "Catalog or inventory"
+ },
+ {
+  "ruta": "practica/clasificar/1/categorias/1",
+  "es": "Matriz",
+  "en": "Matrix"
+ },
+ {
+  "ruta": "practica/clasificar/1/categorias/2",
+  "es": "Diagrama o mapa",
+  "en": "Diagram or map"
+ },
+ {
+  "ruta": "practica/clasificar/1/categorias/3",
+  "es": "Análisis o plan",
+  "en": "Analysis or plan"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/0/texto",
+  "es": "Application Portfolio con owner y criticidad",
+  "en": "Application Portfolio with owner and criticality"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/1/texto",
+  "es": "Inventario de datos maestros de proveedor",
+  "en": "Supplier master data inventory"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/2/texto",
+  "es": "Proceso × Aplicación",
+  "en": "Process × Application"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/3/texto",
+  "es": "Capacidad × Área responsable",
+  "en": "Capability × Accountable area"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/4/texto",
+  "es": "Process Map AS-IS",
+  "en": "Process Map AS-IS"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/5/texto",
+  "es": "Diagrama de integración TO-BE",
+  "en": "TO-BE integration diagram"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/6/texto",
+  "es": "Data / Information Flow",
+  "en": "Data / Information Flow"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/7/texto",
+  "es": "Gap Analysis",
+  "en": "Gap Analysis"
+ },
+ {
+  "ruta": "practica/clasificar/1/items/8/texto",
+  "es": "Roadmap de implementación",
+  "en": "Implementation roadmap"
+ },
+ {
+  "ruta": "practica/clasificar/1/explicacion",
+  "es": "Catálogo: lista organizada. Matriz: relación entre dos dimensiones. Diagrama o mapa: representación visual de componentes y flujos. Análisis o plan: interpretación y secuencia de acción.",
+  "en": "Catalog: an organized list. Matrix: a relationship between two dimensions. Diagram or map: a visual representation of components and flows. Analysis or plan: interpretation and sequence of action."
+ },
+ {
+  "ruta": "practica/clasificar/2/consigna",
+  "es": "Clasifica cada indicador del reto según lo que mide.",
+  "en": "Classify each indicator of the challenge by what it measures."
+ },
+ {
+  "ruta": "practica/clasificar/2/categorias/0",
+  "es": "Tiempo",
+  "en": "Time"
+ },
+ {
+  "ruta": "practica/clasificar/2/categorias/1",
+  "es": "Esfuerzo o recursos",
+  "en": "Effort or resources"
+ },
+ {
+  "ruta": "practica/clasificar/2/categorias/2",
+  "es": "Calidad",
+  "en": "Quality"
+ },
+ {
+  "ruta": "practica/clasificar/2/categorias/3",
+  "es": "Costo",
+  "en": "Cost"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/0/texto",
+  "es": "Lead time (72 h → 8 h)",
+  "en": "Lead time (72 h → 8 h)"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/1/texto",
+  "es": "Processing time (45 min → 15 min)",
+  "en": "Processing time (45 min → 15 min)"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/2/texto",
+  "es": "Personas involucradas (6 → 3)",
+  "en": "People involved (6 → 3)"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/3/texto",
+  "es": "Capturas manuales (3 → 1)",
+  "en": "Manual data entries (3 → 1)"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/4/texto",
+  "es": "Tasa de error (8 % → 1 %)",
+  "en": "Error rate (8 % → 1 %)"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/5/texto",
+  "es": "Retrabajos por dato incorrecto",
+  "en": "Rework caused by incorrect data"
+ },
+ {
+  "ruta": "practica/clasificar/2/items/6/texto",
+  "es": "Costo por transacción ($180 → $70)",
+  "en": "Cost per transaction ($180 → $70)"
+ },
+ {
+  "ruta": "practica/clasificar/2/explicacion",
+  "es": "Un baseline completo cubre las cuatro dimensiones. Presentar solo tiempo deja fuera la mitad del argumento de valor.",
+  "en": "A complete baseline covers all four dimensions. Presenting time alone leaves out half of the value argument."
+ },
+ {
+  "ruta": "practica/clasificar/3/consigna",
+  "es": "Clasifica cada aplicación empresarial por el área que atiende principalmente.",
+  "en": "Classify each enterprise application by the area it mainly serves."
+ },
+ {
+  "ruta": "practica/clasificar/3/categorias/0",
+  "es": "Ventas y clientes",
+  "en": "Sales and customers"
+ },
+ {
+  "ruta": "practica/clasificar/3/categorias/1",
+  "es": "Operación y manufactura",
+  "en": "Operations and manufacturing"
+ },
+ {
+  "ruta": "practica/clasificar/3/categorias/2",
+  "es": "Finanzas y transacciones",
+  "en": "Finance and transactions"
+ },
+ {
+  "ruta": "practica/clasificar/3/categorias/3",
+  "es": "Personas y soporte",
+  "en": "People and support"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/0/texto",
+  "es": "CRM",
+  "en": "CRM"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/1/texto",
+  "es": "Portal de e-commerce",
+  "en": "E-commerce portal"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/2/texto",
+  "es": "MES",
+  "en": "MES"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/3/texto",
+  "es": "WMS",
+  "en": "WMS"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/4/texto",
+  "es": "PLM",
+  "en": "PLM"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/5/texto",
+  "es": "ERP",
+  "en": "ERP"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/6/texto",
+  "es": "HCM",
+  "en": "HCM"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/7/texto",
+  "es": "ITSM",
+  "en": "ITSM"
+ },
+ {
+  "ruta": "practica/clasificar/3/items/8/texto",
+  "es": "ECM / DMS",
+  "en": "ECM / DMS"
+ },
+ {
+  "ruta": "practica/clasificar/3/explicacion",
+  "es": "Una empresa grande no tiene «un sistema»: tiene un ecosistema. Reconocer a qué área sirve cada pieza es el primer paso para detectar duplicidad.",
+  "en": "A large company does not have “one system”: it has an ecosystem. Recognizing which area each piece serves is the first step toward spotting duplication."
+ },
+ {
+  "ruta": "practica/ordenar/0/consigna",
+  "es": "Ordena la secuencia que debe seguir un proyecto de TI desde la necesidad hasta la tecnología.",
+  "en": "Put in order the sequence an IT project should follow, from the need to the technology."
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/0",
+  "es": "Necesidad del negocio",
+  "en": "Business need"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/1",
+  "es": "Proceso",
+  "en": "Process"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/2",
+  "es": "Problema u oportunidad",
+  "en": "Problem or opportunity"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/3",
+  "es": "Datos",
+  "en": "Data"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/4",
+  "es": "Capacidades",
+  "en": "Capabilities"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/5",
+  "es": "Requerimientos",
+  "en": "Requirements"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/6",
+  "es": "Arquitectura",
+  "en": "Architecture"
+ },
+ {
+  "ruta": "practica/ordenar/0/pasos/7",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "practica/ordenar/0/explicacion",
+  "es": "Empezar por la tecnología («encontré una herramienta de IA, ¿dónde la usamos?») invierte la lógica y produce soluciones sin justificación de negocio.",
+  "en": "Starting from the technology (“I found an AI tool, where do we use it?”) inverts the logic and produces solutions with no business justification."
+ },
+ {
+  "ruta": "practica/ordenar/1/consigna",
+  "es": "Ordena las cinco etapas del SIPOC.",
+  "en": "Put the five stages of SIPOC in order."
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/0",
+  "es": "Supplier",
+  "en": "Supplier"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/1",
+  "es": "Input",
+  "en": "Input"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/2",
+  "es": "Process",
+  "en": "Process"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/3",
+  "es": "Output",
+  "en": "Output"
+ },
+ {
+  "ruta": "practica/ordenar/1/pasos/4",
+  "es": "Customer",
+  "en": "Customer"
+ },
+ {
+  "ruta": "practica/ordenar/1/explicacion",
+  "es": "SIPOC delimita el alcance del proceso antes de modelarlo en detalle: quién provee, qué entra, qué se hace, qué sale y quién lo recibe.",
+  "en": "SIPOC bounds the scope of the process before you model it in detail: who supplies, what comes in, what is done, what goes out and who receives it."
+ },
+ {
+  "ruta": "practica/ordenar/2/consigna",
+  "es": "Ordena el ciclo DMAIC.",
+  "en": "Put the DMAIC cycle in order."
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/0",
+  "es": "Define",
+  "en": "Define"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/1",
+  "es": "Measure",
+  "en": "Measure"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/2",
+  "es": "Analyze",
+  "en": "Analyze"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/3",
+  "es": "Improve",
+  "en": "Improve"
+ },
+ {
+  "ruta": "practica/ordenar/2/pasos/4",
+  "es": "Control",
+  "en": "Control"
+ },
+ {
+  "ruta": "practica/ordenar/2/explicacion",
+  "es": "Medir antes de analizar es lo que produce el baseline; controlar al final es lo que evita que el proceso regrese a su estado anterior.",
+  "en": "Measuring before analyzing is what produces the baseline; controlling at the end is what keeps the process from sliding back to its previous state."
+ },
+ {
+  "ruta": "practica/ordenar/3/consigna",
+  "es": "Ordena los ocho artefactos del reto en el orden en que conviene construirlos.",
+  "en": "Put the eight artifacts of the challenge in the order in which it makes sense to build them."
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/0",
+  "es": "Problem Statement",
+  "en": "Problem Statement"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/1",
+  "es": "SIPOC / Process Map",
+  "en": "SIPOC / Process Map"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/2",
+  "es": "AS-IS Process",
+  "en": "AS-IS Process"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/3",
+  "es": "Application Landscape",
+  "en": "Application Landscape"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/4",
+  "es": "Process-Application Matrix",
+  "en": "Process-Application Matrix"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/5",
+  "es": "Data / Information Flow",
+  "en": "Data / Information Flow"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/6",
+  "es": "TO-BE Architecture / Process",
+  "en": "TO-BE Architecture / Process"
+ },
+ {
+  "ruta": "practica/ordenar/3/pasos/7",
+  "es": "Gap Analysis + Roadmap",
+  "en": "Gap Analysis + Roadmap"
+ },
+ {
+  "ruta": "practica/ordenar/3/explicacion",
+  "es": "Primero se enuncia y delimita el problema, después se documenta la realidad, luego se diseña el futuro y al final se planea la transición.",
+  "en": "First you state and bound the problem, then you document reality, then you design the future and finally you plan the transition."
+ },
+ {
+  "ruta": "practica/ordenar/4/consigna",
+  "es": "Ordena el flujo del proceso de compras del ejemplo.",
+  "en": "Put the purchasing process flow from the example in order."
+ },
+ {
+  "ruta": "practica/ordenar/4/pasos/0",
+  "es": "Solicitud del usuario",
+  "en": "User request"
+ },
+ {
+  "ruta": "practica/ordenar/4/pasos/1",
+  "es": "Aprobación",
+  "en": "Approval"
+ },
+ {
+  "ruta": "practica/ordenar/4/pasos/2",
+  "es": "Cotización",
+  "en": "Quotation"
+ },
+ {
+  "ruta": "practica/ordenar/4/pasos/3",
+  "es": "Orden de compra",
+  "en": "Purchase order"
+ },
+ {
+  "ruta": "practica/ordenar/4/pasos/4",
+  "es": "Recepción",
+  "en": "Receipt"
+ },
+ {
+  "ruta": "practica/ordenar/4/pasos/5",
+  "es": "Factura",
+  "en": "Invoice"
+ },
+ {
+  "ruta": "practica/ordenar/4/pasos/6",
+  "es": "Pago",
+  "en": "Payment"
+ },
+ {
+  "ruta": "practica/ordenar/4/explicacion",
+  "es": "Documentar el flujo real es el paso previo a medir dónde se acumulan las esperas.",
+  "en": "Documenting the real flow is the step before measuring where the waits pile up."
+ },
+ {
+  "ruta": "practica/flashcards/0/frente",
+  "es": "La secuencia correcta de un proyecto de TI",
+  "en": "The correct sequence of an IT project"
+ },
+ {
+  "ruta": "practica/flashcards/0/reverso",
+  "es": "Necesidad del negocio → Proceso → Problema → Datos → Capacidades → Requerimientos → Arquitectura → Tecnología.",
+  "en": "Business need → Process → Problem → Data → Capabilities → Requirements → Architecture → Technology."
+ },
+ {
+  "ruta": "practica/flashcards/1/frente",
+  "es": "Digitalización",
+  "en": "Digitization"
+ },
+ {
+  "ruta": "practica/flashcards/1/reverso",
+  "es": "La información o actividad pasa a medios digitales, sin cambiar el proceso. Un PDF en lugar de papel sigue siendo el mismo flujo.",
+  "en": "The information or activity moves to digital media, without changing the process. A PDF instead of paper is still the same flow."
+ },
+ {
+  "ruta": "practica/flashcards/2/frente",
+  "es": "Automatización",
+  "en": "Automation"
+ },
+ {
+  "ruta": "practica/flashcards/2/reverso",
+  "es": "El sistema ejecuta la actividad: consulta el saldo, envía la aprobación, actualiza el registro.",
+  "en": "The system performs the activity: it checks the balance, sends the approval, updates the record."
+ },
+ {
+  "ruta": "practica/flashcards/3/frente",
+  "es": "Transformación digital",
+  "en": "Digital transformation"
+ },
+ {
+  "ruta": "practica/flashcards/3/reverso",
+  "es": "Se cuestiona el proceso completo y cambian capacidades, experiencia del cliente o modelo de negocio.",
+  "en": "You question the whole process, and capabilities, customer experience or the business model change."
+ },
+ {
+  "ruta": "practica/flashcards/4/frente",
+  "es": "SIPOC",
+  "en": "SIPOC"
+ },
+ {
+  "ruta": "practica/flashcards/4/reverso",
+  "es": "Supplier → Input → Process → Output → Customer. Delimita el alcance del proceso antes de modelarlo.",
+  "en": "Supplier → Input → Process → Output → Customer. It bounds the scope of the process before you model it."
+ },
+ {
+  "ruta": "practica/flashcards/5/frente",
+  "es": "Lead time vs. processing time",
+  "en": "Lead time vs. processing time"
+ },
+ {
+  "ruta": "practica/flashcards/5/reverso",
+  "es": "Lead time: tiempo total transcurrido, incluidas las esperas. Processing time: solo el trabajo real. 22 min de trabajo frente a 23 h de lead time revela dónde está el problema.",
+  "en": "Lead time: total elapsed time, waits included. Processing time: the actual work only. 22 min of work against 23 h of lead time reveals where the problem is."
+ },
+ {
+  "ruta": "practica/flashcards/6/frente",
+  "es": "Lean",
+  "en": "Lean"
+ },
+ {
+  "ruta": "practica/flashcards/6/reverso",
+  "es": "Eliminar desperdicio: espera, retrabajo, captura duplicada, traslado innecesario, sobreproceso.",
+  "en": "Eliminate waste: waiting, rework, duplicate data entry, unnecessary movement, overprocessing."
+ },
+ {
+  "ruta": "practica/flashcards/7/frente",
+  "es": "Six Sigma",
+  "en": "Six Sigma"
+ },
+ {
+  "ruta": "practica/flashcards/7/reverso",
+  "es": "Reducir variación y defectos con base estadística.",
+  "en": "Reduce variation and defects on a statistical basis."
+ },
+ {
+  "ruta": "practica/flashcards/8/frente",
+  "es": "Kaizen",
+  "en": "Kaizen"
+ },
+ {
+  "ruta": "practica/flashcards/8/reverso",
+  "es": "Mejora continua incremental con participación de quienes ejecutan el proceso.",
+  "en": "Incremental continuous improvement, with the participation of the people who run the process."
+ },
+ {
+  "ruta": "practica/flashcards/9/frente",
+  "es": "DMAIC",
+  "en": "DMAIC"
+ },
+ {
+  "ruta": "practica/flashcards/9/reverso",
+  "es": "Define → Measure → Analyze → Improve → Control.",
+  "en": "Define → Measure → Analyze → Improve → Control."
+ },
+ {
+  "ruta": "practica/flashcards/10/frente",
+  "es": "COBIT",
+  "en": "COBIT"
+ },
+ {
+  "ruta": "practica/flashcards/10/reverso",
+  "es": "Gobierno de TI: ¿estamos haciendo lo correcto, controlando riesgos y generando valor? Accountability, controles, riesgo, métricas y alineación.",
+  "en": "IT governance: are we doing the right thing, controlling risks and generating value? Accountability, controls, risk, metrics and alignment."
+ },
+ {
+  "ruta": "practica/flashcards/11/frente",
+  "es": "ITIL",
+  "en": "ITIL"
+ },
+ {
+  "ruta": "practica/flashcards/11/reverso",
+  "es": "Gestión del servicio de TI: ¿cómo diseñamos, entregamos, soportamos y mejoramos el servicio? Incidentes, problemas y cambios.",
+  "en": "IT service management: how do we design, deliver, support and improve the service? Incidents, problems and changes."
+ },
+ {
+  "ruta": "practica/flashcards/12/frente",
+  "es": "ISO frente a marcos",
+  "en": "ISO versus frameworks"
+ },
+ {
+  "ruta": "practica/flashcards/12/reverso",
+  "es": "La ISO puede establecer requisitos certificables; TOGAF, COBIT e ITIL funcionan como marcos y buenas prácticas. La obligatoriedad depende de leyes, contratos o decisiones organizacionales.",
+  "en": "An ISO standard can set certifiable requirements; TOGAF, COBIT and ITIL work as frameworks and good practices. Whether they are mandatory depends on laws, contracts or organizational decisions."
+ },
+ {
+  "ruta": "practica/flashcards/13/frente",
+  "es": "Artefacto",
+  "en": "Artifact"
+ },
+ {
+  "ruta": "practica/flashcards/13/reverso",
+  "es": "Representación estructurada de un aspecto de la empresa o su arquitectura, creada para analizar, comunicar, decidir o gobernar. Puede ser catálogo, matriz, mapa, modelo, principio, roadmap o heatmap.",
+  "en": "A structured representation of an aspect of the enterprise or its architecture, created to analyze, communicate, decide or govern. It can be a catalog, matrix, map, model, principle, roadmap or heatmap."
+ },
+ {
+  "ruta": "practica/flashcards/14/frente",
+  "es": "Deliverable vs. artifact",
+  "en": "Deliverable vs. artifact"
+ },
+ {
+  "ruta": "practica/flashcards/14/reverso",
+  "es": "El deliverable es la entrega formal; un deliverable puede contener múltiples artefactos.",
+  "en": "The deliverable is the formal delivery; one deliverable can contain multiple artifacts."
+ },
+ {
+  "ruta": "practica/flashcards/15/frente",
+  "es": "View y viewpoint",
+  "en": "View and viewpoint"
+ },
+ {
+  "ruta": "practica/flashcards/15/reverso",
+  "es": "La misma arquitectura se presenta distinto al CEO (valor, riesgo, inversión), al CFO (costos, ROI), al CISO (riesgos, controles), al arquitecto (sistemas, interfaces, datos) y al developer (APIs, componentes, protocolos).",
+  "en": "The same architecture is presented differently to the CEO (value, risk, investment), the CFO (costs, ROI), the CISO (risks, controls), the architect (systems, interfaces, data) and the developer (APIs, components, protocols)."
+ },
+ {
+  "ruta": "practica/flashcards/16/frente",
+  "es": "La secuencia del reto",
+  "en": "The sequence of the challenge"
+ },
+ {
+  "ruta": "practica/flashcards/16/reverso",
+  "es": "AS-IS → Gap analysis → TO-BE → Roadmap.",
+  "en": "AS-IS → Gap analysis → TO-BE → Roadmap."
+ },
+ {
+  "ruta": "practica/flashcards/17/frente",
+  "es": "Los 8 artefactos del reto",
+  "en": "The 8 artifacts of the challenge"
+ },
+ {
+  "ruta": "practica/flashcards/17/reverso",
+  "es": "Problem statement · SIPOC/Process map · AS-IS · Application landscape · Matriz proceso-aplicación · Data flow · TO-BE · Gap analysis + roadmap.",
+  "en": "Problem statement · SIPOC/Process map · AS-IS · Application landscape · Process-application matrix · Data flow · TO-BE · Gap analysis + roadmap."
+ },
+ {
+  "ruta": "practica/flashcards/18/frente",
+  "es": "Baseline cuantitativo",
+  "en": "Quantitative baseline"
+ },
+ {
+  "ruta": "practica/flashcards/18/reverso",
+  "es": "Lead time, processing time, personas involucradas, sistemas, capturas manuales, tasa de error y costo por transacción.",
+  "en": "Lead time, processing time, people involved, systems, manual data entries, error rate and cost per transaction."
+ },
+ {
+  "ruta": "practica/flashcards/19/frente",
+  "es": "El criterio de evaluación",
+  "en": "The evaluation criterion"
+ },
+ {
+  "ruta": "practica/flashcards/19/reverso",
+  "es": "Un diagrama demuestra cómo entendieron el proceso; los datos demuestran si su propuesta realmente lo mejora.",
+  "en": "A diagram shows how you understood the process; the data shows whether your proposal really improves it."
+ },
+ {
+  "ruta": "practica/flashcards/20/frente",
+  "es": "Ecosistema de aplicaciones",
+  "en": "Application ecosystem"
+ },
+ {
+  "ruta": "practica/flashcards/20/reverso",
+  "es": "ERP, CRM, HCM, SCM, MES, WMS, PLM, ECM/DMS, BI, BPM/Workflow, ITSM. Una empresa grande no tiene «un sistema».",
+  "en": "ERP, CRM, HCM, SCM, MES, WMS, PLM, ECM/DMS, BI, BPM/Workflow, ITSM. A large company does not have “one system”."
+ },
+ {
+  "ruta": "practica/flashcards/21/frente",
+  "es": "Problem statement",
+  "en": "Problem statement"
+ },
+ {
+  "ruta": "practica/flashcards/21/reverso",
+  "es": "Qué ocurre, a quién afecta, con qué magnitud medida y qué consecuencia tiene si no se resuelve.",
+  "en": "What is happening, who it affects, with what measured magnitude and what consequence it has if it is not solved."
+ }
+]

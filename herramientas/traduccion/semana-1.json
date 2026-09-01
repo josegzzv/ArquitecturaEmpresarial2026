@@ -41,8 +41,8 @@
  },
  {
   "ruta": "dias/0/nombre",
-  "es": "Lunes · Sesión 1",
-  "en": "Monday · Session 1"
+  "es": "Sesión 1",
+  "en": "Session 1"
  },
  {
   "ruta": "dias/0/tema",
@@ -516,8 +516,8 @@
  },
  {
   "ruta": "dias/1/nombre",
-  "es": "Martes · Sesión 2",
-  "en": "Tuesday · Session 2"
+  "es": "Sesión 2",
+  "en": "Session 2"
  },
  {
   "ruta": "dias/1/tema",
@@ -1006,8 +1006,8 @@
  },
  {
   "ruta": "dias/2/nombre",
-  "es": "Miércoles · Sesión 3",
-  "en": "Wednesday · Session 3"
+  "es": "Sesión 3",
+  "en": "Session 3"
  },
  {
   "ruta": "dias/2/tema",
@@ -1436,8 +1436,8 @@
  },
  {
   "ruta": "dias/3/nombre",
-  "es": "Jueves · Sesión 4",
-  "en": "Thursday · Session 4"
+  "es": "Sesión 4",
+  "en": "Session 4"
  },
  {
   "ruta": "dias/3/tema",

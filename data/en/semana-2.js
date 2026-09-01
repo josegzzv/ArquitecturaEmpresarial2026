@@ -20,7 +20,7 @@ EA.registrarSemanaEn(
  "dias": [
   {
    "id": "martes",
-   "nombre": "Tuesday · Session 1",
+   "nombre": "Session 1",
    "tema": "From strategy to the technology project",
    "proposito": "Understand that an IT project does not start by selecting technology, and learn to gather the hard data that shows where the problem really is.",
    "bloques": [
@@ -276,14 +276,14 @@ EA.registrarSemanaEn(
     },
     {
      "tipo": "nota",
-     "titulo": "Tuesday activity",
+     "titulo": "Session 1 activity",
      "cuerpo": "<p>A company takes 72 hours to onboard a supplier. Purchasing, Finance, Legal and IT are all involved. The process uses Excel, email, the ERP and PDF documents.</p><p>In teams: objective → process → problems → KPI → possible improvements → technology that could play a part. <b>You still cannot pick a product</b>: that forces you to think like architects.</p>"
     }
    ]
   },
   {
    "id": "miercoles",
-   "nombre": "Wednesday · Session 2",
+   "nombre": "Session 2",
    "tema": "Frameworks, standards and governance",
    "proposito": "Clear up a very common confusion: not everything is a “framework” for the same thing. Each one answers a different question and they can coexist.",
    "bloques": [
@@ -404,7 +404,7 @@ EA.registrarSemanaEn(
     },
     {
      "tipo": "tabla",
-     "titulo": "Wednesday activity: what would you use?",
+     "titulo": "Session 2 activity: what would you use?",
      "encabezados": [
       "Case",
       "Answer"
@@ -445,7 +445,7 @@ EA.registrarSemanaEn(
   },
   {
    "id": "jueves",
-   "nombre": "Thursday · Session 3",
+   "nombre": "Session 3",
    "tema": "Enterprise Architecture artifacts and the challenge",
    "proposito": "Learn to document the AS-IS, design the TO-BE and demonstrate the improvement quantitatively. This is the most important session for the challenge deliverable.",
    "bloques": [

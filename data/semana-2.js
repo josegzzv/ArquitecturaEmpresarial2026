@@ -1,6 +1,6 @@
 /* ============================================================
    SEMANA 2 — De la estrategia al artefacto
-   3 sesiones de 2 horas (martes a jueves)
+   3 sesiones de 2 horas
    Caso integrador de la semana: alta de proveedores (72 h → 8 h)
    ============================================================ */
 
@@ -23,10 +23,10 @@ EA.registrarSemana({
 
   dias: [
 
-    /* ---------- MARTES ---------- */
+    /* ---------- SESIÓN 1 ---------- */
     {
       id: "martes",
-      nombre: "Martes · Sesión 1",
+      nombre: "Sesión 1",
       tema: "De la estrategia al proyecto tecnológico",
       proposito: "Entender que un proyecto de TI no comienza seleccionando tecnología, y aprender a levantar los datos duros que demuestran dónde está realmente el problema.",
       bloques: [
@@ -187,17 +187,17 @@ EA.registrarSemana({
         },
         {
           tipo: "nota",
-          titulo: "Actividad del martes",
+          titulo: "Actividad de la sesión 1",
           cuerpo: "<p>Una empresa tarda 72 horas en dar de alta un proveedor. Intervienen Compras, Finanzas, Legal y TI. El proceso usa Excel, correo, ERP y documentos PDF.</p>"
                 + "<p>En equipos: objetivo → proceso → problemas → KPI → posibles mejoras → tecnología que podría intervenir. <b>Todavía no pueden escoger producto</b>: eso los obliga a pensar como arquitectos.</p>"
         }
       ]
     },
 
-    /* ---------- MIÉRCOLES ---------- */
+    /* ---------- SESIÓN 2 ---------- */
     {
       id: "miercoles",
-      nombre: "Miércoles · Sesión 2",
+      nombre: "Sesión 2",
       tema: "Marcos, estándares y gobierno",
       proposito: "Resolver una confusión muy frecuente: no todo es un «framework» para lo mismo. Cada uno responde a una pregunta distinta y pueden coexistir.",
       bloques: [
@@ -269,7 +269,7 @@ EA.registrarSemana({
         },
         {
           tipo: "tabla",
-          titulo: "Actividad del miércoles: ¿qué usarías?",
+          titulo: "Actividad de la sesión 2: ¿qué usarías?",
           encabezados: ["Caso", "Respuesta"],
           filas: [
             ["A · Rediseñar la arquitectura global después de adquirir tres empresas", "TOGAF"],
@@ -288,10 +288,10 @@ EA.registrarSemana({
       ]
     },
 
-    /* ---------- JUEVES ---------- */
+    /* ---------- SESIÓN 3 ---------- */
     {
       id: "jueves",
-      nombre: "Jueves · Sesión 3",
+      nombre: "Sesión 3",
       tema: "Artefactos de Arquitectura Empresarial y reto",
       proposito: "Aprender a documentar el AS-IS, diseñar el TO-BE y demostrar cuantitativamente la mejora. Esta es la sesión más importante para la entrega del reto.",
       bloques: [

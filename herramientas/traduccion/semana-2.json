@@ -46,8 +46,8 @@
  },
  {
   "ruta": "dias/0/nombre",
-  "es": "Martes · Sesión 1",
-  "en": "Tuesday · Session 1"
+  "es": "Sesión 1",
+  "en": "Session 1"
  },
  {
   "ruta": "dias/0/tema",
@@ -756,8 +756,8 @@
  },
  {
   "ruta": "dias/0/bloques/15/titulo",
-  "es": "Actividad del martes",
-  "en": "Tuesday activity"
+  "es": "Actividad de la sesión 1",
+  "en": "Session 1 activity"
  },
  {
   "ruta": "dias/0/bloques/15/cuerpo",
@@ -766,8 +766,8 @@
  },
  {
   "ruta": "dias/1/nombre",
-  "es": "Miércoles · Sesión 2",
-  "en": "Wednesday · Session 2"
+  "es": "Sesión 2",
+  "en": "Session 2"
  },
  {
   "ruta": "dias/1/tema",
@@ -1046,8 +1046,8 @@
  },
  {
   "ruta": "dias/1/bloques/8/titulo",
-  "es": "Actividad del miércoles: ¿qué usarías?",
-  "en": "Wednesday activity: what would you use?"
+  "es": "Actividad de la sesión 2: ¿qué usarías?",
+  "en": "Session 2 activity: what would you use?"
  },
  {
   "ruta": "dias/1/bloques/8/encabezados/0",
@@ -1131,8 +1131,8 @@
  },
  {
   "ruta": "dias/2/nombre",
-  "es": "Jueves · Sesión 3",
-  "en": "Thursday · Session 3"
+  "es": "Sesión 3",
+  "en": "Session 3"
  },
  {
   "ruta": "dias/2/tema",

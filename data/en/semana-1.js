@@ -19,7 +19,7 @@ EA.registrarSemanaEn(
  "dias": [
   {
    "id": "lunes",
-   "nombre": "Monday · Session 1",
+   "nombre": "Session 1",
    "tema": "Introduction to Enterprise Architecture",
    "proposito": "Understand that Enterprise Architecture is not only technology: it is a way of connecting strategy, operations, information and systems in order to transform an organization.",
    "bloques": [
@@ -208,7 +208,7 @@ EA.registrarSemanaEn(
   },
   {
    "id": "martes",
-   "nombre": "Tuesday · Session 2",
+   "nombre": "Session 2",
    "tema": "Processes, BPM and value creation",
    "proposito": "Understand how processes connect different areas of the company and how the value received by the customer and the organization is measured.",
    "bloques": [
@@ -409,7 +409,7 @@ EA.registrarSemanaEn(
   },
   {
    "id": "miercoles",
-   "nombre": "Wednesday · Session 3",
+   "nombre": "Session 3",
    "tema": "Enterprise Architecture frameworks and standards",
    "proposito": "Differentiate the main frameworks and understand that a framework organizes the work, whereas a standard sets common criteria.",
    "bloques": [
@@ -550,7 +550,7 @@ EA.registrarSemanaEn(
   },
   {
    "id": "jueves",
-   "nombre": "Thursday · Session 4",
+   "nombre": "Session 4",
    "tema": "Roles, Digital Transformation and integration",
    "proposito": "Integrate strategy, architecture, processes and solution development, clarifying professional responsibilities.",
    "bloques": [

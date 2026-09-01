@@ -1,6 +1,6 @@
 /* ============================================================
    SEMANA 1 — Arquitectura Empresarial: fundamentos
-   4 sesiones de 2 horas (lunes a jueves)
+   4 sesiones de 2 horas
    ============================================================ */
 
 EA.registrarSemana({
@@ -22,10 +22,10 @@ EA.registrarSemana({
   /* ==================== CONCEPTOS POR DÍA ==================== */
   dias: [
 
-    /* ---------- LUNES ---------- */
+    /* ---------- SESIÓN 1 ---------- */
     {
       id: "lunes",
-      nombre: "Lunes · Sesión 1",
+      nombre: "Sesión 1",
       tema: "Introducción a la Arquitectura Empresarial",
       proposito: "Entender que la Arquitectura Empresarial no es solamente tecnología: es una forma de conectar estrategia, operación, información y sistemas para transformar una organización.",
       bloques: [
@@ -140,10 +140,10 @@ EA.registrarSemana({
       ]
     },
 
-    /* ---------- MARTES ---------- */
+    /* ---------- SESIÓN 2 ---------- */
     {
       id: "martes",
-      nombre: "Martes · Sesión 2",
+      nombre: "Sesión 2",
       tema: "Procesos, BPM y generación de valor",
       proposito: "Comprender cómo los procesos conectan diferentes áreas de la empresa y cómo se mide el valor que reciben el cliente y la organización.",
       bloques: [
@@ -248,10 +248,10 @@ EA.registrarSemana({
       ]
     },
 
-    /* ---------- MIÉRCOLES ---------- */
+    /* ---------- SESIÓN 3 ---------- */
     {
       id: "miercoles",
-      nombre: "Miércoles · Sesión 3",
+      nombre: "Sesión 3",
       tema: "Marcos de Arquitectura Empresarial y estándares",
       proposito: "Diferenciar los principales marcos y comprender que un marco organiza el trabajo, mientras que un estándar establece criterios comunes.",
       bloques: [
@@ -400,10 +400,10 @@ EA.registrarSemana({
       ]
     },
 
-    /* ---------- JUEVES ---------- */
+    /* ---------- SESIÓN 4 ---------- */
     {
       id: "jueves",
-      nombre: "Jueves · Sesión 4",
+      nombre: "Sesión 4",
       tema: "Roles, Transformación Digital e integración",
       proposito: "Integrar estrategia, arquitectura, procesos y desarrollo de soluciones, aclarando responsabilidades profesionales.",
       bloques: [

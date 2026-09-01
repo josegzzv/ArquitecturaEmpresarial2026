@@ -28,11 +28,10 @@ sellar() {
 import re, sys, pathlib
 sello = sys.argv[1]
 patron = re.compile(r'((?:href|src)="(?:assets/(?:css|js)|data)/[^"?]+)(\?v=\d+)?"')
-for nombre in ("index.html", "semana.html", "glosario.html", "aviso-legal.html"):
-    f = pathlib.Path(nombre)
-    if not f.exists():
-        continue
+# Todas las páginas HTML de la raíz: no hay que mantener una lista a mano.
+for f in sorted(pathlib.Path(".").glob("*.html")):
     f.write_text(patron.sub(rf'\1?v={sello}"', f.read_text()))
+    print("    ·", f.name)
 PYEOF
   echo "    Sello de versión aplicado: $sello"
 }

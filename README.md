@@ -8,6 +8,7 @@ Sin dependencias, sin build, sin servidor. Se publica tal cual en GitHub Pages.
 ```
 index.html            Portada: tarjetas de las 5 semanas
 semana.html           Página genérica de semana (semana.html?s=1)
+casos.html            Catálogo de casos de empresas reales + práctica propia
 glosario.html         Glosario buscable, alimentado por todas las semanas
 aviso-legal.html      Autoría, atribuciones, marcas de terceros y condiciones de uso
 publicar.sh           Publica o actualiza el sitio en GitHub Pages
@@ -15,7 +16,9 @@ assets/css/styles.css Único archivo de estilos (tema claro y oscuro)
 assets/js/nucleo.js   Registro de contenido, tema, progreso local, utilidades
 assets/js/vistas.js   Render de portada, conceptos y glosario
 assets/js/practica.js Motor de práctica: 6 modos
+assets/js/casos.js    Render del catálogo de casos (filtros, búsqueda, fichas)
 data/curso.js         Metadatos generales del curso
+data/casos.js         Catálogo de casos y su banco de reactivos
 data/semana-1.js      Contenido y reactivos de la Semana 1
 data/semana-2.js      Contenido y reactivos de la Semana 2
 data/semana-3.js      Contenido y reactivos de la Semana 3
@@ -47,6 +50,7 @@ atenuada y no son navegables.
 | `tabla`    | `titulo`, `encabezados[]`, `filas[][]` | Comparaciones, AS-IS/TO-BE |
 | `flujo`    | `titulo`, `pasos[]`             | Cadena horizontal con flechas |
 | `diagrama` | `titulo`, `cuerpo` (texto plano)| Diagrama ASCII monoespaciado |
+| `svg`      | `titulo`, `svg` (markup), `pie` | Diagrama vectorial; usa las clases de `.figura` |
 | `defs`     | `titulo`, `items[{termino, definicion}]` | Definiciones |
 | `nota`     | `titulo`, `cuerpo` (HTML)       | Caja ámbar: advertencias, preguntas al grupo |
 | `clave`    | `titulo`, `cuerpo` (HTML)       | Caja de acento: idea central del tema |
@@ -118,6 +122,53 @@ monoespaciado al desarrollo y `resaltado` marca el resultado.
 Las opciones y el orden de los reactivos se barajan automáticamente en cada
 intento: escribe siempre la respuesta correcta en la posición que quieras y
 apunta a ella con `correcta`.
+
+### Diagramas vectoriales (`tipo: "svg"`)
+
+El SVG se escribe **sin colores literales**: se pintan con clases de CSS para que
+el diagrama cambie con el tema claro/oscuro. Clases disponibles:
+
+| Clase | Para qué |
+|-------|----------|
+| `caja` / `caja-viva` / `caja-alt` | Rectángulos: neutro, de acento, secundario |
+| `rotulo` / `rotulo-sm` / `rotulo-viva` | Texto normal, chico y de acento |
+| `arista` / `arista-viva` / `arista-punteada` | Conectores |
+| `punta` / `punta-viva` | Relleno de las puntas de flecha (`marker`) |
+| `zona` | Región agrupadora de fondo |
+
+Usa siempre `viewBox` y **nunca** `width`/`height` fijos: la figura escala sola
+dentro de `.figura-lienzo` y no desborda en móvil.
+
+### Catálogo de casos
+
+`data/casos.js` registra el catálogo con `EA.registrarCasos({ categorias, casos, practica })`.
+
+```js
+categorias: [{ id: "capacidad", nombre: "Capacidad y cuellos de botella", resumen: "…" }],
+casos: [{
+  id: "starbucks",                 // ancla de URL: casos.html#caso-starbucks
+  titulo: "…", subtitulo: "…",
+  categoria: "capacidad",
+  semanas: [3],                    // pastillas S3, S4…
+  patrones: ["cuello de botella"], // pastillas de acento y términos de búsqueda
+  flujo: ["Paso 1", "Paso 2"],
+  contexto: "HTML",
+  analisis: "HTML",
+  cifras: { titulo, encabezados: [...], filas: [[...]] },   // se marca solo como ilustrativa
+  indicadores: ["…"],
+  preguntas: ["…"],
+  conecta: "texto corto"
+}],
+practica: { /* mismo esquema que el de una semana: los 6 modos */ }
+```
+
+Para agregar casos nuevos basta con añadir objetos al arreglo `casos`; los chips
+de filtro, el contador y la búsqueda se recalculan solos. Si el caso es de una
+categoría nueva, agrega primero su entrada en `categorias`.
+
+**Cifras ilustrativas.** Las empresas son reales, los números no: cada tabla se
+etiqueta automáticamente y la página lleva un aviso general. No cambies eso sin
+antes tener cifras públicas verificables.
 
 ### Glosario
 

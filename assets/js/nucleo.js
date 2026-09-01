@@ -147,6 +147,7 @@ window.EA = (function () {
           inactivo: s.estado !== "publicada"
         });
       });
+      enlaces.push({ href: "casos.html", texto: "Casos", id: "casos" });
       enlaces.push({ href: "glosario.html", texto: "Glosario", id: "glosario" });
 
       const nav = el("nav", { class: "nav" });

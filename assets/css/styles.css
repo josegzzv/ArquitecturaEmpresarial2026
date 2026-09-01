@@ -548,3 +548,93 @@ footer.sitio .contenedor {
   header.sitio, .pestanas, .modos, .btn-tema, footer.sitio { display: none; }
   body { background: #fff; }
 }
+
+/* ---------- Catálogo de casos ---------- */
+.barra-filtros {
+  display: flex; flex-wrap: wrap; gap: .9rem 1.4rem; align-items: center;
+  justify-content: space-between; margin-bottom: 1.6rem;
+}
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip {
+  font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+  padding: .38rem .8rem; border-radius: 999px; display: inline-flex; align-items: center; gap: .4rem;
+}
+.chip:hover { border-color: var(--accent); color: var(--text); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.chip-n { font-size: .72rem; opacity: .75; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] .chip-n { opacity: .9; }
+
+.busqueda-casos { display: flex; align-items: center; gap: .7rem; flex: 1; min-width: 250px; justify-content: flex-end; }
+.busqueda-casos input {
+  font: inherit; font-size: .88rem; padding: .5rem .8rem; border-radius: 9px;
+  border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+  flex: 1; max-width: 340px;
+}
+.busqueda-casos input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.contador { font-size: .8rem; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+.grupo-casos { margin-bottom: 2.4rem; }
+.grupo-casos > h2 {
+  font-size: 1.15rem; letter-spacing: -.02em; margin: 0 0 .3rem;
+  display: flex; align-items: center; gap: .55rem; font-family: var(--display);
+}
+.grupo-casos > h2::before {
+  content: ""; width: 4px; height: 1.05em; border-radius: 2px; background: var(--accent);
+}
+.grupo-casos > p.sub { margin: 0 0 1rem; color: var(--muted); font-size: .9rem; max-width: 78ch; }
+
+.ficha-caso {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  margin-bottom: .8rem; overflow: hidden; transition: border-color .15s ease;
+}
+.ficha-caso:hover { border-color: var(--border-strong, var(--border)); }
+.ficha-caso.abierto { border-color: var(--accent); box-shadow: var(--shadow); }
+.ficha-cabecera {
+  width: 100%; display: flex; align-items: flex-start; gap: 1rem; text-align: left;
+  background: none; border: 0; font: inherit; cursor: pointer; padding: 1rem 1.15rem .6rem;
+  color: inherit;
+}
+.ficha-titulo { flex: 1; }
+.ficha-categoria {
+  font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--accent-2);
+}
+.ficha-titulo h3 { margin: .18rem 0 .2rem; font-size: 1.08rem; letter-spacing: -.015em; font-family: var(--display); }
+.ficha-titulo p { margin: 0; font-size: .89rem; color: var(--muted); }
+.ficha-flecha { color: var(--muted); font-size: .9rem; transition: transform .2s ease; margin-top: .9rem; }
+.ficha-caso.abierto .ficha-flecha { transform: rotate(180deg); color: var(--accent); }
+
+.ficha-chips { display: flex; flex-wrap: wrap; gap: .35rem; padding: 0 1.15rem 1rem; }
+
+.ficha-cuerpo { padding: .2rem 1.15rem 1.2rem; border-top: 1px solid var(--border); margin-top: .2rem; }
+.ficha-seccion { margin-top: 1.1rem; }
+.ficha-seccion > h5 {
+  margin: 0 0 .5rem; font-size: .76rem; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--muted); font-weight: 700; display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+}
+.ficha-seccion p { margin: 0 0 .6rem; font-size: .93rem; }
+.ficha-seccion p:last-child { margin-bottom: 0; }
+.ficha-seccion ul, .ficha-seccion ol { margin: 0; padding-left: 1.2rem; font-size: .93rem; }
+.ficha-seccion li { margin-bottom: .35rem; }
+.ficha-seccion.preguntas {
+  background: var(--accent-2-soft); border: 1px solid color-mix(in srgb, var(--accent-2) 25%, transparent);
+  border-radius: 10px; padding: .9rem 1rem .9rem 1rem;
+}
+.ficha-seccion.preguntas > h5 { color: var(--accent-2); }
+.etiqueta-ilustrativa {
+  font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  background: var(--warn-soft); color: var(--warn); padding: .15rem .45rem; border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent);
+}
+.ficha-conecta {
+  margin-top: 1.1rem; padding-top: .8rem; border-top: 1px solid var(--border);
+  font-size: .85rem; color: var(--muted);
+}
+.ficha-conecta b { color: var(--text); }
+
+@media (max-width: 620px) {
+  .barra-filtros { flex-direction: column; align-items: stretch; }
+  .busqueda-casos { justify-content: flex-start; }
+  .busqueda-casos input { max-width: none; }
+}

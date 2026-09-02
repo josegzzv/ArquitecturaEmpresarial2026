@@ -77,12 +77,12 @@
  {
   "ruta": "dias/0/bloques/0/encabezados/0",
   "es": "Técnica",
-  "en": "Technique"
+  "en": "Technical"
  },
  {
   "ruta": "dias/0/bloques/0/encabezados/1",
   "es": "Cuándo conviene",
-  "en": "When it works best"
+  "en": "When it fits"
  },
  {
   "ruta": "dias/0/bloques/0/encabezados/2",
@@ -412,7 +412,7 @@
  {
   "ruta": "dias/0/bloques/7/filas/1/0",
   "es": "Confeccionar",
-  "en": "Sew the garment"
+  "en": "Sew"
  },
  {
   "ruta": "dias/0/bloques/7/filas/1/1",
@@ -502,7 +502,7 @@
  {
   "ruta": "dias/0/bloques/7/filas/7/0",
   "es": "Recaptura de datos en Excel",
-  "en": "Re-entering data in Excel"
+  "en": "Data re-entry in Excel"
  },
  {
   "ruta": "dias/0/bloques/7/filas/7/1",
@@ -846,271 +846,846 @@
  },
  {
   "ruta": "dias/1/bloques/5/titulo",
+  "es": "El VPN, en una frase que puedas decir en voz alta",
+  "en": "NPV, in one sentence you can say out loud"
+ },
+ {
+  "ruta": "dias/1/bloques/5/cuerpo",
+  "es": "<p>El Valor Presente Neto responde una sola pregunta: <b>«si hacemos este proyecto, ¿cuánto vale más la empresa hoy?»</b></p><p>Un VPN de <b>$166,807</b> no significa que vas a tener esa cantidad en la cuenta. Significa que, después de recuperar la inversión <i>y</i> de pagar lo que cuesta tener ese dinero metido ahí en vez de en otra cosa, al proyecto todavía le sobran $166,807 de valor. Es lo que el proyecto <b>agrega</b>, no lo que produce.</p>",
+  "en": "<p>Net Present Value answers a single question: <b>“if we do this project, how much more is the company worth today?”</b></p><p>An NPV of <b>$166,807</b> does not mean you are going to have that amount in the bank. It means that, after recovering the investment <i>and</i> paying what it costs to keep that money tied up there instead of somewhere else, the project still has $166,807 of value left over. It is what the project <b>adds</b>, not what it produces.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/6/titulo",
+  "es": "Por qué $450,000 del año 4 no valen $450,000 hoy",
+  "en": "Why $450,000 in year 4 is not worth $450,000 today"
+ },
+ {
+  "ruta": "dias/1/bloques/6/cuerpo",
+  "es": "<p>Aquí es donde casi todo el mundo se pierde, y no es por la fórmula: es por el supuesto de fondo. Un peso que llega dentro de cuatro años vale menos que un peso que llega hoy, y <b>no es principalmente por la inflación</b>.</p><p>Es por el <b>costo de oportunidad</b>. Si la empresa tiene ese dinero hoy, puede hacer otra cosa con él: pagar deuda, comprar inventario, abrir una sucursal. Cuando lo mete en tu proyecto, renuncia a todo eso. La <b>tasa de descuento</b> —el 12 % de este ejercicio— es el precio de esa renuncia: lo mínimo que la empresa exige ganar para que valga la pena inmovilizar su dinero en lugar de usarlo en su siguiente mejor alternativa.</p><p>Y hay un segundo componente: el <b>riesgo</b>. El ahorro del año 4 es una promesa; el dinero de hoy es un hecho. Descontar es la forma matemática de decir «cuento con esto, pero no del todo».</p>",
+  "en": "<p>This is where almost everyone gets lost, and it is not the formula: it is the assumption underneath it. A peso that arrives four years from now is worth less than a peso that arrives today, and <b>that is not mainly because of inflation</b>.</p><p>It is because of <b>opportunity cost</b>. If the company has that money today, it can do something else with it: pay down debt, buy inventory, open a branch. When it puts the money into your project, it gives all of that up. The <b>discount rate</b> —the 12 % in this exercise— is the price of giving it up: the least the company demands to earn for it to be worth tying up its money instead of using it on its next best alternative.</p><p>And there is a second piece: <b>risk</b>. The year 4 saving is a promise; today's money is a fact. Discounting is the mathematical way of saying “I am counting on this, but not all the way”.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/titulo",
+  "es": "El mismo ahorro, año por año, traído a hoy",
+  "en": "The same saving, year by year, brought to today"
+ },
+ {
+  "ruta": "dias/1/bloques/7/encabezados/0",
+  "es": "Año",
+  "en": "Year"
+ },
+ {
+  "ruta": "dias/1/bloques/7/encabezados/1",
+  "es": "Ahorro",
+  "en": "Saving"
+ },
+ {
+  "ruta": "dias/1/bloques/7/encabezados/2",
+  "es": "Factor de descuento",
+  "en": "Discount factor"
+ },
+ {
+  "ruta": "dias/1/bloques/7/encabezados/3",
+  "es": "Cuánto vale hoy",
+  "en": "What it is worth today"
+ },
+ {
+  "ruta": "dias/1/bloques/7/encabezados/4",
+  "es": "Se conserva",
+  "en": "Retained"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/0/0",
+  "es": "1",
+  "en": "1"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/0/1",
+  "es": "$450,000",
+  "en": "$450,000"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/0/2",
+  "es": "1 / 1.12<sup>1</sup> = 0.892857",
+  "en": "1 / 1.12<sup>1</sup> = 0.892857"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/0/3",
+  "es": "<b>$401,786</b>",
+  "en": "<b>$401,786</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/0/4",
+  "es": "89.3 %",
+  "en": "89.3 %"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/1/0",
+  "es": "2",
+  "en": "2"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/1/1",
+  "es": "$450,000",
+  "en": "$450,000"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/1/2",
+  "es": "1 / 1.12<sup>2</sup> = 0.797194",
+  "en": "1 / 1.12<sup>2</sup> = 0.797194"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/1/3",
+  "es": "<b>$358,737</b>",
+  "en": "<b>$358,737</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/1/4",
+  "es": "79.7 %",
+  "en": "79.7 %"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/2/0",
+  "es": "3",
+  "en": "3"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/2/1",
+  "es": "$450,000",
+  "en": "$450,000"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/2/2",
+  "es": "1 / 1.12<sup>3</sup> = 0.711780",
+  "en": "1 / 1.12<sup>3</sup> = 0.711780"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/2/3",
+  "es": "<b>$320,301</b>",
+  "en": "<b>$320,301</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/2/4",
+  "es": "71.2 %",
+  "en": "71.2 %"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/3/0",
+  "es": "4",
+  "en": "4"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/3/1",
+  "es": "$450,000",
+  "en": "$450,000"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/3/2",
+  "es": "1 / 1.12<sup>4</sup> = 0.635518",
+  "en": "1 / 1.12<sup>4</sup> = 0.635518"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/3/3",
+  "es": "<b>$285,983</b>",
+  "en": "<b>$285,983</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/3/4",
+  "es": "63.6 %",
+  "en": "63.6 %"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/4/0",
+  "es": "<b>Suma</b>",
+  "en": "<b>Sum</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/4/1",
+  "es": "<b>$1,800,000</b>",
+  "en": "<b>$1,800,000</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/4/2",
+  "es": "—",
+  "en": "—"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/4/3",
+  "es": "<b>$1,366,807</b>",
+  "en": "<b>$1,366,807</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/4/4",
+  "es": "—",
+  "en": "—"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/5/0",
+  "es": "<b>Menos la inversión</b>",
+  "en": "<b>Less the investment</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/5/3",
+  "es": "<b>− $1,200,000</b>",
+  "en": "<b>− $1,200,000</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/6/0",
+  "es": "<b>VPN</b>",
+  "en": "<b>NPV</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/7/filas/6/3",
+  "es": "<b>$166,807</b>",
+  "en": "<b>$166,807</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/8/titulo",
+  "es": "Lo que el descuento le quita a cada año",
+  "en": "What discounting takes off each year"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#0",
+  "es": "$450,000 nominales cada año",
+  "en": "$450,000 nominal every year"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#1",
+  "es": "401,786",
+  "en": "401,786"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#2",
+  "es": "358,737",
+  "en": "358,737"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#3",
+  "es": "320,301",
+  "en": "320,301"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#4",
+  "es": "285,983",
+  "en": "285,983"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#5",
+  "es": "Año 1",
+  "en": "Year 1"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#6",
+  "es": "Año 2",
+  "en": "Year 2"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#7",
+  "es": "Año 3",
+  "en": "Year 3"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#8",
+  "es": "Año 4",
+  "en": "Year 4"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#9",
+  "es": "89.3 %",
+  "en": "89.3 %"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#10",
+  "es": "79.7 %",
+  "en": "79.7 %"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#11",
+  "es": "71.2 %",
+  "en": "71.2 %"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#12",
+  "es": "63.6 %",
+  "en": "63.6 %"
+ },
+ {
+  "ruta": "dias/1/bloques/8/svg#13",
+  "es": "El bloque tenue es lo que el descuento se lleva: $433,193 en total.",
+  "en": "The faint block is what discounting takes: $433,193 in all."
+ },
+ {
+  "ruta": "dias/1/bloques/8/pie",
+  "es": "Sin descontar, el proyecto parecería dejar $600,000. Descontado, deja $166,807. Esa diferencia no es un truco contable: es el precio de esperar.",
+  "en": "Undiscounted, the project would look like it leaves $600,000. Discounted, it leaves $166,807. That difference is not an accounting trick: it is the price of waiting."
+ },
+ {
+  "ruta": "dias/1/bloques/9/titulo",
+  "es": "Las tres decisiones que hay detrás de todo VPN",
+  "en": "The three decisions behind every NPV"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/0/termino",
+  "es": "El flujo",
+  "en": "The cash flow"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/0/definicion",
+  "es": "Cuánto entra o se ahorra cada año, y <b>cuándo</b>. Es la parte que tú calculaste con el rediseño del proceso, y la que más se discute: si el ahorro es un supuesto, dilo.",
+  "en": "How much comes in or is saved each year, and <b>when</b>. It is the part you calculated with the process redesign, and the part that gets argued about most: if the saving is an assumption, say so."
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/1/termino",
+  "es": "La tasa",
+  "en": "The rate"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/1/definicion",
+  "es": "Cuánto exige la empresa por inmovilizar su dinero. <b>No la inventas tú</b>: te la da Finanzas. Si no te la dan, pregúntala; usar una tasa al azar invalida todo el cálculo.",
+  "en": "How much the company demands for tying up its money. <b>You do not make it up</b>: Finance gives it to you. If they do not, ask for it; using a rate you picked at random invalidates the whole calculation."
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/2/termino",
+  "es": "El horizonte",
+  "en": "The horizon"
+ },
+ {
+  "ruta": "dias/1/bloques/9/items/2/definicion",
+  "es": "Cuántos años cuentas. Alargarlo mejora artificialmente cualquier proyecto, así que se justifica con la vida útil real de la solución, no con la que hace falta para que salga positivo.",
+  "en": "How many years you count. Stretching it makes any project look better artificially, so you justify it with the real useful life of the solution, not with the length you need for the result to come out positive."
+ },
+ {
+  "ruta": "dias/1/bloques/10/titulo",
+  "es": "Lo que el VPN no te dice",
+  "en": "What NPV does not tell you"
+ },
+ {
+  "ruta": "dias/1/bloques/10/cuerpo",
+  "es": "<ul><li><b>No dice cuándo recuperas.</b> Un VPN alto puede tardar años en devolver el primer peso: para eso está el periodo de recuperación.</li><li><b>No dice qué tan frágil es.</b> Dos proyectos con el mismo VPN pueden tener sensibilidades opuestas. Por eso el análisis de sensibilidad va siempre junto.</li><li><b>No compara tamaños.</b> Un VPN de $166,807 sobre una inversión de $1.2 millones no es lo mismo que sobre una de $200,000. Para ordenar proyectos con presupuesto limitado se usa el índice de rentabilidad.</li><li><b>No incluye lo que no cuantificaste.</b> Si el proyecto además reduce un riesgo regulatorio, eso no está en el número: se declara aparte, no se le inventa un precio.</li></ul>",
+  "en": "<ul><li><b>It does not tell you when you get your money back.</b> A high NPV can take years to return the first peso: that is what the payback period is for.</li><li><b>It does not tell you how fragile it is.</b> Two projects with the same NPV can have opposite sensitivities. That is why sensitivity analysis always goes with it.</li><li><b>It does not compare sizes.</b> An NPV of $166,807 on an investment of $1.2 million is not the same as on one of $200,000. To rank projects when the budget is limited you use the profitability index.</li><li><b>It does not include what you did not quantify.</b> If the project also reduces a regulatory risk, that is not in the number: you declare it separately, you do not invent a price for it.</li></ul>"
+ },
+ {
+  "ruta": "dias/1/bloques/11/titulo",
+  "es": "Cómo explicarlo en tu presentación, sin ser financiero",
+  "en": "How to explain it in your presentation, without being a finance person"
+ },
+ {
+  "ruta": "dias/1/bloques/11/cuerpo",
+  "es": "<p>La dirección no quiere una clase de finanzas: quiere saber si el proyecto vale la pena. Tres frases bastan.</p><p><b>1 · La cifra y qué significa.</b> «El proyecto tiene un valor presente neto de $166,807. Eso quiere decir que, después de recuperar el millón doscientos que invertimos y de cubrir el 12 % que la empresa exige por su dinero, todavía nos deja $166,807 de valor.»</p><p><b>2 · Por qué está descontado.</b> «Los ahorros los traje a valor de hoy, porque un peso que llega en cuatro años no vale lo mismo que uno que tenemos ahora. Sin descontar parecería que deja $600,000; el número honesto es $166,807.»</p><p><b>3 · Qué tan seguro es.</b> «La tasa interna de retorno es 18.45 %, contra el 12 % que exigimos: hay margen. Y aunque el ahorro fuera 20 % menor que lo estimado, el proyecto sigue siendo rentable.»</p><p class=\"sub\" style=\"margin-top:.8rem\"><b>Y lo que no debes decir:</b> «el VPN es positivo, así que conviene». Es cierto y no explica nada. Si alguien pregunta «¿positivo respecto a qué?» y no sabes contestar, el número deja de valer.</p>",
+  "en": "<p>Management does not want a finance class: it wants to know whether the project is worth doing. Three sentences are enough.</p><p><b>1 · The figure and what it means.</b> “The project has a net present value of $166,807. That means that, after recovering the one point two million we invested and covering the 12 % the company demands for its money, it still leaves us $166,807 of value.”</p><p><b>2 · Why it is discounted.</b> “I brought the savings to today's value, because a peso that arrives in four years is not worth the same as one we have now. Undiscounted it would look like it leaves $600,000; the honest number is $166,807.”</p><p><b>3 · How safe it is.</b> “The internal rate of return is 18.45 %, against the 12 % we demand: there is room. And even if the saving came in 20 % below what we estimated, the project is still worth doing.”</p><p class=\"sub\" style=\"margin-top:.8rem\"><b>And what you must not say:</b> “the NPV is positive, so it is a good idea”. It is true and it explains nothing. If someone asks “positive compared to what?” and you cannot answer, the number stops being worth anything.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/12/titulo",
+  "es": "Los demás números que vas a tener que defender",
+  "en": "The other numbers you will have to defend"
+ },
+ {
+  "ruta": "dias/1/bloques/12/cuerpo",
+  "es": "<p>El VPN es el más difícil de explicar, pero no es el único que te van a preguntar. Un caso de negocio completo se sostiene sobre siete u ocho cifras, y cada una responde una pregunta distinta que alguien en la sala trae en la cabeza. La tabla siguiente es para que llegues con la frase lista.</p>",
+  "en": "<p>NPV is the hardest one to explain, but it is not the only one they will ask you about. A complete business case rests on seven or eight figures, and each one answers a different question that someone in the room already has in their head. The table below is so you walk in with the sentence ready.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/titulo",
+  "es": "Diccionario para hablar con la dirección",
+  "en": "A dictionary for talking to management"
+ },
+ {
+  "ruta": "dias/1/bloques/13/encabezados/0",
+  "es": "Término",
+  "en": "Term"
+ },
+ {
+  "ruta": "dias/1/bloques/13/encabezados/1",
+  "es": "Qué es, en una frase",
+  "en": "What it is, in one sentence"
+ },
+ {
+  "ruta": "dias/1/bloques/13/encabezados/2",
+  "es": "Cómo decirlo en la presentación",
+  "en": "How to say it in the presentation"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/0/0",
+  "es": "<b>Inversión inicial</b>",
+  "en": "<b>Initial investment</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/0/1",
+  "es": "Lo que hay que desembolsar una sola vez para que el proyecto exista.",
+  "en": "What you have to lay out once, up front, for the project to exist."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/0/2",
+  "es": "«Pedimos $1,200,000 una sola vez.»",
+  "en": "“We are asking for $1,200,000, once.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/1/0",
+  "es": "<b>Costo de operación</b>",
+  "en": "<b>Operating cost</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/1/1",
+  "es": "Lo que cuesta cada año mantenerlo vivo: licencias, soporte, personal.",
+  "en": "What it costs every year to keep it alive: licenses, support, staff."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/1/2",
+  "es": "«Y $95,000 al año para mantenerlo, que ya están descontados del beneficio.»",
+  "en": "“Plus $95,000 a year to keep it running, and that is already netted out of the benefit.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/2/0",
+  "es": "<b>Flujo neto anual</b>",
+  "en": "<b>Annual net cash flow</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/2/1",
+  "es": "El beneficio del año menos lo que costó operarlo. Es lo que realmente entra.",
+  "en": "The year's benefit minus what it cost to run. It is what actually comes in."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/2/2",
+  "es": "«Cada año nos deja $332,680 netos, ya restando la operación.»",
+  "en": "“Each year it leaves us $332,680 net, with the operating cost already taken out.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/3/0",
+  "es": "<b>Tasa de descuento</b><br><span style=\"font-size:.82em;color:var(--muted)\">o TREMA</span>",
+  "en": "<b>Discount rate</b><br><span style=\"font-size:.82em;color:var(--muted)\">or hurdle rate</span>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/3/1",
+  "es": "El mínimo que la empresa exige ganar por inmovilizar su dinero. La define Finanzas, no tú.",
+  "en": "The minimum the company demands to earn for tying up its money. Finance sets it, not you."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/3/2",
+  "es": "«Usamos el 12 % que nos dio Finanzas, no una tasa que hayamos escogido.»",
+  "en": "“We used the 12 % Finance gave us, not a rate we picked ourselves.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/4/0",
+  "es": "<b>Costo de oportunidad</b>",
+  "en": "<b>Opportunity cost</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/4/1",
+  "es": "Lo que la empresa deja de ganar en su siguiente mejor alternativa por meter el dinero aquí.",
+  "en": "What the company gives up earning on its next best alternative by putting the money here."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/4/2",
+  "es": "«Ese 12 % es lo que el dinero rendiría en otra cosa; el proyecto tiene que superarlo.»",
+  "en": "“That 12 % is what the money would earn somewhere else; the project has to beat it.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/5/0",
+  "es": "<b>VPN</b><br><span style=\"font-size:.82em;color:var(--muted)\">Valor Presente Neto</span>",
+  "en": "<b>NPV</b><br><span style=\"font-size:.82em;color:var(--muted)\">Net Present Value</span>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/5/1",
+  "es": "Cuánto vale más la empresa hoy si hace el proyecto, ya descontado el costo del dinero.",
+  "en": "How much more the company is worth today if it does the project, with the cost of money already discounted."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/5/2",
+  "es": "«Nos deja $166,807 de valor, después de recuperar la inversión y de pagar el 12 %.»",
+  "en": "“It leaves us $166,807 of value, after paying back the investment and covering the 12 %.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/6/0",
+  "es": "<b>TIR</b><br><span style=\"font-size:.82em;color:var(--muted)\">Tasa Interna de Retorno</span>",
+  "en": "<b>IRR</b><br><span style=\"font-size:.82em;color:var(--muted)\">Internal Rate of Return</span>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/6/1",
+  "es": "El rendimiento que produce el proyecto. Se compara contra la tasa exigida.",
+  "en": "The return the project itself produces. You compare it against the rate the company demands."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/6/2",
+  "es": "«Rinde 18.45 % contra el 12 % que exigimos: hay 6 puntos de margen.»",
+  "en": "“It returns 18.45 % against the 12 % we demand: that is 6 points of headroom.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/7/0",
+  "es": "<b>Periodo de recuperación</b><br><span style=\"font-size:.82em;color:var(--muted)\">payback</span>",
+  "en": "<b>Payback period</b><br><span style=\"font-size:.82em;color:var(--muted)\">payback</span>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/7/1",
+  "es": "Cuánto tarda en devolver lo invertido. Mide riesgo y liquidez, no rentabilidad.",
+  "en": "How long it takes to give back what you put in. It measures risk and liquidity, not profitability."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/7/2",
+  "es": "«Recuperamos la inversión en 2.67 años; el proyecto vive cuatro.»",
+  "en": "“We get the investment back in 2.67 years; the project lasts four.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/8/0",
+  "es": "<b>ROI</b>",
+  "en": "<b>ROI</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/8/1",
+  "es": "Cuánto ganamos por cada peso invertido, sin considerar cuándo llega.",
+  "en": "How much we make for every peso invested, without taking into account when it arrives."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/8/2",
+  "es": "«El retorno acumulado es 50 %, aunque el VPN es la cifra que manda.»",
+  "en": "“The cumulative return is 50 %, though NPV is the number that decides.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/9/0",
+  "es": "<b>Margen de contribución</b>",
+  "en": "<b>Contribution margin</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/9/1",
+  "es": "Lo que deja cada unidad vendida después del costo variable. Es lo que paga los costos fijos.",
+  "en": "What each unit sold leaves after variable cost. It is what pays the fixed costs."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/9/2",
+  "es": "«Cada par deja $250 para cubrir fijos; la mejora lo sube a $270.»",
+  "en": "“Every pair leaves $250 to cover fixed costs; the improvement takes that to $270.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/10/0",
+  "es": "<b>Punto de equilibrio</b>",
+  "en": "<b>Break-even point</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/10/1",
+  "es": "Cuántas unidades hay que vender para no perder dinero.",
+  "en": "How many units you have to sell not to lose money."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/10/2",
+  "es": "«Hoy necesitamos vender 1,000 pares al mes; con la mejora, 926.»",
+  "en": "“Today we need to sell 1,000 pairs a month; with the improvement, 926.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/11/0",
+  "es": "<b>Costo de no hacer nada</b>",
+  "en": "<b>Cost of doing nothing</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/11/1",
+  "es": "Lo que cuesta al año seguir igual. La alternativa que siempre hay que poner sobre la mesa.",
+  "en": "What it costs each year to stay as we are. The alternative you always have to put on the table."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/11/2",
+  "es": "«Quedarnos como estamos nos cuesta $844,704 al año.»",
+  "en": "“Staying as we are costs us $844,704 a year.”"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/12/0",
+  "es": "<b>Análisis de sensibilidad</b>",
+  "en": "<b>Sensitivity analysis</b>"
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/12/1",
+  "es": "Qué pasa con el resultado si el supuesto falla. Mide la fragilidad del caso.",
+  "en": "What happens to the result if the assumption fails. It measures how fragile the case is."
+ },
+ {
+  "ruta": "dias/1/bloques/13/filas/12/2",
+  "es": "«Aunque el ahorro fuera 12.2 % menor de lo estimado, el proyecto sigue siendo rentable.»",
+  "en": "“Even if the saving came in 12.2 % below our estimate, the project is still worth doing.”"
+ },
+ {
+  "ruta": "dias/1/bloques/14/titulo",
+  "es": "Los cinco errores que hunden una presentación financiera",
+  "en": "The five mistakes that sink a financial presentation"
+ },
+ {
+  "ruta": "dias/1/bloques/14/cuerpo",
+  "es": "<ol><li><b>Presentar el VPN sin la tasa.</b> «Positivo» no significa nada si no dices <i>positivo respecto a qué</i>. La tasa es parte de la cifra.</li><li><b>Confundir ahorro con utilidad.</b> Un ahorro de $450,000 no es utilidad: hay que restarle lo que cuesta operar la solución.</li><li><b>Usar el payback como si midiera rentabilidad.</b> Dice cuándo recuperas, no cuánto ganas. Un proyecto puede recuperarse rápido y aun así destruir valor.</li><li><b>Estirar el horizonte hasta que el VPN salga positivo.</b> Si necesitas siete años para que cuadre, el problema no es el horizonte.</li><li><b>No declarar los supuestos.</b> El número más frágil de todo caso de negocio es el que nadie cuestionó porque nadie lo mencionó.</li></ol>",
+  "en": "<ol><li><b>Presenting the NPV without the rate.</b> “Positive” means nothing unless you say <i>positive compared to what</i>. The rate is part of the figure.</li><li><b>Confusing saving with profit.</b> A saving of $450,000 is not profit: you have to subtract what it costs to run the solution.</li><li><b>Using payback as if it measured profitability.</b> It tells you when you get your money back, not how much you make. A project can pay back fast and still destroy value.</li><li><b>Stretching the horizon until the NPV comes out positive.</b> If you need seven years to make it add up, the horizon is not the problem.</li><li><b>Not declaring your assumptions.</b> The most fragile number in any business case is the one nobody questioned because nobody mentioned it.</li></ol>"
+ },
+ {
+  "ruta": "dias/1/bloques/15/titulo",
+  "es": "El orden en que se dicen",
+  "en": "The order you say them in"
+ },
+ {
+  "ruta": "dias/1/bloques/15/cuerpo",
+  "es": "<p>No los sueltes como lista. Tienen una secuencia natural, y es la que responde las preguntas en el orden en que aparecen en la cabeza de quien decide:</p><p><b>1.</b> ¿Cuánto nos cuesta seguir igual? → <i>costo de no hacer nada</i><br><b>2.</b> ¿Cuánto hay que poner? → <i>inversión inicial y costo de operación</i><br><b>3.</b> ¿Cuánto regresa y cuándo? → <i>flujo neto y periodo de recuperación</i><br><b>4.</b> ¿Vale la pena contra nuestras alternativas? → <i>VPN y TIR</i><br><b>5.</b> ¿Qué tan seguro es esto? → <i>análisis de sensibilidad</i></p><p>Si llegas al punto 5 y todavía te están escuchando, el caso está ganado.</p>",
+  "en": "<p>Do not just dump them as a list. They have a natural sequence, and it is the one that answers the questions in the order they come up in the head of whoever is deciding:</p><p><b>1.</b> What does it cost us to stay as we are? → <i>cost of doing nothing</i><br><b>2.</b> What do we have to put in? → <i>initial investment and operating cost</i><br><b>3.</b> How much comes back, and when? → <i>net cash flow and payback period</i><br><b>4.</b> Is it worth it against our alternatives? → <i>NPV and IRR</i><br><b>5.</b> How safe is this? → <i>sensitivity analysis</i></p><p>If you get to point 5 and they are still listening, the case is won.</p>"
+ },
+ {
+  "ruta": "dias/1/bloques/16/titulo",
   "es": "Fórmulas de referencia",
   "en": "Reference formulas"
  },
  {
-  "ruta": "dias/1/bloques/5/encabezados/0",
+  "ruta": "dias/1/bloques/16/encabezados/0",
   "es": "Indicador",
   "en": "Indicator"
  },
  {
-  "ruta": "dias/1/bloques/5/encabezados/1",
+  "ruta": "dias/1/bloques/16/encabezados/1",
   "es": "Fórmula",
   "en": "Formula"
  },
  {
-  "ruta": "dias/1/bloques/5/encabezados/2",
+  "ruta": "dias/1/bloques/16/encabezados/2",
   "es": "Cómo se lee",
   "en": "How to read it"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/0/0",
+  "ruta": "dias/1/bloques/16/filas/0/0",
   "es": "Margen de contribución",
   "en": "Contribution margin"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/0/1",
+  "ruta": "dias/1/bloques/16/filas/0/1",
   "es": "<code>MC = Precio − Costo variable unitario</code>",
   "en": "<code>CM = Price − Unit variable cost</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/0/2",
+  "ruta": "dias/1/bloques/16/filas/0/2",
   "es": "Lo que aporta cada unidad para cubrir fijos",
   "en": "What each unit contributes to cover fixed costs"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/1/0",
+  "ruta": "dias/1/bloques/16/filas/1/0",
   "es": "Punto de equilibrio",
   "en": "Break-even point"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/1/1",
+  "ruta": "dias/1/bloques/16/filas/1/1",
   "es": "<code>PE = Costos fijos / MC</code>",
   "en": "<code>BEP = Fixed costs / CM</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/1/2",
+  "ruta": "dias/1/bloques/16/filas/1/2",
   "es": "Volumen en el que la utilidad es cero",
   "en": "Volume at which profit is zero"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/2/0",
+  "ruta": "dias/1/bloques/16/filas/2/0",
   "es": "Retorno sobre la inversión",
   "en": "Return on investment"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/2/1",
+  "ruta": "dias/1/bloques/16/filas/2/1",
   "es": "<code>ROI = (Beneficio total − Inversión) / Inversión</code>",
   "en": "<code>ROI = (Total benefit − Investment) / Investment</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/2/2",
+  "ruta": "dias/1/bloques/16/filas/2/2",
   "es": "Cuánto gano por cada peso invertido",
   "en": "How much you earn for every peso invested"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/3/0",
+  "ruta": "dias/1/bloques/16/filas/3/0",
   "es": "Periodo de recuperación",
   "en": "Payback period"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/3/1",
+  "ruta": "dias/1/bloques/16/filas/3/1",
   "es": "<code>PB = Inversión / Flujo por periodo</code>",
   "en": "<code>PB = Investment / Cash flow per period</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/3/2",
+  "ruta": "dias/1/bloques/16/filas/3/2",
   "es": "En cuánto tiempo recupero lo invertido",
   "en": "How long it takes you to recover what you invested"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/4/0",
+  "ruta": "dias/1/bloques/16/filas/4/0",
   "es": "Factor de anualidad",
   "en": "Annuity factor"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/4/1",
+  "ruta": "dias/1/bloques/16/filas/4/1",
   "es": "<code>FA = [1 − (1 + k)<sup>−n</sup>] / k</code>",
   "en": "<code>AF = [1 − (1 + k)<sup>−n</sup>] / k</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/4/2",
+  "ruta": "dias/1/bloques/16/filas/4/2",
   "es": "Atajo para descontar <i>n</i> flujos iguales a la tasa <i>k</i>",
   "en": "Shortcut for discounting <i>n</i> equal cash flows at rate <i>k</i>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/5/0",
+  "ruta": "dias/1/bloques/16/filas/5/0",
   "es": "Valor Presente Neto",
   "en": "Net Present Value"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/5/1",
+  "ruta": "dias/1/bloques/16/filas/5/1",
   "es": "<code>VPN = Flujo × FA − Inversión</code>",
   "en": "<code>NPV = Cash flow × AF − Investment</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/5/2",
+  "ruta": "dias/1/bloques/16/filas/5/2",
   "es": "Si es mayor que cero, el proyecto crea valor",
   "en": "If it is greater than zero, the project creates value"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/6/0",
+  "ruta": "dias/1/bloques/16/filas/6/0",
   "es": "VPN, forma general",
   "en": "NPV, general form"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/6/1",
+  "ruta": "dias/1/bloques/16/filas/6/1",
   "es": "<code>VPN = Σ [ F<sub>t</sub> / (1 + k)<sup>t</sup> ] − Inversión</code>",
   "en": "<code>NPV = Σ [ F<sub>t</sub> / (1 + k)<sup>t</sup> ] − Investment</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/6/2",
+  "ruta": "dias/1/bloques/16/filas/6/2",
   "es": "Cuando los flujos son distintos entre sí",
   "en": "When the cash flows differ from one another"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/7/0",
+  "ruta": "dias/1/bloques/16/filas/7/0",
   "es": "Tasa Interna de Retorno",
   "en": "Internal Rate of Return"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/7/1",
+  "ruta": "dias/1/bloques/16/filas/7/1",
   "es": "<code>TIR = la tasa k que hace VPN = 0</code>",
   "en": "<code>IRR = the rate k that makes NPV = 0</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/7/2",
+  "ruta": "dias/1/bloques/16/filas/7/2",
   "es": "Se compara contra la TREMA exigida",
   "en": "It is compared against the required hurdle rate"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/8/0",
+  "ruta": "dias/1/bloques/16/filas/8/0",
   "es": "Índice de rentabilidad",
   "en": "Profitability index"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/8/1",
+  "ruta": "dias/1/bloques/16/filas/8/1",
   "es": "<code>IR = (Flujo × FA) / Inversión</code>",
   "en": "<code>PI = (Cash flow × AF) / Investment</code>"
  },
  {
-  "ruta": "dias/1/bloques/5/filas/8/2",
+  "ruta": "dias/1/bloques/16/filas/8/2",
   "es": "Para priorizar con presupuesto limitado",
   "en": "To prioritize with a limited budget"
  },
  {
-  "ruta": "dias/1/bloques/6/titulo",
+  "ruta": "dias/1/bloques/17/titulo",
   "es": "Qué método usar y para qué",
   "en": "Which method to use and what for"
  },
  {
-  "ruta": "dias/1/bloques/6/encabezados/0",
+  "ruta": "dias/1/bloques/17/encabezados/0",
   "es": "Método",
   "en": "Method"
  },
  {
-  "ruta": "dias/1/bloques/6/encabezados/1",
+  "ruta": "dias/1/bloques/17/encabezados/1",
   "es": "Responde",
   "en": "Answers"
  },
  {
-  "ruta": "dias/1/bloques/6/encabezados/2",
+  "ruta": "dias/1/bloques/17/encabezados/2",
   "es": "Limitación",
   "en": "Limitation"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/0/0",
+  "ruta": "dias/1/bloques/17/filas/0/0",
   "es": "ROI",
   "en": "ROI"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/0/1",
+  "ruta": "dias/1/bloques/17/filas/0/1",
   "es": "¿Cuánto gano por cada peso invertido?",
   "en": "How much do you earn for every peso invested?"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/0/2",
+  "ruta": "dias/1/bloques/17/filas/0/2",
   "es": "Ignora el valor del dinero en el tiempo",
   "en": "It ignores the time value of money"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/1/0",
+  "ruta": "dias/1/bloques/17/filas/1/0",
   "es": "Payback",
   "en": "Payback"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/1/1",
+  "ruta": "dias/1/bloques/17/filas/1/1",
   "es": "¿En cuánto tiempo recupero?",
   "en": "How long does it take you to recover?"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/1/2",
+  "ruta": "dias/1/bloques/17/filas/1/2",
   "es": "Ignora todo lo que pasa después de recuperar",
   "en": "It ignores everything that happens after you recover"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/2/0",
+  "ruta": "dias/1/bloques/17/filas/2/0",
   "es": "VPN",
   "en": "NPV"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/2/1",
+  "ruta": "dias/1/bloques/17/filas/2/1",
   "es": "¿Crea valor a la tasa que exijo?",
   "en": "Does it create value at the rate you require?"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/2/2",
+  "ruta": "dias/1/bloques/17/filas/2/2",
   "es": "Sensible al supuesto de la tasa de descuento",
   "en": "Sensitive to the discount rate assumption"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/3/0",
+  "ruta": "dias/1/bloques/17/filas/3/0",
   "es": "TIR",
   "en": "IRR"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/3/1",
+  "ruta": "dias/1/bloques/17/filas/3/1",
   "es": "¿Qué rendimiento implícito tiene?",
   "en": "What implicit return does it have?"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/3/2",
+  "ruta": "dias/1/bloques/17/filas/3/2",
   "es": "Puede dar resultados múltiples con flujos irregulares",
   "en": "It can give multiple results with irregular cash flows"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/4/0",
+  "ruta": "dias/1/bloques/17/filas/4/0",
   "es": "Índice de rentabilidad",
   "en": "Profitability index"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/4/1",
+  "ruta": "dias/1/bloques/17/filas/4/1",
   "es": "¿Cuál priorizo con presupuesto limitado?",
   "en": "Which one do you prioritize with a limited budget?"
  },
  {
-  "ruta": "dias/1/bloques/6/filas/4/2",
+  "ruta": "dias/1/bloques/17/filas/4/2",
   "es": "No indica el tamaño absoluto del beneficio",
   "en": "It does not tell you the absolute size of the benefit"
  },
  {
-  "ruta": "dias/1/bloques/7/titulo",
+  "ruta": "dias/1/bloques/18/titulo",
   "es": "Regla práctica para la entrega",
   "en": "A practical rule for the deliverable"
  },
  {
-  "ruta": "dias/1/bloques/7/cuerpo",
+  "ruta": "dias/1/bloques/18/cuerpo",
   "es": "<p>Presenta <b>al menos VPN y payback juntos</b>. El VPN dice si crea valor; el payback dice qué tan expuesto estás mientras tanto. Un proyecto con buen VPN y payback de cinco años puede ser inaceptable para una empresa con problemas de liquidez.</p><p>Y declara siempre la <b>tasa de descuento</b> que usaste y de dónde salió. Cambiarla es la forma más fácil de manipular un VPN.</p>",
   "en": "<p>Present <b>at least NPV and payback together</b>. The NPV tells you whether it creates value; the payback tells you how exposed you are in the meantime. A project with a good NPV and a five-year payback can be unacceptable for a company with liquidity problems.</p><p>And always state the <b>discount rate</b> you used and where it came from. Changing it is the easiest way to manipulate an NPV.</p>"
  },
  {
-  "ruta": "dias/1/bloques/8/titulo",
+  "ruta": "dias/1/bloques/19/titulo",
   "es": "Beneficios de estrategias alternativas",
   "en": "Benefits of alternative strategies"
  },
  {
-  "ruta": "dias/1/bloques/8/cuerpo",
+  "ruta": "dias/1/bloques/19/cuerpo",
   "es": "<p>Nunca presentes una sola opción: presenta <b>dos o tres alternativas evaluadas con los mismos criterios</b>, incluida la de <i>no hacer nada</i>. El costo de no hacer nada casi nunca es cero — es el desperdicio que se sigue pagando cada mes — y calcularlo suele ser el argumento más contundente de toda la propuesta.</p>",
   "en": "<p>Never present a single option: present <b>two or three alternatives evaluated with the same criteria</b>, including <i>doing nothing</i>. The cost of doing nothing is almost never zero — it is the waste you keep paying for every month — and working it out is usually the most compelling argument in the whole proposal.</p>"
  },
@@ -1232,7 +1807,7 @@
  {
   "ruta": "dias/2/bloques/1/filas/5/0",
   "es": "Cuándo conviene",
-  "en": "When it works best"
+  "en": "When it fits"
  },
  {
   "ruta": "dias/2/bloques/1/filas/5/1",
@@ -2622,7 +3197,7 @@
  {
   "ruta": "practica/calculos/0/datos/filas/4/0",
   "es": "Registro fiscal del lote",
-  "en": "Tax record for the batch"
+  "en": "Tax record of the batch"
  },
  {
   "ruta": "practica/calculos/0/datos/filas/4/1",

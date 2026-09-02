@@ -699,6 +699,11 @@ EA.registrarTallerEn(
      "cuerpo": "<p>No improvement recovers 100 % of what is being lost. The team assumed a <b>recovery of 80 %</b> of the theoretical benefit. That number did not come out of a calculation: it is a judgment, and that is why the last question of this stage puts it to the test.</p>"
     },
     {
+     "tipo": "clave",
+     "titulo": "Before you type the NPV: what you are going to be saying",
+     "cuerpo": "<p>You are going to calculate a Net Present Value and then you are going to have to <b>explain it to the Commercial Director</b>, who is not a finance person. Get the sentence clear before you have the number:</p><p><i>“The project is worth $X today. That means that, after recovering the $680,000 we invested and covering the 12 % the company demands for its money, it still leaves us $X of value.”</i></p><p>The cash flows are brought to today's value because a peso that arrives in four years is not worth the same as one we have now — not so much because of inflation as because of <b>opportunity cost</b>: that money could be doing something else. The 12 % rate is the price of giving that up.</p><p class=\"sub\">If you need the full walkthrough, it is in <a href=\"semana.html?s=5\">Week 5, session 2</a>.</p>"
+    },
+    {
      "tipo": "nota",
      "titulo": "Before you calculate anything",
      "cuerpo": "<p>The first figure you have to estimate is not the benefit of the project: it is the <b>cost of doing nothing</b>. If that figure is small, the conversation ends there and THN saves itself the project.</p>"

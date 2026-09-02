@@ -1421,11 +1421,21 @@
  },
  {
   "ruta": "etapas/5/bloques/2/titulo",
+  "es": "Antes de teclear el VPN: qué vas a estar diciendo",
+  "en": "Before you type the NPV: what you are going to be saying"
+ },
+ {
+  "ruta": "etapas/5/bloques/2/cuerpo",
+  "es": "<p>Vas a calcular un Valor Presente Neto y después vas a tener que <b>explicárselo al Director Comercial</b>, que no es financiero. Ten clara la frase antes de tener el número:</p><p><i>«El proyecto vale $X hoy. Eso quiere decir que, después de recuperar los $680,000 que invertimos y de cubrir el 12 % que la empresa exige por su dinero, todavía nos deja $X de valor.»</i></p><p>Los flujos se traen a valor de hoy porque un peso que llega en cuatro años no vale lo mismo que uno que tenemos ahora — no tanto por la inflación como por el <b>costo de oportunidad</b>: ese dinero podría estar haciendo otra cosa. La tasa del 12 % es el precio de esa renuncia.</p><p class=\"sub\">Si necesitas el desarrollo completo, está en la <a href=\"semana.html?s=5\">Semana 5, sesión 2</a>.</p>",
+  "en": "<p>You are going to calculate a Net Present Value and then you are going to have to <b>explain it to the Commercial Director</b>, who is not a finance person. Get the sentence clear before you have the number:</p><p><i>“The project is worth $X today. That means that, after recovering the $680,000 we invested and covering the 12 % the company demands for its money, it still leaves us $X of value.”</i></p><p>The cash flows are brought to today's value because a peso that arrives in four years is not worth the same as one we have now — not so much because of inflation as because of <b>opportunity cost</b>: that money could be doing something else. The 12 % rate is the price of giving that up.</p><p class=\"sub\">If you need the full walkthrough, it is in <a href=\"semana.html?s=5\">Week 5, session 2</a>.</p>"
+ },
+ {
+  "ruta": "etapas/5/bloques/3/titulo",
   "es": "Antes de calcular nada",
   "en": "Before you calculate anything"
  },
  {
-  "ruta": "etapas/5/bloques/2/cuerpo",
+  "ruta": "etapas/5/bloques/3/cuerpo",
   "es": "<p>La primera cifra que hay que estimar no es el beneficio del proyecto: es el <b>costo de no hacer nada</b>. Si esa cifra es pequeña, la conversación termina ahí y THN se ahorra el proyecto.</p>",
   "en": "<p>The first figure you have to estimate is not the benefit of the project: it is the <b>cost of doing nothing</b>. If that figure is small, the conversation ends there and THN saves itself the project.</p>"
  },

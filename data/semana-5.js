@@ -199,6 +199,196 @@ EA.registrarSemana({
           ]
         },
         {
+          tipo: "clave",
+          titulo: "El VPN, en una frase que puedas decir en voz alta",
+          cuerpo: "<p>El Valor Presente Neto responde una sola pregunta: <b>«si hacemos este proyecto, "
+            + "¿cuánto vale más la empresa hoy?»</b></p>"
+            + "<p>Un VPN de <b>$166,807</b> no significa que vas a tener esa cantidad en la cuenta. Significa "
+            + "que, después de recuperar la inversión <i>y</i> de pagar lo que cuesta tener ese dinero "
+            + "metido ahí en vez de en otra cosa, al proyecto todavía le sobran $166,807 de valor. "
+            + "Es lo que el proyecto <b>agrega</b>, no lo que produce.</p>"
+        },
+        {
+          tipo: "texto",
+          titulo: "Por qué $450,000 del año 4 no valen $450,000 hoy",
+          cuerpo: "<p>Aquí es donde casi todo el mundo se pierde, y no es por la fórmula: es por el supuesto "
+            + "de fondo. Un peso que llega dentro de cuatro años vale menos que un peso que llega hoy, "
+            + "y <b>no es principalmente por la inflación</b>.</p>"
+            + "<p>Es por el <b>costo de oportunidad</b>. Si la empresa tiene ese dinero hoy, puede hacer "
+            + "otra cosa con él: pagar deuda, comprar inventario, abrir una sucursal. Cuando lo mete en tu "
+            + "proyecto, renuncia a todo eso. La <b>tasa de descuento</b> —el 12 % de este ejercicio— es el "
+            + "precio de esa renuncia: lo mínimo que la empresa exige ganar para que valga la pena "
+            + "inmovilizar su dinero en lugar de usarlo en su siguiente mejor alternativa.</p>"
+            + "<p>Y hay un segundo componente: el <b>riesgo</b>. El ahorro del año 4 es una promesa; el "
+            + "dinero de hoy es un hecho. Descontar es la forma matemática de decir «cuento con esto, "
+            + "pero no del todo».</p>"
+        },
+        {
+          tipo: "tabla",
+          titulo: "El mismo ahorro, año por año, traído a hoy",
+          encabezados: ["Año", "Ahorro", "Factor de descuento", "Cuánto vale hoy", "Se conserva"],
+          filas: [
+            ["1", "$450,000", "1 / 1.12<sup>1</sup> = 0.892857", "<b>$401,786</b>", "89.3 %"],
+            ["2", "$450,000", "1 / 1.12<sup>2</sup> = 0.797194", "<b>$358,737</b>", "79.7 %"],
+            ["3", "$450,000", "1 / 1.12<sup>3</sup> = 0.711780", "<b>$320,301</b>", "71.2 %"],
+            ["4", "$450,000", "1 / 1.12<sup>4</sup> = 0.635518", "<b>$285,983</b>", "63.6 %"],
+            ["<b>Suma</b>", "<b>$1,800,000</b>", "—", "<b>$1,366,807</b>", "—"],
+            ["<b>Menos la inversión</b>", "", "", "<b>− $1,200,000</b>", ""],
+            ["<b>VPN</b>", "", "", "<b>$166,807</b>", ""]
+          ]
+        },
+        {
+          tipo: "svg",
+          titulo: "Lo que el descuento le quita a cada año",
+          svg: "<svg viewBox=\"0 0 700 240\" role=\"img\" aria-label=\"Cuatro barras que se encogen conforme el ahorro está más lejos en el tiempo\">"
+            + "<text class=\"rotulo-sm\" x=\"12\" y=\"20\">$450,000 nominales cada año</text>"
+            + "<rect class=\"caja-alt\" x=\"90\"  y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/>"
+            + "<rect class=\"caja-alt\" x=\"238\" y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/>"
+            + "<rect class=\"caja-alt\" x=\"386\" y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/>"
+            + "<rect class=\"caja-alt\" x=\"534\" y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/>"
+            + "<rect class=\"caja-viva\" x=\"90\"  y=\"53\"  width=\"92\" height=\"107\" rx=\"4\"/>"
+            + "<rect class=\"caja-viva\" x=\"238\" y=\"64\"  width=\"92\" height=\"96\"  rx=\"4\"/>"
+            + "<rect class=\"caja-viva\" x=\"386\" y=\"75\"  width=\"92\" height=\"85\"  rx=\"4\"/>"
+            + "<rect class=\"caja-viva\" x=\"534\" y=\"84\"  width=\"92\" height=\"76\"  rx=\"4\"/>"
+            + "<text class=\"rotulo-viva\" x=\"136\" y=\"113\" text-anchor=\"middle\">401,786</text>"
+            + "<text class=\"rotulo-viva\" x=\"284\" y=\"118\" text-anchor=\"middle\">358,737</text>"
+            + "<text class=\"rotulo-viva\" x=\"432\" y=\"124\" text-anchor=\"middle\">320,301</text>"
+            + "<text class=\"rotulo-viva\" x=\"580\" y=\"128\" text-anchor=\"middle\">285,983</text>"
+            + "<text class=\"rotulo\" x=\"136\" y=\"180\" text-anchor=\"middle\">Año 1</text>"
+            + "<text class=\"rotulo\" x=\"284\" y=\"180\" text-anchor=\"middle\">Año 2</text>"
+            + "<text class=\"rotulo\" x=\"432\" y=\"180\" text-anchor=\"middle\">Año 3</text>"
+            + "<text class=\"rotulo\" x=\"580\" y=\"180\" text-anchor=\"middle\">Año 4</text>"
+            + "<text class=\"rotulo-sm\" x=\"136\" y=\"200\" text-anchor=\"middle\">89.3 %</text>"
+            + "<text class=\"rotulo-sm\" x=\"284\" y=\"200\" text-anchor=\"middle\">79.7 %</text>"
+            + "<text class=\"rotulo-sm\" x=\"432\" y=\"200\" text-anchor=\"middle\">71.2 %</text>"
+            + "<text class=\"rotulo-sm\" x=\"580\" y=\"200\" text-anchor=\"middle\">63.6 %</text>"
+            + "<text class=\"rotulo-sm\" x=\"12\" y=\"228\">El bloque tenue es lo que el descuento se lleva: $433,193 en total.</text>"
+            + "</svg>",
+          pie: "Sin descontar, el proyecto parecería dejar $600,000. Descontado, deja $166,807. Esa diferencia no es un truco contable: es el precio de esperar."
+        },
+        {
+          tipo: "defs",
+          titulo: "Las tres decisiones que hay detrás de todo VPN",
+          items: [
+            { termino: "El flujo",
+              definicion: "Cuánto entra o se ahorra cada año, y <b>cuándo</b>. Es la parte que tú calculaste con el rediseño del proceso, y la que más se discute: si el ahorro es un supuesto, dilo." },
+            { termino: "La tasa",
+              definicion: "Cuánto exige la empresa por inmovilizar su dinero. <b>No la inventas tú</b>: te la da Finanzas. Si no te la dan, pregúntala; usar una tasa al azar invalida todo el cálculo." },
+            { termino: "El horizonte",
+              definicion: "Cuántos años cuentas. Alargarlo mejora artificialmente cualquier proyecto, así que se justifica con la vida útil real de la solución, no con la que hace falta para que salga positivo." }
+          ]
+        },
+        {
+          tipo: "nota",
+          titulo: "Lo que el VPN no te dice",
+          cuerpo: "<ul>"
+            + "<li><b>No dice cuándo recuperas.</b> Un VPN alto puede tardar años en devolver el primer peso: para eso está el periodo de recuperación.</li>"
+            + "<li><b>No dice qué tan frágil es.</b> Dos proyectos con el mismo VPN pueden tener sensibilidades opuestas. Por eso el análisis de sensibilidad va siempre junto.</li>"
+            + "<li><b>No compara tamaños.</b> Un VPN de $166,807 sobre una inversión de $1.2 millones no es lo mismo que sobre una de $200,000. Para ordenar proyectos con presupuesto limitado se usa el índice de rentabilidad.</li>"
+            + "<li><b>No incluye lo que no cuantificaste.</b> Si el proyecto además reduce un riesgo regulatorio, eso no está en el número: se declara aparte, no se le inventa un precio.</li>"
+            + "</ul>"
+        },
+        {
+          tipo: "clave",
+          titulo: "Cómo explicarlo en tu presentación, sin ser financiero",
+          cuerpo: "<p>La dirección no quiere una clase de finanzas: quiere saber si el proyecto vale la pena. "
+            + "Tres frases bastan.</p>"
+            + "<p><b>1 · La cifra y qué significa.</b> «El proyecto tiene un valor presente neto de $166,807. "
+            + "Eso quiere decir que, después de recuperar el millón doscientos que invertimos y de cubrir el "
+            + "12 % que la empresa exige por su dinero, todavía nos deja $166,807 de valor.»</p>"
+            + "<p><b>2 · Por qué está descontado.</b> «Los ahorros los traje a valor de hoy, porque un peso "
+            + "que llega en cuatro años no vale lo mismo que uno que tenemos ahora. Sin descontar parecería "
+            + "que deja $600,000; el número honesto es $166,807.»</p>"
+            + "<p><b>3 · Qué tan seguro es.</b> «La tasa interna de retorno es 18.45 %, contra el 12 % que "
+            + "exigimos: hay margen. Y aunque el ahorro fuera 20 % menor que lo estimado, el proyecto sigue "
+            + "siendo rentable.»</p>"
+            + "<p class=\"sub\" style=\"margin-top:.8rem\"><b>Y lo que no debes decir:</b> «el VPN es "
+            + "positivo, así que conviene». Es cierto y no explica nada. Si alguien pregunta «¿positivo "
+            + "respecto a qué?» y no sabes contestar, el número deja de valer.</p>"
+        },
+        {
+          tipo: "texto",
+          titulo: "Los demás números que vas a tener que defender",
+          cuerpo: "<p>El VPN es el más difícil de explicar, pero no es el único que te van a preguntar. "
+            + "Un caso de negocio completo se sostiene sobre siete u ocho cifras, y cada una responde una "
+            + "pregunta distinta que alguien en la sala trae en la cabeza. La tabla siguiente es para que "
+            + "llegues con la frase lista.</p>"
+        },
+        {
+          tipo: "tabla",
+          titulo: "Diccionario para hablar con la dirección",
+          encabezados: ["Término", "Qué es, en una frase", "Cómo decirlo en la presentación"],
+          filas: [
+            ["<b>Inversión inicial</b>",
+             "Lo que hay que desembolsar una sola vez para que el proyecto exista.",
+             "«Pedimos $1,200,000 una sola vez.»"],
+            ["<b>Costo de operación</b>",
+             "Lo que cuesta cada año mantenerlo vivo: licencias, soporte, personal.",
+             "«Y $95,000 al año para mantenerlo, que ya están descontados del beneficio.»"],
+            ["<b>Flujo neto anual</b>",
+             "El beneficio del año menos lo que costó operarlo. Es lo que realmente entra.",
+             "«Cada año nos deja $332,680 netos, ya restando la operación.»"],
+            ["<b>Tasa de descuento</b><br><span style=\"font-size:.82em;color:var(--muted)\">o TREMA</span>",
+             "El mínimo que la empresa exige ganar por inmovilizar su dinero. La define Finanzas, no tú.",
+             "«Usamos el 12 % que nos dio Finanzas, no una tasa que hayamos escogido.»"],
+            ["<b>Costo de oportunidad</b>",
+             "Lo que la empresa deja de ganar en su siguiente mejor alternativa por meter el dinero aquí.",
+             "«Ese 12 % es lo que el dinero rendiría en otra cosa; el proyecto tiene que superarlo.»"],
+            ["<b>VPN</b><br><span style=\"font-size:.82em;color:var(--muted)\">Valor Presente Neto</span>",
+             "Cuánto vale más la empresa hoy si hace el proyecto, ya descontado el costo del dinero.",
+             "«Nos deja $166,807 de valor, después de recuperar la inversión y de pagar el 12 %.»"],
+            ["<b>TIR</b><br><span style=\"font-size:.82em;color:var(--muted)\">Tasa Interna de Retorno</span>",
+             "El rendimiento que produce el proyecto. Se compara contra la tasa exigida.",
+             "«Rinde 18.45 % contra el 12 % que exigimos: hay 6 puntos de margen.»"],
+            ["<b>Periodo de recuperación</b><br><span style=\"font-size:.82em;color:var(--muted)\">payback</span>",
+             "Cuánto tarda en devolver lo invertido. Mide riesgo y liquidez, no rentabilidad.",
+             "«Recuperamos la inversión en 2.67 años; el proyecto vive cuatro.»"],
+            ["<b>ROI</b>",
+             "Cuánto ganamos por cada peso invertido, sin considerar cuándo llega.",
+             "«El retorno acumulado es 50 %, aunque el VPN es la cifra que manda.»"],
+            ["<b>Margen de contribución</b>",
+             "Lo que deja cada unidad vendida después del costo variable. Es lo que paga los costos fijos.",
+             "«Cada par deja $250 para cubrir fijos; la mejora lo sube a $270.»"],
+            ["<b>Punto de equilibrio</b>",
+             "Cuántas unidades hay que vender para no perder dinero.",
+             "«Hoy necesitamos vender 1,000 pares al mes; con la mejora, 926.»"],
+            ["<b>Costo de no hacer nada</b>",
+             "Lo que cuesta al año seguir igual. La alternativa que siempre hay que poner sobre la mesa.",
+             "«Quedarnos como estamos nos cuesta $844,704 al año.»"],
+            ["<b>Análisis de sensibilidad</b>",
+             "Qué pasa con el resultado si el supuesto falla. Mide la fragilidad del caso.",
+             "«Aunque el ahorro fuera 12.2 % menor de lo estimado, el proyecto sigue siendo rentable.»"]
+          ]
+        },
+        {
+          tipo: "nota",
+          titulo: "Los cinco errores que hunden una presentación financiera",
+          cuerpo: "<ol>"
+            + "<li><b>Presentar el VPN sin la tasa.</b> «Positivo» no significa nada si no dices "
+            + "<i>positivo respecto a qué</i>. La tasa es parte de la cifra.</li>"
+            + "<li><b>Confundir ahorro con utilidad.</b> Un ahorro de $450,000 no es utilidad: hay que "
+            + "restarle lo que cuesta operar la solución.</li>"
+            + "<li><b>Usar el payback como si midiera rentabilidad.</b> Dice cuándo recuperas, no cuánto "
+            + "ganas. Un proyecto puede recuperarse rápido y aun así destruir valor.</li>"
+            + "<li><b>Estirar el horizonte hasta que el VPN salga positivo.</b> Si necesitas siete años "
+            + "para que cuadre, el problema no es el horizonte.</li>"
+            + "<li><b>No declarar los supuestos.</b> El número más frágil de todo caso de negocio es el "
+            + "que nadie cuestionó porque nadie lo mencionó.</li>"
+            + "</ol>"
+        },
+        {
+          tipo: "clave",
+          titulo: "El orden en que se dicen",
+          cuerpo: "<p>No los sueltes como lista. Tienen una secuencia natural, y es la que responde las "
+            + "preguntas en el orden en que aparecen en la cabeza de quien decide:</p>"
+            + "<p><b>1.</b> ¿Cuánto nos cuesta seguir igual? → <i>costo de no hacer nada</i><br>"
+            + "<b>2.</b> ¿Cuánto hay que poner? → <i>inversión inicial y costo de operación</i><br>"
+            + "<b>3.</b> ¿Cuánto regresa y cuándo? → <i>flujo neto y periodo de recuperación</i><br>"
+            + "<b>4.</b> ¿Vale la pena contra nuestras alternativas? → <i>VPN y TIR</i><br>"
+            + "<b>5.</b> ¿Qué tan seguro es esto? → <i>análisis de sensibilidad</i></p>"
+            + "<p>Si llegas al punto 5 y todavía te están escuchando, el caso está ganado.</p>"
+        },
+        {
           tipo: "tabla",
           titulo: "Fórmulas de referencia",
           encabezados: ["Indicador", "Fórmula", "Cómo se lee"],

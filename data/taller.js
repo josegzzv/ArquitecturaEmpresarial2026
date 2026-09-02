@@ -574,6 +574,21 @@ EA.registrarTaller({
             + "juicio, y por eso la última pregunta de esta etapa lo pone a prueba.</p>"
         },
         {
+          tipo: "clave",
+          titulo: "Antes de teclear el VPN: qué vas a estar diciendo",
+          cuerpo: "<p>Vas a calcular un Valor Presente Neto y después vas a tener que <b>explicárselo al "
+            + "Director Comercial</b>, que no es financiero. Ten clara la frase antes de tener el número:</p>"
+            + "<p><i>«El proyecto vale $X hoy. Eso quiere decir que, después de recuperar los $680,000 que "
+            + "invertimos y de cubrir el 12 % que la empresa exige por su dinero, todavía nos deja $X de "
+            + "valor.»</i></p>"
+            + "<p>Los flujos se traen a valor de hoy porque un peso que llega en cuatro años no vale lo "
+            + "mismo que uno que tenemos ahora — no tanto por la inflación como por el <b>costo de "
+            + "oportunidad</b>: ese dinero podría estar haciendo otra cosa. La tasa del 12 % es el precio "
+            + "de esa renuncia.</p>"
+            + "<p class=\"sub\">Si necesitas el desarrollo completo, está en la "
+            + "<a href=\"semana.html?s=5\">Semana 5, sesión 2</a>.</p>"
+        },
+        {
           tipo: "nota",
           titulo: "Antes de calcular nada",
           cuerpo: "<p>La primera cifra que hay que estimar no es el beneficio del proyecto: es el "

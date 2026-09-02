@@ -30,8 +30,8 @@ EA.registrarSemanaEn(
      "tipo": "tabla",
      "titulo": "Information-gathering techniques",
      "encabezados": [
-      "Technique",
-      "When it works best",
+      "Technical",
+      "When it fits",
       "Risk it carries"
      ],
      "filas": [
@@ -167,7 +167,7 @@ EA.registrarSemanaEn(
        "VA"
       ],
       [
-       "Sew the garment",
+       "Sew",
        "35",
        "VA"
       ],
@@ -197,7 +197,7 @@ EA.registrarSemanaEn(
        "NVA"
       ],
       [
-       "Re-entering data in Excel",
+       "Data re-entry in Excel",
        "6",
        "NVA"
       ],
@@ -357,6 +357,203 @@ EA.registrarSemanaEn(
      ]
     },
     {
+     "tipo": "clave",
+     "titulo": "NPV, in one sentence you can say out loud",
+     "cuerpo": "<p>Net Present Value answers a single question: <b>“if we do this project, how much more is the company worth today?”</b></p><p>An NPV of <b>$166,807</b> does not mean you are going to have that amount in the bank. It means that, after recovering the investment <i>and</i> paying what it costs to keep that money tied up there instead of somewhere else, the project still has $166,807 of value left over. It is what the project <b>adds</b>, not what it produces.</p>"
+    },
+    {
+     "tipo": "texto",
+     "titulo": "Why $450,000 in year 4 is not worth $450,000 today",
+     "cuerpo": "<p>This is where almost everyone gets lost, and it is not the formula: it is the assumption underneath it. A peso that arrives four years from now is worth less than a peso that arrives today, and <b>that is not mainly because of inflation</b>.</p><p>It is because of <b>opportunity cost</b>. If the company has that money today, it can do something else with it: pay down debt, buy inventory, open a branch. When it puts the money into your project, it gives all of that up. The <b>discount rate</b> —the 12 % in this exercise— is the price of giving it up: the least the company demands to earn for it to be worth tying up its money instead of using it on its next best alternative.</p><p>And there is a second piece: <b>risk</b>. The year 4 saving is a promise; today's money is a fact. Discounting is the mathematical way of saying “I am counting on this, but not all the way”.</p>"
+    },
+    {
+     "tipo": "tabla",
+     "titulo": "The same saving, year by year, brought to today",
+     "encabezados": [
+      "Year",
+      "Saving",
+      "Discount factor",
+      "What it is worth today",
+      "Retained"
+     ],
+     "filas": [
+      [
+       "1",
+       "$450,000",
+       "1 / 1.12<sup>1</sup> = 0.892857",
+       "<b>$401,786</b>",
+       "89.3 %"
+      ],
+      [
+       "2",
+       "$450,000",
+       "1 / 1.12<sup>2</sup> = 0.797194",
+       "<b>$358,737</b>",
+       "79.7 %"
+      ],
+      [
+       "3",
+       "$450,000",
+       "1 / 1.12<sup>3</sup> = 0.711780",
+       "<b>$320,301</b>",
+       "71.2 %"
+      ],
+      [
+       "4",
+       "$450,000",
+       "1 / 1.12<sup>4</sup> = 0.635518",
+       "<b>$285,983</b>",
+       "63.6 %"
+      ],
+      [
+       "<b>Sum</b>",
+       "<b>$1,800,000</b>",
+       "—",
+       "<b>$1,366,807</b>",
+       "—"
+      ],
+      [
+       "<b>Less the investment</b>",
+       "",
+       "",
+       "<b>− $1,200,000</b>",
+       ""
+      ],
+      [
+       "<b>NPV</b>",
+       "",
+       "",
+       "<b>$166,807</b>",
+       ""
+      ]
+     ]
+    },
+    {
+     "tipo": "svg",
+     "titulo": "What discounting takes off each year",
+     "svg": "<svg viewBox=\"0 0 700 240\" role=\"img\" aria-label=\"Cuatro barras que se encogen conforme el ahorro está más lejos en el tiempo\"><text class=\"rotulo-sm\" x=\"12\" y=\"20\">$450,000 nominal every year</text><rect class=\"caja-alt\" x=\"90\"  y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/><rect class=\"caja-alt\" x=\"238\" y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/><rect class=\"caja-alt\" x=\"386\" y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/><rect class=\"caja-alt\" x=\"534\" y=\"40\" width=\"92\" height=\"120\" rx=\"4\"/><rect class=\"caja-viva\" x=\"90\"  y=\"53\"  width=\"92\" height=\"107\" rx=\"4\"/><rect class=\"caja-viva\" x=\"238\" y=\"64\"  width=\"92\" height=\"96\"  rx=\"4\"/><rect class=\"caja-viva\" x=\"386\" y=\"75\"  width=\"92\" height=\"85\"  rx=\"4\"/><rect class=\"caja-viva\" x=\"534\" y=\"84\"  width=\"92\" height=\"76\"  rx=\"4\"/><text class=\"rotulo-viva\" x=\"136\" y=\"113\" text-anchor=\"middle\">401,786</text><text class=\"rotulo-viva\" x=\"284\" y=\"118\" text-anchor=\"middle\">358,737</text><text class=\"rotulo-viva\" x=\"432\" y=\"124\" text-anchor=\"middle\">320,301</text><text class=\"rotulo-viva\" x=\"580\" y=\"128\" text-anchor=\"middle\">285,983</text><text class=\"rotulo\" x=\"136\" y=\"180\" text-anchor=\"middle\">Year 1</text><text class=\"rotulo\" x=\"284\" y=\"180\" text-anchor=\"middle\">Year 2</text><text class=\"rotulo\" x=\"432\" y=\"180\" text-anchor=\"middle\">Year 3</text><text class=\"rotulo\" x=\"580\" y=\"180\" text-anchor=\"middle\">Year 4</text><text class=\"rotulo-sm\" x=\"136\" y=\"200\" text-anchor=\"middle\">89.3 %</text><text class=\"rotulo-sm\" x=\"284\" y=\"200\" text-anchor=\"middle\">79.7 %</text><text class=\"rotulo-sm\" x=\"432\" y=\"200\" text-anchor=\"middle\">71.2 %</text><text class=\"rotulo-sm\" x=\"580\" y=\"200\" text-anchor=\"middle\">63.6 %</text><text class=\"rotulo-sm\" x=\"12\" y=\"228\">The faint block is what discounting takes: $433,193 in all.</text></svg>",
+     "pie": "Undiscounted, the project would look like it leaves $600,000. Discounted, it leaves $166,807. That difference is not an accounting trick: it is the price of waiting."
+    },
+    {
+     "tipo": "defs",
+     "titulo": "The three decisions behind every NPV",
+     "items": [
+      {
+       "termino": "The cash flow",
+       "definicion": "How much comes in or is saved each year, and <b>when</b>. It is the part you calculated with the process redesign, and the part that gets argued about most: if the saving is an assumption, say so."
+      },
+      {
+       "termino": "The rate",
+       "definicion": "How much the company demands for tying up its money. <b>You do not make it up</b>: Finance gives it to you. If they do not, ask for it; using a rate you picked at random invalidates the whole calculation."
+      },
+      {
+       "termino": "The horizon",
+       "definicion": "How many years you count. Stretching it makes any project look better artificially, so you justify it with the real useful life of the solution, not with the length you need for the result to come out positive."
+      }
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "What NPV does not tell you",
+     "cuerpo": "<ul><li><b>It does not tell you when you get your money back.</b> A high NPV can take years to return the first peso: that is what the payback period is for.</li><li><b>It does not tell you how fragile it is.</b> Two projects with the same NPV can have opposite sensitivities. That is why sensitivity analysis always goes with it.</li><li><b>It does not compare sizes.</b> An NPV of $166,807 on an investment of $1.2 million is not the same as on one of $200,000. To rank projects when the budget is limited you use the profitability index.</li><li><b>It does not include what you did not quantify.</b> If the project also reduces a regulatory risk, that is not in the number: you declare it separately, you do not invent a price for it.</li></ul>"
+    },
+    {
+     "tipo": "clave",
+     "titulo": "How to explain it in your presentation, without being a finance person",
+     "cuerpo": "<p>Management does not want a finance class: it wants to know whether the project is worth doing. Three sentences are enough.</p><p><b>1 · The figure and what it means.</b> “The project has a net present value of $166,807. That means that, after recovering the one point two million we invested and covering the 12 % the company demands for its money, it still leaves us $166,807 of value.”</p><p><b>2 · Why it is discounted.</b> “I brought the savings to today's value, because a peso that arrives in four years is not worth the same as one we have now. Undiscounted it would look like it leaves $600,000; the honest number is $166,807.”</p><p><b>3 · How safe it is.</b> “The internal rate of return is 18.45 %, against the 12 % we demand: there is room. And even if the saving came in 20 % below what we estimated, the project is still worth doing.”</p><p class=\"sub\" style=\"margin-top:.8rem\"><b>And what you must not say:</b> “the NPV is positive, so it is a good idea”. It is true and it explains nothing. If someone asks “positive compared to what?” and you cannot answer, the number stops being worth anything.</p>"
+    },
+    {
+     "tipo": "texto",
+     "titulo": "The other numbers you will have to defend",
+     "cuerpo": "<p>NPV is the hardest one to explain, but it is not the only one they will ask you about. A complete business case rests on seven or eight figures, and each one answers a different question that someone in the room already has in their head. The table below is so you walk in with the sentence ready.</p>"
+    },
+    {
+     "tipo": "tabla",
+     "titulo": "A dictionary for talking to management",
+     "encabezados": [
+      "Term",
+      "What it is, in one sentence",
+      "How to say it in the presentation"
+     ],
+     "filas": [
+      [
+       "<b>Initial investment</b>",
+       "What you have to lay out once, up front, for the project to exist.",
+       "“We are asking for $1,200,000, once.”"
+      ],
+      [
+       "<b>Operating cost</b>",
+       "What it costs every year to keep it alive: licenses, support, staff.",
+       "“Plus $95,000 a year to keep it running, and that is already netted out of the benefit.”"
+      ],
+      [
+       "<b>Annual net cash flow</b>",
+       "The year's benefit minus what it cost to run. It is what actually comes in.",
+       "“Each year it leaves us $332,680 net, with the operating cost already taken out.”"
+      ],
+      [
+       "<b>Discount rate</b><br><span style=\"font-size:.82em;color:var(--muted)\">or hurdle rate</span>",
+       "The minimum the company demands to earn for tying up its money. Finance sets it, not you.",
+       "“We used the 12 % Finance gave us, not a rate we picked ourselves.”"
+      ],
+      [
+       "<b>Opportunity cost</b>",
+       "What the company gives up earning on its next best alternative by putting the money here.",
+       "“That 12 % is what the money would earn somewhere else; the project has to beat it.”"
+      ],
+      [
+       "<b>NPV</b><br><span style=\"font-size:.82em;color:var(--muted)\">Net Present Value</span>",
+       "How much more the company is worth today if it does the project, with the cost of money already discounted.",
+       "“It leaves us $166,807 of value, after paying back the investment and covering the 12 %.”"
+      ],
+      [
+       "<b>IRR</b><br><span style=\"font-size:.82em;color:var(--muted)\">Internal Rate of Return</span>",
+       "The return the project itself produces. You compare it against the rate the company demands.",
+       "“It returns 18.45 % against the 12 % we demand: that is 6 points of headroom.”"
+      ],
+      [
+       "<b>Payback period</b><br><span style=\"font-size:.82em;color:var(--muted)\">payback</span>",
+       "How long it takes to give back what you put in. It measures risk and liquidity, not profitability.",
+       "“We get the investment back in 2.67 years; the project lasts four.”"
+      ],
+      [
+       "<b>ROI</b>",
+       "How much we make for every peso invested, without taking into account when it arrives.",
+       "“The cumulative return is 50 %, though NPV is the number that decides.”"
+      ],
+      [
+       "<b>Contribution margin</b>",
+       "What each unit sold leaves after variable cost. It is what pays the fixed costs.",
+       "“Every pair leaves $250 to cover fixed costs; the improvement takes that to $270.”"
+      ],
+      [
+       "<b>Break-even point</b>",
+       "How many units you have to sell not to lose money.",
+       "“Today we need to sell 1,000 pairs a month; with the improvement, 926.”"
+      ],
+      [
+       "<b>Cost of doing nothing</b>",
+       "What it costs each year to stay as we are. The alternative you always have to put on the table.",
+       "“Staying as we are costs us $844,704 a year.”"
+      ],
+      [
+       "<b>Sensitivity analysis</b>",
+       "What happens to the result if the assumption fails. It measures how fragile the case is.",
+       "“Even if the saving came in 12.2 % below our estimate, the project is still worth doing.”"
+      ]
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "The five mistakes that sink a financial presentation",
+     "cuerpo": "<ol><li><b>Presenting the NPV without the rate.</b> “Positive” means nothing unless you say <i>positive compared to what</i>. The rate is part of the figure.</li><li><b>Confusing saving with profit.</b> A saving of $450,000 is not profit: you have to subtract what it costs to run the solution.</li><li><b>Using payback as if it measured profitability.</b> It tells you when you get your money back, not how much you make. A project can pay back fast and still destroy value.</li><li><b>Stretching the horizon until the NPV comes out positive.</b> If you need seven years to make it add up, the horizon is not the problem.</li><li><b>Not declaring your assumptions.</b> The most fragile number in any business case is the one nobody questioned because nobody mentioned it.</li></ol>"
+    },
+    {
+     "tipo": "clave",
+     "titulo": "The order you say them in",
+     "cuerpo": "<p>Do not just dump them as a list. They have a natural sequence, and it is the one that answers the questions in the order they come up in the head of whoever is deciding:</p><p><b>1.</b> What does it cost us to stay as we are? → <i>cost of doing nothing</i><br><b>2.</b> What do we have to put in? → <i>initial investment and operating cost</i><br><b>3.</b> How much comes back, and when? → <i>net cash flow and payback period</i><br><b>4.</b> Is it worth it against our alternatives? → <i>NPV and IRR</i><br><b>5.</b> How safe is this? → <i>sensitivity analysis</i></p><p>If you get to point 5 and they are still listening, the case is won.</p>"
+    },
+    {
      "tipo": "tabla",
      "titulo": "Reference formulas",
      "encabezados": [
@@ -506,7 +703,7 @@ EA.registrarSemanaEn(
        "Technical debt and vendor dependence"
       ],
       [
-       "When it works best",
+       "When it fits",
        "Support processes and industry standards",
        "Only where the process is a real source of differentiation"
       ]
@@ -1074,7 +1271,7 @@ EA.registrarSemanaEn(
        "NNVA"
       ],
       [
-       "Tax record for the batch",
+       "Tax record of the batch",
        "4",
        "NNVA"
       ],

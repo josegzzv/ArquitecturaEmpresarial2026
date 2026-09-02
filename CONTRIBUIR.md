@@ -214,8 +214,23 @@ un error. Es lo que convierte ocho ejercicios sueltos en un solo caso.
 si el navegador lo bloquea, el taller sigue funcionando sin memoria. Nada viaja a
 ningún servidor.
 
-**Entregable.** El botón final arma un Markdown con todas las respuestas y lo
-ofrece como descarga y como copia al portapapeles.
+**Entregable.** El alumno entrega en Word, así que el cierre no produce texto
+plano: arma un **documento con formato** —título, tabla de identificación,
+un encabezado por etapa, tabla de dos columnas para los valores numéricos y
+párrafos para la redacción— y lo ofrece de tres maneras:
+
+- **Copiar con formato.** Escribe `text/html` y `text/plain` al portapapeles con
+  `ClipboardItem`, así que al pegar en Word llegan los títulos, las negritas y
+  las tablas. Si la API no está disponible —contexto no seguro, navegador
+  viejo— cae a seleccionar el nodo y `execCommand("copy")`, que también
+  conserva el formato.
+- **Descargar para Word.** Un `.doc` que en realidad es HTML con el bloque de
+  espacios de nombres de Office; Word lo abre como documento, no como página.
+- **Imprimir o guardar en PDF.** Con estilos de impresión que ocultan todo
+  menos el documento.
+
+El nombre y el grupo del alumno se piden en esa pantalla y se guardan con el
+resto del avance.
 
 **Al agregar campos numéricos**, verifica el resultado de forma independiente
 antes de escribirlo en `respuesta`, y ajusta `tolerancia` al redondeo que esperas

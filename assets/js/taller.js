@@ -306,11 +306,57 @@
     return { nodo: seccion, campos: campos };
   }
 
-  /* ---------- Entregable ---------- */
+  /* ---------- Entregable ----------
+     Se arma como documento con formato real —títulos, negritas, tablas—
+     no como texto plano. Markdown no servía: el alumno entrega en Word y
+     los ## y ** se pegaban literales. */
 
-  function armarEntregable(taller, estado) {
-    const lineas = ["# " + taller.titulo, "", "**" + taller.caso.nombre + "** · " + taller.caso.resumen, ""];
+  function escapa(s) {
+    return String(s === undefined || s === null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
 
+  /* Las etiquetas traen HTML de énfasis y a veces marcadores {{}}; se
+     conserva el énfasis y se resuelven los marcadores contra lo escrito. */
+  function etiquetaLimpia(texto, estado) {
+    return String(texto || "")
+      .replace(/\{\{([\w.-]+)\}\}/g, function (todo, ref) {
+        const p = ref.split(".");
+        const v = ((estado[p[0]] || {}).campos || {})[p[1]];
+        return v === undefined || v === "" ? "—" : v;
+      })
+      .replace(/<(?!\/?(b|i|em|strong|code)\b)[^>]*>/gi, "");
+  }
+
+  /* Los párrafos que escribe el alumno respetan sus saltos de línea. */
+  function parrafos(texto) {
+    return String(texto || "").split(/\n{2,}/)
+      .map(function (b) { return b.trim(); })
+      .filter(Boolean)
+      .map(function (b) { return "<p>" + escapa(b).replace(/\n/g, "<br>") + "</p>"; })
+      .join("\n");
+  }
+
+  function armarEntregable(taller, estado, datos) {
+    const d = datos || {};
+    const partes = [];
+
+    partes.push("<h1>" + escapa(taller.titulo) + "</h1>");
+    partes.push("<p class='doc-caso'><b>" + escapa(taller.caso.nombre) + "</b> — "
+      + escapa(taller.caso.resumen) + "</p>");
+
+    const ficha = [];
+    if (d.nombre) ficha.push([EA.t("taller.campoNombre"), d.nombre]);
+    if (d.grupo) ficha.push([EA.t("taller.campoGrupo"), d.grupo]);
+    ficha.push([EA.t("taller.campoFecha"), new Date().toLocaleDateString(EA.idioma() === "en" ? "en-US" : "es-MX",
+      { year: "numeric", month: "long", day: "numeric" })]);
+    partes.push("<table class='doc-ficha'><tbody>"
+      + ficha.map(function (f) {
+          return "<tr><td><b>" + escapa(f[0]) + "</b></td><td>" + escapa(f[1]) + "</td></tr>";
+        }).join("")
+      + "</tbody></table>");
+
+    let n = 0;
     taller.etapas.forEach(function (etapa, i) {
       const g = estado[etapa.id] || { campos: {} };
       const conValor = (etapa.campos || []).filter(function (c) {
@@ -318,24 +364,62 @@
         return v !== undefined && String(v).trim() !== "";
       });
       if (!conValor.length) return;
+      n++;
 
-      lineas.push("## " + (i + 1) + ". " + etapa.titulo, "");
-      conValor.forEach(function (c) {
-        const v = g.campos[c.id];
-        const etiqueta = String(c.etiqueta).replace(/<[^>]+>/g, "");
-        if (c.tipo === "texto") lineas.push("**" + etiqueta + "**", "", v, "");
-        else lineas.push("- **" + etiqueta + ":** " + v + (c.unidad ? " " + c.unidad : ""));
+      partes.push("<h2>" + (i + 1) + ". " + escapa(etapa.titulo) + "</h2>");
+
+      /* Los valores objetivos van en tabla: se leen mejor y Word las respeta. */
+      const cortos = conValor.filter(function (c) { return c.tipo !== "texto"; });
+      if (cortos.length) {
+        partes.push("<table class='doc-datos'><thead><tr>"
+          + "<th>" + escapa(EA.t("taller.colConcepto")) + "</th>"
+          + "<th>" + escapa(EA.t("taller.colValor")) + "</th></tr></thead><tbody>"
+          + cortos.map(function (c) {
+              const v = g.campos[c.id];
+              return "<tr><td>" + etiquetaLimpia(c.etiqueta, estado) + "</td><td>"
+                + escapa(v) + (c.unidad ? " " + escapa(c.unidad) : "") + "</td></tr>";
+            }).join("")
+          + "</tbody></table>");
+      }
+
+      conValor.filter(function (c) { return c.tipo === "texto"; }).forEach(function (c) {
+        partes.push("<h3>" + etiquetaLimpia(c.etiqueta, estado) + "</h3>");
+        partes.push(parrafos(g.campos[c.id]));
       });
-      lineas.push("");
     });
 
-    lineas.push("---", "", taller.pieEntregable || "");
-    return lineas.join("\n");
+    if (!n) partes.push("<p><i>" + escapa(EA.t("taller.sinRespuestas")) + "</i></p>");
+
+    partes.push("<hr>");
+    partes.push("<p class='doc-pie'>" + escapa(taller.pieEntregable || "") + "</p>");
+
+    return partes.join("\n");
   }
 
-  function descargar(nombre, contenido) {
+  /* Documento completo para Word. El bloque de espacios de nombres es lo
+     que hace que Word lo abra como documento y no como página web. */
+  function documentoWord(titulo, cuerpo) {
+    return "<html xmlns:o='urn:schemas-microsoft-com:office:office' "
+      + "xmlns:w='urn:schemas-microsoft-com:office:word' "
+      + "xmlns='http://www.w3.org/TR/REC-html40'>"
+      + "<head><meta charset='utf-8'><title>" + escapa(titulo) + "</title>"
+      + "<style>"
+      + "body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.45;color:#000}"
+      + "h1{font-size:20pt;margin:0 0 4pt}h2{font-size:14pt;margin:18pt 0 6pt;border-bottom:1pt solid #999;padding-bottom:2pt}"
+      + "h3{font-size:11.5pt;margin:12pt 0 3pt}"
+      + ".doc-caso{color:#444;margin:0 0 12pt}"
+      + "table{border-collapse:collapse;margin:6pt 0 10pt}"
+      + "td,th{border:.5pt solid #999;padding:4pt 7pt;vertical-align:top;font-size:10.5pt}"
+      + "th{background:#eee;text-align:left}"
+      + ".doc-ficha td{border:none;padding:1pt 10pt 1pt 0}"
+      + ".doc-pie{font-size:9pt;color:#666}"
+      + "</style></head><body>" + cuerpo + "</body></html>";
+  }
+
+  function descargarWord(nombre, titulo, cuerpo) {
     try {
-      const blob = new Blob([contenido], { type: "text/markdown;charset=utf-8" });
+      const blob = new Blob(["﻿" + documentoWord(titulo, cuerpo)],
+                            { type: "application/msword;charset=utf-8" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url; a.download = nombre;
@@ -343,6 +427,38 @@
       setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
       return true;
     } catch (e) { return false; }
+  }
+
+  /* Copia conservando el formato: se ofrecen las dos versiones del
+     portapapeles y Word toma la de HTML. Si la API no está disponible
+     —contexto no seguro, navegador viejo— se copia la selección, que
+     también llega con formato. */
+  function copiarConFormato(nodo, alTerminar) {
+    const html = nodo.innerHTML;
+    const plano = nodo.innerText;
+
+    function porSeleccion() {
+      try {
+        const sel = window.getSelection();
+        const rango = document.createRange();
+        rango.selectNodeContents(nodo);
+        sel.removeAllRanges(); sel.addRange(rango);
+        const ok = document.execCommand("copy");
+        sel.removeAllRanges();
+        alTerminar(ok);
+      } catch (e) { alTerminar(false); }
+    }
+
+    if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+      try {
+        navigator.clipboard.write([new ClipboardItem({
+          "text/html": new Blob([html], { type: "text/html" }),
+          "text/plain": new Blob([plano], { type: "text/plain" })
+        })]).then(function () { alTerminar(true); }, porSeleccion);
+        return;
+      } catch (e) { /* cae a la selección */ }
+    }
+    porSeleccion();
   }
 
   /* ---------- Página ---------- */
@@ -440,40 +556,71 @@
     }
 
     function entregable() {
-      const texto = armarEntregable(taller, estado);
       contenedor.innerHTML = "";
+      const datos = estado.__portada || (estado.__portada = {});
 
-      const pre = el("pre", { class: "entregable", text: texto });
+      /* Datos de identificación: se guardan como todo lo demás */
+      function campoIdent(clave, etiqueta) {
+        const input = el("input", {
+          type: "text", class: "entrada-ident", value: datos[clave] || "",
+          placeholder: etiqueta, "aria-label": etiqueta
+        });
+        input.addEventListener("input", function () {
+          datos[clave] = input.value; guardar(estado); repinta();
+        });
+        return el("label", { class: "campo-ident" }, [
+          el("span", { class: "campo-etiqueta", text: etiqueta }), input
+        ]);
+      }
+
+      const vista = el("div", { class: "entregable" });
+
+      function repinta() {
+        vista.innerHTML = armarEntregable(taller, estado, datos);
+      }
+      repinta();
+
       const acciones = el("div", { class: "acciones" });
 
-      const bajar = el("button", { class: "btn primario", type: "button", text: EA.t("taller.descargar") });
-      bajar.addEventListener("click", function () {
-        const ok = descargar((taller.archivo || "entregable") + ".md", texto);
-        bajar.textContent = ok ? EA.t("taller.descargado") : EA.t("taller.noDescargo");
-      });
-
-      const copiar = el("button", { class: "btn", type: "button", text: EA.t("taller.copiar") });
+      const copiar = el("button", { class: "btn primario", type: "button", text: EA.t("taller.copiarWord") });
       copiar.addEventListener("click", function () {
-        try {
-          navigator.clipboard.writeText(texto).then(
-            function () { copiar.textContent = EA.t("taller.copiado"); },
-            function () { copiar.textContent = EA.t("taller.noCopio"); }
-          );
-        } catch (e) { copiar.textContent = EA.t("taller.noCopio"); }
+        copiarConFormato(vista, function (ok) {
+          copiar.textContent = ok ? EA.t("taller.copiado") : EA.t("taller.noCopio");
+          setTimeout(function () { copiar.textContent = EA.t("taller.copiarWord"); }, 3500);
+        });
       });
 
-      const volver = el("button", { class: "btn", type: "button", text: EA.t("taller.volver") });
+      const bajar = el("button", { class: "btn", type: "button", text: EA.t("taller.descargarWord") });
+      bajar.addEventListener("click", function () {
+        const ok = descargarWord((taller.archivo || "entregable") + ".doc",
+                                 taller.titulo, vista.innerHTML);
+        bajar.textContent = ok ? EA.t("taller.descargado") : EA.t("taller.noDescargo");
+        setTimeout(function () { bajar.textContent = EA.t("taller.descargarWord"); }, 3500);
+      });
+
+      const imprimir = el("button", { class: "btn", type: "button", text: EA.t("taller.imprimir") });
+      imprimir.addEventListener("click", function () { window.print(); });
+
+      const volver = el("button", { class: "btn sutil", type: "button", text: EA.t("taller.volver") });
       volver.addEventListener("click", function () { ir(taller.etapas.length - 1); });
 
-      acciones.appendChild(bajar); acciones.appendChild(copiar); acciones.appendChild(volver);
+      acciones.appendChild(copiar);
+      acciones.appendChild(bajar);
+      acciones.appendChild(imprimir);
+      acciones.appendChild(volver);
 
-      contenedor.appendChild(el("section", { class: "etapa" }, [
+      contenedor.appendChild(el("section", { class: "etapa cierre" }, [
         el("header", { class: "etapa-cabecera" }, [
           el("div", { class: "etapa-num", text: EA.t("taller.cierre") }),
           el("h2", { text: EA.t("taller.tuEntregable") }),
           el("p", { class: "etapa-objetivo", text: EA.t("taller.entregableNota") })
         ]),
-        acciones, pre
+        el("div", { class: "identificacion" }, [
+          campoIdent("nombre", EA.t("taller.campoNombre")),
+          campoIdent("grupo", EA.t("taller.campoGrupo"))
+        ]),
+        acciones,
+        vista
       ]));
       window.scrollTo({ top: 0, behavior: "smooth" });
     }

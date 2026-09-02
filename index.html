@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=202609012221">
-<script src="assets/js/nucleo.js?v=202609012221"></script>
-<script src="assets/js/idioma.js?v=202609012221"></script>
+<link rel="stylesheet" href="assets/css/styles.css?v=202609012242">
+<script src="assets/js/nucleo.js?v=202609012242"></script>
+<script src="assets/js/idioma.js?v=202609012242"></script>
 </head>
 <body>
 
@@ -35,28 +35,16 @@
 
     <section class="seccion">
       <h2 data-t="inicio.comoUsar">Cómo usar este sitio</h2>
-      <div class="bloque">
-        <ol>
-          <li data-t="inicio.paso1"><b>Lee los conceptos</b> de la semana antes de la sesión. Están organizados por día de clase.</li>
-          <li data-t="inicio.paso2"><b>Practica</b> con los seis modos: opción múltiple, escenario → marco, clasificación, ordenar secuencias, ejercicios de cálculo con solución paso a paso y tarjetas de repaso.</li>
-          <li data-t="inicio.paso3"><b>Revisa la retroalimentación.</b> Cada reactivo explica por qué la respuesta correcta lo es y por qué las demás no.</li>
-          <li data-t="inicio.paso4"><b>Repite hasta 80 % o más.</b> Tu mejor resultado se guarda en tu propio navegador; nadie más lo ve.</li>
-        </ol>
-      </div>
+      <p class="sub" data-t="inicio.comoUsarSub">Cuatro tipos de material, cada uno para un momento distinto del estudio.</p>
+      <div id="guia"></div>
     </section>
 
     <section class="seccion">
       <h2 data-t="inicio.hilo">Hilo conductor del curso</h2>
+      <p class="sub" data-t="inicio.hiloSub">Seis niveles que el curso recorre de arriba abajo. Cada uno acota al siguiente.</p>
       <div class="bloque">
-        <div class="flujo">
-          <span class="paso" data-t="inicio.hilo1">Estrategia</span><span class="sep">→</span>
-          <span class="paso" data-t="inicio.hilo2">Capacidades</span><span class="sep">→</span>
-          <span class="paso" data-t="inicio.hilo3">Procesos</span><span class="sep">→</span>
-          <span class="paso" data-t="inicio.hilo4">Datos y aplicaciones</span><span class="sep">→</span>
-          <span class="paso" data-t="inicio.hilo5">Tecnología</span><span class="sep">→</span>
-          <span class="paso" data-t="inicio.hilo6">Resultado y valor</span>
-        </div>
-        <p style="margin-top:.9rem" data-t="inicio.hiloTexto">La Arquitectura Empresarial no comienza preguntando qué tecnología comprar, sino qué resultados necesita alcanzar la organización y cómo deben coordinarse sus capacidades, procesos, información, aplicaciones y tecnología para lograrlos.</p>
+        <div id="hilo"></div>
+        <p class="hilo-cierre" data-t="inicio.hiloTexto">La Arquitectura Empresarial no comienza preguntando qué tecnología comprar, sino qué resultados necesita alcanzar la organización y cómo deben coordinarse sus capacidades, procesos, información, aplicaciones y tecnología para lograrlos.</p>
       </div>
     </section>
 
@@ -65,16 +53,20 @@
 
 <footer class="sitio"><div class="contenedor"></div></footer>
 
-<script src="data/curso.js?v=202609012221"></script>
-<script src="data/semana-1.js?v=202609012221"></script>
-<script src="data/semana-2.js?v=202609012221"></script>
-<script src="data/semana-3.js?v=202609012221"></script>
-<script src="data/semana-4.js?v=202609012221"></script>
-<script src="data/semana-5.js?v=202609012221"></script>
-<script src="assets/js/vistas.js?v=202609012221"></script>
+<script src="data/curso.js?v=202609012242"></script>
+<script src="data/semana-1.js?v=202609012242"></script>
+<script src="data/semana-2.js?v=202609012242"></script>
+<script src="data/semana-3.js?v=202609012242"></script>
+<script src="data/semana-4.js?v=202609012242"></script>
+<script src="data/semana-5.js?v=202609012242"></script>
+<script src="data/casos.js?v=202609012242"></script>
+<script src="data/taller.js?v=202609012242"></script>
+<script src="assets/js/vistas.js?v=202609012242"></script>
 <script>
   EA.montarCascaron("inicio");
   EA.vistas.renderPortada(document.getElementById("semanas"));
+  EA.vistas.renderGuia(document.getElementById("guia"));
+  EA.vistas.renderHilo(document.getElementById("hilo"));
 </script>
 </body>
 </html>

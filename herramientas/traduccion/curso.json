@@ -23,5 +23,330 @@
   "ruta": "caso",
   "es": "<b>Caso conductor del curso.</b> Pendiente por definir.",
   "en": "<b>Anchor case for the course.</b> To be defined."
+ },
+ {
+  "ruta": "hilo/0/nombre",
+  "es": "Estrategia",
+  "en": "Strategy"
+ },
+ {
+  "ruta": "hilo/0/resumen",
+  "es": "El resultado que la organización necesita alcanzar, dicho de forma que se pueda verificar.",
+  "en": "The outcome the organization needs to reach, stated so it can be verified."
+ },
+ {
+  "ruta": "hilo/0/pregunta",
+  "es": "¿Qué resultado necesita el negocio, y cómo sabremos que lo logró?",
+  "en": "What outcome does the business need, and how will we know it got there?"
+ },
+ {
+  "ruta": "hilo/0/ejemplo",
+  "es": "«Ganar participación entre clientes industriales respondiendo el mismo día», no «modernizarnos».",
+  "en": "«Win share among industrial customers by answering the same day», not «modernize ourselves»."
+ },
+ {
+  "ruta": "hilo/0/error",
+  "es": "Confundir la estrategia con una lista de proyectos. Un proyecto es un medio; la estrategia es el resultado.",
+  "en": "Confusing strategy with a list of projects. A project is a means; strategy is the outcome."
+ },
+ {
+  "ruta": "hilo/0/donde",
+  "es": "Semana 1",
+  "en": "Week 1"
+ },
+ {
+  "ruta": "hilo/1/nombre",
+  "es": "Capacidades",
+  "en": "Capabilities"
+ },
+ {
+  "ruta": "hilo/1/resumen",
+  "es": "Lo que la empresa tiene que saber hacer para lograr ese resultado, sin importar quién lo haga ni con qué sistema.",
+  "en": "What the company has to know how to do in order to reach that outcome, regardless of who does it or with which system."
+ },
+ {
+  "ruta": "hilo/1/pregunta",
+  "es": "¿Qué debe saber hacer la organización, independientemente de su estructura actual?",
+  "en": "What must the organization be able to do, independently of its current structure?"
+ },
+ {
+  "ruta": "hilo/1/ejemplo",
+  "es": "«Cotizar con precio y disponibilidad confiables» es una capacidad. «El área de Ventas» es un departamento.",
+  "en": "«Quote with reliable prices and availability» is a capability. «The Sales department» is a department."
+ },
+ {
+  "ruta": "hilo/1/error",
+  "es": "Nombrar departamentos en vez de capacidades. Las capacidades sobreviven a las reorganizaciones; los organigramas no.",
+  "en": "Naming departments instead of capabilities. Capabilities outlive reorganizations; org charts do not."
+ },
+ {
+  "ruta": "hilo/1/donde",
+  "es": "Semana 1",
+  "en": "Week 1"
+ },
+ {
+  "ruta": "hilo/2/nombre",
+  "es": "Procesos",
+  "en": "Processes"
+ },
+ {
+  "ruta": "hilo/2/resumen",
+  "es": "Cómo se ejecuta esa capacidad paso a paso, con tiempos, rutas, esperas y responsables reales.",
+  "en": "How that capability is carried out step by step, with real times, routes, waits and owners."
+ },
+ {
+  "ruta": "hilo/2/pregunta",
+  "es": "¿Cómo se hace hoy, cuánto tarda de verdad y dónde se atora?",
+  "en": "How is it done today, how long does it really take, and where does it get stuck?"
+ },
+ {
+  "ruta": "hilo/2/ejemplo",
+  "es": "Cotizar toma 79 minutos de trabajo y 14 horas de lead time: el 91 % del tiempo el expediente está esperando.",
+  "en": "Quoting takes 79 minutes of work and 14 hours of lead time: 91 % of the time the file is just waiting."
+ },
+ {
+  "ruta": "hilo/2/error",
+  "es": "Documentar el proceso como alguien cree que debería ser, en vez de medir el que realmente ocurre.",
+  "en": "Documenting the process as someone thinks it should be, instead of measuring the one that actually happens."
+ },
+ {
+  "ruta": "hilo/2/donde",
+  "es": "Semanas 2 y 3",
+  "en": "Weeks 2 and 3"
+ },
+ {
+  "ruta": "hilo/3/nombre",
+  "es": "Datos y aplicaciones",
+  "en": "Data and applications"
+ },
+ {
+  "ruta": "hilo/3/resumen",
+  "es": "La información que cada paso necesita y los sistemas que la producen, la guardan y la entregan.",
+  "en": "The information each step needs and the systems that produce it, store it and deliver it."
+ },
+ {
+  "ruta": "hilo/3/pregunta",
+  "es": "¿Qué información necesita cada paso, y qué sistema es dueño de ella?",
+  "en": "What information does each step need, and which system owns it?"
+ },
+ {
+  "ruta": "hilo/3/ejemplo",
+  "es": "El criterio técnico ya se había emitido antes, pero no vivía en ningún sistema: por eso se repetía el trabajo.",
+  "en": "The technical judgment had already been made before, but it lived in no system: that is why the work was repeated."
+ },
+ {
+  "ruta": "hilo/3/error",
+  "es": "Comprar una aplicación antes de saber qué dato le falta al proceso. La aplicación llega; el dato sigue sin existir.",
+  "en": "Buying an application before knowing which piece of data the process is missing. The application arrives; the data still does not exist."
+ },
+ {
+  "ruta": "hilo/3/donde",
+  "es": "Semanas 2 y 4",
+  "en": "Weeks 2 and 4"
+ },
+ {
+  "ruta": "hilo/4/nombre",
+  "es": "Tecnología",
+  "en": "Technology"
+ },
+ {
+  "ruta": "hilo/4/resumen",
+  "es": "La infraestructura y los servicios que sostienen a las aplicaciones y a los datos de forma confiable y segura.",
+  "en": "The infrastructure and services that keep applications and data running reliably and securely."
+ },
+ {
+  "ruta": "hilo/4/pregunta",
+  "es": "¿Qué se necesita para que todo eso opere sin caerse, y qué pasa cuando se cae?",
+  "en": "What does it take for all of that to run without falling over, and what happens when it does?"
+ },
+ {
+  "ruta": "hilo/4/ejemplo",
+  "es": "Un ERP configurado, respaldado, con tiempos de recuperación definidos y alguien responsable de mantenerlo.",
+  "en": "An ERP configured, backed up, with defined recovery times and someone accountable for maintaining it."
+ },
+ {
+  "ruta": "hilo/4/error",
+  "es": "Tratarla como el punto de partida. La tecnología es el habilitador de la eficiencia operativa, no la estrategia.",
+  "en": "Treating it as the starting point. Technology enables operational efficiency; it is not the strategy."
+ },
+ {
+  "ruta": "hilo/4/donde",
+  "es": "Semana 4",
+  "en": "Week 4"
+ },
+ {
+  "ruta": "hilo/5/nombre",
+  "es": "Resultado y valor",
+  "en": "Outcome and value"
+ },
+ {
+  "ruta": "hilo/5/resumen",
+  "es": "La comprobación de que el rediseño movió el número que dijimos que iba a mover.",
+  "en": "The proof that the redesign moved the number we said it would move."
+ },
+ {
+  "ruta": "hilo/5/pregunta",
+  "es": "¿Cambió el indicador que prometimos, y cuánto valió el cambio?",
+  "en": "Did the indicator we promised actually change, and what was the change worth?"
+ },
+ {
+  "ruta": "hilo/5/ejemplo",
+  "es": "Lead time de 14 h a menos de 8 h, y el margen que se estaba perdiendo, recuperado y medido.",
+  "en": "Lead time from 14 h to under 8 h, and the margin that was being lost, recovered and measured."
+ },
+ {
+  "ruta": "hilo/5/error",
+  "es": "Declarar el éxito por haber implantado el sistema. Implantar no es mejorar: mejorar es que el indicador se mueva.",
+  "en": "Declaring success because the system went live. Going live is not improving: improving is the indicator moving."
+ },
+ {
+  "ruta": "hilo/5/donde",
+  "es": "Semana 5",
+  "en": "Week 5"
+ },
+ {
+  "ruta": "guia/0/nombre",
+  "es": "Las semanas del curso",
+  "en": "The course weeks"
+ },
+ {
+  "ruta": "guia/0/cuando",
+  "es": "Antes de cada sesión, y otra vez antes del examen.",
+  "en": "Before each session, and again before the exam."
+ },
+ {
+  "ruta": "guia/0/cuerpo",
+  "es": "Los conceptos explicados en prosa, con diagramas, tablas comparativas y definiciones, organizados por sesión. Cada semana cierra con su zona de práctica.",
+  "en": "The concepts explained in prose, with diagrams, comparison tables and definitions, organized by session. Each week closes with its practice area."
+ },
+ {
+  "ruta": "guia/0/enlace",
+  "es": "semana.html?s=1",
+  "en": "semana.html?s=1"
+ },
+ {
+  "ruta": "guia/0/accion",
+  "es": "Empezar por la Semana 1",
+  "en": "Start with Week 1"
+ },
+ {
+  "ruta": "guia/1/nombre",
+  "es": "Los seis modos de práctica",
+  "en": "The six practice modes"
+ },
+ {
+  "ruta": "guia/1/cuando",
+  "es": "Después de leer, para comprobar si de verdad entendiste.",
+  "en": "After reading, to check whether you really understood."
+ },
+ {
+  "ruta": "guia/1/cuerpo",
+  "es": "Opción múltiple, escenario → marco, clasificar arrastrando, ordenar una secuencia, ejercicios de cálculo con solución paso a paso y tarjetas de repaso. Cada reactivo explica por qué la respuesta correcta lo es <b>y por qué las demás no</b>.",
+  "en": "Multiple choice, scenario → framework, drag-and-drop classification, sequencing, calculation exercises with step-by-step solutions, and flashcards. Every item explains why the correct answer is correct <b>and why the others are not</b>."
+ },
+ {
+  "ruta": "guia/1/enlace",
+  "es": "semana.html?s=1&v=practica",
+  "en": "semana.html?s=1&v=practica"
+ },
+ {
+  "ruta": "guia/1/accion",
+  "es": "Ir a la práctica",
+  "en": "Go to practice"
+ },
+ {
+  "ruta": "guia/2/nombre",
+  "es": "El catálogo de casos",
+  "en": "The case catalog"
+ },
+ {
+  "ruta": "guia/2/cuando",
+  "es": "Cuando quieras ver el concepto fuera del salón.",
+  "en": "When you want to see the concept outside the classroom."
+ },
+ {
+  "ruta": "guia/2/cuerpo",
+  "es": "Empresas reconocibles agrupadas no por industria sino por el <b>patrón de proceso</b> que enseñan. La idea es que reconozcas el mismo problema estructural en una cafetería, un banco y una línea de ensamble.",
+  "en": "Recognizable companies grouped not by industry but by the <b>process pattern</b> they teach. The idea is that you recognize the same structural problem in a coffee shop, a bank and an assembly line."
+ },
+ {
+  "ruta": "guia/2/enlace",
+  "es": "casos.html",
+  "en": "casos.html"
+ },
+ {
+  "ruta": "guia/2/accion",
+  "es": "Ver los casos",
+  "en": "Browse the cases"
+ },
+ {
+  "ruta": "guia/3/nombre",
+  "es": "El taller integrador",
+  "en": "The integrative workshop"
+ },
+ {
+  "ruta": "guia/3/cuando",
+  "es": "Cuando ya tengas las piezas y quieras armarlas.",
+  "en": "Once you have the pieces and want to put them together."
+ },
+ {
+  "ruta": "guia/3/cuerpo",
+  "es": "Un solo caso recorrido de punta a punta: entrevistas, medición, valor, rediseño, caso de negocio, acta de constitución y presentación a la gerencia. Lo que calculas en una etapa reaparece en las siguientes, y al final descargas todo como un documento.",
+  "en": "A single case worked end to end: interviews, measurement, value, redesign, business case, project charter and the presentation to management. What you calculate in one stage reappears in the next ones, and at the end you download it all as one document."
+ },
+ {
+  "ruta": "guia/3/enlace",
+  "es": "taller.html",
+  "en": "taller.html"
+ },
+ {
+  "ruta": "guia/3/accion",
+  "es": "Entrar al taller",
+  "en": "Enter the workshop"
+ },
+ {
+  "ruta": "guia/4/nombre",
+  "es": "El glosario",
+  "en": "The glossary"
+ },
+ {
+  "ruta": "guia/4/cuando",
+  "es": "Cada vez que una sigla te detenga la lectura.",
+  "en": "Every time an acronym stops your reading."
+ },
+ {
+  "ruta": "guia/4/cuerpo",
+  "es": "Todos los términos del curso en un solo lugar, buscables, con la semana en la que se introdujo cada uno.",
+  "en": "Every term in the course in one searchable place, with the week where each one was introduced."
+ },
+ {
+  "ruta": "guia/4/enlace",
+  "es": "glosario.html",
+  "en": "glosario.html"
+ },
+ {
+  "ruta": "guia/4/accion",
+  "es": "Abrir el glosario",
+  "en": "Open the glossary"
+ },
+ {
+  "ruta": "consejos/0",
+  "es": "<b>Lee antes de la sesión, no después.</b> El material está escrito para que llegues con preguntas, no para sustituir la clase.",
+  "en": "<b>Read before the session, not after.</b> The material is written so you arrive with questions, not to replace the class."
+ },
+ {
+  "ruta": "consejos/1",
+  "es": "<b>En los ejercicios de cálculo, resuelve antes de ver el desarrollo.</b> Equivocarte y luego comparar enseña más que leer la solución correcta de entrada.",
+  "en": "<b>In the calculation exercises, solve before looking at the working.</b> Getting it wrong and then comparing teaches more than reading the right answer first."
+ },
+ {
+  "ruta": "consejos/2",
+  "es": "<b>Repite hasta 80 % o más.</b> Tu mejor resultado se guarda en tu propio navegador: no viaja a ningún servidor y el profesor no lo ve.",
+  "en": "<b>Repeat until you reach 80 % or more.</b> Your best score is stored in your own browser: it never reaches a server and the instructor does not see it."
+ },
+ {
+  "ruta": "consejos/3",
+  "es": "<b>Si un número no te cuadra, dilo.</b> Cada cálculo del sitio fue verificado, pero una discrepancia encontrada por un alumno es un hallazgo legítimo.",
+  "en": "<b>If a number does not add up, say so.</b> Every calculation on this site was verified, but a discrepancy found by a student is a legitimate finding."
  }
 ]

@@ -84,6 +84,9 @@ window.EA = (function () {
   function obtenerTaller() {
     return (enIngles() && tallerEn && (tallerEn.etapas || []).length) ? tallerEn : taller;
   }
+  /* Ojo: el enlace del menú NO depende de esto. data/taller.js solo se carga
+     en taller.html, así que condicionar el menú a que esté cargado hacía que
+     el enlace apareciera únicamente estando ya dentro del taller. */
   function hayTaller() { return !!(taller && (taller.etapas || []).length); }
 
   /* ---------- Conteo de reactivos ---------- */
@@ -211,7 +214,7 @@ window.EA = (function () {
         });
       });
       enlaces.push({ href: "casos.html", texto: T("nav.casos"), id: "casos" });
-      if (hayTaller()) enlaces.push({ href: "taller.html", texto: T("nav.taller"), id: "taller" });
+      enlaces.push({ href: "taller.html", texto: T("nav.taller"), id: "taller" });
       enlaces.push({ href: "glosario.html", texto: T("nav.glosario"), id: "glosario" });
 
       const nav = el("nav", { class: "nav" });

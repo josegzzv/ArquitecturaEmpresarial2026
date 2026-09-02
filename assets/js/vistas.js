@@ -140,6 +140,136 @@
     }
   }
 
+  /* ---------------- Hilo conductor interactivo ----------------
+     Un eslabón se abre con el ratón, con el teclado o con el dedo.
+     El detalle NO es un tooltip: es un panel fijo debajo, porque un
+     tooltip no existe en pantallas táctiles y se pierde al leerlo. */
+
+  function renderHilo(destino) {
+    const pasos = (EA.obtenerCurso().hilo) || [];
+    if (!pasos.length || !destino) return;
+
+    const cadena = el("div", { class: "hilo" });
+    const panel = el("div", { class: "hilo-detalle", "aria-live": "polite" });
+    const botones = [];
+    let fijado = 0;      // el que quedó seleccionado al hacer clic
+    let mostrando = -1;
+
+    function pinta(i) {
+      if (i === mostrando) return;
+      mostrando = i;
+      const p = pasos[i];
+      panel.innerHTML = "";
+      panel.appendChild(el("div", { class: "hilo-cabeza" }, [
+        el("h3", { text: p.nombre }),
+        p.donde ? el("span", { class: "pastilla", text: p.donde }) : null
+      ]));
+      panel.appendChild(el("p", { class: "hilo-resumen", html: p.resumen || "" }));
+
+      const filas = [];
+      if (p.pregunta) filas.push(["pregunta", EA.t("hilo.pregunta"), p.pregunta]);
+      if (p.ejemplo) filas.push(["ejemplo", EA.t("hilo.ejemplo"), p.ejemplo]);
+      if (p.error) filas.push(["error", EA.t("hilo.error"), p.error]);
+
+      filas.forEach(function (f) {
+        panel.appendChild(el("div", { class: "hilo-fila " + f[0] }, [
+          el("span", { class: "hilo-etiqueta", text: f[1] }),
+          el("span", { class: "hilo-valor", html: f[2] })
+        ]));
+      });
+
+      botones.forEach(function (b, k) {
+        b.setAttribute("aria-selected", String(k === i));
+      });
+    }
+
+    pasos.forEach(function (p, i) {
+      if (i > 0) cadena.appendChild(el("span", { class: "sep", text: "→", "aria-hidden": "true" }));
+
+      const b = el("button", {
+        class: "paso", type: "button", role: "tab",
+        "aria-selected": "false", text: p.nombre
+      });
+      b.addEventListener("mouseenter", function () { pinta(i); });
+      b.addEventListener("focus", function () { pinta(i); });
+      b.addEventListener("click", function () { fijado = i; pinta(i); });
+      botones.push(b);
+      cadena.appendChild(b);
+    });
+
+    /* Al sacar el ratón de la cadena, vuelve al que quedó fijado */
+    cadena.addEventListener("mouseleave", function () { pinta(fijado); });
+
+    /* Flechas para moverse con el teclado, como en cualquier lista de pestañas */
+    cadena.addEventListener("keydown", function (e) {
+      const i = botones.indexOf(document.activeElement);
+      if (i < 0) return;
+      let destinoIdx = -1;
+      if (e.key === "ArrowRight") destinoIdx = (i + 1) % botones.length;
+      if (e.key === "ArrowLeft") destinoIdx = (i - 1 + botones.length) % botones.length;
+      if (e.key === "Home") destinoIdx = 0;
+      if (e.key === "End") destinoIdx = botones.length - 1;
+      if (destinoIdx < 0) return;
+      e.preventDefault();
+      botones[destinoIdx].focus();
+    });
+
+    cadena.setAttribute("role", "tablist");
+    destino.appendChild(cadena);
+    destino.appendChild(el("p", { class: "hilo-pista", text: EA.t("hilo.pista") }));
+    destino.appendChild(panel);
+    pinta(0);
+  }
+
+  /* ---------------- Guía de secciones ---------------- */
+
+  function renderGuia(destino) {
+    const c = EA.obtenerCurso();
+    const guia = c.guia || [];
+    if (!guia.length || !destino) return;
+
+    /* Los conteos salen del contenido real, no de un número escrito a mano. */
+    const semanas = EA.listaSemanas().filter(function (s) { return s.estado === "publicada"; });
+    const reactivos = semanas.reduce(function (a, s) { return a + EA.contarReactivos(s); }, 0);
+    const casos = ((EA.obtenerCasos && EA.obtenerCasos().casos) || []).length;
+    const etapas = ((EA.obtenerTaller && EA.obtenerTaller()) || { etapas: [] }).etapas.length;
+    const terminos = EA.listaSemanas().reduce(function (a, s) { return a + (s.terminos || []).length; }, 0);
+
+    const conteos = {
+      semanas: EA.t("guia.nSemanas", { n: semanas.length }),
+      practica: EA.t("guia.nReactivos", { n: reactivos }),
+      casos: casos ? EA.t("guia.nCasos", { n: casos }) : null,
+      taller: etapas ? EA.t("guia.nEtapas", { n: etapas }) : null,
+      glosario: EA.t("guia.nTerminos", { n: terminos })
+    };
+
+    const rejilla = el("div", { class: "guia" });
+    guia.forEach(function (g) {
+      const tarjeta = el("article", { class: "guia-tarjeta" }, [
+        el("div", { class: "guia-cabeza" }, [
+          el("span", { class: "guia-icono", text: g.icono || "◆", "aria-hidden": "true" }),
+          el("h3", { text: g.nombre }),
+          conteos[g.id] ? el("span", { class: "pastilla viva", text: conteos[g.id] }) : null
+        ]),
+        g.cuando ? el("p", { class: "guia-cuando", html: g.cuando }) : null,
+        el("p", { class: "guia-cuerpo", html: g.cuerpo || "" }),
+        g.enlace ? el("a", { class: "guia-enlace", href: g.enlace }, [
+          document.createTextNode(g.accion || ""),
+          el("span", { class: "guia-flecha", text: " →", "aria-hidden": "true" })
+        ]) : null
+      ]);
+      rejilla.appendChild(tarjeta);
+    });
+    destino.appendChild(rejilla);
+
+    if (c.consejos && c.consejos.length) {
+      destino.appendChild(el("div", { class: "bloque clave consejos" }, [
+        el("h4", { text: EA.t("guia.consejos") }),
+        el("ul", {}, c.consejos.map(function (t) { return el("li", { html: t }); }))
+      ]));
+    }
+  }
+
   /* ---------------- Página de semana ---------------- */
 
   function renderSemana(semana, destinoConceptos, destinoCabecera) {
@@ -205,5 +335,5 @@
     pinta("");
   }
 
-  EA.vistas = { renderPortada, renderSemana, renderGlosario, renderBloque };
+  EA.vistas = { renderPortada, renderSemana, renderGlosario, renderBloque, renderHilo, renderGuia };
 })(window.EA);

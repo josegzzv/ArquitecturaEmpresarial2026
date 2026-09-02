@@ -487,16 +487,9 @@
 
   /* El cronograma, como barras proporcionales hechas con celdas de tabla:
      es la única forma de que un Gantt sobreviva al pegado en Word. */
-  function ganttExportado(taller, estado, r) {
-    let def = null, valor = null;
-    (taller.etapas || []).forEach(function (e) {
-      (e.campos || []).forEach(function (c) {
-        if (c.tipo !== "cronograma") return;
-        const v = ((estado[e.id] || {}).campos || {})[c.id];
-        if (v !== undefined && String(v).trim() !== "") { def = c; valor = v; }
-      });
-    });
-    if (!def) return "";
+  /* Dibuja el cronograma de un campo concreto. */
+  function ganttDe(def, valor, rotulo) {
+    if (!def || valor === undefined || String(valor).trim() === "") return "";
 
     const fases = leerCronograma(def, valor);
     const total = fases.reduce(function (a, f) { return a + f.valor; }, 0);
@@ -524,12 +517,26 @@
     }).join("");
 
     const meses = Math.round(total / 4.345 * 10) / 10;
-    return (r.ocultarRotulo ? "" : "<p class='doc-rotulo'>" + escapa(def.rotulo || r.cronoTitulo || "") + "</p>")
+    return (rotulo ? "<p class='doc-rotulo'>" + escapa(rotulo) + "</p>" : "")
       + "<table class='doc-gantt' style='width:100%;border-collapse:collapse;margin:0 0 4pt'>"
       + filas + "</table>"
       + "<p class='doc-gantt-total'>"
       + escapa(EA.t("taller.cronoTotal", { n: total, u: def.unidad || "", m: meses }))
       + "</p>";
+  }
+
+  /* Busca el cronograma que el alumno llenó, para el resumen de arriba. */
+  function ganttExportado(taller, estado, r) {
+    let def = null, valor = null;
+    (taller.etapas || []).forEach(function (e) {
+      (e.campos || []).forEach(function (c) {
+        if (c.tipo !== "cronograma") return;
+        const v = ((estado[e.id] || {}).campos || {})[c.id];
+        if (v !== undefined && String(v).trim() !== "") { def = c; valor = v; }
+      });
+    });
+    if (!def) return "";
+    return ganttDe(def, valor, r.ocultarRotulo ? "" : (def.rotulo || r.cronoTitulo || ""));
   }
 
   /* `quiere` permite pedir solo una parte: en una diapositiva de 16:9 no
@@ -637,8 +644,12 @@
 
       partes.push("<h2>" + (i + 1) + ". " + escapa(etapa.titulo) + "</h2>");
 
-      /* Los valores objetivos van en tabla: se leen mejor y Word las respeta. */
-      const cortos = conValor.filter(function (c) { return c.tipo !== "texto"; });
+      /* Los valores objetivos van en tabla: se leen mejor y Word las respeta.
+         El cronograma queda fuera — su valor es un JSON, no una cifra: se
+         dibuja aparte como diagrama de barras. */
+      const cortos = conValor.filter(function (c) {
+        return c.tipo !== "texto" && c.tipo !== "cronograma";
+      });
       if (cortos.length) {
         partes.push("<table class='doc-datos'><thead><tr>"
           + "<th>" + escapa(EA.t("taller.colConcepto")) + "</th>"
@@ -653,6 +664,11 @@
             }).join("")
           + "</tbody></table>");
       }
+
+      conValor.filter(function (c) { return c.tipo === "cronograma"; }).forEach(function (c) {
+        partes.push("<h3>" + escapa(c.rotulo || etiquetaLimpia(c.etiqueta, estado, taller)) + "</h3>");
+        partes.push(ganttDe(c, g.campos[c.id]));
+      });
 
       conValor.filter(function (c) { return c.tipo === "texto"; }).forEach(function (c) {
         partes.push("<h3>" + etiquetaLimpia(c.etiqueta, estado, taller) + "</h3>");

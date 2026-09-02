@@ -12,6 +12,86 @@ EA.registrarTallerEn(
  },
  "pieEntregable": "Produced with the integrative workshop of the Process Design and Enterprise Architecture course. The figures in the case are illustrative and the company is fictional.",
  "intro": "<p>The eight stages follow the same order as a real project: first you understand, then you measure, then you decide what to change, then you justify it with money, and only at the end do you ask for authorization. What you answer is saved in your browser and carried forward into the following stages: the lead time you calculate in stage 2 is the one that will appear in your project charter in stage 7.</p><p>When you finish you can download everything as a single document.</p>",
+ "resumen": {
+  "titulo": "Executive summary",
+  "cronoTitulo": "Proposed schedule",
+  "tiempoTitulo": "Where the time goes today",
+  "trabajo": "Actual work",
+  "espera": "Waiting",
+  "kpis": [
+   {
+    "etapa": "tiempos",
+    "campo": "lt",
+    "etiqueta": "Current lead time"
+   },
+   {
+    "etapa": "tiempos",
+    "campo": "eficiencia",
+    "etiqueta": "Cycle efficiency"
+   },
+   {
+    "etapa": "capacidad",
+    "campo": "capProceso",
+    "etiqueta": "Process capacity"
+   },
+   {
+    "etapa": "negocio",
+    "campo": "cnh",
+    "etiqueta": "Cost of doing nothing"
+   },
+   {
+    "etapa": "negocio",
+    "campo": "vpnB",
+    "etiqueta": "NPV of the proposal"
+   },
+   {
+    "etapa": "negocio",
+    "campo": "paybackB",
+    "etiqueta": "Pays back in"
+   }
+  ],
+  "barra": {
+   "etapa": "tiempos",
+   "campo": "eficiencia"
+  }
+ },
+ "diapositivas": [
+  {
+   "etapa": "presentacion",
+   "campo": "p1",
+   "titulo": "The problem"
+  },
+  {
+   "etapa": "presentacion",
+   "campo": "p2",
+   "titulo": "What we found"
+  },
+  {
+   "etapa": "presentacion",
+   "campo": "p3",
+   "titulo": "What we propose"
+  },
+  {
+   "etapa": "presentacion",
+   "campo": "p4",
+   "titulo": "How much it improves"
+  },
+  {
+   "etapa": "presentacion",
+   "campo": "p5",
+   "titulo": "What it costs and when it pays back"
+  },
+  {
+   "etapa": "presentacion",
+   "campo": "p6",
+   "titulo": "Risks and how they are mitigated"
+  },
+  {
+   "etapa": "presentacion",
+   "campo": "p7",
+   "titulo": "The decision we are asking for today"
+  }
+ ],
  "etapas": [
   {
    "id": "descubrimiento",
@@ -198,7 +278,7 @@ EA.registrarTallerEn(
      "tipo": "tabla",
      "titulo": "Measured waits between steps",
      "encabezados": [
-      "Wait",
+      "Waiting",
       "When it happens",
       "Average"
      ],
@@ -826,12 +906,71 @@ EA.registrarTallerEn(
      "ayuda": "They are all in the stage 1 interviews."
     },
     {
+     "id": "cronograma",
+     "tipo": "cronograma",
+     "unidad": "weeks",
+     "rotulo": "Proposed schedule",
+     "etiqueta": "Schedule: split the timeline across the phases",
+     "ayuda": "The phases are fixed; what you decide is <b>how long each one lasts</b>. Splitting the timeline forces you to take a position: almost everyone underestimates testing and the pilot, and overestimates configuration. Look at the total before you call it done.",
+     "fases": [
+      {
+       "id": "reglas",
+       "nombre": "Defining the rules with Engineering",
+       "min": 1,
+       "max": 12,
+       "valor": 3
+      },
+      {
+       "id": "config",
+       "nombre": "Configuration in the ERP",
+       "min": 1,
+       "max": 12,
+       "valor": 4
+      },
+      {
+       "id": "migracion",
+       "nombre": "Migrating the history",
+       "min": 1,
+       "max": 12,
+       "valor": 2
+      },
+      {
+       "id": "pruebas",
+       "nombre": "Testing and adjustments",
+       "min": 1,
+       "max": 12,
+       "valor": 3
+      },
+      {
+       "id": "piloto",
+       "nombre": "Pilot with validation running in parallel",
+       "min": 1,
+       "max": 12,
+       "valor": 4
+      },
+      {
+       "id": "despliegue",
+       "nombre": "Rollout and training",
+       "min": 1,
+       "max": 12,
+       "valor": 2
+      },
+      {
+       "id": "estabiliza",
+       "nombre": "Stabilization and measurement",
+       "min": 1,
+       "max": 12,
+       "valor": 4
+      }
+     ]
+    },
+    {
      "id": "hitos",
      "tipo": "texto",
      "lineas": 4,
      "minimoPalabras": 20,
-     "etiqueta": "Main milestones",
-     "ayuda": "Four or five. A milestone is a verifiable result, not an activity."
+     "etiqueta": "Milestones: what marks the end of each phase",
+     "ayuda": "A milestone is a <b>verifiable result</b>, not an activity: “rules approved by Engineering”, not “define the rules”."
     },
     {
      "id": "presupuesto",

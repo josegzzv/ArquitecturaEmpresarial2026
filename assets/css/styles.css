@@ -53,6 +53,10 @@
 
 * { box-sizing: border-box; }
 
+/* Un display explícito (grid, flex) le gana al [hidden] del navegador.
+   Sin esto, ocultar un contenedor con .hidden = true no surte efecto. */
+[hidden] { display: none !important; }
+
 /* Familia de despliegue para títulos y etiquetas */
 h1, h2, h3, .marca strong, .hero .kicker, .tarjeta-semana .num,
 .dia .etiqueta-dia, .pestanas button, .modo .nombre, .pregunta,
@@ -735,6 +739,42 @@ footer.sitio .contenedor {
 
 .bloque.modelo { border-left: 3px solid var(--ok); }
 
+/* ---------- Cronograma con deslizadores ---------- */
+.cronograma { display: grid; gap: .5rem; margin: .7rem 0 1rem; }
+.crono-fase { display: grid; grid-template-columns: 15rem 1fr; gap: .3rem 1rem; align-items: center; }
+.crono-nombre { font-size: .88rem; }
+.crono-control { display: flex; align-items: center; gap: .6rem; }
+.crono-rango { flex: 1; min-width: 6rem; accent-color: var(--accent); cursor: pointer; }
+.crono-valor {
+  font-variant-numeric: tabular-nums; font-weight: 700; color: var(--accent);
+  min-width: 1.6rem; text-align: right;
+}
+.crono-unidad { font-size: .78rem; color: var(--muted); min-width: 4.2rem; }
+
+.gantt-total {
+  font-size: .88rem; font-weight: 600; color: var(--text);
+  padding: .5rem .7rem; background: var(--accent-soft); color: var(--accent);
+  border-radius: 8px; display: inline-block; margin-bottom: .7rem;
+}
+.gantt-previa { display: grid; gap: .28rem; }
+.gantt-fila { display: grid; grid-template-columns: 15rem 1fr; gap: 1rem; align-items: center; }
+.gantt-nombre { font-size: .8rem; color: var(--muted); }
+.gantt-pista { display: block; background: var(--bg-alt); border-radius: 5px; height: 1.35rem; }
+.gantt-barra {
+  display: block; height: 100%; border-radius: 5px; color: #fff;
+  font-size: .72rem; font-weight: 700; line-height: 1.35rem; text-align: center;
+  min-width: 1.2rem;
+}
+.gantt-barra.c0 { background: var(--accent); }
+.gantt-barra.c1 { background: var(--accent-2); }
+.gantt-barra.c2 { background: var(--warn); }
+.gantt-barra.c3 { background: var(--ok); }
+
+@media (max-width: 700px) {
+  .crono-fase, .gantt-fila { grid-template-columns: 1fr; gap: .2rem; }
+  .gantt-nombre { font-size: .76rem; }
+}
+
 /* Identificación del alumno para el encabezado del entregable */
 .identificacion { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
 .campo-ident { display: flex; flex-direction: column; gap: .25rem; min-width: 0; flex: 1 1 14rem; }
@@ -772,16 +812,76 @@ footer.sitio .contenedor {
 .entregable .doc-ficha { width: auto; margin: 0 0 1.2rem; }
 .entregable .doc-ficha td { border: 0; padding: .1rem 1.2rem .1rem 0; font-size: .86rem; color: #14202e; }
 
+.entregable .doc-rotulo {
+  font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: #5a6b7f; margin: 1rem 0 .35rem;
+}
+.entregable .doc-num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.entregable .doc-gantt td { border: 0; padding: .12rem 0; }
+.entregable .doc-gantt-total { font-size: .82rem; color: #5a6b7f; margin-bottom: 1rem; }
+.entregable .doc-kpis td { border: 0; }
+
 @media (max-width: 620px) { .entregable { padding: 1.2rem 1.1rem; } }
 
-/* Al imprimir, solo el documento */
+/* ---------- Presentación ejecutiva ---------- */
+.diapositivas { display: grid; gap: 1.2rem; }
+.lamina {
+  background: #fff; color: #14202e; border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: var(--shadow); aspect-ratio: 16 / 9; padding: 2.4rem 2.8rem;
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+}
+.lamina h2 { font-size: 1.9rem; margin: .3rem 0 .5rem; letter-spacing: -.02em; line-height: 1.1; }
+.lamina h3 {
+  font-size: 1.25rem; margin: 0 0 .8rem; letter-spacing: -.01em;
+  padding-bottom: .4rem; border-bottom: 2px solid #b3400a;
+}
+.lamina p { font-size: 1rem; line-height: 1.55; margin: 0 0 .6rem; max-width: 62ch; }
+.lamina-pie {
+  position: absolute; left: 2.8rem; right: 2.8rem; bottom: 1.2rem;
+  font-size: .72rem; color: #8a99aa; border-top: 1px solid #e4e9ef; padding-top: .5rem;
+}
+.lamina-marca {
+  font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: #b3400a;
+}
+.lamina.portada { justify-content: center; background: linear-gradient(135deg, #fff 60%, #fdf0e8); }
+.lamina-sub { color: #5a6b7f; font-size: 1.05rem !important; }
+.lamina-autor { margin-top: 1.4rem !important; font-size: .9rem !important; color: #5a6b7f; }
+.lamina-num {
+  position: absolute; top: 1.6rem; right: 2.2rem;
+  font-size: 2.6rem; font-weight: 800; color: #f2e6de; line-height: 1;
+}
+.lamina-info { font-size: .8rem; }
+.lamina-info table { width: 100%; border-collapse: collapse; }
+.lamina-aviso { color: #8a99aa; font-style: italic; }
+
+@media (max-width: 760px) {
+  .lamina { aspect-ratio: auto; padding: 1.4rem 1.5rem; }
+  .lamina h2 { font-size: 1.4rem; }
+  .lamina h3 { font-size: 1.05rem; }
+  .lamina-pie { position: static; left: auto; right: auto; bottom: auto; margin-top: 1rem; }
+  .lamina-num { font-size: 1.8rem; top: 1rem; right: 1.2rem; }
+}
+
+/* ---------- Impresión ---------- */
 @media print {
   .etapa.cierre .etapa-cabecera, .etapa.cierre .identificacion,
-  .etapa.cierre .acciones { display: none; }
+  .etapa.cierre .acciones, .etapa.cierre .pestanas { display: none; }
   .entregable {
     max-height: none; overflow: visible; border: 0; box-shadow: none;
     padding: 0; background: #fff;
   }
+  /* Las diapositivas solo se imprimen desde su propia vista */
+  .diapositivas { display: none; }
+  :root.viendo-presentacion .entregable { display: none; }
+  :root.viendo-presentacion .diapositivas { display: block; }
+  :root.viendo-presentacion .lamina {
+    border: 0; border-radius: 0; box-shadow: none; aspect-ratio: auto;
+    width: 100%; height: 100vh; page-break-after: always; break-after: page;
+    padding: 5vh 7vw; margin: 0;
+  }
+  :root.viendo-presentacion .lamina:last-child { page-break-after: auto; break-after: auto; }
+  :root.viendo-presentacion .lamina-pie { left: 7vw; right: 7vw; bottom: 4vh; }
 }
 
 .taller-pasos { justify-content: space-between; margin-top: 2rem; }

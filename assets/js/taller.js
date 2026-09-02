@@ -55,12 +55,25 @@
      el alumno respondió antes. Si aún no lo ha contestado, se muestra
      un hueco visible en vez de romper la frase. */
 
+  /* Devuelve el valor que el alumno escribió, ya con su formato:
+     un monto arrastrado a otra etapa debe leerse $534,600, no 534600. */
+  function valorArrastrado(ref, estado, taller) {
+    const partes = String(ref).split(".");
+    const v = ((estado[partes[0]] || {}).campos || {})[partes[1]];
+    if (v === undefined || String(v).trim() === "") return null;
+    let unidad = "";
+    ((taller && taller.etapas) || []).forEach(function (e) {
+      if (e.id !== partes[0]) return;
+      (e.campos || []).forEach(function (c) { if (c.id === partes[1]) unidad = c.unidad || ""; });
+    });
+    return formatoValor(v, unidad);
+  }
+
   function resolver(texto, estado, taller) {
     if (!texto) return "";
     return String(texto).replace(/\{\{([\w.-]+)\}\}/g, function (todo, ref) {
-      const partes = ref.split(".");
-      const v = ((estado[partes[0]] || {}).campos || {})[partes[1]];
-      if (v === undefined || v === "") {
+      const v = valorArrastrado(ref, estado, taller);
+      if (v === null) {
         return '<span class="hueco" title="' + EA.t("taller.pendiente") + '">—</span>';
       }
       return '<b class="arrastrado">' + v + "</b>";
@@ -170,9 +183,102 @@
     };
   }
 
-  function construyeCampo(c, valor, estado) {
+  /* ---------- Cronograma ----------
+     Las fases son fijas: lo que el alumno decide es cuánto dura cada una.
+     Ahí está el ejercicio — repartir un plazo total entre fases obliga a
+     tomar postura sobre dónde está el trabajo de verdad. */
+
+  function leerCronograma(c, valor) {
+    let guardado = {};
+    try { guardado = JSON.parse(valor || "{}"); } catch (e) { guardado = {}; }
+    return (c.fases || []).map(function (f) {
+      const v = Number(guardado[f.id]);
+      return { id: f.id, nombre: f.nombre,
+               valor: isNaN(v) ? (f.valor || 1) : v,
+               min: f.min || 1, max: f.max || 12 };
+    });
+  }
+
+  function campoCronograma(c, valor, alGuardar) {
+    const fases = leerCronograma(c, valor);
+    const caja = el("div", { class: "cronograma" });
+    const previa = el("div", { class: "gantt-previa" });
+    const total = el("div", { class: "gantt-total" });
+
+    function serializa() {
+      const o = {};
+      fases.forEach(function (f) { o[f.id] = f.valor; });
+      return JSON.stringify(o);
+    }
+
+    function suma() { return fases.reduce(function (a, f) { return a + f.valor; }, 0); }
+
+    function pintaPrevia() {
+      const t = suma();
+      previa.innerHTML = "";
+      let acumulado = 0;
+      fases.forEach(function (f, i) {
+        const fila = el("div", { class: "gantt-fila" }, [
+          el("span", { class: "gantt-nombre", text: f.nombre }),
+          el("span", { class: "gantt-pista" }, [
+            el("span", {
+              class: "gantt-barra c" + (i % 4),
+              style: "margin-left:" + (acumulado / t * 100) + "%;width:" + (f.valor / t * 100) + "%",
+              text: String(f.valor)
+            })
+          ])
+        ]);
+        acumulado += f.valor;
+        previa.appendChild(fila);
+      });
+      const meses = Math.round(t / 4.345 * 10) / 10;
+      total.textContent = EA.t("taller.cronoTotal", { n: t, u: c.unidad || "", m: meses });
+    }
+
+    fases.forEach(function (f) {
+      const salida = el("output", { class: "crono-valor", text: String(f.valor) });
+      const rango = el("input", {
+        type: "range", class: "crono-rango", min: String(f.min), max: String(f.max),
+        step: "1", value: String(f.valor), "aria-label": f.nombre
+      });
+      rango.addEventListener("input", function () {
+        f.valor = Number(rango.value);
+        salida.textContent = rango.value;
+        pintaPrevia();
+        alGuardar(serializa());
+      });
+      caja.appendChild(el("label", { class: "crono-fase" }, [
+        el("span", { class: "crono-nombre", text: f.nombre }),
+        el("span", { class: "crono-control" }, [rango, salida,
+          el("span", { class: "crono-unidad", text: c.unidad || "" })])
+      ]));
+    });
+
+    pintaPrevia();
+
+    const nodo = el("div", { class: "campo campo-largo" }, [
+      el("span", { class: "campo-etiqueta", html: c.etiqueta }),
+      c.ayuda ? el("span", { class: "campo-pista", html: c.ayuda }) : null,
+      caja, total, previa
+    ]);
+
+    /* El motor espera un input; se usa uno oculto como portador del valor. */
+    const portador = el("input", { type: "hidden", value: serializa() });
+    nodo.appendChild(portador);
+
+    return {
+      nodo: nodo, input: portador,
+      revisar: function () { return null; },
+      valor: function () { return serializa(); },
+      objetivo: false,
+      forzarGuardado: true
+    };
+  }
+
+  function construyeCampo(c, valor, estado, alGuardar) {
     if (c.tipo === "texto") return campoTexto(c, valor);
     if (c.tipo === "opcion") return campoOpcion(c, valor);
+    if (c.tipo === "cronograma") return campoCronograma(c, valor, alGuardar);
     return campoNumero(c, valor, estado);
   }
 
@@ -208,8 +314,14 @@
       if (copia.ayuda) copia.ayuda = resolver(copia.ayuda, estado, taller);
       if (copia.pista) copia.pista = resolver(copia.pista, estado, taller);
 
-      const campo = construyeCampo(copia, guardadoEtapa.campos[c.id], estado);
+      const campo = construyeCampo(copia, guardadoEtapa.campos[c.id], estado, function (v) {
+        guardadoEtapa.campos[c.id] = v;
+        alCambiar();
+      });
       campo.def = c;
+      if (campo.forzarGuardado && guardadoEtapa.campos[c.id] === undefined) {
+        guardadoEtapa.campos[c.id] = campo.valor();
+      }
       campo.input.addEventListener("input", function () {
         guardadoEtapa.campos[c.id] = campo.texto ? campo.texto() : campo.valor();
         alCambiar();
@@ -318,14 +430,168 @@
 
   /* Las etiquetas traen HTML de énfasis y a veces marcadores {{}}; se
      conserva el énfasis y se resuelven los marcadores contra lo escrito. */
-  function etiquetaLimpia(texto, estado) {
+  function etiquetaLimpia(texto, estado, taller) {
     return String(texto || "")
       .replace(/\{\{([\w.-]+)\}\}/g, function (todo, ref) {
-        const p = ref.split(".");
-        const v = ((estado[p[0]] || {}).campos || {})[p[1]];
-        return v === undefined || v === "" ? "—" : v;
+        const v = valorArrastrado(ref, estado, taller);
+        return v === null ? "—" : v;
       })
       .replace(/<(?!\/?(b|i|em|strong|code)\b)[^>]*>/gi, "");
+  }
+
+  /* ---------- Formato de cifras ----------
+     El alumno escribe «534600»; en un reporte eso se lee $534,600.
+     Se conservan exactamente los decimales que tecleó: redondear aquí
+     cambiaría un resultado que él calculó. */
+
+  function formatoValor(valor, unidad) {
+    const u = String(unidad || "").trim();
+    const n = aNumero(valor);
+    if (isNaN(n)) return escapa(valor) + (u ? " " + escapa(u) : "");
+
+    const decimales = Math.min((String(valor).split(/[.,]/)[1] || "").length, 6);
+    const num = n.toLocaleString(EA.idioma() === "en" ? "en-US" : "es-MX", {
+      minimumFractionDigits: decimales, maximumFractionDigits: decimales
+    });
+
+    if (u.indexOf("$") === 0) {
+      // "/año" se lee mejor separado: $534,600 / año
+      const resto = u.slice(1).trim().replace(/^\/\s*/, "/ ");
+      return "$" + num + (resto ? " " + escapa(resto) : "");
+    }
+    if (u === "%") return num + " %";
+    return num + (u ? " " + escapa(u) : "");
+  }
+
+  /* ---------- Infografía ----------
+     Construida con tablas de celdas coloreadas, no con SVG ni con divs:
+     es lo único que Word conserva al pegar y que además imprime bien. */
+
+  const TINTA = {
+    acento: "#b3400a", acentoSuave: "#fdf0e8",
+    frio: "#0f5f6b", frioSuave: "#e6f2f3",
+    ok: "#0f7a4a", gris: "#8a99aa", grisSuave: "#eef2f6",
+    borde: "#c9d3de", tinta: "#14202e", tenue: "#5a6b7f"
+  };
+
+  function tarjetaKpi(etiqueta, valor, color, fondo) {
+    return "<td style='width:33%;padding:0 6pt 10pt 0;vertical-align:top'>"
+      + "<table style='width:100%;border-collapse:collapse'><tr>"
+      + "<td style='background:" + fondo + ";border-left:3pt solid " + color + ";padding:7pt 10pt'>"
+      + "<div style='font-size:8pt;letter-spacing:.06em;text-transform:uppercase;color:" + TINTA.tenue + "'>"
+      + escapa(etiqueta) + "</div>"
+      + "<div style='font-size:15pt;font-weight:700;color:" + color + "'>" + valor + "</div>"
+      + "</td></tr></table></td>";
+  }
+
+  /* El cronograma, como barras proporcionales hechas con celdas de tabla:
+     es la única forma de que un Gantt sobreviva al pegado en Word. */
+  function ganttExportado(taller, estado, r) {
+    let def = null, valor = null;
+    (taller.etapas || []).forEach(function (e) {
+      (e.campos || []).forEach(function (c) {
+        if (c.tipo !== "cronograma") return;
+        const v = ((estado[e.id] || {}).campos || {})[c.id];
+        if (v !== undefined && String(v).trim() !== "") { def = c; valor = v; }
+      });
+    });
+    if (!def) return "";
+
+    const fases = leerCronograma(def, valor);
+    const total = fases.reduce(function (a, f) { return a + f.valor; }, 0);
+    if (!total) return "";
+
+    const colores = [TINTA.acento, TINTA.frio, "#8a6100", TINTA.ok];
+    let acumulado = 0;
+
+    const filas = fases.map(function (f, i) {
+      const antes = Math.round(acumulado / total * 100);
+      const ancho = Math.max(2, Math.round(f.valor / total * 100));
+      acumulado += f.valor;
+      const color = colores[i % colores.length];
+      return "<tr>"
+        + "<td style='width:34%;padding:2pt 8pt 2pt 0;font-size:9pt;border:0;color:" + TINTA.tinta + "'>"
+          + escapa(f.nombre) + "</td>"
+        + "<td style='border:0;padding:2pt 0'>"
+          + "<table style='width:100%;border-collapse:collapse'><tr>"
+          + (antes > 0 ? "<td style='width:" + antes + "%;border:0'>&nbsp;</td>" : "")
+          + "<td style='width:" + ancho + "%;background:" + color + ";color:#fff;border:0;"
+            + "padding:3pt 5pt;font-size:8.5pt;font-weight:700;text-align:center;white-space:nowrap'>"
+            + f.valor + "</td>"
+          + (100 - antes - ancho > 0 ? "<td style='border:0'>&nbsp;</td>" : "")
+          + "</tr></table></td></tr>";
+    }).join("");
+
+    const meses = Math.round(total / 4.345 * 10) / 10;
+    return (r.ocultarRotulo ? "" : "<p class='doc-rotulo'>" + escapa(def.rotulo || r.cronoTitulo || "") + "</p>")
+      + "<table class='doc-gantt' style='width:100%;border-collapse:collapse;margin:0 0 4pt'>"
+      + filas + "</table>"
+      + "<p class='doc-gantt-total'>"
+      + escapa(EA.t("taller.cronoTotal", { n: total, u: def.unidad || "", m: meses }))
+      + "</p>";
+  }
+
+  /* `quiere` permite pedir solo una parte: en una diapositiva de 16:9 no
+     cabe todo junto, así que la presentación la reparte en dos láminas. */
+  function infografia(taller, estado, quiere) {
+    const r = taller.resumen;
+    if (!r) return "";
+    const q = quiere || { titulo: true, crono: true, tiempo: true, kpis: true };
+    const partes = [];
+
+    if (q.titulo) partes.push("<h2 style='border:0'>" + escapa(r.titulo) + "</h2>");
+
+    /* --- 1 · El cronograma que el alumno repartió --- */
+    if (q.crono) partes.push(ganttExportado(taller, estado, Object.assign({}, r, { ocultarRotulo: !q.titulo })));
+
+    /* --- 2 · Trabajo contra espera, con el número del propio alumno --- */
+    const efic = aNumero(((estado[r.barra.etapa] || {}).campos || {})[r.barra.campo]);
+    if (q.tiempo && !isNaN(efic) && efic > 0 && efic <= 100) {
+      const trabajo = Math.max(1, Math.round(efic));
+      const espera = 100 - trabajo;
+      partes.push("<p class='doc-rotulo'>" + escapa(r.tiempoTitulo) + "</p>");
+      partes.push("<table class='doc-barra' style='width:100%;border-collapse:collapse;margin:0 0 4pt'>"
+        + "<tr>"
+        + "<td style='width:" + trabajo + "%;background:" + TINTA.acento + ";color:#fff;"
+          + "padding:7pt 6pt;font-size:9pt;font-weight:700;text-align:center;white-space:nowrap'>"
+          + formatoValor(efic, "%") + "</td>"
+        + "<td style='width:" + espera + "%;background:" + TINTA.grisSuave + ";color:" + TINTA.tenue + ";"
+          + "padding:7pt 6pt;font-size:9pt;font-weight:700;text-align:center'>"
+          + formatoValor(Math.round((100 - efic) * 100) / 100, "%") + "</td>"
+        + "</tr></table>");
+      partes.push("<table style='width:100%;border-collapse:collapse;margin:0 0 14pt'><tr>"
+        + "<td style='width:" + trabajo + "%;font-size:8pt;color:" + TINTA.acento + ";font-weight:700'>"
+          + escapa(r.trabajo) + "</td>"
+        + "<td style='width:" + espera + "%;font-size:8pt;color:" + TINTA.tenue + "'>"
+          + escapa(r.espera) + "</td>"
+        + "</tr></table>");
+    }
+
+    /* --- 3 · Indicadores --- */
+    const kpis = !q.kpis ? [] : (r.kpis || []).map(function (k) {
+      const etapa = (taller.etapas || []).filter(function (e) { return e.id === k.etapa; })[0];
+      if (!etapa) return null;
+      const def = (etapa.campos || []).filter(function (c) { return c.id === k.campo; })[0];
+      const v = ((estado[k.etapa] || {}).campos || {})[k.campo];
+      if (!def || v === undefined || String(v).trim() === "") return null;
+      return { etiqueta: k.etiqueta, valor: formatoValor(v, def.unidad) };
+    }).filter(Boolean);
+
+    if (kpis.length) {
+      const filas = [];
+      for (let i = 0; i < kpis.length; i += 3) {
+        const grupo = kpis.slice(i, i + 3);
+        filas.push("<tr>" + grupo.map(function (k, j) {
+          const par = (i + j) % 2 === 0;
+          return tarjetaKpi(k.etiqueta, k.valor,
+            par ? TINTA.acento : TINTA.frio, par ? TINTA.acentoSuave : TINTA.frioSuave);
+        }).join("") + (grupo.length < 3 ? "<td></td>".repeat(3 - grupo.length) : "") + "</tr>");
+      }
+      partes.push("<table class='doc-kpis' style='width:100%;border-collapse:collapse;margin:0 0 6pt'>"
+        + filas.join("") + "</table>");
+    }
+
+    return partes.join("\n");
   }
 
   /* Los párrafos que escribe el alumno respetan sus saltos de línea. */
@@ -356,6 +622,8 @@
         }).join("")
       + "</tbody></table>");
 
+    partes.push(infografia(taller, estado));
+
     let n = 0;
     taller.etapas.forEach(function (etapa, i) {
       const g = estado[etapa.id] || { campos: {} };
@@ -375,15 +643,14 @@
           + "<th>" + escapa(EA.t("taller.colConcepto")) + "</th>"
           + "<th>" + escapa(EA.t("taller.colValor")) + "</th></tr></thead><tbody>"
           + cortos.map(function (c) {
-              const v = g.campos[c.id];
-              return "<tr><td>" + etiquetaLimpia(c.etiqueta, estado) + "</td><td>"
-                + escapa(v) + (c.unidad ? " " + escapa(c.unidad) : "") + "</td></tr>";
+              return "<tr><td>" + etiquetaLimpia(c.etiqueta, estado, taller) + "</td>"
+                + "<td class='doc-num'>" + formatoValor(g.campos[c.id], c.unidad) + "</td></tr>";
             }).join("")
           + "</tbody></table>");
       }
 
       conValor.filter(function (c) { return c.tipo === "texto"; }).forEach(function (c) {
-        partes.push("<h3>" + etiquetaLimpia(c.etiqueta, estado) + "</h3>");
+        partes.push("<h3>" + etiquetaLimpia(c.etiqueta, estado, taller) + "</h3>");
         partes.push(parrafos(g.campos[c.id]));
       });
     });
@@ -394,6 +661,83 @@
     partes.push("<p class='doc-pie'>" + escapa(taller.pieEntregable || "") + "</p>");
 
     return partes.join("\n");
+  }
+
+  /* ---------- Presentación ejecutiva ----------
+     Las mismas respuestas, en formato de diapositiva. No es adorno: la
+     etapa 8 pide siete puntos y esos siete puntos SON la presentación.
+     Se imprime apaisada, una diapositiva por página, para guardarla en PDF. */
+
+  function presentacion(taller, estado, datos) {
+    const d = datos || {};
+    const laminas = [];
+
+    function lamina(clase, cuerpo, pie) {
+      return "<section class='lamina " + clase + "'>" + cuerpo
+        + "<footer class='lamina-pie'>" + (pie || "") + "</footer></section>";
+    }
+
+    const autor = [d.nombre, d.grupo].filter(Boolean).map(escapa).join(" · ");
+
+    /* Portada */
+    laminas.push(lamina("portada",
+      "<div class='lamina-marca'>" + escapa(taller.caso.nombre) + "</div>"
+      + "<h2>" + escapa(EA.t("taller.presTitulo")) + "</h2>"
+      + "<p class='lamina-sub'>" + escapa(taller.caso.resumen) + "</p>"
+      + (autor ? "<p class='lamina-autor'>" + autor + "</p>" : ""), ""));
+
+    /* Cronograma e indicadores, en dos láminas: en 16:9 no caben juntos */
+    const r = taller.resumen || {};
+    const crono = infografia(taller, estado, { crono: true });
+    if (crono.trim()) {
+      laminas.push(lamina("datos",
+        "<h3>" + escapa(r.cronoTitulo || r.titulo || "") + "</h3>"
+        + "<div class='lamina-info'>" + crono + "</div>",
+        escapa(taller.caso.nombre)));
+    }
+    const cifras = infografia(taller, estado, { tiempo: true, kpis: true });
+    if (cifras.trim()) {
+      laminas.push(lamina("datos",
+        "<h3>" + escapa(r.titulo || "") + "</h3>"
+        + "<div class='lamina-info'>" + cifras + "</div>",
+        escapa(taller.caso.nombre)));
+    }
+
+    /* Los siete puntos */
+    (taller.diapositivas || []).forEach(function (s, i) {
+      const v = ((estado[s.etapa] || {}).campos || {})[s.campo];
+      if (v === undefined || String(v).trim() === "") return;
+      laminas.push(lamina("punto",
+        "<div class='lamina-num'>" + (i + 1) + "</div>"
+        + "<h3>" + escapa(s.titulo) + "</h3>"
+        + parrafos(v),
+        escapa(taller.caso.nombre)));
+    });
+
+    if (laminas.length <= 2) {
+      laminas.push(lamina("vacia",
+        "<p class='lamina-aviso'>" + escapa(EA.t("taller.presVacia")) + "</p>", ""));
+    }
+
+    return laminas.join("\n");
+  }
+
+  /* Imprime en modo apaisado sin tocar la impresión del reporte: se
+     inyecta la regla @page justo antes y se retira al terminar. */
+  function imprimirApaisado(clase) {
+    const estilo = document.createElement("style");
+    estilo.textContent = "@page { size: A4 landscape; margin: 0; }";
+    document.head.appendChild(estilo);
+    document.documentElement.classList.add(clase);
+
+    function limpia() {
+      document.documentElement.classList.remove(clase);
+      if (estilo.parentNode) estilo.parentNode.removeChild(estilo);
+      window.removeEventListener("afterprint", limpia);
+    }
+    window.addEventListener("afterprint", limpia);
+    window.print();
+    setTimeout(limpia, 1500);   // por si el navegador no dispara afterprint
   }
 
   /* Documento completo para Word. El bloque de espacios de nombres es lo
@@ -574,14 +918,36 @@
       }
 
       const vista = el("div", { class: "entregable" });
+      const diapos = el("div", { class: "diapositivas", hidden: true });
 
       function repinta() {
         vista.innerHTML = armarEntregable(taller, estado, datos);
+        diapos.innerHTML = presentacion(taller, estado, datos);
       }
       repinta();
 
-      const acciones = el("div", { class: "acciones" });
+      /* --- Dos entregables distintos: el reporte y la presentación --- */
+      const tabs = el("div", { class: "pestanas", role: "tablist" });
+      const tabDoc = el("button", { type: "button", role: "tab", "aria-selected": "true",
+        text: EA.t("taller.vistaReporte") });
+      const tabPres = el("button", { type: "button", role: "tab", "aria-selected": "false",
+        text: EA.t("taller.vistaPresentacion") });
+      tabs.appendChild(tabDoc); tabs.appendChild(tabPres);
 
+      const accionesDoc = el("div", { class: "acciones" });
+      const accionesPres = el("div", { class: "acciones", hidden: true });
+
+      function activa(esDoc) {
+        tabDoc.setAttribute("aria-selected", String(esDoc));
+        tabPres.setAttribute("aria-selected", String(!esDoc));
+        vista.hidden = !esDoc; accionesDoc.hidden = !esDoc;
+        diapos.hidden = esDoc; accionesPres.hidden = esDoc;
+        document.documentElement.classList.toggle("viendo-presentacion", !esDoc);
+      }
+      tabDoc.addEventListener("click", function () { activa(true); });
+      tabPres.addEventListener("click", function () { activa(false); });
+
+      /* --- Acciones del reporte --- */
       const copiar = el("button", { class: "btn primario", type: "button", text: EA.t("taller.copiarWord") });
       copiar.addEventListener("click", function () {
         copiarConFormato(vista, function (ok) {
@@ -601,13 +967,30 @@
       const imprimir = el("button", { class: "btn", type: "button", text: EA.t("taller.imprimir") });
       imprimir.addEventListener("click", function () { window.print(); });
 
-      const volver = el("button", { class: "btn sutil", type: "button", text: EA.t("taller.volver") });
-      volver.addEventListener("click", function () { ir(taller.etapas.length - 1); });
+      accionesDoc.appendChild(copiar);
+      accionesDoc.appendChild(bajar);
+      accionesDoc.appendChild(imprimir);
 
-      acciones.appendChild(copiar);
-      acciones.appendChild(bajar);
-      acciones.appendChild(imprimir);
-      acciones.appendChild(volver);
+      /* --- Acciones de la presentación --- */
+      const pdf = el("button", { class: "btn primario", type: "button", text: EA.t("taller.presPdf") });
+      pdf.addEventListener("click", function () { imprimirApaisado("viendo-presentacion"); });
+
+      const copiarPres = el("button", { class: "btn", type: "button", text: EA.t("taller.copiarWord") });
+      copiarPres.addEventListener("click", function () {
+        copiarConFormato(diapos, function (ok) {
+          copiarPres.textContent = ok ? EA.t("taller.copiado") : EA.t("taller.noCopio");
+          setTimeout(function () { copiarPres.textContent = EA.t("taller.copiarWord"); }, 3500);
+        });
+      });
+
+      accionesPres.appendChild(pdf);
+      accionesPres.appendChild(copiarPres);
+
+      const volver = el("button", { class: "btn sutil", type: "button", text: EA.t("taller.volver") });
+      volver.addEventListener("click", function () {
+        document.documentElement.classList.remove("viendo-presentacion");
+        ir(taller.etapas.length - 1);
+      });
 
       contenedor.appendChild(el("section", { class: "etapa cierre" }, [
         el("header", { class: "etapa-cabecera" }, [
@@ -619,8 +1002,10 @@
           campoIdent("nombre", EA.t("taller.campoNombre")),
           campoIdent("grupo", EA.t("taller.campoGrupo"))
         ]),
-        acciones,
-        vista
+        tabs,
+        accionesDoc, accionesPres,
+        el("div", { class: "acciones" }, [volver]),
+        vista, diapos
       ]));
       window.scrollTo({ top: 0, behavior: "smooth" });
     }

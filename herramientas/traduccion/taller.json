@@ -35,6 +35,96 @@
   "en": "<p>The eight stages follow the same order as a real project: first you understand, then you measure, then you decide what to change, then you justify it with money, and only at the end do you ask for authorization. What you answer is saved in your browser and carried forward into the following stages: the lead time you calculate in stage 2 is the one that will appear in your project charter in stage 7.</p><p>When you finish you can download everything as a single document.</p>"
  },
  {
+  "ruta": "resumen/titulo",
+  "es": "Resumen ejecutivo",
+  "en": "Executive summary"
+ },
+ {
+  "ruta": "resumen/cronoTitulo",
+  "es": "Cronograma propuesto",
+  "en": "Proposed schedule"
+ },
+ {
+  "ruta": "resumen/tiempoTitulo",
+  "es": "Dónde se va el tiempo hoy",
+  "en": "Where the time goes today"
+ },
+ {
+  "ruta": "resumen/trabajo",
+  "es": "Trabajo real",
+  "en": "Actual work"
+ },
+ {
+  "ruta": "resumen/espera",
+  "es": "Espera",
+  "en": "Waiting"
+ },
+ {
+  "ruta": "resumen/kpis/0/etiqueta",
+  "es": "Lead time actual",
+  "en": "Current lead time"
+ },
+ {
+  "ruta": "resumen/kpis/1/etiqueta",
+  "es": "Eficiencia de ciclo",
+  "en": "Cycle efficiency"
+ },
+ {
+  "ruta": "resumen/kpis/2/etiqueta",
+  "es": "Capacidad del proceso",
+  "en": "Process capacity"
+ },
+ {
+  "ruta": "resumen/kpis/3/etiqueta",
+  "es": "Costo de no hacer nada",
+  "en": "Cost of doing nothing"
+ },
+ {
+  "ruta": "resumen/kpis/4/etiqueta",
+  "es": "VPN de la propuesta",
+  "en": "NPV of the proposal"
+ },
+ {
+  "ruta": "resumen/kpis/5/etiqueta",
+  "es": "Se recupera en",
+  "en": "Pays back in"
+ },
+ {
+  "ruta": "diapositivas/0/titulo",
+  "es": "El problema",
+  "en": "The problem"
+ },
+ {
+  "ruta": "diapositivas/1/titulo",
+  "es": "Qué encontramos",
+  "en": "What we found"
+ },
+ {
+  "ruta": "diapositivas/2/titulo",
+  "es": "Qué proponemos",
+  "en": "What we propose"
+ },
+ {
+  "ruta": "diapositivas/3/titulo",
+  "es": "Cuánto mejora",
+  "en": "How much it improves"
+ },
+ {
+  "ruta": "diapositivas/4/titulo",
+  "es": "Cuánto cuesta y cuándo retorna",
+  "en": "What it costs and when it pays back"
+ },
+ {
+  "ruta": "diapositivas/5/titulo",
+  "es": "Riesgos y cómo se mitigan",
+  "en": "Risks and how they are mitigated"
+ },
+ {
+  "ruta": "diapositivas/6/titulo",
+  "es": "La decisión que pedimos hoy",
+  "en": "The decision we are asking for today"
+ },
+ {
   "ruta": "etapas/0/titulo",
   "es": "Descubrimiento",
   "en": "Discovery"
@@ -467,7 +557,7 @@
  {
   "ruta": "etapas/1/bloques/3/encabezados/0",
   "es": "Espera",
-  "en": "Wait"
+  "en": "Waiting"
  },
  {
   "ruta": "etapas/1/bloques/3/encabezados/1",
@@ -1675,57 +1765,112 @@
   "en": "They are all in the stage 1 interviews."
  },
  {
+  "ruta": "etapas/6/campos/9/unidad",
+  "es": "semanas",
+  "en": "weeks"
+ },
+ {
+  "ruta": "etapas/6/campos/9/rotulo",
+  "es": "Cronograma propuesto",
+  "en": "Proposed schedule"
+ },
+ {
   "ruta": "etapas/6/campos/9/etiqueta",
-  "es": "Hitos principales",
-  "en": "Main milestones"
+  "es": "Cronograma: reparte el plazo entre las fases",
+  "en": "Schedule: split the timeline across the phases"
  },
  {
   "ruta": "etapas/6/campos/9/ayuda",
-  "es": "Cuatro o cinco. Un hito es un resultado verificable, no una actividad.",
-  "en": "Four or five. A milestone is a verifiable result, not an activity."
+  "es": "Las fases son fijas; lo que decides es <b>cuánto dura cada una</b>. Repartir obliga a tomar postura: casi todos subestiman las pruebas y el piloto, y sobrestiman la configuración. Mira el total antes de darlo por bueno.",
+  "en": "The phases are fixed; what you decide is <b>how long each one lasts</b>. Splitting the timeline forces you to take a position: almost everyone underestimates testing and the pilot, and overestimates configuration. Look at the total before you call it done."
+ },
+ {
+  "ruta": "etapas/6/campos/9/fases/0/nombre",
+  "es": "Definición de reglas con Ingeniería",
+  "en": "Defining the rules with Engineering"
+ },
+ {
+  "ruta": "etapas/6/campos/9/fases/1/nombre",
+  "es": "Configuración en el ERP",
+  "en": "Configuration in the ERP"
+ },
+ {
+  "ruta": "etapas/6/campos/9/fases/2/nombre",
+  "es": "Migración del histórico",
+  "en": "Migrating the history"
+ },
+ {
+  "ruta": "etapas/6/campos/9/fases/3/nombre",
+  "es": "Pruebas y ajustes",
+  "en": "Testing and adjustments"
+ },
+ {
+  "ruta": "etapas/6/campos/9/fases/4/nombre",
+  "es": "Piloto con validación en paralelo",
+  "en": "Pilot with validation running in parallel"
+ },
+ {
+  "ruta": "etapas/6/campos/9/fases/5/nombre",
+  "es": "Despliegue y capacitación",
+  "en": "Rollout and training"
+ },
+ {
+  "ruta": "etapas/6/campos/9/fases/6/nombre",
+  "es": "Estabilización y medición",
+  "en": "Stabilization and measurement"
  },
  {
   "ruta": "etapas/6/campos/10/etiqueta",
+  "es": "Hitos: qué marca el cierre de cada fase",
+  "en": "Milestones: what marks the end of each phase"
+ },
+ {
+  "ruta": "etapas/6/campos/10/ayuda",
+  "es": "Un hito es un <b>resultado verificable</b>, no una actividad: «reglas aprobadas por Ingeniería», no «definir reglas».",
+  "en": "A milestone is a <b>verifiable result</b>, not an activity: “rules approved by Engineering”, not “define the rules”."
+ },
+ {
+  "ruta": "etapas/6/campos/11/etiqueta",
   "es": "Presupuesto autorizado que solicitas",
   "en": "Authorized budget you are requesting"
  },
  {
-  "ruta": "etapas/6/campos/10/unidad",
+  "ruta": "etapas/6/campos/11/unidad",
   "es": "$",
   "en": "$"
  },
  {
-  "ruta": "etapas/6/campos/10/pista",
+  "ruta": "etapas/6/campos/11/pista",
   "es": "El del análisis de la etapa 6. Si pides otra cifra, tienes que poder defenderla.",
   "en": "The one from the stage 6 analysis. If you ask for a different figure, you have to be able to defend it."
  },
  {
-  "ruta": "etapas/6/campos/11/etiqueta",
+  "ruta": "etapas/6/campos/12/etiqueta",
   "es": "Riesgos de alto nivel y respuesta prevista",
   "en": "High-level risks and planned response"
  },
  {
-  "ruta": "etapas/6/campos/11/ayuda",
+  "ruta": "etapas/6/campos/12/ayuda",
   "es": "Incluye la resistencia al cambio: el especialista técnico puede leer esto como una amenaza.",
   "en": "Include resistance to change: the technical specialist may read this as a threat."
  },
  {
-  "ruta": "etapas/6/campos/12/etiqueta",
+  "ruta": "etapas/6/campos/13/etiqueta",
   "es": "Criterios de éxito y de aceptación",
   "en": "Success and acceptance criteria"
  },
  {
-  "ruta": "etapas/6/campos/12/ayuda",
+  "ruta": "etapas/6/campos/13/ayuda",
   "es": "Cómo se sabrá, con un número, que el proyecto se puede cerrar.",
   "en": "How you will know, with a number, that the project can be closed."
  },
  {
-  "ruta": "etapas/6/campos/13/etiqueta",
+  "ruta": "etapas/6/campos/14/etiqueta",
   "es": "Supuestos y restricciones",
   "en": "Assumptions and constraints"
  },
  {
-  "ruta": "etapas/6/campos/13/ayuda",
+  "ruta": "etapas/6/campos/14/ayuda",
   "es": "El 80 % de recuperación va aquí.",
   "en": "The 80 % recovery goes here."
  },

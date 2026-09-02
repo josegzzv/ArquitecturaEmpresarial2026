@@ -31,6 +31,39 @@ EA.registrarTaller({
     + "constitución en la etapa 7.</p>"
     + "<p>Al terminar puedes descargar todo como un solo documento.</p>",
 
+  /* ------------------------------------------------------------------
+     Qué se destaca en la infografía del reporte y en la presentación.
+     Todo apunta a campos que el alumno llenó: si no los contestó, la
+     tarjeta simplemente no aparece.
+     ------------------------------------------------------------------ */
+  resumen: {
+    titulo: "Resumen ejecutivo",
+    cronoTitulo: "Cronograma propuesto",
+    tiempoTitulo: "Dónde se va el tiempo hoy",
+    trabajo: "Trabajo real",
+    espera: "Espera",
+    kpis: [
+      { etapa: "tiempos",   campo: "lt",          etiqueta: "Lead time actual" },
+      { etapa: "tiempos",   campo: "eficiencia",  etiqueta: "Eficiencia de ciclo" },
+      { etapa: "capacidad", campo: "capProceso",  etiqueta: "Capacidad del proceso" },
+      { etapa: "negocio",   campo: "cnh",         etiqueta: "Costo de no hacer nada" },
+      { etapa: "negocio",   campo: "vpnB",        etiqueta: "VPN de la propuesta" },
+      { etapa: "negocio",   campo: "paybackB",    etiqueta: "Se recupera en" }
+    ],
+    /* La barra usa la eficiencia de ciclo: lo demás es espera. */
+    barra: { etapa: "tiempos", campo: "eficiencia" }
+  },
+
+  diapositivas: [
+    { etapa: "presentacion", campo: "p1", titulo: "El problema" },
+    { etapa: "presentacion", campo: "p2", titulo: "Qué encontramos" },
+    { etapa: "presentacion", campo: "p3", titulo: "Qué proponemos" },
+    { etapa: "presentacion", campo: "p4", titulo: "Cuánto mejora" },
+    { etapa: "presentacion", campo: "p5", titulo: "Cuánto cuesta y cuándo retorna" },
+    { etapa: "presentacion", campo: "p6", titulo: "Riesgos y cómo se mitigan" },
+    { etapa: "presentacion", campo: "p7", titulo: "La decisión que pedimos hoy" }
+  ],
+
   etapas: [
 
     /* ============================================================
@@ -742,9 +775,28 @@ EA.registrarTaller({
           ayuda: "Están todos en las entrevistas de la etapa 1."
         },
         {
+          id: "cronograma",
+          tipo: "cronograma",
+          unidad: "semanas",
+          rotulo: "Cronograma propuesto",
+          etiqueta: "Cronograma: reparte el plazo entre las fases",
+          ayuda: "Las fases son fijas; lo que decides es <b>cuánto dura cada una</b>. "
+            + "Repartir obliga a tomar postura: casi todos subestiman las pruebas y el piloto, "
+            + "y sobrestiman la configuración. Mira el total antes de darlo por bueno.",
+          fases: [
+            { id: "reglas",     nombre: "Definición de reglas con Ingeniería", min: 1, max: 12, valor: 3 },
+            { id: "config",     nombre: "Configuración en el ERP",             min: 1, max: 12, valor: 4 },
+            { id: "migracion",  nombre: "Migración del histórico",             min: 1, max: 12, valor: 2 },
+            { id: "pruebas",    nombre: "Pruebas y ajustes",                   min: 1, max: 12, valor: 3 },
+            { id: "piloto",     nombre: "Piloto con validación en paralelo",   min: 1, max: 12, valor: 4 },
+            { id: "despliegue", nombre: "Despliegue y capacitación",           min: 1, max: 12, valor: 2 },
+            { id: "estabiliza", nombre: "Estabilización y medición",           min: 1, max: 12, valor: 4 }
+          ]
+        },
+        {
           id: "hitos", tipo: "texto", lineas: 4, minimoPalabras: 20,
-          etiqueta: "Hitos principales",
-          ayuda: "Cuatro o cinco. Un hito es un resultado verificable, no una actividad."
+          etiqueta: "Hitos: qué marca el cierre de cada fase",
+          ayuda: "Un hito es un <b>resultado verificable</b>, no una actividad: «reglas aprobadas por Ingeniería», no «definir reglas»."
         },
         {
           id: "presupuesto", etiqueta: "Presupuesto autorizado que solicitas",

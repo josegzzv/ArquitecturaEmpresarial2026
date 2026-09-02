@@ -30,7 +30,9 @@ const BORRADOR = path.join(RAIZ, "herramientas", "traduccion");
 /* Claves cuyo valor es un identificador o un valor centinela:
    traducirlas rompería anclas, filtros o la lógica del sitio. */
 const NO_TRADUCIR = new Set(
-  ["id", "estado", "tipo", "sigla", "icono", "clave", "categoria", "casoEstado"]);
+  ["id", "estado", "tipo", "sigla", "icono", "clave", "categoria", "casoEstado",
+   /* Referencias a otra etapa o campo del taller: traducirlas rompe el enlace. */
+   "etapa", "campo"]);
 
 const REGISTRO = {
   curso: ["registrarCurso", "registrarCursoEn"],

@@ -197,7 +197,11 @@ etapas: [{
       opciones: ["Ingeniería", "Ventas", "Gerencia"], correcta: 0 },
     // redacción: NO se califica sola
     { id: "recomendacion", tipo: "texto", etiqueta: "Tu recomendación",
-      ayuda: "…", marcador: "…", minimoPalabras: 40, lineas: 5 }
+      ayuda: "…", marcador: "…", minimoPalabras: 40, lineas: 5 },
+    // cronograma: fases fijas, el alumno reparte la duración con deslizadores
+    { id: "cronograma", tipo: "cronograma", unidad: "semanas",
+      etiqueta: "Reparte el plazo entre las fases",
+      fases: [{ id: "reglas", nombre: "Definición de reglas", min: 1, max: 12, valor: 3 }] }
   ],
   solucion: "<div class='paso-calc'>…</div>",   // desarrollo de los numéricos
   rubrica: ["…", "…"],                          // el alumno se marca a sí mismo
@@ -235,6 +239,28 @@ resto del avance.
 **Al agregar campos numéricos**, verifica el resultado de forma independiente
 antes de escribirlo en `respuesta`, y ajusta `tolerancia` al redondeo que esperas
 del alumno (holgada en porcentajes y montos, estrecha en enteros).
+
+**El cronograma** guarda su valor como JSON (`{"reglas":3,…}`) en el mismo mapa
+de respuestas. Las fases son fijas a propósito: lo que se evalúa es cómo reparte
+el plazo, no que invente actividades.
+
+### Infografía y presentación
+
+`resumen` en `data/taller.js` decide qué se destaca, y todo apunta por
+`{ etapa, campo }` a respuestas del alumno: si no las contestó, la tarjeta no
+aparece. `diapositivas` define el guion de la presentación.
+
+La infografía —Gantt, barra de trabajo contra espera, tarjetas de indicadores—
+está hecha con **tablas de celdas coloreadas, no con SVG ni divs**: es lo único
+que Word conserva al pegar y que además imprime bien.
+
+Las cifras se formatean con `formatoValor`, que respeta los decimales que el
+alumno escribió y aplica moneda, porcentaje y separador de miles según el idioma
+activo. **Nunca redondea**: alteraría un resultado que él calculó.
+
+La presentación se imprime apaisada, una lámina por página, inyectando
+`@page { size: A4 landscape }` justo antes de imprimir y retirándolo después,
+para no afectar la impresión del reporte.
 
 ## Idiomas
 

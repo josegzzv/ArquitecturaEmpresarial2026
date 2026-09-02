@@ -739,6 +739,22 @@ footer.sitio .contenedor {
 
 .bloque.modelo { border-left: 3px solid var(--ok); }
 
+/* Un campo que no debe perderse entre los demás */
+.campo-destacado {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent); border-radius: 11px;
+  padding: 1rem 1.15rem; margin: .4rem 0;
+}
+.campo-destacado > .campo-etiqueta {
+  font-family: var(--display); font-size: 1rem; font-weight: 700;
+  color: var(--text); display: block; margin-bottom: .2rem;
+}
+
+/* La entrada del índice que lleva al entregable */
+.paso-cierre { margin-top: .4rem; padding-top: .7rem; border-top: 1px solid var(--border); }
+.paso-cierre .paso-num { border-color: var(--accent); color: var(--accent); }
+.paso-cierre[aria-current="step"] .paso-num { background: var(--accent); color: #fff; }
+
 /* ---------- Cronograma con deslizadores ---------- */
 .cronograma { display: grid; gap: .5rem; margin: .7rem 0 1rem; }
 .crono-fase { display: grid; grid-template-columns: 15rem 1fr; gap: .3rem 1rem; align-items: center; }

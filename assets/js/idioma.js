@@ -254,6 +254,7 @@
     "taller.descargado":  ["✓ Descargado", "✓ Downloaded"],
     "taller.noDescargo":  ["No se pudo descargar — usa Copiar", "Download failed — use Copy instead"],
     "taller.imprimir":    ["Imprimir o guardar en PDF", "Print or save as PDF"],
+    "taller.indiceCierre":["Reporte y presentación", "Report and presentation"],
     "taller.vistaReporte":["Reporte", "Report"],
     "taller.vistaPresentacion": ["Presentación ejecutiva", "Executive presentation"],
     "taller.presTitulo":  ["Rediseño del proceso de cotización", "Redesign of the quoting process"],

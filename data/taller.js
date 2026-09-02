@@ -777,6 +777,7 @@ EA.registrarTaller({
         {
           id: "cronograma",
           tipo: "cronograma",
+          destacado: true,
           unidad: "semanas",
           rotulo: "Cronograma propuesto",
           etiqueta: "Cronograma: reparte el plazo entre las fases",

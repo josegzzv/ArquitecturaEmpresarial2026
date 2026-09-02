@@ -155,7 +155,13 @@
     (c.opciones || []).forEach(function (o, i) {
       sel.appendChild(el("option", { value: String(i), text: o }));
     });
-    if (valor !== undefined && valor !== "") sel.value = valor;
+    /* Se guarda el ÍNDICE. Las respuestas viejas guardaban el texto de la
+       opción y al volver no coincidían con ningún <option>: se rescatan. */
+    if (valor !== undefined && valor !== "") {
+      const porTexto = (c.opciones || []).indexOf(String(valor));
+      sel.value = porTexto > -1 ? String(porTexto) : String(valor);
+      if (sel.selectedIndex < 0) sel.value = "";
+    }
 
     const marca = el("span", { class: "campo-veredicto" });
 
@@ -176,9 +182,6 @@
       input: sel,
       revisar: revisar,
       valor: function () { return sel.value; },
-      texto: function () {
-        return sel.value === "" ? "" : (c.opciones || [])[Number(sel.value)];
-      },
       objetivo: true
     };
   }
@@ -256,7 +259,7 @@
 
     pintaPrevia();
 
-    const nodo = el("div", { class: "campo campo-largo" }, [
+    const nodo = el("div", { class: "campo campo-largo campo-destacado" }, [
       el("span", { class: "campo-etiqueta", html: c.etiqueta }),
       c.ayuda ? el("span", { class: "campo-pista", html: c.ayuda }) : null,
       caja, total, previa
@@ -322,14 +325,12 @@
       if (campo.forzarGuardado && guardadoEtapa.campos[c.id] === undefined) {
         guardadoEtapa.campos[c.id] = campo.valor();
       }
-      campo.input.addEventListener("input", function () {
-        guardadoEtapa.campos[c.id] = campo.texto ? campo.texto() : campo.valor();
+      function anota() {
+        guardadoEtapa.campos[c.id] = campo.valor();
         alCambiar();
-      });
-      campo.input.addEventListener("change", function () {
-        guardadoEtapa.campos[c.id] = campo.texto ? campo.texto() : campo.valor();
-        alCambiar();
-      });
+      }
+      campo.input.addEventListener("input", anota);
+      campo.input.addEventListener("change", anota);
       campos.push(campo);
       caja.appendChild(campo.nodo);
     });
@@ -643,8 +644,12 @@
           + "<th>" + escapa(EA.t("taller.colConcepto")) + "</th>"
           + "<th>" + escapa(EA.t("taller.colValor")) + "</th></tr></thead><tbody>"
           + cortos.map(function (c) {
+              const bruto = g.campos[c.id];
+              const salida = c.tipo === "opcion"
+                ? escapa((c.opciones || [])[Number(bruto)] || bruto)
+                : formatoValor(bruto, c.unidad);
               return "<tr><td>" + etiquetaLimpia(c.etiqueta, estado, taller) + "</td>"
-                + "<td class='doc-num'>" + formatoValor(g.campos[c.id], c.unidad) + "</td></tr>";
+                + "<td class='doc-num'>" + salida + "</td></tr>";
             }).join("")
           + "</tbody></table>");
       }
@@ -814,7 +819,9 @@
     const estado = leer();
     let actual = 0;
 
-    /* Índice lateral */
+    /* Índice lateral. La última entrada NO es una etapa: es el entregable,
+       y tiene que estar aquí porque si solo se llega con el botón del final,
+       nadie descubre que existe la presentación. */
     const nav = el("ol", { class: "taller-indice" });
     const enlaces = [];
     taller.etapas.forEach(function (e, i) {
@@ -826,6 +833,14 @@
       enlaces.push(b);
       nav.appendChild(el("li", {}, [b]));
     });
+
+    const btnCierre = el("button", { type: "button", class: "paso-indice paso-cierre" }, [
+      el("span", { class: "paso-num", text: "★" }),
+      el("span", { class: "paso-titulo", text: EA.t("taller.indiceCierre") })
+    ]);
+    btnCierre.addEventListener("click", function () { entregable(); });
+    nav.appendChild(el("li", {}, [btnCierre]));
+
     if (indice) indice.appendChild(nav);
 
     const contenedor = el("div", { class: "taller-etapa" });
@@ -873,6 +888,8 @@
     function alCambiar() { guardar(estado); pintaBarra(); }
 
     function ir(i) {
+      btnCierre.setAttribute("aria-current", "false");
+      document.documentElement.classList.remove("viendo-presentacion");
       actual = Math.max(0, Math.min(taller.etapas.length - 1, i));
       contenedor.innerHTML = "";
       const r = renderEtapa(taller, actual, estado, alCambiar);
@@ -901,6 +918,8 @@
 
     function entregable() {
       contenedor.innerHTML = "";
+      enlaces.forEach(function (b) { b.setAttribute("aria-current", "false"); });
+      btnCierre.setAttribute("aria-current", "step");
       const datos = estado.__portada || (estado.__portada = {});
 
       /* Datos de identificación: se guardan como todo lo demás */

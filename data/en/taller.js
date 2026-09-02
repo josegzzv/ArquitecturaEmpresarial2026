@@ -908,6 +908,7 @@ EA.registrarTallerEn(
     {
      "id": "cronograma",
      "tipo": "cronograma",
+     "destacado": true,
      "unidad": "weeks",
      "rotulo": "Proposed schedule",
      "etiqueta": "Schedule: split the timeline across the phases",

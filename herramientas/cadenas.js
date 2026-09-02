@@ -35,11 +35,12 @@ const NO_TRADUCIR = new Set(
 const REGISTRO = {
   curso: ["registrarCurso", "registrarCursoEn"],
   casos: ["registrarCasos", "registrarCasosEn"],
+  taller: ["registrarTaller", "registrarTallerEn"],
   semana: ["registrarSemana", "registrarSemanaEn"]
 };
 
 function familia(nombre) {
-  if (nombre === "curso" || nombre === "casos") return nombre;
+  if (nombre === "curso" || nombre === "casos" || nombre === "taller") return nombre;
   return "semana";
 }
 
@@ -51,6 +52,7 @@ function cargarEs(nombre) {
   const recoger = (d) => { capturado = d; };
   const EA = {
     registrarCurso: recoger, registrarCasos: recoger, registrarSemana: recoger,
+    registrarTaller: recoger, registrarTallerEn: recoger,
     registrarCursoEn: recoger, registrarCasosEn: recoger, registrarSemanaEn: recoger
   };
   vm.runInContext(fs.readFileSync(ruta, "utf8"),
@@ -221,7 +223,7 @@ function inyectar(nombre) {
 /* ---------- Entrada ---------- */
 
 const [, , accion, nombre] = process.argv;
-const TODOS = ["curso", "semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos"];
+const TODOS = ["curso", "semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos", "taller"];
 const lista = nombre && nombre !== "todos" ? [nombre] : TODOS;
 
 if (accion === "extraer") lista.forEach(extraer);

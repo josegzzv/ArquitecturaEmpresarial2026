@@ -9,7 +9,7 @@ const path = require("path");
 const RAIZ = path.resolve(__dirname, "..");
 const BORRADOR = path.join(RAIZ, "herramientas", "traduccion");
 const PARTES = path.join(BORRADOR, "partes");
-const ARCHIVOS = ["semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos"];
+const ARCHIVOS = ["semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos", "taller"];
 
 function partir(tam) {
   fs.mkdirSync(PARTES, { recursive: true });

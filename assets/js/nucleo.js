@@ -73,6 +73,19 @@ window.EA = (function () {
     return (enIngles() && casosEn && (casosEn.casos || []).length) ? casosEn : casos;
   }
 
+  /* ---------- Taller integrador ----------
+     Mismo criterio que el catálogo de casos: el registro vive aquí
+     porque /data se carga antes que el JS de la página. */
+  let taller = null;
+  let tallerEn = null;
+
+  function registrarTaller(def) { taller = def; }
+  function registrarTallerEn(def) { tallerEn = def; }
+  function obtenerTaller() {
+    return (enIngles() && tallerEn && (tallerEn.etapas || []).length) ? tallerEn : taller;
+  }
+  function hayTaller() { return !!(taller && (taller.etapas || []).length); }
+
   /* ---------- Conteo de reactivos ---------- */
   function contarReactivos(semana) {
     const p = (semana && semana.practica) || {};
@@ -198,6 +211,7 @@ window.EA = (function () {
         });
       });
       enlaces.push({ href: "casos.html", texto: T("nav.casos"), id: "casos" });
+      if (hayTaller()) enlaces.push({ href: "taller.html", texto: T("nav.taller"), id: "taller" });
       enlaces.push({ href: "glosario.html", texto: T("nav.glosario"), id: "glosario" });
 
       const nav = el("nav", { class: "nav" });
@@ -250,6 +264,7 @@ window.EA = (function () {
     registrarCurso, registrarCursoEn,
     registrarSemana, registrarSemanaEn,
     registrarCasos, registrarCasosEn, obtenerCasos,
+    registrarTaller, registrarTallerEn, obtenerTaller, hayTaller,
     obtenerSemana, listaSemanas, obtenerCurso,
     contarReactivos, aplicarTema, alternarTema, temaInicial,
     guardarResultado, mejorPorSemana, leerProgreso,

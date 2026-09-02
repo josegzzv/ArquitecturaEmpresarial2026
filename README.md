@@ -51,6 +51,7 @@ Al terminar las cinco semanas debe poder, sin ayuda:
 | **Encontrar el límite** | Identifica el cuello de botella, calcula la capacidad del proceso y predice qué pasa al reforzar cada recurso |
 | **Rediseñarlo** | Propone un TO-BE con rutas, paralelismo y retrabajo bien modelados, y justifica el cambio con números |
 | **Justificarlo** | Construye el caso de negocio: VPN, TIR, ROI, punto de equilibrio, periodo de recuperación y análisis de sensibilidad |
+| **Autorizarlo** | Redacta un acta de constitución que alguien con presupuesto podría firmar, y la defiende en cinco minutos ante la gerencia |
 | **Ubicarlo en la arquitectura** | Sitúa el rediseño en un marco (TOGAF, Zachman, DoDAF, IAF) y sabe por qué se eligió ese y no otro |
 | **Gobernarlo** | Distingue qué gobierna COBIT, qué opera ITIL y dónde entra la gestión del cambio para que el rediseño sobreviva al go-live |
 
@@ -91,6 +92,14 @@ de ciclo y espera, rutas y variantes, orquestación, servicios de TI y
 continuidad, y datos y punto de venta. La agrupación es intencional: el objetivo
 es que el alumno reconozca el mismo problema estructural en una cafetería, un
 banco y una línea de ensamble.
+
+**Un taller integrador** que recorre un solo caso de punta a punta, en ocho
+etapas: entrevistas de descubrimiento, medición del AS-IS, capacidad y cuello de
+botella, análisis de valor, rediseño, caso de negocio con VPN y sensibilidad,
+acta de constitución del proyecto y presentación a la gerencia. Lo que el alumno
+calcula en una etapa reaparece en las siguientes: el lead time de la etapa 2 es
+el que sustenta la justificación de su acta en la etapa 7. Al final descarga todo
+como un solo documento.
 
 **Un glosario** que reúne los términos de las cinco semanas y marca en cuál se
 introdujo cada uno.

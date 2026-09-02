@@ -20,7 +20,7 @@ const path = require("path");
 const vm = require("vm");
 
 const RAIZ = path.resolve(__dirname, "..");
-const ARCHIVOS = ["curso", "semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos"];
+const ARCHIVOS = ["curso", "semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos", "taller"];
 
 /* ---------- Carga aislada de un archivo de datos ---------- */
 
@@ -37,7 +37,9 @@ function cargar(rutaRelativa) {
     registrarSemana:   registrar("semana"),
     registrarSemanaEn: registrar("semana"),
     registrarCasos:    registrar("casos"),
-    registrarCasosEn:  registrar("casos")
+    registrarCasosEn:  registrar("casos"),
+    registrarTaller:   registrar("taller"),
+    registrarTallerEn: registrar("taller")
   };
 
   const contexto = vm.createContext({ EA, window: { EA }, console });

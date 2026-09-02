@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-t-titulo="taller.tituloDoc">Taller integrador · Arquitectura Empresarial</title>
+<meta name="description" content="Taller integrador: un caso recorrido de punta a punta, del descubrimiento al acta de constitución y la presentación ejecutiva.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23b3400a'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='sans-serif' font-weight='bold' fill='white'>AE</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css?v=202609012221">
+<script src="assets/js/nucleo.js?v=202609012221"></script>
+<script src="assets/js/idioma.js?v=202609012221"></script>
+</head>
+<body>
+
+<header class="sitio"><div class="contenedor barra"></div></header>
+
+<main>
+  <div class="contenedor">
+
+    <section class="hero">
+      <div class="kicker" data-t="taller.kicker">Taller</div>
+      <h1 data-t="taller.h1">Taller integrador</h1>
+      <p class="lead" data-t="taller.lead">Un solo caso recorrido de punta a punta: entrevistas, medición, valor, rediseño, dinero, acta de constitución y presentación a la gerencia. Lo que respondes se guarda y se arrastra a las etapas siguientes.</p>
+    </section>
+
+    <div class="bloque nota" style="margin-bottom:1.4rem">
+      <h4 data-t="taller.avisoTitulo">Sobre este caso</h4>
+      <p data-t="taller.avisoCuerpo">La empresa es ficticia y las cifras se construyeron para que los cálculos cierren y el ejercicio se pueda resolver completo. El proceso, en cambio, es el de cualquier distribuidor industrial que cotiza a solicitud.</p>
+      <p data-t="taller.avisoPrivacidad">Tus respuestas se guardan solo en este navegador. No viajan a ningún servidor y el profesor no las ve: para entregarlas, descarga el documento al final.</p>
+    </div>
+
+    <div class="taller-marco">
+      <aside class="taller-lateral" id="indice"></aside>
+      <div class="taller-cuerpo" id="taller"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="sitio"><div class="contenedor"></div></footer>
+
+<script src="data/curso.js?v=202609012221"></script>
+<script src="data/semana-1.js?v=202609012221"></script>
+<script src="data/semana-2.js?v=202609012221"></script>
+<script src="data/semana-3.js?v=202609012221"></script>
+<script src="data/semana-4.js?v=202609012221"></script>
+<script src="data/semana-5.js?v=202609012221"></script>
+<script src="data/taller.js?v=202609012221"></script>
+<script src="assets/js/vistas.js?v=202609012221"></script>
+<script src="assets/js/taller.js?v=202609012221"></script>
+<script>
+  EA.montarCascaron("taller");
+  EA.taller.crear(document.getElementById("taller"), document.getElementById("indice"));
+</script>
+</body>
+</html>

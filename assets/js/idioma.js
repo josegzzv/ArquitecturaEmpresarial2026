@@ -58,6 +58,7 @@
     "marca.titulo":        ["Arquitectura Empresarial", "Enterprise Architecture"],
     "nav.inicio":          ["Inicio", "Home"],
     "nav.casos":           ["Casos", "Cases"],
+    "nav.taller":          ["Taller", "Workshop"],
     "nav.glosario":        ["Glosario", "Glossary"],
     "nav.proximamente":    ["Próximamente", "Coming soon"],
     "tema.aClaro":         ["Cambiar a tema claro", "Switch to light theme"],
@@ -205,6 +206,58 @@
     "ficha.ilustrativas":    ["cifras ilustrativas", "illustrative figures"],
     "ficha.indicadores":     ["Qué mediría un analista", "What an analyst would measure"],
     "ficha.preguntas":       ["Para discutir en clase", "For class discussion"],
+
+    /* ---- Taller integrador ---- */
+    "taller.tituloDoc":   ["Taller integrador · Arquitectura Empresarial",
+                           "Integrative workshop · Enterprise Architecture"],
+    "taller.kicker":      ["Taller", "Workshop"],
+    "taller.h1":          ["Taller integrador", "Integrative workshop"],
+    "taller.lead":        ["Un solo caso recorrido de punta a punta: entrevistas, medición, valor, rediseño, dinero, acta de constitución y presentación a la gerencia. Lo que respondes se guarda y se arrastra a las etapas siguientes.",
+                           "A single case worked end to end: interviews, measurement, value, redesign, money, project charter and the presentation to management. What you write is saved and carried into the later stages."],
+    "taller.avisoTitulo": ["Sobre este caso", "About this case"],
+    "taller.avisoCuerpo": ["La empresa es ficticia y las cifras se construyeron para que los cálculos cierren y el ejercicio se pueda resolver completo. El proceso, en cambio, es el de cualquier distribuidor industrial que cotiza a solicitud.",
+                           "The company is fictional and the figures were built so the calculations work out and the exercise can be solved end to end. The process, on the other hand, is that of any industrial distributor that quotes on request."],
+    "taller.avisoPrivacidad": ["Tus respuestas se guardan solo en este navegador. No viajan a ningún servidor y el profesor no las ve: para entregarlas, descarga el documento al final.",
+                           "Your answers are stored only in this browser. They never reach a server and the instructor cannot see them: to hand them in, download the document at the end."],
+
+    "taller.etapaN":      ["Etapa {n} de {total}", "Stage {n} of {total}"],
+    "taller.completadas": ["{a} de {b} etapas completas", "{a} of {b} stages complete"],
+    "taller.anterior":    ["← Etapa anterior", "← Previous stage"],
+    "taller.siguiente":   ["Siguiente etapa →", "Next stage →"],
+    "taller.armar":       ["Armar mi entregable →", "Build my deliverable →"],
+    "taller.revisar":     ["Revisar mis valores", "Check my values"],
+    "taller.valores":     ["{a} de {b} valores correctos", "{a} of {b} values correct"],
+    "taller.faltan":      ["Quedan {n} sin contestar.", "{n} still unanswered."],
+    "taller.verSolucion": ["Ver el desarrollo", "Show the working"],
+    "taller.ocultarSolucion": ["Ocultar el desarrollo", "Hide the working"],
+    "taller.comoSale":    ["Cómo sale", "How it works out"],
+    "taller.rubrica":     ["Revísate con esta lista", "Check yourself against this list"],
+    "taller.rubricaNota": ["Lo que escribes no se puede calificar solo. Esto sí: márcalo tú, con honestidad.",
+                           "What you write cannot be graded automatically. This can: tick it yourself, honestly."],
+    "taller.verModelo":   ["Ver una respuesta de referencia", "Show a reference answer"],
+    "taller.ocultarModelo": ["Ocultar la referencia", "Hide the reference"],
+    "taller.modelo":      ["Respuesta de referencia", "Reference answer"],
+    "taller.modeloNota":  ["No es la única correcta. Compárala con la tuya y quédate con las diferencias que te convenzan.",
+                           "It is not the only correct one. Compare it with yours and keep the differences that convince you."],
+    "taller.pendiente":   ["Aún no lo has calculado", "You have not calculated this yet"],
+    "taller.palabras":    ["{n} palabras", "{n} words"],
+    "taller.palabrasDe":  ["{n} palabras · sugerido {min}", "{n} words · suggested {min}"],
+    "taller.elige":       ["Elige…", "Choose…"],
+    "taller.cierre":      ["Cierre", "Wrap-up"],
+    "taller.tuEntregable":["Tu entregable", "Your deliverable"],
+    "taller.entregableNota": ["Esto es lo que llevas escrito, en un solo documento. Descárgalo y entrégalo como te lo pida tu profesor.",
+                           "This is everything you have written, in a single document. Download it and hand it in as your instructor asks."],
+    "taller.descargar":   ["Descargar como .md", "Download as .md"],
+    "taller.descargado":  ["✓ Descargado", "✓ Downloaded"],
+    "taller.noDescargo":  ["No se pudo descargar — copia el texto", "Download failed — copy the text instead"],
+    "taller.copiar":      ["Copiar al portapapeles", "Copy to clipboard"],
+    "taller.copiado":     ["✓ Copiado", "✓ Copied"],
+    "taller.noCopio":     ["No se pudo copiar — selecciónalo a mano", "Copy failed — select it manually"],
+    "taller.volver":      ["Volver a la última etapa", "Back to the last stage"],
+    "taller.reiniciar":   ["Empezar de nuevo", "Start over"],
+    "taller.confirmarReinicio": ["Esto borra todo lo que has escrito en el taller. ¿Seguro?",
+                           "This erases everything you have written in the workshop. Are you sure?"],
+
     "ficha.conecta":         ["<b>Conecta con:</b> ", "<b>Connects to:</b> "],
 
     /* ---- Portada (marcado estático) ---- */
@@ -356,7 +409,7 @@
   */
 
   const ARCHIVOS_EN = [
-    "curso", "semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos"
+    "curso", "semana-1", "semana-2", "semana-3", "semana-4", "semana-5", "casos", "taller"
   ];
 
   function sello() {

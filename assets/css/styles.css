@@ -572,6 +572,112 @@ footer.sitio .contenedor {
   body { background: #fff; }
 }
 
+/* ---------- Taller integrador ---------- */
+.taller-marco { display: grid; grid-template-columns: 250px 1fr; gap: 2rem; align-items: start; }
+/* Sin esto, un bloque ancho (una tabla, el desarrollo monoespaciado) estira
+   la columna del grid y saca la página entera de la pantalla en móvil. */
+.taller-marco > * { min-width: 0; }
+.taller-cuerpo .paso-calc, .taller-cuerpo .diagrama { overflow-x: auto; }
+
+.taller-lateral { position: sticky; top: 5rem; }
+
+.taller-indice { list-style: none; margin: 0; padding: 0; counter-reset: none; }
+.taller-indice li { margin: 0; }
+.paso-indice {
+  display: flex; gap: .6rem; align-items: flex-start; width: 100%;
+  background: none; border: 0; cursor: pointer; font: inherit; text-align: left;
+  padding: .5rem .6rem; border-radius: 9px; color: var(--muted); line-height: 1.35;
+}
+.paso-indice:hover { background: var(--bg-alt); color: var(--text); }
+.paso-indice[aria-current="step"] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.paso-num {
+  flex: 0 0 auto; width: 22px; height: 22px; border-radius: 999px;
+  border: 1px solid var(--border); display: grid; place-items: center;
+  font-size: .72rem; font-weight: 700; margin-top: .05rem;
+}
+.paso-indice[aria-current="step"] .paso-num { border-color: var(--accent); }
+.paso-indice.hecha .paso-num { background: var(--ok); border-color: var(--ok); color: #fff; }
+.paso-indice.hecha .paso-num::after { content: "✓"; }
+.paso-indice.hecha .paso-num { font-size: .68rem; }
+.paso-titulo { font-size: .84rem; }
+
+.taller-reinicio { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.btn.sutil { font-size: .78rem; padding: .35rem .7rem; color: var(--muted); background: none; }
+.btn.sutil:hover { color: var(--bad); border-color: var(--bad); }
+
+.taller-barra { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.4rem; font-size: .82rem; color: var(--muted); }
+.taller-barra .pista { flex: 1; height: 6px; background: var(--bg-alt); border-radius: 999px; overflow: hidden; }
+.taller-barra .relleno { height: 100%; background: var(--accent); border-radius: 999px; transition: width .3s ease; }
+
+.etapa { margin-bottom: 1.6rem; }
+.etapa-cabecera { margin-bottom: 1.4rem; }
+.etapa-num {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--accent); font-weight: 700;
+}
+.etapa-cabecera h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem); margin: .3rem 0 .5rem;
+  letter-spacing: -.02em; line-height: 1.15;
+}
+.etapa-objetivo { color: var(--muted); margin: 0; font-size: 1rem; }
+
+.campos-taller { display: grid; gap: 1.1rem; margin: 1.4rem 0; min-width: 0; }
+.campos-taller > .campo { min-width: 0; }
+.campo-largo { display: block; }
+.entrada-texto {
+  width: 100%; font: inherit; font-size: .92rem; line-height: 1.55;
+  padding: .65rem .8rem; border-radius: 9px; border: 1px solid var(--border);
+  background: var(--surface-2); color: var(--text); resize: vertical; margin-top: .35rem;
+}
+.entrada-texto:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+/* Un <select> toma su ancho natural de la opción más larga, y aquí las
+   opciones son frases completas: hay que acotarlo o desborda la página. */
+.entrada-opcion {
+  font: inherit; font-size: .9rem; padding: .5rem .6rem; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+  width: 100%; max-width: 34rem;
+}
+.campo-nota { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; margin-top: .3rem; }
+.campo-conteo { font-size: .74rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.campo-conteo.suficiente { color: var(--ok); }
+
+.hueco {
+  display: inline-block; min-width: 2.2rem; text-align: center;
+  border-bottom: 2px dotted var(--warn); color: var(--warn); font-weight: 700;
+}
+.arrastrado { color: var(--accent); }
+
+.rubrica-caja { border-left: 3px solid var(--accent); }
+.rubrica { list-style: none; margin: .6rem 0 0; padding: 0; display: grid; gap: .5rem; }
+.rubrica li { display: flex; gap: .6rem; align-items: flex-start; margin: 0; }
+.rubrica input { margin-top: .28rem; flex: 0 0 auto; accent-color: var(--accent); }
+.rubrica label { font-size: .9rem; line-height: 1.5; cursor: pointer; }
+
+.bloque.modelo { border-left: 3px solid var(--ok); }
+
+.entregable {
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 11px;
+  padding: 1.1rem 1.2rem; font-size: .82rem; line-height: 1.6;
+  white-space: pre-wrap; word-break: break-word; max-height: 62vh; overflow-y: auto;
+}
+
+.taller-pasos { justify-content: space-between; margin-top: 2rem; }
+
+@media (max-width: 860px) {
+  .taller-marco { grid-template-columns: 1fr; gap: 1.2rem; }
+  .taller-lateral { position: static; }
+  .taller-indice { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .taller-indice li { flex: 0 0 auto; }
+  .paso-titulo { display: none; }
+  .paso-indice { padding: .4rem; }
+  .taller-reinicio { margin-top: .8rem; padding-top: .8rem; }
+}
+
+@media print {
+  .taller-lateral, .taller-barra, .taller-pasos { display: none; }
+  .taller-marco { display: block; }
+}
+
 /* ---------- Catálogo de casos ---------- */
 .barra-filtros {
   display: flex; flex-wrap: wrap; gap: .9rem 1.4rem; align-items: center;

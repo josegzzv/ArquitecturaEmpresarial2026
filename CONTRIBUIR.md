@@ -11,6 +11,7 @@ Sin dependencias, sin build, sin servidor. Se publica tal cual en GitHub Pages.
 index.html              Portada: tarjetas de las 5 semanas
 semana.html             Página genérica de semana (semana.html?s=1)
 casos.html              Catálogo de casos + banco de práctica propio
+taller.html             Taller integrador: un caso de punta a punta
 glosario.html           Glosario buscable, alimentado por todas las semanas
 aviso-legal.html        Autoría, atribuciones, marcas de terceros, condiciones de uso
 publicar.sh             Publica o actualiza el sitio en GitHub Pages
@@ -21,10 +22,12 @@ assets/js/idioma.js     Motor ES/EN: diccionario de interfaz y carga del conteni
 assets/js/vistas.js     Render de portada, conceptos y glosario
 assets/js/practica.js   Motor de práctica: 6 modos
 assets/js/casos.js      Render del catálogo de casos
+assets/js/taller.js     Motor del taller: etapas, campos, rúbricas y entregable
 
 data/curso.js           Metadatos generales del curso
 data/semana-1..5.js     Contenido y reactivos de cada semana
 data/casos.js           Catálogo de casos y su banco de reactivos
+data/taller.js          Caso y etapas del taller integrador
 data/en/*.js            Los mismos archivos, en inglés
 ```
 
@@ -172,6 +175,51 @@ categoría nueva, agrega primero su entrada en `categorias`.
 
 **Cifras ilustrativas.** Cada tabla se etiqueta automáticamente y la página lleva
 un aviso general. No quites eso sin tener antes cifras públicas verificables.
+
+## Taller integrador
+
+`data/taller.js` registra el taller con `EA.registrarTaller({ titulo, caso, etapas })`.
+A diferencia de la práctica, aquí el alumno **produce un entregable**, así que el
+motor solo califica lo que tiene respuesta objetiva y para lo demás da una rúbrica
+de autoevaluación y un modelo de referencia.
+
+```js
+etapas: [{
+  id: "negocio",                    // ancla y clave de guardado
+  titulo: "…", objetivo: "…",
+  bloques: [ /* mismos tipos que una semana: texto, tabla, nota, clave… */ ],
+  campos: [
+    // numérico: se autocalifica
+    { id: "cnh", etiqueta: "Costo de no hacer nada", respuesta: 534600,
+      unidad: "$/año", tolerancia: 600, pista: "…" },
+    // opción: se autocalifica
+    { id: "cuello", tipo: "opcion", etiqueta: "¿Cuál es el cuello de botella?",
+      opciones: ["Ingeniería", "Ventas", "Gerencia"], correcta: 0 },
+    // redacción: NO se califica sola
+    { id: "recomendacion", tipo: "texto", etiqueta: "Tu recomendación",
+      ayuda: "…", marcador: "…", minimoPalabras: 40, lineas: 5 }
+  ],
+  solucion: "<div class='paso-calc'>…</div>",   // desarrollo de los numéricos
+  rubrica: ["…", "…"],                          // el alumno se marca a sí mismo
+  modelo: "<p>…</p>"                            // respuesta de referencia
+}]
+```
+
+**Arrastre entre etapas.** En cualquier texto de una etapa, `{{etapa.campo}}` se
+sustituye por lo que el alumno respondió antes — `{{tiempos.lt}}` trae el lead
+time que él mismo calculó. Si aún no lo contesta se muestra un hueco marcado, no
+un error. Es lo que convierte ocho ejercicios sueltos en un solo caso.
+
+**Guardado.** Todo vive en `localStorage` bajo `ea:taller`, envuelto en try/catch:
+si el navegador lo bloquea, el taller sigue funcionando sin memoria. Nada viaja a
+ningún servidor.
+
+**Entregable.** El botón final arma un Markdown con todas las respuestas y lo
+ofrece como descarga y como copia al portapapeles.
+
+**Al agregar campos numéricos**, verifica el resultado de forma independiente
+antes de escribirlo en `respuesta`, y ajusta `tolerancia` al redondeo que esperas
+del alumno (holgada en porcentajes y montos, estrecha en enteros).
 
 ## Idiomas
 
